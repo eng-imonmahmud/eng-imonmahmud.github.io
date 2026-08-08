@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -25,80 +25,78 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            obsidian: '#0B0F17',
-            midnight: '#111827',
-            surface: '#1A2333',
-            emeraldAccent: '#10B981',
-            tealAccent: '#06B6D4',
-            amberAccent: '#F59E0B',
+            primary: '#1E3A8A',
+            secondary: '#0284C7',
+            accentGold: '#D97706',
+            darkSlate: '#0F172A',
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-[#0B0F17] text-slate-300 font-sans antialiased selection:bg-emeraldAccent selection:text-obsidian">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- Sticky Navbar -->
-  <nav class="sticky top-0 z-50 bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/40">
+  <!-- Sticky Executive Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="bg-primary text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-primary/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-primary transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
-          <span>🌐</span> <span id="lang-label">DE</span>
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono text-xs rounded-xl border border-slate-200 transition">
+          <span>🌐</span> <span id="lang-label">EN</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-primary transition">← Back to Projects</a>
         
-        <a href="https://github.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+        <a href="https://github.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-darkSlate text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Banner -->
-  <header class="relative bg-gradient-to-b from-[#111827] via-[#0B0F17] to-[#0B0F17] py-16 lg:py-24 border-b border-slate-800 overflow-hidden">
+  <!-- Hero Header -->
+  <header class="relative bg-gradient-to-br from-darkSlate via-slate-900 to-primary text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
       <div class="lg:col-span-8 space-y-5">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emeraldAccent/10 text-emeraldAccent border border-emeraldAccent/20">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-sky-500/20 text-sky-300 border border-sky-400/30">
           <span>🚀</span>
           <span>Serverless & AI Systems</span>
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
           Enterprise Serverless Api Gateway Secure Microservices
         </h1>
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
           Production-ready Google Cloud serverless architecture using API Gateway, private Cloud Run microservices, IAM-based Zero Trust security, and OpenAPI for secure enterprise API management.
         </p>
         <div class="flex flex-wrap gap-2 pt-2">
-          <span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">AWS API Gateway</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Lambda</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">DynamoDB</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">IAM</span>
+          <span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">AWS API Gateway</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Lambda</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">DynamoDB</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">IAM</span>
         </div>
         <div class="flex flex-wrap items-center gap-4 pt-4">
-          <a href="https://github.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices" target="_blank" class="px-6 py-3 bg-gradient-to-r from-emeraldAccent to-tealAccent hover:opacity-90 text-obsidian font-heading font-bold text-sm rounded-xl shadow-lg shadow-emeraldAccent/20 transition flex items-center">
+          <a href="https://github.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices" target="_blank" class="px-6 py-3 bg-secondary hover:bg-blue-600 text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
           </a>
-          <a href="index.html#projects" class="px-6 py-3 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-heading font-semibold text-sm rounded-xl border border-slate-700 transition">
+          <a href="index.html#projects" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-heading font-semibold text-sm rounded-xl border border-white/20 transition">
             ← Back to Portfolio Overview
           </a>
         </div>
       </div>
       
-      <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
-        <ul class="text-xs font-mono space-y-2.5 text-slate-300">
-          <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">enterprise-serverless-api-gateway-secure-microservices</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">Shell</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Security Control:</span> <span class="text-emeraldAccent">Zero-Trust & IAM</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
+      <div class="lg:col-span-4 bg-white/10 border border-white/20 p-6 rounded-2xl space-y-4 shadow-xl backdrop-blur-md">
+        <h3 class="font-heading font-bold text-white text-base border-b border-white/20 pb-3">Enterprise Architecture Specs</h3>
+        <ul class="text-xs font-mono space-y-2.5 text-slate-200">
+          <li class="flex justify-between"><span class="text-slate-300">Repository:</span> <span class="text-sky-300 font-semibold">enterprise-serverless-api-gateway-secure-microservices</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Primary Language:</span> <span class="text-white">Shell</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Security Control:</span> <span class="text-emerald-400">Zero-Trust & IAM</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
         </ul>
         <div class="pt-2">
-          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Enterprise Serverless Api Gateway Secure Microservices" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-heading font-bold text-xs rounded-xl border border-slate-700 transition">
+          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Enterprise Serverless Api Gateway Secure Microservices" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-white text-darkSlate font-heading font-bold text-xs rounded-xl shadow transition hover:bg-slate-100">
             ✉ Contact Candidate Regarding This Project
           </a>
         </div>
@@ -111,69 +109,69 @@
     
     
         <section class="space-y-6">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <h2 class="text-xl font-heading font-bold text-darkSlate tracking-tight">
               Live Production Console & Screenshots
             </h2>
-            <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">15 Screenshots Verified</span>
+            <span class="text-xs font-mono text-primary bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">15 Screenshots Verified</span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #1</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices/main/architecture.png" alt="Enterprise Serverless Api Gateway Secure Microservices Screenshot 1" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #2</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices/main/screenshots/screencapture-console-cloud-google-run-overview-2026-07-10-21_53_53.png" alt="Enterprise Serverless Api Gateway Secure Microservices Screenshot 2" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #3</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices/main/screenshots/screencapture-console-cloud-google-run-detail-us-central1-employee-api-revisions-2026-07-10-21_54_27.png" alt="Enterprise Serverless Api Gateway Secure Microservices Screenshot 3" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #4</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices/main/screenshots/screencapture-console-cloud-google-run-detail-us-central1-employee-api-revisions-2026-07-10-21_54_39.png" alt="Enterprise Serverless Api Gateway Secure Microservices Screenshot 4" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #5</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices/main/screenshots/screencapture-console-cloud-google-run-detail-us-central1-employee-api-observability-metrics-2026-07-10-21_54_08.png" alt="Enterprise Serverless Api Gateway Secure Microservices Screenshot 5" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #6</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices/main/screenshots/screencapture-console-cloud-google-run-detail-us-central1-employee-api-observability-logs-2026-07-10-21_54_19.png" alt="Enterprise Serverless Api Gateway Secure Microservices Screenshot 6" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
@@ -184,16 +182,16 @@
         
 
     <!-- Architecture & Technical Specifications Section -->
-    <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
-      <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+    <section class="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-heading font-bold text-darkSlate tracking-tight">
           System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
+        <p class="text-xs text-slate-500 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
-      <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">Enterprise Serverless API Gateway & Secure Microservices Architecture</h1>
+      <div class="prose max-w-none text-slate-700 text-sm leading-relaxed space-y-4">
+        <h1 class="text-2xl font-heading font-bold text-slate-900 mt-6 mb-3">Enterprise Serverless API Gateway & Secure Microservices Architecture</h1>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
@@ -206,69 +204,69 @@
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Project Description</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Project Description</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">This project demonstrates a production-ready, highly secure, and automated Enterprise Serverless Architecture built natively on Google Cloud Platform (GCP). It features a Python Flask microservice containerized using Docker, continuously built via Google Cloud Build, and stored in Artifact Registry. The service is securely deployed to a private Google Cloud Run instance.</p>
+<p class="text-slate-700 leading-relaxed my-2">This project demonstrates a production-ready, highly secure, and automated Enterprise Serverless Architecture built natively on Google Cloud Platform (GCP). It features a Python Flask microservice containerized using Docker, continuously built via Google Cloud Build, and stored in Artifact Registry. The service is securely deployed to a private Google Cloud Run instance.</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">To adhere to the Zero Trust security model, the Cloud Run instance strictly blocks all unauthenticated public access. Traffic is exclusively managed and routed through a Google Cloud API Gateway, which utilizes a dedicated Identity and Access Management (IAM) service account with least privilege permissions (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">roles/run.invoker</code>) to authenticate and securely invoke the private backend.</p>
+<p class="text-slate-700 leading-relaxed my-2">To adhere to the Zero Trust security model, the Cloud Run instance strictly blocks all unauthenticated public access. Traffic is exclusively managed and routed through a Google Cloud API Gateway, which utilizes a dedicated Identity and Access Management (IAM) service account with least privilege permissions (<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">roles/run.invoker</code>) to authenticate and securely invoke the private backend.</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">The entire pipeline, infrastructure deployment, IAM configuration, validation, and cleanup have been automated, eliminating the need for manual intervention and mitigating security risks.</p>
+<p class="text-slate-700 leading-relaxed my-2">The entire pipeline, infrastructure deployment, IAM configuration, validation, and cleanup have been automated, eliminating the need for manual intervention and mitigating security risks.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Architecture Overview</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Architecture Overview</h2>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">The application traffic flows securely through the following path:</p>
-<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Internet</strong> → <strong class="text-white">API Gateway</strong> → <strong class="text-white">IAM Authentication (Service Account)</strong> → <strong class="text-white">Private Cloud Run</strong></p>
+<p class="text-slate-700 leading-relaxed my-2">The application traffic flows securely through the following path:</p>
+<p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Internet</strong> → <strong class="text-slate-900">API Gateway</strong> → <strong class="text-slate-900">IAM Authentication (Service Account)</strong> → <strong class="text-slate-900">Private Cloud Run</strong></p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Technology Stack</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Technology Stack</h2>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Language</strong>: Python 3.11</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Web Framework</strong>: Flask</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Containerization</strong>: Docker</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">CI/CD</strong>: Google Cloud Build</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Container Registry</strong>: Google Artifact Registry</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Serverless Compute</strong>: Google Cloud Run (Private)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Management</strong>: Google Cloud API Gateway</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Security & Auth</strong>: Google Cloud IAM (Zero Trust, Least Privilege)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Specification</strong>: OpenAPI 2.0 (Swagger)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Scripting</strong>: Bash / PowerShell</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Language</strong>: Python 3.11</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Web Framework</strong>: Flask</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Containerization</strong>: Docker</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">CI/CD</strong>: Google Cloud Build</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Container Registry</strong>: Google Artifact Registry</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Serverless Compute</strong>: Google Cloud Run (Private)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">API Management</strong>: Google Cloud API Gateway</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Security & Auth</strong>: Google Cloud IAM (Zero Trust, Least Privilege)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">API Specification</strong>: OpenAPI 2.0 (Swagger)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Scripting</strong>: Bash / PowerShell</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Features</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Features</h2>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Zero Trust Security Model</strong>: Direct public access to the Cloud Run microservices is completely blocked using the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">--no-allow-unauthenticated</code> policy.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Least Privilege IAM</strong>: The API Gateway uses a dedicated service account limited strictly to the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">run.invoker</code> role.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Automated CI/CD</strong>: Seamlessly transitions from raw code to a deployed container image via Cloud Build and Artifact Registry.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Management</strong>: Centralized routing and API specification using a fully managed Google API Gateway.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Infrastructure as Code (IaC) principles</strong>: Standardized deployment scripts and OpenAPI YAML for repeatable, immutable deployments.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Zero Trust Security Model</strong>: Direct public access to the Cloud Run microservices is completely blocked using the <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">--no-allow-unauthenticated</code> policy.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Least Privilege IAM</strong>: The API Gateway uses a dedicated service account limited strictly to the <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">run.invoker</code> role.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Automated CI/CD</strong>: Seamlessly transitions from raw code to a deployed container image via Cloud Build and Artifact Registry.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">API Management</strong>: Centralized routing and API specification using a fully managed Google API Gateway.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Infrastructure as Code (IaC) principles</strong>: Standardized deployment scripts and OpenAPI YAML for repeatable, immutable deployments.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Security Model</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Security Model</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">This project stringently enforces enterprise-grade security protocols:</p>
+<p class="text-slate-700 leading-relaxed my-2">This project stringently enforces enterprise-grade security protocols:</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">1.  <strong class="text-white">No Public Direct Access</strong>: Attempting to bypass the Gateway and access Cloud Run directly results in a deliberate <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">403 Forbidden</code> response.</p>
-<p class="text-slate-300 leading-relaxed my-2">2.  <strong class="text-white">Explicit IAM Binding</strong>: Only the designated API Gateway Service Account possesses the precise cryptographic token authority to negotiate entry to the backend.</p>
-<p class="text-slate-300 leading-relaxed my-2">3.  <strong class="text-white">Strict Git Ignore Policies</strong>: All local JSON credential files, PEM keys, temporary artifacts, and environmental configuration files are systematically ignored to prevent credential leakage.</p>
+<p class="text-slate-700 leading-relaxed my-2">1.  <strong class="text-slate-900">No Public Direct Access</strong>: Attempting to bypass the Gateway and access Cloud Run directly results in a deliberate <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">403 Forbidden</code> response.</p>
+<p class="text-slate-700 leading-relaxed my-2">2.  <strong class="text-slate-900">Explicit IAM Binding</strong>: Only the designated API Gateway Service Account possesses the precise cryptographic token authority to negotiate entry to the backend.</p>
+<p class="text-slate-700 leading-relaxed my-2">3.  <strong class="text-slate-900">Strict Git Ignore Policies</strong>: All local JSON credential files, PEM keys, temporary artifacts, and environmental configuration files are systematically ignored to prevent credential leakage.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">API Endpoint Documentation</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">API Endpoint Documentation</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">The API Gateway routes the following RESTful endpoints:</p>
+<p class="text-slate-700 leading-relaxed my-2">The API Gateway routes the following RESTful endpoints:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /health</code>: Validates the operational health of the microservice.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /employees</code>: Returns structured employee organizational data.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /projects</code>: Returns current enterprise project statuses.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /departments</code>: Returns departmental hierarchical data.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">GET /health</code>: Validates the operational health of the microservice.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">GET /employees</code>: Returns structured employee organizational data.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">GET /projects</code>: Returns current enterprise project statuses.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">GET /departments</code>: Returns departmental hierarchical data.</li>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Example JSON Responses</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Example JSON Responses</h3>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /health</code></strong></p>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">json</div><pre><code>{
+<p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">GET /health</code></strong></p>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">json</div><pre><code>{
   "service": "employee-api",
   "status": "healthy"
 }</code></pre></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /employees</code></strong></p>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">json</div><pre><code>{
+<p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">GET /employees</code></strong></p>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">json</div><pre><code>{
   "data": [
     {
       "department": "Engineering",
@@ -280,9 +278,9 @@
   ]
 }</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Repository Structure</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Repository Structure</h2>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">code</div><pre><code>.
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">code</div><pre><code>.
 ├── .gitignore               # Enterprise-grade Git exclusions
 ├── Dockerfile               # Container build instructions
 ├── LICENSE                  # MIT License
@@ -298,108 +296,108 @@
     ├── deploy.sh            # Local deployment wrapper
     └── validate.sh          # Automated curl-based validation</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Deployment & Validation Workflow</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Deployment & Validation Workflow</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">The automated deployment pipeline performs the following sequentially:</p>
-<p class="text-slate-300 leading-relaxed my-2">1.  <strong class="text-white">Build Phase</strong>: Cloud Build packages the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">app.py</code> into a Docker image and pushes it to Artifact Registry.</p>
-<p class="text-slate-300 leading-relaxed my-2">2.  <strong class="text-white">Deploy Phase</strong>: Cloud Run deploys the image privately.</p>
-<p class="text-slate-300 leading-relaxed my-2">3.  <strong class="text-white">Security Phase</strong>: A Service Account is provisioned, and IAM policies bind the account to the Cloud Run service.</p>
-<p class="text-slate-300 leading-relaxed my-2">4.  <strong class="text-white">Gateway Phase</strong>: The OpenAPI specification dynamically injects the backend URL and initializes the API Config and API Gateway.</p>
-<p class="text-slate-300 leading-relaxed my-2">5.  <strong class="text-white">Validation Phase</strong>: Curl scripts automatically assert that the backend rejects direct traffic (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">403</code>) while the gateway routes successfully (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">200 OK</code>).</p>
+<p class="text-slate-700 leading-relaxed my-2">The automated deployment pipeline performs the following sequentially:</p>
+<p class="text-slate-700 leading-relaxed my-2">1.  <strong class="text-slate-900">Build Phase</strong>: Cloud Build packages the <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">app.py</code> into a Docker image and pushes it to Artifact Registry.</p>
+<p class="text-slate-700 leading-relaxed my-2">2.  <strong class="text-slate-900">Deploy Phase</strong>: Cloud Run deploys the image privately.</p>
+<p class="text-slate-700 leading-relaxed my-2">3.  <strong class="text-slate-900">Security Phase</strong>: A Service Account is provisioned, and IAM policies bind the account to the Cloud Run service.</p>
+<p class="text-slate-700 leading-relaxed my-2">4.  <strong class="text-slate-900">Gateway Phase</strong>: The OpenAPI specification dynamically injects the backend URL and initializes the API Config and API Gateway.</p>
+<p class="text-slate-700 leading-relaxed my-2">5.  <strong class="text-slate-900">Validation Phase</strong>: Curl scripts automatically assert that the backend rejects direct traffic (<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">403</code>) while the gateway routes successfully (<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">200 OK</code>).</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Screenshot Gallery</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Screenshot Gallery</h2>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Google Cloud Console Deployments</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Google Cloud Console Deployments</h3>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run Overview</strong>:</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Run Overview</strong>:</li>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run Revisions</strong>:</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Run Revisions</strong>:</li>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run Revisions (Detailed)</strong>:</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Run Revisions (Detailed)</strong>:</li>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run Metrics</strong>:</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Run Metrics</strong>:</li>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run Logs</strong>:</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Run Logs</strong>:</li>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run IAM Security Policy</strong>:</li>
-<div class="h-2"></div>
-<div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">API Gateway Configurations</h3>
-<div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Gateway Overview</strong>:</li>
-<div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Detail</strong>:</li>
-<div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Configs Rollout</strong>:</li>
-<div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Configs Detail</strong>:</li>
-<div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Gateway Deployed</strong>:</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Run IAM Security Policy</strong>:</li>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Live Validation & Endpoint Tests</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">API Gateway Configurations</h3>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Direct Cloud Run URL (Blocked / Zero Trust)</strong>:</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">API Gateway Overview</strong>:</li>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Gateway Health Check (Success)</strong>:</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">API Detail</strong>:</li>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Gateway Employee Endpoint (Success)</strong>:</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">API Configs Rollout</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">API Configs Detail</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Gateway Deployed</strong>:</li>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Lessons Learned</h2>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Live Validation & Endpoint Tests</h3>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Enforcing a Zero Trust backend significantly bolsters the resilience of serverless applications against unauthorized invocations.</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Decoupling API routing from the core application logic using API Gateway streamlines microservice architecture and scales effortlessly.</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Complete end-to-end automation via scripts and pipelines dramatically reduces the time-to-market while enforcing stringent cloud-native best practices.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Direct Cloud Run URL (Blocked / Zero Trust)</strong>:</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Future Improvements</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">API Gateway Health Check (Success)</strong>:</li>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Implement Google Cloud Armor in front of the API Gateway for WAF and DDoS protection.</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Incorporate JSON Web Token (JWT) validation at the API Gateway level to authenticate end-users, not just the microservices.</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Translate the imperative deployment bash scripts into declarative Terraform modules for industry-standard state management.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">API Gateway Employee Endpoint (Success)</strong>:</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Credits</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Imon Mahmud</strong></p>
-<p class="text-slate-300 leading-relaxed my-2">IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Lessons Learned</h2>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">License</h2>
+<li class="ml-4 list-disc text-slate-700 my-1">Enforcing a Zero Trust backend significantly bolsters the resilience of serverless applications against unauthorized invocations.</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Decoupling API routing from the core application logic using API Gateway streamlines microservice architecture and scales effortlessly.</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Complete end-to-end automation via scripts and pipelines dramatically reduces the time-to-market while enforcing stringent cloud-native best practices.</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">This project is licensed under the MIT License - see the LICENSE file for details.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Future Improvements</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-700 my-1">Implement Google Cloud Armor in front of the API Gateway for WAF and DDoS protection.</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Incorporate JSON Web Token (JWT) validation at the API Gateway level to authenticate end-users, not just the microservices.</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Translate the imperative deployment bash scripts into declarative Terraform modules for industry-standard state management.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Credits</h2>
+<div class="h-2"></div>
+<p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Imon Mahmud</strong></p>
+<p class="text-slate-700 leading-relaxed my-2">IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">License</h2>
+<div class="h-2"></div>
+<p class="text-slate-700 leading-relaxed my-2">This project is licensed under the MIT License - see the LICENSE file for details.</p>
 <div class="h-2"></div>
       </div>
     </section>
 
     <!-- Recruiter Compliance & Value Matrix -->
     <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-emeraldAccent text-xl">🛡️</div>
-        <h3 class="font-heading font-bold text-white text-base">Security & Compliance</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-emerald-600 text-xl">🛡️</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">Security & Compliance</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
       </div>
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-tealAccent text-xl">⚡</div>
-        <h3 class="font-heading font-bold text-white text-base">IaC & Automation</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-secondary text-xl">⚡</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">IaC & Automation</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
       </div>
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-amberAccent text-xl">📊</div>
-        <h3 class="font-heading font-bold text-white text-base">Observability & Health</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-amber-600 text-xl">📊</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">Observability & Health</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
       </div>
     </section>
 
     <!-- Navigation Footer CTA -->
-    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-slate-900 via-surface to-slate-900 border border-slate-800 p-8 rounded-2xl gap-4">
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-primary via-darkSlate to-primary border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
       <div>
         <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
-        <p class="text-xs text-slate-400">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
+        <p class="text-xs text-slate-300">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
       </div>
       <div class="flex space-x-3">
-        <a href="https://github.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices" target="_blank" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+        <a href="https://github.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices" target="_blank" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-mono text-xs rounded-xl border border-white/20 transition">
           View Repository ↗
         </a>
-        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emeraldAccent hover:bg-emerald-600 text-obsidian font-heading font-bold text-xs rounded-xl transition">
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-heading font-bold text-xs rounded-xl shadow transition">
           Contact Candidate
         </a>
       </div>
@@ -407,8 +405,8 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
-    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
+  <footer class="bg-darkSlate border-t border-slate-800 py-10 text-center text-xs text-slate-400 space-y-4">
+    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-white">Home</a> | <a href="disclaimer.html" class="hover:text-white">Disclaimer</a> | <a href="privacy.html" class="hover:text-white">Privacy Policy</a></p>
   </footer>
 </body>
 </html>

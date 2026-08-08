@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -25,80 +25,78 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            obsidian: '#0B0F17',
-            midnight: '#111827',
-            surface: '#1A2333',
-            emeraldAccent: '#10B981',
-            tealAccent: '#06B6D4',
-            amberAccent: '#F59E0B',
+            primary: '#1E3A8A',
+            secondary: '#0284C7',
+            accentGold: '#D97706',
+            darkSlate: '#0F172A',
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-[#0B0F17] text-slate-300 font-sans antialiased selection:bg-emeraldAccent selection:text-obsidian">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- Sticky Navbar -->
-  <nav class="sticky top-0 z-50 bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/40">
+  <!-- Sticky Executive Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="bg-primary text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-primary/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-primary transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
-          <span>🌐</span> <span id="lang-label">DE</span>
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono text-xs rounded-xl border border-slate-200 transition">
+          <span>🌐</span> <span id="lang-label">EN</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-primary transition">← Back to Projects</a>
         
-        <a href="https://github.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+        <a href="https://github.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-darkSlate text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Banner -->
-  <header class="relative bg-gradient-to-b from-[#111827] via-[#0B0F17] to-[#0B0F17] py-16 lg:py-24 border-b border-slate-800 overflow-hidden">
+  <!-- Hero Header -->
+  <header class="relative bg-gradient-to-br from-darkSlate via-slate-900 to-primary text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
       <div class="lg:col-span-8 space-y-5">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emeraldAccent/10 text-emeraldAccent border border-emeraldAccent/20">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-sky-500/20 text-sky-300 border border-sky-400/30">
           <span>🚀</span>
           <span>DevSecOps & Security</span>
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
           Centralized Cloud Audit Governance Security Analytics Platform
         </h1>
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
           Enterprise-grade AWS cloud audit, governance, and security analytics platform built with Terraform using CloudTrail, AWS Config, Amazon S3, and Athena for centralized compliance monitoring and audit log analysis.
         </p>
         <div class="flex flex-wrap gap-2 pt-2">
-          <span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">AWS CloudTrail</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Config</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Athena</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">S3</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Terraform</span>
+          <span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">AWS CloudTrail</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Config</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Athena</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">S3</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Terraform</span>
         </div>
         <div class="flex flex-wrap items-center gap-4 pt-4">
-          <a href="https://github.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform" target="_blank" class="px-6 py-3 bg-gradient-to-r from-emeraldAccent to-tealAccent hover:opacity-90 text-obsidian font-heading font-bold text-sm rounded-xl shadow-lg shadow-emeraldAccent/20 transition flex items-center">
+          <a href="https://github.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform" target="_blank" class="px-6 py-3 bg-secondary hover:bg-blue-600 text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
           </a>
-          <a href="index.html#projects" class="px-6 py-3 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-heading font-semibold text-sm rounded-xl border border-slate-700 transition">
+          <a href="index.html#projects" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-heading font-semibold text-sm rounded-xl border border-white/20 transition">
             ← Back to Portfolio Overview
           </a>
         </div>
       </div>
       
-      <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
-        <ul class="text-xs font-mono space-y-2.5 text-slate-300">
-          <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">centralized-cloud-audit-governance-security-analytics-platform</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">HCL</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Security Control:</span> <span class="text-emeraldAccent">Zero-Trust & IAM</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
+      <div class="lg:col-span-4 bg-white/10 border border-white/20 p-6 rounded-2xl space-y-4 shadow-xl backdrop-blur-md">
+        <h3 class="font-heading font-bold text-white text-base border-b border-white/20 pb-3">Enterprise Architecture Specs</h3>
+        <ul class="text-xs font-mono space-y-2.5 text-slate-200">
+          <li class="flex justify-between"><span class="text-slate-300">Repository:</span> <span class="text-sky-300 font-semibold">centralized-cloud-audit-governance-security-analytics-platform</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Primary Language:</span> <span class="text-white">HCL</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Security Control:</span> <span class="text-emerald-400">Zero-Trust & IAM</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
         </ul>
         <div class="pt-2">
-          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Centralized Cloud Audit Governance Security Analytics Platform" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-heading font-bold text-xs rounded-xl border border-slate-700 transition">
+          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Centralized Cloud Audit Governance Security Analytics Platform" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-white text-darkSlate font-heading font-bold text-xs rounded-xl shadow transition hover:bg-slate-100">
             ✉ Contact Candidate Regarding This Project
           </a>
         </div>
@@ -111,69 +109,69 @@
     
     
         <section class="space-y-6">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <h2 class="text-xl font-heading font-bold text-darkSlate tracking-tight">
               Live Production Console & Screenshots
             </h2>
-            <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">7 Screenshots Verified</span>
+            <span class="text-xs font-mono text-primary bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">7 Screenshots Verified</span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #1</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform/main/screenshots/Amazon%20S3%20Buckets%20cloud-sec-audit-prod-logs-44i4sj-logs.png" alt="Centralized Cloud Audit Governance Security Analytics Platform Screenshot 1" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #2</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform/main/screenshots/Amazon%20S3%20Buckets%20cloud-sec-audit-prod-logs-44i4sj-permissions.png" alt="Centralized Cloud Audit Governance Security Analytics Platform Screenshot 2" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #3</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform/main/screenshots/CloudTrailTrailsarnawscloudtraileu-central-1217343504992trailcloud-sec-audit-prod-trail.png" alt="Centralized Cloud Audit Governance Security Analytics Platform Screenshot 3" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #4</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform/main/screenshots/CloudTrail%20Event%20history.png" alt="Centralized Cloud Audit Governance Security Analytics Platform Screenshot 4" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #5</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform/main/screenshots/AWS%20Config%20Settings.png" alt="Centralized Cloud Audit Governance Security Analytics Platform Screenshot 5" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #6</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform/main/screenshots/IAMRoles.png" alt="Centralized Cloud Audit Governance Security Analytics Platform Screenshot 6" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
@@ -184,30 +182,30 @@
         
 
     <!-- Architecture & Technical Specifications Section -->
-    <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
-      <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+    <section class="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-heading font-bold text-darkSlate tracking-tight">
           System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
+        <p class="text-xs text-slate-500 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
-      <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">Centralized Cloud Audit, Governance & Security Analytics Platform</h1>
+      <div class="prose max-w-none text-slate-700 text-sm leading-relaxed space-y-4">
+        <h1 class="text-2xl font-heading font-bold text-slate-900 mt-6 mb-3">Centralized Cloud Audit, Governance & Security Analytics Platform</h1>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📌 Project Overview</h2>
-<p class="text-slate-300 leading-relaxed my-2">This repository contains a production-grade Infrastructure as Code (IaC) deployment for a centralized AWS security and audit logging platform. Designed for enterprise environments, it automates the collection of management events and configuration changes across an AWS environment and provides serverless, SQL-based security analytics capabilities.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">📌 Project Overview</h2>
+<p class="text-slate-700 leading-relaxed my-2">This repository contains a production-grade Infrastructure as Code (IaC) deployment for a centralized AWS security and audit logging platform. Designed for enterprise environments, it automates the collection of management events and configuration changes across an AWS environment and provides serverless, SQL-based security analytics capabilities.</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">The infrastructure strict adheres to the AWS Well-Architected Framework and the principle of least privilege, providing a robust solution for compliance, governance, and cloud security posture management.</p>
+<p class="text-slate-700 leading-relaxed my-2">The infrastructure strict adheres to the AWS Well-Architected Framework and the principle of least privilege, providing a robust solution for compliance, governance, and cloud security posture management.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🏗️ Architecture Overview</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">🏗️ Architecture Overview</h2>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>graph TD
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">mermaid</div><pre><code>graph TD
     subgraph AWS Cloud [eu-central-1]
         A[AWS CloudTrail] --&gt;|Delivers Logs| S3[Centralized S3 Logging Bucket]
         B[AWS Config] --&gt;|Delivers Snapshots &amp; History| S3
@@ -222,35 +220,35 @@
         User[Security Analyst] --&gt;|Executes SQL Queries| C
     end</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🛠️ Technology Stack</h2>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Provider</strong>: Amazon Web Services (AWS)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Infrastructure as Code</strong>: Terraform (HCL)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS Services</strong>:</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS CloudTrail</strong>: For API auditing and tracking user activity.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS Config</strong>: For continuous resource tracking and configuration history.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon S3</strong>: For secure, encrypted, and centralized log storage.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon Athena</strong>: For serverless SQL querying of audit logs.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS IAM</strong>: For implementing strict least-privilege security controls.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">🛠️ Technology Stack</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Provider</strong>: Amazon Web Services (AWS)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Infrastructure as Code</strong>: Terraform (HCL)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">AWS Services</strong>:</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">AWS CloudTrail</strong>: For API auditing and tracking user activity.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">AWS Config</strong>: For continuous resource tracking and configuration history.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Amazon S3</strong>: For secure, encrypted, and centralized log storage.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Amazon Athena</strong>: For serverless SQL querying of audit logs.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">AWS IAM</strong>: For implementing strict least-privilege security controls.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🚀 Features</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">🚀 Features</h2>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Security Features</h3>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Centralized Secure Storage</strong>: All logs are aggregated into a tightly controlled S3 bucket.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Encryption at Rest</strong>: S3 default encryption (SSE-S3) is enforced for both logging and Athena results.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Public Access Block</strong>: S3 Public Access is strictly blocked at the bucket level.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Least Privilege IAM</strong>: Custom IAM roles and bucket policies limit write access to only explicitly authorized AWS service principals (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">cloudtrail.amazonaws.com</code> and <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">config.amazonaws.com</code>).</li>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Security Features</h3>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Centralized Secure Storage</strong>: All logs are aggregated into a tightly controlled S3 bucket.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Encryption at Rest</strong>: S3 default encryption (SSE-S3) is enforced for both logging and Athena results.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Public Access Block</strong>: S3 Public Access is strictly blocked at the bucket level.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Least Privilege IAM</strong>: Custom IAM roles and bucket policies limit write access to only explicitly authorized AWS service principals (<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">cloudtrail.amazonaws.com</code> and <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">config.amazonaws.com</code>).</li>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Governance Features</h3>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Complete Audit Trail</strong>: Captures global AWS management events.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Configuration Tracking</strong>: AWS Config tracks all supported regional and global resources.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Automated Data Retention</strong>: S3 Lifecycle rules automatically expire and delete logs after a defined retention period to minimize costs.</li>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Governance Features</h3>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Complete Audit Trail</strong>: Captures global AWS management events.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Configuration Tracking</strong>: AWS Config tracks all supported regional and global resources.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Automated Data Retention</strong>: S3 Lifecycle rules automatically expire and delete logs after a defined retention period to minimize costs.</li>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Cost Optimization</h3>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Serverless Analytics</strong>: Amazon Athena charges only per query scanned, with zero infrastructure to manage.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Free-Tier Compatibility</strong>: Designed carefully to operate within AWS Free Tier limits (single-region trail, optimized storage).</li>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Cost Optimization</h3>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Serverless Analytics</strong>: Amazon Athena charges only per query scanned, with zero infrastructure to manage.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Free-Tier Compatibility</strong>: Designed carefully to operate within AWS Free Tier limits (single-region trail, optimized storage).</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📁 Terraform Project Structure</h2>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>.
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">📁 Terraform Project Structure</h2>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>.
 ├── providers.tf         # AWS provider and region configuration
 ├── versions.tf          # Terraform and provider versions
 ├── variables.tf         # Input variables (environment, project names, etc.)
@@ -265,113 +263,113 @@
 ├── .gitignore           # Standard Terraform git ignores
 └── test_aws.py          # Python script for generating events and testing Athena</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📸 Screenshots Gallery</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">📸 Screenshots Gallery</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">The following screenshots demonstrate the deployed resources and successful validation:</p>
+<p class="text-slate-700 leading-relaxed my-2">The following screenshots demonstrate the deployed resources and successful validation:</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">S3 Logging Bucket Configuration</strong></p>
-<div class="h-2"></div>
-<div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">S3 Bucket Policy & Permissions</strong></p>
+<p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">S3 Logging Bucket Configuration</strong></p>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">CloudTrail Configuration</strong></p>
+<p class="text-slate-700 leading-relaxed my-2">2. <strong class="text-slate-900">S3 Bucket Policy & Permissions</strong></p>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">4. <strong class="text-white">CloudTrail Event History</strong></p>
+<p class="text-slate-700 leading-relaxed my-2">3. <strong class="text-slate-900">CloudTrail Configuration</strong></p>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">5. <strong class="text-white">AWS Config Dashboard</strong></p>
+<p class="text-slate-700 leading-relaxed my-2">4. <strong class="text-slate-900">CloudTrail Event History</strong></p>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">6. <strong class="text-white">IAM Role (Least Privilege)</strong></p>
+<p class="text-slate-700 leading-relaxed my-2">5. <strong class="text-slate-900">AWS Config Dashboard</strong></p>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">7. <strong class="text-white">Amazon Athena Query Editor</strong></p>
+<p class="text-slate-700 leading-relaxed my-2">6. <strong class="text-slate-900">IAM Role (Least Privilege)</strong></p>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">⚙️ Deployment Process</h2>
+<p class="text-slate-700 leading-relaxed my-2">7. <strong class="text-slate-900">Amazon Athena Query Editor</strong></p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Initialize Terraform</strong>: Downloads providers and initializes the backend.</p>
-<p class="text-slate-300 leading-relaxed my-2"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono"></code>`bash</p>
-<p class="text-slate-300 leading-relaxed my-2">terraform init</p>
-<p class="text-slate-300 leading-relaxed my-2"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono"></code>`</p>
-<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Validate Configuration</strong>: Ensures the code is syntactically valid.</p>
-<p class="text-slate-300 leading-relaxed my-2"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono"></code>`bash</p>
-<p class="text-slate-300 leading-relaxed my-2">terraform validate</p>
-<p class="text-slate-300 leading-relaxed my-2"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono"></code>`</p>
-<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">Plan Deployment</strong>: Previews the resources that will be created.</p>
-<p class="text-slate-300 leading-relaxed my-2"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono"></code>`bash</p>
-<p class="text-slate-300 leading-relaxed my-2">terraform plan</p>
-<p class="text-slate-300 leading-relaxed my-2"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono"></code>`</p>
-<p class="text-slate-300 leading-relaxed my-2">4. <strong class="text-white">Apply Infrastructure</strong>: Deploys the infrastructure to the AWS account.</p>
-<p class="text-slate-300 leading-relaxed my-2"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono"></code>`bash</p>
-<p class="text-slate-300 leading-relaxed my-2">terraform apply -auto-approve</p>
-<p class="text-slate-300 leading-relaxed my-2"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono"></code>`</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">✅ Validation & Testing Process</h2>
-<p class="text-slate-300 leading-relaxed my-2">A custom python script (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">test_aws.py</code>) was used to validate the entire pipeline:</p>
-<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Event Generation</strong>: Automatically created and deleted an IAM user to trigger CloudTrail management events.</p>
-<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Athena Table Creation</strong>: Created the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">cloudtrail_logs</code> external table pointing to the S3 bucket via Athena SQL.</p>
-<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">Analytics Query Execution</strong>: Executed a <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">SELECT</code> query against the CloudTrail logs successfully, validating the data pipeline from event generation -> S3 storage -> Athena analytics.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">⚙️ Deployment Process</h2>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🧹 Infrastructure Lifecycle & Cleanup Process</h2>
-<p class="text-slate-300 leading-relaxed my-2">To prevent unwanted AWS charges and adhere to the project's temporary lifecycle requirements, the infrastructure is completely destroyed after validation:</p>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">bash</div><pre><code>terraform destroy -auto-approve</code></pre></div>
+<p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">Initialize Terraform</strong>: Downloads providers and initializes the backend.</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`bash</p>
+<p class="text-slate-700 leading-relaxed my-2">terraform init</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`</p>
+<p class="text-slate-700 leading-relaxed my-2">2. <strong class="text-slate-900">Validate Configuration</strong>: Ensures the code is syntactically valid.</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`bash</p>
+<p class="text-slate-700 leading-relaxed my-2">terraform validate</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`</p>
+<p class="text-slate-700 leading-relaxed my-2">3. <strong class="text-slate-900">Plan Deployment</strong>: Previews the resources that will be created.</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`bash</p>
+<p class="text-slate-700 leading-relaxed my-2">terraform plan</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`</p>
+<p class="text-slate-700 leading-relaxed my-2">4. <strong class="text-slate-900">Apply Infrastructure</strong>: Deploys the infrastructure to the AWS account.</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`bash</p>
+<p class="text-slate-700 leading-relaxed my-2">terraform apply -auto-approve</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🔮 Future Enhancements</h2>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Multi-Account Logging</strong>: Expand the architecture using AWS Organizations to aggregate logs from multiple accounts into a central security account.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS KMS Encryption</strong>: Implement Customer Managed Keys (CMKs) for S3 and CloudTrail encryption.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Athena Partitioning</strong>: Introduce AWS Glue Crawlers or Lambda functions to automatically partition Athena tables by year, month, and day for performance optimization and cost reduction.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Alerting</strong>: Integrate Amazon SNS and CloudWatch Events for real-time alerting on critical security events (e.g., unauthorized access attempts, root account logins).</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">✅ Validation & Testing Process</h2>
+<p class="text-slate-700 leading-relaxed my-2">A custom python script (<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">test_aws.py</code>) was used to validate the entire pipeline:</p>
+<p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">Event Generation</strong>: Automatically created and deleted an IAM user to trigger CloudTrail management events.</p>
+<p class="text-slate-700 leading-relaxed my-2">2. <strong class="text-slate-900">Athena Table Creation</strong>: Created the <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">cloudtrail_logs</code> external table pointing to the S3 bucket via Athena SQL.</p>
+<p class="text-slate-700 leading-relaxed my-2">3. <strong class="text-slate-900">Analytics Query Execution</strong>: Executed a <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">SELECT</code> query against the CloudTrail logs successfully, validating the data pipeline from event generation -> S3 storage -> Athena analytics.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🎓 Recruiter Highlights</h2>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Skills Demonstrated</strong>: Infrastructure as Code (IaC), Cloud Security Posture Management (CSPM), Identity and Access Management (IAM), Data Analytics, Serverless Architectures, CI/CD Readiness.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Learning Outcomes</strong>: Deepened expertise in AWS security services integration, strict least-privilege IAM policy writing, and Terraform state/resource lifecycle management.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">🧹 Infrastructure Lifecycle & Cleanup Process</h2>
+<p class="text-slate-700 leading-relaxed my-2">To prevent unwanted AWS charges and adhere to the project's temporary lifecycle requirements, the infrastructure is completely destroyed after validation:</p>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">bash</div><pre><code>terraform destroy -auto-approve</code></pre></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">🔮 Future Enhancements</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Multi-Account Logging</strong>: Expand the architecture using AWS Organizations to aggregate logs from multiple accounts into a central security account.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">AWS KMS Encryption</strong>: Implement Customer Managed Keys (CMKs) for S3 and CloudTrail encryption.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Athena Partitioning</strong>: Introduce AWS Glue Crawlers or Lambda functions to automatically partition Athena tables by year, month, and day for performance optimization and cost reduction.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Alerting</strong>: Integrate Amazon SNS and CloudWatch Events for real-time alerting on critical security events (e.g., unauthorized access attempts, root account logins).</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📜 License</h2>
-<p class="text-slate-300 leading-relaxed my-2">This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">🎓 Recruiter Highlights</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Skills Demonstrated</strong>: Infrastructure as Code (IaC), Cloud Security Posture Management (CSPM), Identity and Access Management (IAM), Data Analytics, Serverless Architectures, CI/CD Readiness.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Learning Outcomes</strong>: Deepened expertise in AWS security services integration, strict least-privilege IAM policy writing, and Terraform state/resource lifecycle management.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">👨‍💻 Author</h2>
-<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Imon Mahmud</strong></p>
-<p class="text-slate-300 leading-relaxed my-2">*IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER*</p>
-<p class="text-slate-300 leading-relaxed my-2">[GitHub Profile](https://github.com/eng-imonmahmud)</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">📜 License</h2>
+<p class="text-slate-700 leading-relaxed my-2">This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">👨‍💻 Author</h2>
+<p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Imon Mahmud</strong></p>
+<p class="text-slate-700 leading-relaxed my-2">*IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER*</p>
+<p class="text-slate-700 leading-relaxed my-2">[GitHub Profile](https://github.com/eng-imonmahmud)</p>
 <div class="h-2"></div>
       </div>
     </section>
 
     <!-- Recruiter Compliance & Value Matrix -->
     <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-emeraldAccent text-xl">🛡️</div>
-        <h3 class="font-heading font-bold text-white text-base">Security & Compliance</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-emerald-600 text-xl">🛡️</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">Security & Compliance</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
       </div>
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-tealAccent text-xl">⚡</div>
-        <h3 class="font-heading font-bold text-white text-base">IaC & Automation</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-secondary text-xl">⚡</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">IaC & Automation</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
       </div>
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-amberAccent text-xl">📊</div>
-        <h3 class="font-heading font-bold text-white text-base">Observability & Health</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-amber-600 text-xl">📊</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">Observability & Health</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
       </div>
     </section>
 
     <!-- Navigation Footer CTA -->
-    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-slate-900 via-surface to-slate-900 border border-slate-800 p-8 rounded-2xl gap-4">
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-primary via-darkSlate to-primary border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
       <div>
         <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
-        <p class="text-xs text-slate-400">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
+        <p class="text-xs text-slate-300">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
       </div>
       <div class="flex space-x-3">
-        <a href="https://github.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform" target="_blank" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+        <a href="https://github.com/eng-imonmahmud/centralized-cloud-audit-governance-security-analytics-platform" target="_blank" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-mono text-xs rounded-xl border border-white/20 transition">
           View Repository ↗
         </a>
-        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emeraldAccent hover:bg-emerald-600 text-obsidian font-heading font-bold text-xs rounded-xl transition">
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-heading font-bold text-xs rounded-xl shadow transition">
           Contact Candidate
         </a>
       </div>
@@ -379,8 +377,8 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
-    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
+  <footer class="bg-darkSlate border-t border-slate-800 py-10 text-center text-xs text-slate-400 space-y-4">
+    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-white">Home</a> | <a href="disclaimer.html" class="hover:text-white">Disclaimer</a> | <a href="privacy.html" class="hover:text-white">Privacy Policy</a></p>
   </footer>
 </body>
 </html>

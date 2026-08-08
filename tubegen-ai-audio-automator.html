@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TubeGen AI Audio Automator - Documentation Hub | Imon Mahmud</title>
+  
+  <title>TubeGen AI Audio Automator | Imon Mahmud - Enterprise Cloud & DevOps Architecture</title>
+  <meta name="description" content="Technical documentation and architecture breakdown for TubeGen AI Audio Automator by Imon Mahmud. Python infrastructure tools to sanitize raw text structures and execute split-chunk speech conversion utilizing Edge-TTS pipelines. Features multi-thread retry handling and background audio mixing.">
+  <meta name="keywords" content="TubeGen AI Audio Automator, Imon Mahmud, Cloud Infrastructure, DevOps, Automation">
+  <meta name="author" content="Imon Mahmud">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -18,358 +22,66 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            primary: '#1e3a8a',
-            secondary: '#0284c7',
-            dark: '#0f172a',
+            primary: '#1E3A8A',
+            secondary: '#0284C7',
+            darkSlate: '#0F172A',
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-[#0B0F17] text-slate-300 text-slate-300 font-sans antialiased">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- NAVIGATION NAVBAR (Matches SEO Writer Structure Exactly) -->
-  <nav class="sticky top-0 z-50 bg-slate-900/90 text-slate-300 border-slate-800/90 backdrop-blur-md border-b border-slate-800 shadow-sm">
+  <!-- Sticky Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      
-      <div class="flex items-center space-x-2">
-        <a href="index.html" class="bg-primary text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-lg shadow-md shadow-primary/20">IM</a>
-        <span class="font-heading font-bold text-white text-xl tracking-tight hidden lg:block" data-en="Imon Mahmud | Innovation Hub" data-de="Imon Mahmud | Innovationszentrum">Imon Mahmud | Innovation Hub</span>
+      <div class="flex items-center space-x-3">
+        <a href="index.html" class="bg-primary text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block">Imon Mahmud | Systems & Architecture</a>
       </div>
       
-      <div class="flex items-center space-x-6">
-        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-300 font-heading font-bold text-xs rounded-lg transition">
-          🌐 <span id="lang-label">DE</span>
-        </button>
-
-        <a href="index.html#projects" class="text-sm font-sans font-medium text-slate-600 hover:text-primary transition" data-en="← Back to Portfolio" data-de="← Zurück zum Portfolio">← Back to Portfolio</a>
-        
-        <a href="mailto:imon.mahmud.official@hotmail.com?subject=TubeGen AI Audio Automator Licensing Inquiry" class="inline-flex items-center justify-center px-5 py-2.5 bg-primary hover:bg-dark text-white font-sans font-bold text-sm rounded-xl shadow-md shadow-primary/10 transition duration-300" data-en="Contact Developer" data-de="Entwickler kontaktieren">
-          Contact Developer
+      <div class="flex items-center space-x-4">
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-primary transition">← Back to Projects</a>
+        <a href="https://github.com/eng-imonmahmud/tubegen-ai-audio-automator" target="_blank" class="px-4 py-2 bg-primary hover:bg-darkSlate text-white font-mono text-xs rounded-xl shadow-sm transition">
+          GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- PREMIUM HERO SECTION WITH BULLET POINTS -->
-  <header class="bg-gradient-to-br from-[#111827] via-[#0B0F17] to-[#0B0F17] text-white py-16 lg:py-20 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center lg:text-left grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-      <div class="lg:col-span-7 space-y-4">
-        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-secondary/20 text-secondary border border-secondary/30 uppercase tracking-wider" data-en="⚡ Asynchronous Multi-Thread Audio Pipeline" data-de="⚡ Asynchrone Multi-Thread Audio-Pipeline">
-          ⚡ Asynchronous Multi-Thread Audio Pipeline
+  <!-- Hero Header -->
+  <header class="relative bg-gradient-to-br from-darkSlate via-slate-900 to-primary text-white py-16 lg:py-24 border-b border-slate-200 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-8 space-y-5">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-sky-500/20 text-sky-300 border border-sky-400/30">
+          <span>🤖</span> <span>AI Software Suite</span>
         </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight leading-tight" data-en="TubeGen AI Audio Automator Engine (v1.0)" data-de="TubeGen AI Audio Automator Engine (v1.0)">
-          TubeGen AI Audio Automator Engine (v1.0)
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
+          TubeGen AI Audio Automator
         </h1>
-        <p class="text-base sm:text-lg text-slate-300 max-w-3xl font-normal leading-relaxed" data-en="An enterprise-grade, asynchronous Python-driven speech synthesis framework. It parses localized content manifests, maps structural text chunks into neural voice channels using Edge-TTS via algorithmic text-splitting paradigms, manages connection limits dynamically, and compiles final continuous MP3 master layers with complete state resilience." data-de="Ein asynchrones Python-basiertes Sprachsynthese-Framework für Unternehmen. Es parst lokale Content-Manifeste, teilt Text strukturell mittels algorithmischer Text-Splitting-Paradigmen und wandelt ihn über Edge-TTS in neuronale Sprachkanäle um, während es finale MP3-Masterdateien fehlerresistent kompiliert.">
-          An enterprise-grade, asynchronous Python-driven speech synthesis framework. It parses localized content manifests, maps structural text chunks into neural voice channels using Edge-TTS via algorithmic text-splitting paradigms, manages connection limits dynamically, and compiles final continuous MP3 master layers with complete state resilience.
+        <p class="text-base sm:text-lg text-slate-200 leading-relaxed">
+          Python infrastructure tools to sanitize raw text structures and execute split-chunk speech conversion utilizing Edge-TTS pipelines. Features multi-thread retry handling and background audio mixing.
         </p>
-      </div>
-      
-      <div class="lg:col-span-5 bg-slate-900/90 text-slate-300 border-slate-800/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm space-y-4">
-        <h3 class="font-heading font-bold text-lg border-b border-white/10 pb-2" data-en="Key Capabilities & Value Matrix" data-de="Hauptmerkmale & Wertmatrix">Key Capabilities & Value Matrix</h3>
-        <ul class="text-xs space-y-2 text-slate-300 text-left list-none">
-          <li data-en="🚀 <strong>Smart Algorithmic Splitting:</strong> Tokenizes up to 8,400 chars based on syntax priority (., !, ?, \n) to eliminate cut-off speech." data-de="🚀 <strong>Intelligentes Text-Splitting:</strong> Tokenisiert bis zu 8.400 Zeichen basierend auf Syntaxpriorität (., !, ?, \n), um abgehackte Sprache zu verhindern.">🚀 <strong>Smart Algorithmic Splitting:</strong> Tokenizes up to 8,400 chars based on syntax priority (., !, ?, \n) to eliminate cut-off speech.</li>
-          <li data-en="🔄 <strong>Exponential Backoff Retry Logic:</strong> Robust 5-stage automated net re-handshakes preventing workflow breaking over drops." data-de="🔄 <strong>Exponentielle Backoff-Logik:</strong> Robuste, 5-stufige automatische Netzwerkwiederholung verhindert Verbindungsabbrüche.">🔄 <strong>Exponential Backoff Retry Logic:</strong> Robust 5-stage automated net re-handshakes preventing workflow breaking over drops.</li>
-          <li data-en="💽 <strong>Stateful Resume Integration:</strong> Skips pre-existing rendered segments to minimize cloud overhead during execution failures." data-de="💽 <strong>Stateful-Resume-Integration:</strong> Überspringt bereits existierende Segmente, um Cloud-Overhead bei Fehlern zu minimieren.">💽 <strong>Stateful-Resume-Integration:</strong> Skips pre-existing rendered segments to minimize cloud overhead during execution failures.</li>
-          <li data-en="🎛️ <strong>MoviePy Concat Compiler:</strong> Structural re-indexing and rendering of split audio arrays into a single audio output layer." data-de="🎛️ <strong>MoviePy Concat-Compiler:</strong> Strukturelle Neuindexierung und Zusammenführung von Audio-Arrays in eine einzige Ausgabedatei.">🎛️ <strong>MoviePy Concat Compiler:</strong> Structural re-indexing and rendering of split audio arrays into a single audio output layer.</li>
-        </ul>
-        <div class="pt-2">
-          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Commercial Acquisition Request: TubeGen AI Audio Automator" class="w-full inline-flex items-center justify-center px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-bold text-xs sm:text-sm rounded-xl shadow-lg transition duration-300" data-en="Instant B2B Purchase / Licensing Request" data-de="B2B-Kauf- / Lizenzierungsanfrage per E-Mail">
-            Instant B2B Purchase / Licensing Request
-          </a>
-        </div>
       </div>
     </div>
   </header>
 
-  <!-- MAIN DOCUMENTATION LAYOUT -->
-  <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
+  <!-- Content -->
+  <main class="max-w-7xl mx-auto px-6 py-12 space-y-12">
     
-    <!-- SIDEBAR INDEX LINKING -->
-    <aside class="lg:col-span-3 hidden lg:block">
-      <div class="sticky top-28 bg-slate-900/90 text-slate-300 border-slate-800 border border-slate-800 p-6 rounded-2xl shadow-sm space-y-4">
-        <h4 class="font-heading font-bold text-white uppercase tracking-wider text-xs" data-en="Documentation Index" data-de="Dokumentationsindex">Documentation Index</h4>
-        <nav class="flex flex-col space-y-2 text-sm font-medium text-slate-500">
-          <a href="#pipeline-architecture" class="hover:text-primary transition py-1 border-l-2 border-transparent hover:border-primary pl-2" data-en="1. System Architecture Diagram" data-de="1. Systemarchitektur-Diagramm">1. System Architecture Diagram</a>
-          <a href="#algorithmic-splitting" class="hover:text-primary transition py-1 border-l-2 border-transparent hover:border-primary pl-2" data-en="2. Smart Syntax Tokenizer" data-de="2. Intelligenter Syntax-Tokenizer">2. Smart Syntax Tokenizer</a>
-          <a href="#fault-tolerance" class="hover:text-primary transition py-1 border-l-2 border-transparent hover:border-primary pl-2" data-en="3. Network Resilience Flow" data-de="3. Netzwerk-Resilienz-Fluss">3. Network Resilience Flow</a>
-          <a href="#engineering-metrics" class="hover:text-primary transition py-1 border-l-2 border-transparent hover:border-primary pl-2" data-en="4. Code Metrics & Compliance" data-de="4. Code-Metriken & Compliance">4. Code Metrics & Compliance</a>
-          <a href="#commercial-pitch" class="hover:text-primary transition py-1 border-l-2 border-transparent hover:border-primary pl-2" data-en="5. Commercial Value Proposition" data-de="5. Kommerzieller Nutzwert">5. Commercial Value Proposition</a>
-        </nav>
-      </div>
-    </aside>
 
-    <!-- CONTENT SECTIONS -->
-    <section class="lg:col-span-9 space-y-16">
-
-      <!-- SECTION 1: ARCHITECTURE DIAGRAM -->
-      <article id="pipeline-architecture" class="space-y-6 scroll-mt-24">
-        <div class="border-b border-slate-200 pb-4">
-          <h2 class="text-2xl font-heading font-extrabold text-white" data-en="1. High-Level Asynchronous Pipeline Architecture" data-de="1. High-Level Asynchrone Pipeline-Architektur">1. High-Level Asynchronous Pipeline Architecture</h2>
-          <p class="text-sm text-slate-500" data-en="Decoupled structural design mapping filesystem execution boundaries into neural speech interfaces." data-de="Entkoppeltes strukturelles Design zur Abbildung von Dateisystemgrenzen auf neuronale Sprachschnittstellen.">Decoupled structural design mapping filesystem execution boundaries into neural speech interfaces.</p>
-        </div>
-        
-        <p class="leading-relaxed text-justify" data-en="The engine implements a decoupled asynchronous task dispatcher built entirely on Python's native <code>asyncio</code> paradigm. Unlike synchronous automation tasks that suffer bottleneck hangs when coordinating disk I/O with remote web server network events, this architecture completely abstracts procedural data reading from runtime execution. The pipeline systematically reads raw text sources from structured sub-folders, checks file properties for state verification, and targets specialized external APIs without blocking interface tasks." data-de="Die Engine implementiert einen entkoppelten asynchronen Task-Dispatcher, der vollständig auf Pythons nativem <code>asyncio</code>-Paradigma basiert. Im Gegensatz zu synchronen Automatisierungstasks, die bei der Koordinierung von Festplatten-I/O mit Remote-Server-Netzwerkereignissen blockieren, abstrahiert diese Architektur das Auslesen von Daten komplett von der Ausführung. Die Pipeline liest systematisch Rohtextquellen aus strukturierten Unterordnern und verarbeitet diese, ohne die Benutzeroberfläche zu blockieren.">
-          The engine implements a decoupled asynchronous task dispatcher built entirely on Python's native <code>asyncio</code> paradigm. Unlike synchronous automation tasks that suffer bottleneck hangs when coordinating disk I/O with remote web server network events, this architecture completely abstracts procedural data reading from runtime execution. The pipeline systematically reads raw text sources from structured sub-folders, checks file properties for state verification, and targets specialized external APIs without blocking interface tasks.
-        </p>
-
-        <!-- ASCII FLOW DIAGRAM -->
-        <div class="bg-dark text-emerald-400 p-6 rounded-xl font-mono text-xs overflow-x-auto shadow-inner border border-slate-800 leading-relaxed">
-+---------------------------------------------------------------------------------+
-|                       LOCAL MANIFEST LAYER (File Ingestion)                     |
-|    [title.txt Manifest]  -----> Reads Target Job Iteration Directories           |
-+---------------------------------------------------------------------------------+
-                                         |
-                                         v (Async Event Loop Initialization)
-+---------------------------------------------------------------------------------+
-|                    CORE TEXT PROCESSING ENGINE (Split & Clean)                  |
-|  - regex filename validation   - split_text_smart()   - Syntax Weight Mapping   |
-+---------------------------------------------------------------------------------+
-                                         |
-                                         v (Network Dispatcher Layer)
-+---------------------------------------------------------------------------------+
-|                 EDGE-TTS ASYNCHRONOUS INTERACTION INTERFACE                   |
-|   - 8,400 Max Token Guard   - Pitch/Rate Tuning   - Exponential Backoff Queue   |
-+---------------------------------------------------------------------------------+
-      |                                  |                                  |
-      v [Chunk 1 Render]                 v [Chunk 2 Render]                 v [Chunk N Render]
-+------------------+             +-------------------+            +-----------------+
-| temp_audio_1.mp3 |             | temp_audio_2.mp3  |            | temp_audio_n.mp3|
-+------------------+             +-------------------+            +-----------------+
-      |                                  |                                  |
-      +----------------------------------+----------------------------------+
-                                         |
-                                         v (Sequential Path Sorting)
-+---------------------------------------------------------------------------------+
-|                 PRODUCTION AUDIO COMPILER (MoviePy Concat Engine)               |
-|   - Regex Integer Sorting   - AudioFileClip Buffering   - Master MP3 Rendering  |
-+---------------------------------------------------------------------------------+
-                                         |
-                                         v (Automated Storage Lifecycle Cleanup)
-+---------------------------------------------------------------------------------+
-|                     FINAL RENDERED DIRECTORY (pyaudio Master Output)            |
-+---------------------------------------------------------------------------------+
-        </div>
-      </article>
-
-      <!-- SECTION 2: SMART SYNTAX TOKENIZER -->
-      <article id="algorithmic-splitting" class="space-y-6 scroll-mt-24">
-        <div class="border-b border-slate-200 pb-4">
-          <h2 class="text-2xl font-heading font-extrabold text-white" data-en="2. Algorithmic Pipeline: Smart Syntax Tokenizer" data-de="2. Algorithmische Pipeline: Intelligenter Syntax-Tokenizer">2. Algorithmic Pipeline: Smart Syntax Tokenizer</h2>
-          <p class="text-sm text-slate-500" data-en="Deep dive into the contextual sentence boundary segmentation method." data-de="Tiefgehendere Analyse der kontextuellen Satzgrenzen-Segmentierungsmethode.">Deep dive into the contextual sentence boundary segmentation method.</p>
-        </div>
-
-        <p class="leading-relaxed text-justify" data-en="Standard bulk speech synthesis programs usually split text blocks at static character boundaries, which often slices words right in half and ruins the final audio output. This automation engine fixes that issue by using a smart contextual text-splitting algorithm (<code>split_text_smart</code>) that tracks token sequences dynamically. It evaluates sentence structures in reverse from the maximum payload ceiling, searching for natural syntactic termination markers to guarantee a smooth and premium audio result." data-de="Standardmäßige Text-zu-Sprache-Programme trennen Textblöcke meist an statischen Zeichengrenzen, was Wörter mitten im Satz abschneidet. Diese Automatisierungs-Engine löst dieses Problem durch einen intelligenten, kontextuellen Text-Splitting-Algorithmus (<code>split_text_smart</code>), der Token-Sequenzen dynamisch verfolgt. Er wertet Satzstrukturen rückwärts aus, um natürliche Endungsmarker zu finden und ein flüssiges Audioergebnis zu garantieren.">
-          Standard bulk speech synthesis programs usually split text blocks at static character boundaries, which often slices words right in half and ruins the final audio output. This automation engine fixes that issue by using a smart contextual text-splitting algorithm (<code>split_text_smart</code>) that tracks token sequences dynamically. It evaluates sentence structures in reverse from the maximum payload ceiling, searching for natural syntactic termination markers to guarantee a smooth and premium audio result.
-        </p>
-
-        <div class="relative border-l-2 border-slate-200 pl-6 space-y-8 text-sm">
-          <div class="relative">
-            <span class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-white"></span>
-            <h4 class="font-heading font-bold text-white" data-en="Phase 1: Dynamic Bound Scanning" data-de="Phase 1: Dynamische Bereichs-Abtastung">Phase 1: Dynamic Bound Scanning</h4>
-            <p class="text-slate-600 mt-1 text-justify" data-en="The loop checks the remaining length of the incoming text segment. If the current payload length is safely within the maximum character limit (<code>MAX_CHARS_PER_TTS = 8400</code>), it writes the block directly into the processing queue without any extra transformations." data-de="Die Schleife prüft die verbleibende Länge des eingehenden Textsegments. Wenn die aktuelle Payload-Länge innerhalb des maximalen Zeichenlimits liegt (<code>MAX_CHARS_PER_TTS = 8400</code>), wird der Block ohne weitere Transformationen direkt in die Verarbeitungsschleife geschrieben.">The loop checks the remaining length of the incoming text segment. If the current payload length is safely within the maximum character limit (<code>MAX_CHARS_PER_TTS = 8400</code>), it writes the block directly into the processing queue without any extra transformations.</p>
-          </div>
-          <div class="relative">
-            <span class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-secondary border-4 border-white"></span>
-            <h4 class="font-heading font-bold text-white" data-en="Phase 2: Syntactic Reverse Traversal" data-de="Phase 2: Syntaktische Rückwärtstraversierung">Phase 2: Syntactic Reverse Traversal</h4>
-            <p class="text-slate-600 mt-1 text-justify" data-en="If the text block crosses the character ceiling, the module runs a reverse scan using priority arrays (<code>['.', '!', '?', '\n']</code>). This ensures the text breaks exactly at the end of a sentence, keeping the natural phrasing intact for the neural voice engine." data-de="Wenn der Block die Zeichenobergrenze überschreitet, führt das Modul eine Rückwärtssuche mittels Prioritäts-Arrays durch (<code>['.', '!', '?', '\n']</code>). Dies stellt sicher, dass der Text am Ende eines Satzes bricht, wodurch die natürliche Phrasierung für die neuronale Sprach-Engine erhalten bleibt.">If the text block crosses the character ceiling, the module runs a reverse scan using priority arrays (<code>['.', '!', '?', '\n']</code>). This ensures the text breaks exactly at the end of a sentence, keeping the natural phrasing intact for the neural voice engine.</p>
-          </div>
-          <div class="relative">
-            <span class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-amber-500 border-4 border-white"></span>
-            <h4 class="font-heading font-bold text-white" data-en="Phase 3: Fallback Anchor Calibration" data-de="Phase 3: Fallback-Anker-Kalibrierung">Phase 3: Fallback Anchor Calibration</h4>
-            <p class="text-slate-600 mt-1 text-justify" data-en="If no terminal punctuation is found near the edge, the algorithm safely drops back to check for commas or empty spaces. If those are missing too, it falls back to a hard character break at the limit boundary to guarantee continuous processing without hanging." data-de="Wenn keine Satzzeichen in Randnähe gefunden werden, prüft der Algorithmus sekundär Kommata oder Leerzeichen. Fehlen auch diese, wird an der harten Zeichengrenze getrennt, um ein kontinuierliches Verarbeiten ohne Hänger zu gewährleisten.">If no terminal punctuation is found near the edge, the algorithm safely drops back to check for commas or empty spaces. If those are missing too, it falls back to a hard character break at the limit boundary to guarantee continuous processing without hanging.</p>
-          </div>
-        </div>
-      </article>
-
-      <!-- SECTION 3: NETWORK RESILIENCE FLOW -->
-      <article id="fault-tolerance" class="space-y-6 scroll-mt-24">
-        <div class="border-b border-slate-200 pb-4">
-          <h2 class="text-2xl font-heading font-extrabold text-white" data-en="3. Production Integrity & Network Fault Tolerance" data-de="3. Produktionsintegrität & Netzwerk-Fehlertoleranz">3. Production Integrity & Network Fault Tolerance</h2>
-          <p class="text-sm text-slate-500" data-en="Algorithmic flow handling cloud request limitations and connection dropouts seamlessly." data-de="Algorithmischer Ablauf zur nahtlosen Bewältigung von Cloud-Anfragenlimits und Verbindungsabbrüchen.">Algorithmic flow handling cloud request limitations and connection dropouts seamlessly.</p>
-        </div>
-
-        <p class="leading-relaxed text-justify" data-en="When executing automation scripts at enterprise scale, remote microservices frequently run into API rate-limiting blocks or transient network drops. To protect data pipelines from crashing during these spikes, this framework includes a customized exponential backoff algorithm with an adaptive retry mechanism built directly into its execution core." data-de="Bei der Ausführung von Automatisierungsskripten auf Unternehmensebene stoßen entfernte Microservices häufig auf Ratenbegrenzungen oder vorübergehende Netzwerkverluste. Um Daten-Pipelines vor Abstürzen zu schützen, enthält dieses Framework einen anpassbaren exponentiellen Backoff-Algorithmus directly in core.">
-          When executing automation scripts at enterprise scale, remote microservices frequently run into API rate-limiting blocks or transient network drops. To protect data pipelines from crashing during these spikes, this framework includes a customized exponential backoff algorithm with an adaptive retry mechanism built directly into its execution core.
-        </p>
-
-        <!-- CODE HIGHLIGHT WITH DUAL LANGUAGE LABELS -->
-        <div class="space-y-2">
-          <div class="flex justify-between text-xs font-mono text-slate-400 px-2">
-            <span data-en="Target Module: text_to_speech Engine Execution Logic" data-de="Zielmodul: text_to_speech Engine-Ausführungslogik">Target Module: text_to_speech Engine Execution Logic</span>
-            <span>Python 3.11+ async</span>
-          </div>
-          <pre class="bg-slate-900 text-slate-100 p-5 rounded-xl font-mono text-xs overflow-x-auto shadow-lg leading-relaxed">
-while retries < MAX_RETRIES:
-    try:
-        communicate = edge_tts.Communicate(text, voice, rate=rate, pitch=pitch)
-        await communicate.save(output_filename)
-        return output_filename 
-    
-    except Exception as e:
-        if "Invalid pitch" in str(e):
-            return None # Immediate fail boundary on structural asset error
-
-        retries += 1
-        if retries >= MAX_RETRIES:
-            return None # Hard break when threshold exceeded
-        
-        await asyncio.sleep(backoff_time)
-        backoff_time *= 2 # Algorithmic Exponential Backoff Multiplier</pre>
-        </div>
-      </article>
-
-      <!-- SECTION 4: ENGINEERING METRICS -->
-      <article id="engineering-metrics" class="space-y-6 scroll-mt-24">
-        <div class="border-b border-slate-200 pb-4">
-          <h2 class="text-2xl font-heading font-extrabold text-white" data-en="4. Advanced Engineering Metrics & Code Compliance" data-de="4. Erweiterte Engineering-Metriken & Code-Compliance">4. Advanced Engineering Metrics & Code Compliance</h2>
-          <p class="text-sm text-slate-500" data-en="Structural assessment matrices mapping code performance to corporate standards in Europe and Australia." data-de="Strukturelle Bewertungsmatrizen zur Abbildung der Codeleistung auf Unternehmensstandards in Europa und Australien.">Structural assessment matrices mapping code performance to corporate standards in Europe and Australia.</p>
-        </div>
-
-        <p class="leading-relaxed text-justify text-xs sm:text-sm text-slate-600" data-en="This system skips standard basic scripting patterns, using structured, highly isolated code loops that are built specifically to handle production network stress and prevent failures." data-de="Dieses System vermeidet standardmäßige, einfache Skriptmuster und setzt auf strukturierte, isolierte Schleifen, die speziell für die Bewältigung von produktiven Netzwerkbelastungen ausgelegt sind.">
-          This system skips standard basic scripting patterns, using structured, highly isolated code loops that are built specifically to handle production network stress and prevent failures.
-        </p>
-
-        <!-- HTML COMPLIANCE TABLE -->
-        <div class="bg-slate-900/90 text-slate-300 border-slate-800 border border-slate-200 rounded-xl overflow-hidden shadow-sm">
-          <table class="w-full text-left border-collapse text-xs sm:text-sm">
-            <thead>
-              <tr class="bg-slate-50 text-slate-400 uppercase text-[11px] font-bold tracking-wider border-b border-slate-200">
-                <th class="p-4 w-1/3" data-en="ENGINEERING MECHANISM" data-de="ENTWICKLUNGSMECHANISMUS">ENGINEERING MECHANISM</th>
-                <th class="p-4 w-2/3" data-en="TECHNICAL ARCHITECTURE & RESILIENCE DETAILS" data-de="TECHNISCHE ARCHITEKTUR- & RESILIENZ-DETAILS">TECHNICAL ARCHITECTURE & RESILIENCE DETAILS</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100 text-slate-600 font-sans">
-              <tr>
-                <td class="p-4 font-bold text-white" data-en="Stateful Resume Isolation" data-de="Stateful-Resume-Isolierung">Stateful Resume Isolation</td>
-                <td class="p-4 text-justify" data-en="Uses <code>os.path.exists</code> conditional gates inside processing checkpoints. If an audio fragment is already present in storage, the system skips re-rendering, preventing double-billing on network APIs." data-de="Nutzt <code>os.path.exists</code>-Bedingungen an Kontrollpunkten. Ist ein Audiofragment bereits im Speicher vorhanden, überspringt das System das erneute Rendering, was doppelte API-Kosten verhindert.">Uses <code>os.path.exists</code> conditional gates inside processing checkpoints. If an audio fragment is already present in storage, the system skips re-rendering, preventing double-billing on network APIs.</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-bold text-white" data-en="Strict Sanitization Boundary" data-de="Strikte Bereinigungs-Grenze">Strict Sanitization Boundary</td>
-                <td class="p-4 text-justify" data-en="Applies <code>re.sub(r'[\\/*?:&quot;&lt;&gt;|]', &quot;&quot;)</code> constraints to clear invalid symbols from file strings, preventing low-level OS storage write crashes automatically." data-de="Wendet <code>re.sub(r'[\\/*?:&quot;&lt;&gt;|]', &quot;&quot;)</code>-Beschränkungen an, um ungültige Symbole aus Dateipfaden zu entfernen, wodurch Abstürze beim Schreiben im OS-Speicher automatisch verhindert werden.">Applies <code>re.sub(r'[\\/*?:&quot;&lt;&gt;|]', &quot;&quot;)</code> constraints to clear invalid symbols from file strings, preventing low-level OS storage write crashes automatically.</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-bold text-white" data-en="I/O Resource Management" data-de="I/O-Ressourcen-Management">I/O Resource Management</td>
-                <td class="p-4 text-justify" data-en="Enforces deep memory cleanup inside a structured <code>finally</code> block, running <code>clip.close()</code> sequentially to prevent memory leaks during heavy file assembly operations." data-de="Erzwingt eine tiefe Speicherbereinigung in einem strukturierten <code>finally</code>-Block und führt <code>clip.close()</code> nacheinander aus, um Speicherlecks bei großen Dateioperationen zu verhindern.">Enforces deep memory cleanup inside a structured <code>finally</code> block, running <code>clip.close()</code> sequentially to prevent memory leaks during heavy file assembly operations.</td>
-              </tr>
-              <tr>
-                <td class="p-4 font-bold text-white" data-en="Deterministic Sorting Logic" data-de="Deterministische Sortierlogik">Deterministic Sorting Logic</td>
-                <td class="p-4 text-justify" data-en="Uses custom key matching regular expressions (<code>temp_audio_file_(\d+)</code>) to sort files by integer value instead of standard alphanumeric sorting, preventing mixed-up tracks." data-de="Verwendet reguläre Ausdrücke (<code>temp_audio_file_(\d+)</code>), um Dateien nach ganzzahligen Werten statt standardmäßiger alphanumerischer Sortierung zu ordnen, wodurch vermischte Tracks verhindert werden.">Uses custom key matching regular expressions (<code>temp_audio_file_(\d+)</code>) to sort files by integer value instead of standard alphanumeric sorting, preventing mixed-up tracks.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </article>
-
-      <!-- SECTION 5: COMMERCIAL VALUE PITCH -->
-      <article id="commercial-pitch" class="space-y-6 scroll-mt-24">
-        <div class="border-b border-slate-200 pb-4">
-          <h2 class="text-2xl font-heading font-extrabold text-white" data-en="5. Commercial B2B Integration & ROI Architecture" data-de="5. Kommerzielle B2B-Integration & ROI-Architektur">5. Commercial B2B Integration & ROI Architecture</h2>
-          <p class="text-sm text-slate-500" data-en="How this engine scales asset creation workflows into clear financial returns for media agencies." data-de="Wie diese Engine die Erstellung von Inhalten skaliert und Medienagenturen klare finanzielle Erträge bringt.">How this engine scales asset creation workflows into clear financial returns for media agencies.</p>
-        </div>
-
-        <p class="leading-relaxed text-justify" data-en="For large digital media networks and content companies, producing human voiceovers across hundreds of long video scripts manually requires massive budgets and long turn-around timelines. This automation tool provides an enterprise-ready fix. By replacing high-cost voice services with automated neural voice channels, agencies can instantly scale production speeds and lower content creation overhead by over 90%." data-de="Für große digitale Mediennetzwerke und Content-Unternehmen erfordert die manuelle Erstellung von Sprechertexten für Hunderte von Videos massive Budgets. Dieses Automatisierungstool bietet eine unternehmensweite Lösung. Durch den Ersatz teurer Sprecher durch automatisierte neuronale Sprachkanäle können Agenturen die Produktion sofort skalieren und die Kosten um über 90% senken.">
-          For large digital media networks and content companies, producing human voiceovers across hundreds of long video scripts manually requires massive budgets and long turn-around timelines. This automation tool provides an enterprise-ready fix. By replacing high-cost voice services with automated neural voice channels, agencies can instantly scale production speeds and lower content creation overhead by over 90%.
-        </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div class="bg-slate-50 p-5 rounded-xl border border-slate-800 space-y-2">
-            <h5 class="font-heading font-bold text-white text-sm" data-en="B2B Enterprise Source Distribution" data-de="B2B-Unternehmens-Quellcodelizenz">B2B Enterprise Source Distribution</h5>
-            <p class="text-xs text-slate-500 leading-relaxed text-justify" data-en="Includes the full uncompiled Python code packages, structural data layout guides, and clean deployment instructions designed for quick team integration." data-de="Umfasst die vollständigen unkompilierten Python-Code-Pakete, strukturelle Daten-Layout-Leitfäden und saubere Bereitstellungsanweisungen für eine schnelle Teamintegration.">Includes the full uncompiled Python code packages, structural data layout guides, and clean deployment instructions designed for quick team integration.</p>
-          </div>
-          <div class="bg-slate-50 p-5 rounded-xl border border-slate-800 space-y-2">
-            <h5 class="font-heading font-bold text-white text-sm" data-en="Cloud Optimization Architecture" data-de="Cloud-Optimierungsarchitektur">Cloud Optimization Architecture</h5>
-            <p class="text-xs text-slate-500 leading-relaxed text-justify" data-en="The underlying script pipeline uses clear decoupled methods, making it simple to move into cloud environments like AWS Lambda or Docker containers for automated scaling." data-de="Die zugrundeliegende Skript-Pipeline verwendet klar entkoppelte Methoden, was den Transfer in Cloud-Umgebungen wie AWS Lambda oder Docker-Container zur automatisierten Skalierung vereinfacht.">The underlying script pipeline uses clear decoupled methods, making it simple to move into cloud environments like AWS Lambda or Docker containers for automated scaling.</p>
-          </div>
-        </div>
-      </article>
-
+    <section class="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm">
+      <h2 class="text-2xl font-heading font-bold text-darkSlate">Software Overview & Capabilities</h2>
+      <p class="text-slate-700 leading-relaxed text-sm">Python infrastructure tools to sanitize raw text structures and execute split-chunk speech conversion utilizing Edge-TTS pipelines. Features multi-thread retry handling and background audio mixing.</p>
     </section>
   </main>
 
-  <!-- FOOTER (Matches Portfolio Styling Exactly) -->
-  <footer class="bg-dark text-white pt-12 pb-6 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-xs gap-4 text-slate-400">
-      <div class="space-y-1 text-center md:text-left">
-        <p class="font-bold font-heading text-slate-200" data-en="System Architecture Designed by Imon Mahmud" data-de="Systemarchitektur entwickelt von Imon Mahmud">System Architecture Designed by Imon Mahmud</p>
-        <p data-en="Core Focus Areas: Distributed Cloud Automation Platforms & Secured Infrastructure Engineering Architecture." data-de="Kernfokusbereiche: Verteilte Cloud-Automatisierungsplattformen & Sichere Infrastruktur-Engineering-Architektur.">Core Focus Areas: Distributed Cloud Automation Platforms & Secured Infrastructure Engineering Architecture.</p>
-      </div>
-      <div class="text-center md:text-right font-medium">
-        <p data-en="© 2026 Imon Mahmud. All Engineering Designs & Core Source Assets Reserved." data-de="© 2026 Imon Mahmud. Alle Konstruktionsentwürfe & Core-Quell-Assets vorbehalten.">© 2026 Imon Mahmud. All Engineering Designs & Core Source Assets Reserved.</p>
-      </div>
-    </div>
+  <footer class="bg-darkSlate border-t border-slate-800 py-10 text-center text-xs text-slate-400">
+    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-white">Home</a></p>
   </footer>
-
-  <!-- GDPR / DSGVO COOKIE BANNER -->
-  <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-slate-900/90 text-slate-300 border-slate-800 border border-slate-200 shadow-2xl rounded-2xl p-5 z-50 transition-all duration-300 transform translate-y-0 flex flex-col space-y-4">
-    <div class="flex items-start space-x-3">
-      <span class="text-2xl">🍪</span>
-      <div class="space-y-1">
-        <h4 class="text-xs font-heading font-bold text-white" data-en="Cookie Consent Matrix (GDPR / DSGVO)" data-de="Cookie-Einwilligungs-Matrix (DSGVO)">Cookie Consent Matrix (GDPR / DSGVO)</h4>
-        <p class="text-[11px] text-slate-500 leading-relaxed text-justify" data-en="This website implements tracking cookies to collect recruitment metrics optimized for international hiring markets (Germany, Canada, Australia). You can configure controls below." data-de="Diese Website implementiert Cookies, um Rekrutierungskennzahlen zu erfassen, die für internationale Märkte (Deutschland, Kanada, Australien) optimiert sind.">
-          This website implements tracking cookies to collect recruitment metrics optimized for international hiring markets (Germany, Canada, Australia). You can configure controls below.
-        </p>
-      </div>
-    </div>
-    <div class="flex justify-end space-x-2 text-[11px] font-bold font-heading">
-      <button onclick="denyCookies()" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-300 rounded-lg transition" data-en="Dismiss / Deny" data-de="Ablehnen">Dismiss / Deny</button>
-      <button onclick="acceptCookies()" class="px-3.5 py-1.5 bg-primary hover:bg-dark text-white rounded-lg shadow-md shadow-primary/10 transition" data-en="Accept Cookies" data-de="Akzeptieren">Accept Cookies</button>
-    </div>
-  </div>
-
-  <!-- MULTI-LANGUAGE CONTROLLER JAVASCRIPT ENGINE -->
-  <script>
-    let currentLang = 'en';
-
-    const systemTranslationProperties = {
-      de: {
-        "doc_title": "TubeGen AI Audio Automator - Dokumentationszentrum | Imon Mahmud"
-      },
-      en: {
-        "doc_title": "TubeGen AI Audio Automator - Documentation Hub | Imon Mahmud"
-      }
-    };
-
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
-      
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        if (currentLang === 'en') {
-          el.innerHTML = el.getAttribute('data-en');
-        } else {
-          el.innerHTML = el.getAttribute('data-de');
-        }
-      });
-
-      if(currentLang === 'de') {
-         document.title = systemTranslationProperties.de.doc_title;
-      } else {
-         document.title = systemTranslationProperties.en.doc_title;
-      }
-    }
-
-    function acceptCookies() {
-      document.getElementById('cookie-banner').style.display = 'none';
-      localStorage.setItem('tubegen_automation_cookies', 'accepted');
-    }
-
-    function denyCookies() {
-      document.getElementById('cookie-banner').style.display = 'none';
-      localStorage.setItem('tubegen_automation_cookies', 'denied');
-    }
-
-    window.onload = function() {
-      if (localStorage.getItem('tubegen_automation_cookies')) {
-        document.getElementById('cookie-banner').style.display = 'none';
-      }
-    }
-  </script>
-
 </body>
 </html>

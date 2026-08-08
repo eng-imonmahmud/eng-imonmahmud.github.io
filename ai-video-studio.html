@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Video Studio (V21.0 Advanced) - Documentation | Imon Mahmud</title>
+  
+  <title>AI Video Studio (V21.0 Advanced) | Imon Mahmud - Enterprise Cloud & DevOps Architecture</title>
+  <meta name="description" content="Technical documentation and architecture breakdown for AI Video Studio (V21.0 Advanced) by Imon Mahmud. Automated video generation pipeline using Whisper AI for speech transcription, Gemini AI for footage matching, FFmpeg for NVENC hardware-accelerated video rendering, and background audio mixing.">
+  <meta name="keywords" content="AI Video Studio (V21.0 Advanced), Imon Mahmud, Cloud Infrastructure, DevOps, Automation">
+  <meta name="author" content="Imon Mahmud">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -18,472 +22,73 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            primary: '#1e3a8a',
-            secondary: '#0284c7',
-            dark: '#0f172a',
-            accent: '#f59e0b',
+            primary: '#1E3A8A',
+            secondary: '#0284C7',
+            darkSlate: '#0F172A',
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-[#0B0F17] text-slate-300 text-slate-300 font-sans antialiased">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-  <nav class="sticky top-0 z-50 bg-slate-900/90 text-slate-300 border-slate-800/90 backdrop-blur-md border-b border-slate-800 shadow-sm">
+  <!-- Sticky Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      
-      <div class="flex items-center space-x-2">
-        <a href="index.html" class="bg-primary text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-lg shadow-md shadow-primary/20">IM</a>
-        <span class="font-heading font-bold text-white text-xl tracking-tight hidden lg:block" data-en="Imon Mahmud | Innovation Hub" data-de="Imon Mahmud | Innovationszentrum">Imon Mahmud | Innovation Hub</span>
+      <div class="flex items-center space-x-3">
+        <a href="index.html" class="bg-primary text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block">Imon Mahmud | Systems & Architecture</a>
       </div>
       
-      <div class="flex items-center space-x-6">
-        
-        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-300 font-heading font-bold text-xs rounded-lg transition">
-          🌐 <span id="lang-label">DE</span>
-        </button>
-
-        <a href="index.html#projects" class="text-sm font-sans font-medium text-slate-600 hover:text-primary transition" data-en="← Back to Portfolio" data-de="← Zurück zum Portfolio">← Back to Portfolio</a>
-        
-        <a href="mailto:imon.mahmud.official@hotmail.com?subject=AI Video Studio Licensing Inquiry" class="inline-flex items-center justify-center px-5 py-2.5 bg-primary hover:bg-dark text-white font-sans font-bold text-sm rounded-xl shadow-md shadow-primary/10 transition duration-300" data-en="Contact Developer" data-de="Entwickler kontaktieren">
-          Contact Developer
+      <div class="flex items-center space-x-4">
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-primary transition">← Back to Projects</a>
+        <a href="https://github.com/eng-imonmahmud/ai-video-studio" target="_blank" class="px-4 py-2 bg-primary hover:bg-darkSlate text-white font-mono text-xs rounded-xl shadow-sm transition">
+          GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <header class="relative overflow-hidden bg-gradient-to-b from-slate-900 to-dark text-white py-16 lg:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-transparent to-transparent"></div>
-    <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-      
-      <div class="lg:col-span-7 space-y-6 text-left">
-        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/10 text-blue-400 border border-blue-500/20 uppercase tracking-wider" data-en="Enterprise Software Blueprint" data-de="Unternehmenssoftware-Blaupause">
-          Enterprise Software Blueprint
-        </span>
-        <h1 class="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none">
-          AI Video Studio <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-sky-300">(V21.0 Advanced)</span>
+  <!-- Hero Header -->
+  <header class="relative bg-gradient-to-br from-darkSlate via-slate-900 to-primary text-white py-16 lg:py-24 border-b border-slate-200 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-8 space-y-5">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-sky-500/20 text-sky-300 border border-sky-400/30">
+          <span>🤖</span> <span>AI Software Suite</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
+          AI Video Studio (V21.0 Advanced)
         </h1>
-        <p class="text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl" data-en="An advanced cross-platform, multi-threaded Desktop OS Application engineered for programmatic video synthesis, edge-based AI subtitle synchronization, dynamic audio crossfading, and production-grade rendering workloads." data-de="Eine fortschrittliche, plattformübergreifende und multithreaded Desktop-Anwendung für programmatische Videosynthese, Edge-basierte KI-Untertitel-Synchronisation, dynamisches Audio-Crossfading und professionelles Rendering.">
-          An advanced cross-platform, multi-threaded Desktop OS Application engineered for programmatic video synthesis, edge-based AI subtitle synchronization, dynamic audio crossfading, and production-grade rendering workloads.
+        <p class="text-base sm:text-lg text-slate-200 leading-relaxed">
+          Automated video generation pipeline using Whisper AI for speech transcription, Gemini AI for footage matching, FFmpeg for NVENC hardware-accelerated video rendering, and background audio mixing.
         </p>
-        
-        <div class="space-y-3 pt-2">
-          <div class="flex flex-wrap items-center gap-2">
-            <span class="text-xs text-slate-400 font-heading font-semibold uppercase tracking-wider mr-2" data-en="Supported OS:" data-de="Unterstützte OS:">Supported OS:</span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-800 text-xs text-slate-200 font-medium rounded-lg border border-slate-700 shadow-sm">
-              🪟 Windows 10 / 11
-            </span>
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-800 text-xs text-slate-200 font-medium rounded-lg border border-slate-700 shadow-sm">
-              🐧 Linux (Ubuntu / Debian / Arch)
-            </span>
-          </div>
-          <div class="flex flex-wrap gap-3">
-            <span class="bg-slate-800/80 px-3 py-1.5 rounded-md text-xs font-mono text-blue-300 border border-slate-700"><strong>Tech Stack:</strong> Python 3.11, CustomTkinter, FFmpeg, OpenAI Whisper, Google GenAI</span>
-            <span class="bg-slate-800/80 px-3 py-1.5 rounded-md text-xs font-mono text-emerald-300 border border-slate-700"><strong>Status:</strong> Production Ready &amp; License Available</span>
-          </div>
-        </div>
       </div>
-
-      <div class="lg:col-span-5 bg-slate-900/90 text-slate-300 border-slate-800/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm space-y-4">
-        <h3 class="font-heading font-bold text-lg border-b border-white/10 pb-2 text-sky-400" data-en="Core Software Capabilities" data-de="Kernfunktionen der Software">Core Software Capabilities</h3>
-        <ul class="text-xs space-y-3 text-slate-300 text-left leading-relaxed">
-          <li data-en="🔹 <strong>Create Bulk Faceless Video:</strong> Generate professional faceless videos from Audio — with subtitles, and 4K export. Fully automated." data-de="🔹 <strong>Automatisierte Massenvideoproduktion:</strong> Generieren Sie professionelle gesichtslose Videos aus Audio — mit Untertiteln und 4K-Export. Vollautomatisch.">🔹 <strong>Create Bulk Faceless Video:</strong> Generate professional faceless videos from Audio — with subtitles, and 4K export. Fully automated.</li>
-          <li data-en="🔹 <strong>True Cross-Platform Blueprint:</strong> Native architectural adjustments compiled to deploy seamlessly on both <strong>Windows & Linux OS</strong> environments." data-de="🔹 <strong>Echte native Plattformunabhängigkeit:</strong> Strukturelle Anpassungen sorgen für nahtlose Ausführung unter <strong>Windows & Linux OS</strong>.">🔹 <strong>True Cross-Platform Blueprint:</strong> Native architectural adjustments compiled to deploy seamlessly on both <strong>Windows & Linux OS</strong> environments.</li>
-          <li data-en="🔹 <strong>Hardware Accelerated Matrix:</strong> Automated low-overhead rendering engine exploiting NVIDIA NVENC, AMD AMF, and Intel QSV profiles natively." data-de="🔹 <strong>Hardwarebeschleunigte Matrix:</strong> Automatische Auslastung von NVIDIA NVENC, AMD AMF und Intel QSV Grafikprozessoren beim Rendern.">🔹 <strong>Hardware Accelerated Matrix:</strong> Automated low-overhead rendering engine exploiting NVIDIA NVENC, AMD AMF, and Intel QSV profiles natively.</li>
-          <li data-en="🔹 <strong>Zero UI Deadlocks:</strong> Clean decoupled concurrency paradigm dividing computational rendering arrays from front-end layout pipelines." data-de="🔹 <strong>Keine UI-Blockaden:</strong> Asynchrones Threading-Paradigma trennt schwere Rendering-Prozesse komplett von der Benutzeroberfläche.">🔹 <strong>Zero UI Deadlocks:</strong> Clean decoupled concurrency paradigm dividing computational rendering arrays from front-end layout pipelines.</li>
-        </ul>
-        <div class="pt-2">
-          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Commercial License Purchase Request: AI Video Studio V21.0" class="w-full inline-flex items-center justify-center px-4 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-bold text-xs sm:text-sm rounded-xl shadow-lg transition duration-300" data-en="Instant Purchase Request via Email" data-de="Sofortige Kaufanfrage per E-Mail">
-            Instant Purchase Request via Email
-          </a>
-        </div>
-      </div>
-
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-6 py-16">
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
-      
-      <aside class="lg:col-span-1 sticky top-28 h-fit hidden lg:block">
-        <h3 class="font-heading font-bold text-xs uppercase tracking-wider text-slate-400 mb-4" data-en="Documentation Sections" data-de="Abschnitte">Documentation Sections</h3>
-        <ul class="space-y-3 font-medium text-sm text-slate-600">
-          <li><a href="#overview" class="block hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition" data-en="1. Executive Overview" data-de="1. Übersicht">1. Executive Overview</a></li>
-          <li><a href="#pipeline" class="block hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition" data-en="2. Architecture & Pipeline" data-de="2. Architektur & Pipeline">2. Architecture & Pipeline</a></li>
-          <li><a href="#technical-depth" class="block hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition" data-en="3. Technical Deep Dive" data-de="3. Technische Details">3. Technical Deep Dive</a></li>
-          <li><a href="#system-requirements" class="block hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition" data-en="4. Hardware Configuration" data-de="4. Systemanforderungen">4. Systemanforderungen</a></li>
-          <li><a href="#features" class="block hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition" data-en="5. Advanced Core Features" data-de="5. Hauptfunktionen">5. Advanced Core Features</a></li>
-          <li><a href="#interface" class="block hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition" data-en="6. Interface Showcase" data-de="6. Benutzeroberfläche">6. Interface Showcase</a></li>
-          <li><a href="#video-results" class="block hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition" data-en="7. Render Results Gallery" data-de="7. Videoergebnisse">7. Videoergebnisse</a></li>
-          <li><a href="#business-value" class="block hover:text-primary border-l-2 border-transparent hover:border-primary pl-3 transition" data-en="8. Commercial & ROI" data-de="8. Kommerzieller Wert">8. Commercial & ROI</a></li>
-        </ul>
-      </aside>
-
-      <div class="lg:col-span-3 space-y-20">
+  <!-- Content -->
+  <main class="max-w-7xl mx-auto px-6 py-12 space-y-12">
+    
+        <section class="space-y-6">
+          <h2 class="text-xl font-heading font-bold text-darkSlate">Application User Interface</h2>
+          <div class="bg-white border border-slate-200 p-3 rounded-2xl shadow-sm">
+            <img src="assets/images/projects/ai-video-studio/aivideostudio1.jpg" alt="AI Video Studio (V21.0 Advanced)" class="w-full h-auto rounded-xl">
+          </div>
+        </section>
         
-        <section id="overview" class="scroll-mt-28">
-          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-white mb-4 border-b border-slate-200 pb-2" data-en="1. Executive Overview" data-de="1. Strukturierte Übersicht">1. Executive Overview</h2>
-          <p class="text-slate-600 leading-relaxed text-justify mb-4" data-en="AI Video Studio (V21.0 Advanced) is an automated B2B system designed to eliminate manual video editing operations. Built using decoupled object-oriented Python architectures, it converts continuous multitrack audio arrays and localized transcription files into ready-to-publish video assets. The script features high tolerance parameters for network failures and local device constraints, running safely under load across enterprise server environments or standalone administrative workstations." data-de="AI Video Studio (V21.0 Advanced) ist ein automatisiertes B2B-System, das manuelle Videobearbeitungsprozesse eliminiert. Entwickelt mit entkoppelten, objektorientierten Python-Architekturen, konvertiert es rohe Audiospuren und transkribierten Text in veröffentlichungsbereite Video-Assets. Das Framework ist extrem ausfallsicher konzipiert.">
-            AI Video Studio (V21.0 Advanced) is an automated B2B system designed to eliminate manual video editing operations. Built using decoupled object-oriented Python architectures, it converts continuous multitrack audio arrays and localized transcription files into ready-to-publish video assets. The script features high tolerance parameters for network failures and local device constraints, running safely under load across enterprise server environments or standalone administrative workstations.
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-5 rounded-xl shadow-sm border border-slate-200">
-              <h4 class="font-heading font-bold text-slate-800 mb-2 flex items-center gap-2">
-                <span class="p-1.5 bg-blue-100 rounded text-primary">&check;</span> For Technical Recruiters
-              </h4>
-              <p class="text-xs text-slate-600 leading-relaxed text-justify" data-en="Demonstrates production-grade competency in asynchronous thread orchestration, granular exception tracking pipelines, OS subprocess isolation layers, and dynamic GPU driver monitoring compliant with strict global security and performance benchmarks." data-de="Zeigt tiefgehende Kompetenzen in asynchroner Thread-Orchestrierung, präziser Ausnahmebehandlung, OS-Subprozess-Isolierung und dynamischer GPU-Treiberüberwachung gemäß globalen Leistungsstandards.">
-                Demonstrates production-grade competency in asynchronous thread orchestration, granular exception tracking pipelines, OS subprocess isolation layers, and dynamic GPU driver monitoring compliant with strict global security and performance benchmarks.
-              </p>
-            </div>
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-5 rounded-xl shadow-sm border border-slate-200">
-              <h4 class="font-heading font-bold text-slate-800 mb-2 flex items-center gap-2">
-                <span class="p-1.5 bg-amber-100 rounded text-accent">&starf;</span> For Business Investors / Buyers
-              </h4>
-              <p class="text-xs text-slate-600 leading-relaxed text-justify" data-en="A turn-key commercial asset that drops production cost frameworks by executing continuous automated asset compilation locally on existing company hardware pools, bypassing expensive recurring cloud computing bills completely." data-de="Ein schlüsselfertiges kommerzielles Asset, das Produktionskosten senkt, indem es die automatisierte Asset-Kompilierung lokal auf vorhandener Hardware ausführt und teure Cloud-Server-Kosten überflüssig macht.">
-                A turn-key commercial asset that drops production cost frameworks by executing continuous automated asset compilation locally on existing company hardware pools, bypassing expensive recurring cloud computing bills completely.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        <section id="pipeline" class="scroll-mt-28">
-          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-white mb-4 border-b border-slate-200 pb-2" data-en="2. System Architecture &amp; Data Pipeline" data-de="2. Systemarchitektur &amp; Daten-Pipeline">2. System Architecture &amp; Data Pipeline</h2>
-          <p class="text-slate-600 leading-relaxed text-justify mb-6" data-en="The processing infrastructure manages transitional pipelines asynchronously. Graphical layout states transfer instructions into thread-safe worker pools without slowing window render times, guaranteeing fluid control environments during complex video composition tasks." data-de="Die Verarbeitungs-Infrastruktur verwaltet Daten-Pipelines komplett asynchron. Die grafische UI übergibt Befehle direkt an threadsichere Worker-Pools, was eine flüssige Bedienung auch während rechenintensiver Videosynthesen garantiert.">
-            The processing infrastructure manages transitional pipelines asynchronously. Graphical layout states transfer instructions into thread-safe worker pools without slowing window render times, guaranteeing fluid control environments during complex video composition tasks.
-          </p>
-          
-          <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-6 rounded-xl border border-slate-200 shadow-sm overflow-x-auto mb-6">
-            <div class="min-w-[600px] flex flex-col items-center font-mono text-xs">
-              <div class="flex items-center space-x-4">
-                <div class="bg-dark text-white px-4 py-2 rounded-md shadow-sm border border-slate-700 text-center w-36">
-                  <strong>User Interface</strong><br>CustomTkinter Async GUI
-                </div>
-                <div class="text-slate-400">&rarr;</div>
-                <div class="bg-blue-600 text-white px-4 py-2 rounded-md shadow-sm text-center w-40">
-                  <strong>Threading Supervisor</strong><br>ThreadPoolExecutor Managed
-                </div>
-                <div class="text-slate-400">&rarr;</div>
-                <div class="bg-indigo-600 text-white px-4 py-2 rounded-md shadow-sm text-center w-36">
-                  <strong>AI Compute Layer</strong><br>Local Whisper / Cloud LLM
-                </div>
-              </div>
-              
-              <div class="w-[480px] h-6 border-l-2 border-r-2 border-slate-300 border-dashed my-1"></div>
-
-              <div class="flex items-center space-x-4">
-                <div class="bg-emerald-600 text-white px-4 py-2 rounded-md shadow-sm text-center w-36">
-                  <strong>Output Generation</strong><br>Video Master Artifact
-                </div>
-                <div class="text-slate-400">&larr;</div>
-                <div class="bg-amber-600 text-white px-4 py-2 rounded-md shadow-sm text-center w-40">
-                  <strong>Hardware Rendering</strong><br>FFmpeg H.264 NVENC/AMF
-                </div>
-                <div class="text-slate-400">&larr;</div>
-                <div class="bg-cyan-600 text-white px-4 py-2 rounded-md shadow-sm text-center w-36">
-                  <strong>Asset Alignment</strong><br>Audio, SRT, Watermarks
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="text-xs text-slate-500 italic text-center" data-en="Figure 1: Full-duplex asynchronous compilation and hardware-accelerated encoding execution flow." data-de="Abbildung 1: Asynchroner Kompilierungs- und hardwarebeschleunigter Rendering-Ablauf.">Figure 1: Full-duplex asynchronous compilation and hardware-accelerated encoding execution flow.</p>
-        </section>
-
-        <section id="technical-depth" class="scroll-mt-28">
-          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-white mb-4 border-b border-slate-200 pb-2" data-en="3. Technical Capabilities &amp; Cross-OS Logic" data-de="3. Cross-OS Logik & Algorithmische Fähigkeiten">3. Technical Capabilities &amp; Cross-OS Logic</h2>
-          <p class="text-slate-600 leading-relaxed text-justify mb-4" data-en="The source architecture implements structural operating system adaptors to achieve absolute multi-platform stability. Rather than tracking rigid folder targets, the environment utilizes runtime verification functions to coordinate local system binary links fluidly on both Linux distributions and Windows workstations." data-de="Die Quellarchitektur implementiert strukturelle Betriebssystem-Anpassungen, um absolute Stabilität auf verschiedenen Plattformen zu gewährleisten. Statt fester Pfade nutzt die Engine dynamische Laufzeitprüfungen für Linux- und Windows-Umgebungen.">
-            The source architecture implements structural operating system adaptors to achieve absolute multi-platform stability. Rather than tracking rigid folder targets, the environment utilizes runtime verification functions to coordinate local system binary links fluidly on both Linux distributions and Windows workstations.
-          </p>
-          <div class="space-y-4">
-            
-            <div class="bg-slate-900 rounded-xl p-5 text-slate-200 font-mono text-xs">
-              <h4 class="text-emerald-400 font-bold mb-2">// Subprocess Window Sandboxing (Windows Environment Fix)</h4>
-              <pre class="bg-slate-950 p-3 rounded border border-slate-800 overflow-x-auto text-blue-300">
-if os.name == 'nt':
-    _original_popen = subprocess.Popen
-    class NoWindowPopen(_original_popen):
-        def __init__(self, *args, **kwargs):
-            if 'creationflags' not in kwargs:
-                kwargs['creationflags'] = 0x08000000 # CREATE_NO_WINDOW
-            super().__init__(*args, **kwargs)
-    subprocess.Popen = NoWindowPopen</pre>
-            </div>
-            
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-5 rounded-xl border border-slate-200 shadow-sm space-y-4">
-              <h3 class="font-heading font-bold text-base text-white" data-en="Granular Subsystem Implementations" data-de="Granulare Subsystem-Implementierungen">Granular Subsystem Implementations</h3>
-              
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600">
-                <div class="bg-slate-50 p-3 rounded border border-slate-800 text-justify">
-                  <strong class="text-white block mb-1" data-en="Cross-OS Path Compliance">Cross-OS Path Compliance</strong>
-                  Levers native POSIX permission adjustments (<code>os.chmod</code>) on Linux environments to safely enable local execution flags, while running clean directory mapping queries across Windows configurations via <code>os.path</code> libraries seamlessly.
-                </div>
-                <div class="bg-slate-50 p-3 rounded border border-slate-800 text-justify">
-                  <strong class="text-white block mb-1" data-en="Smart Network Fault Defenses">Smart Network Fault Defenses</strong>
-                  Utilizes structured <code>HTTPAdapter</code> retry pooling via <code>urllib3</code> to gracefully isolate transient network timeouts, automated asset token drops, and stock provider API status exceptions automatically.
-                </div>
-                <div class="bg-slate-50 p-3 rounded border border-slate-800 text-justify">
-                  <strong class="text-white block mb-1" data-en="Hardware Encoder Auto-Discovery">Hardware Encoder Auto-Discovery</strong>
-                  Queries systems hardware arrays at runtime to map encoding instructions directly into available GPU chips (NVIDIA <code>h264_nvenc</code>, AMD <code>h264_amf</code>, Intel <code>h264_qsv</code>), falling back smoothly to CPU limits if VRAM pools are absent.
-                </div>
-                <div class="bg-slate-50 p-3 rounded border border-slate-800 text-justify">
-                  <strong class="text-white block mb-1" data-en="Volatile Data Storage Isolation">Volatile Data Storage Isolation</strong>
-                  Isolates active chunk assemblies inside explicit session folders, running comprehensive recursive deletion sequences via <code>shutil.rmtree</code> on completion to prevent target machine storage leakage.
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <section id="system-requirements" class="scroll-mt-28">
-          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-white mb-4 border-b border-slate-200 pb-2" data-en="4. Hardware Configuration &amp; Runtime Requirements" data-de="4. Systemanforderungen">4. Hardware Configuration &amp; Runtime Requirements</h2>
-          <p class="text-slate-600 leading-relaxed text-justify mb-6" data-en="To ensure rapid local video encoding operations and real-time OpenAI Whisper model initialization stability, the executing system architecture should meet or exceed the following technical layout parameters:" data-de="Um schnelle lokale Videocodierung und stabile KI-Modellinitialisierung zu gewährleisten, sollte das ausführende Computersystem die folgenden Konfigurationsparameter erfüllen:">
-            To ensure rapid local video encoding operations and real-time OpenAI Whisper model initialization stability, the executing system architecture should meet or exceed the following technical layout parameters:
-          </p>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
-              <h4 class="font-heading font-bold text-slate-800 border-b pb-1.5 flex items-center gap-2" data-en="Minimum Specifications" data-de="Mindestanforderungen">
-                <span class="w-2 h-2 rounded-full bg-amber-500"></span> Minimum Specifications
-              </h4>
-              <ul class="space-y-2 text-slate-600 font-sans">
-                <li><strong>Processor:</strong> Intel Core i3 (4th Gen) Map Framework</li>
-                <li><strong>Memory Array:</strong> 8 GB System RAM DDR3 Boundary</li>
-                <li><strong>Graphics Pool:</strong> Intel UHD Graphics / Baseline AMD Radeon Card</li>
-                <li><strong>Render Fallback Strategy:</strong> If a dedicated hardware GPU acceleration layer is absent, the pipeline engine automatically routes processing blocks into highly optimized <span class="text-blue-600 font-semibold">CPU Rendering (libx264)</span> core environments to avoid software deadlocks.</li>
-                <li><strong>Storage Space:</strong> 5 GB Allocated SSD Capacity</li>
-              </ul>
-            </div>
-            
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
-              <h4 class="font-heading font-bold text-slate-800 border-b pb-1.5 flex items-center gap-2" data-en="Recommended Specifications (4K &amp; Batch Production)" data-de="Empfohlene Konfiguration (4K)">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Recommended Specifications (4K &amp; Batch Production)
-              </h4>
-              <ul class="space-y-2 text-slate-600 font-sans">
-                <li><strong>Processor:</strong> Intel Core i7 / AMD Ryzen 7 Multi-Thread Chipset</li>
-                <li><strong>Memory Array:</strong> 16 GB / 32 GB RAM DDR5 Pool</li>
-                <li><strong>Graphics Pool:</strong> NVIDIA RTX 3060 / AMD RX 6600 (Dedicated VRAM)</li>
-                <li><strong>Hardware Profile:</strong> NVIDIA <code>h264_nvenc</code> Hardware Accelerator Pipeline</li>
-                <li><strong>Storage Space:</strong> NVMe M.2 High-Speed SSD Deployment</li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section id="features" class="scroll-mt-28">
-          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-white mb-4 border-b border-slate-200 pb-2" data-en="5. Advanced Core Technical Features" data-de="5. Erweitere Hauptfunktionen">5. Advanced Core Technical Features</h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="flex gap-4">
-              <div class="h-8 w-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold flex-shrink-0 text-sm">01</div>
-              <div>
-                <h4 class="font-heading font-bold text-slate-800 text-base mb-1" data-en="Programmatic Bulk Faceless Video Synthesis">Programmatic Bulk Faceless Video Synthesis</h4>
-                <p class="text-xs text-slate-600 leading-relaxed text-justify" data-en="Converts multitrack raw audio paths into high-retention video files completely automatically. The framework handles text segmentation, keyword mapping, stock selection, and layout burning under single execution runs."></p>
-                Converts multitrack raw audio paths into high-retention video files completely automatically. The framework handles text segmentation, keyword mapping, stock selection, and layout burning under single execution runs.
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="h-8 w-8 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold flex-shrink-0 text-sm">02</div>
-              <div>
-                <h4 class="font-heading font-bold text-slate-800 text-base mb-1" data-en="Sub-Second Alignment &amp; Subtitle Fusion">Sub-Second Alignment &amp; Subtitle Fusion</h4>
-                <p class="text-xs text-slate-600 leading-relaxed text-justify" data-en="Leverages localized machine learning libraries to structure timeline databases. It embeds customized SRT strings with exact timing coordinates directly into targeting frame regions using complex FFmpeg text parameters."></p>
-                Leverages localized machine learning libraries to structure timeline databases. It embeds customized SRT strings with exact timing coordinates directly into targeting frame regions using complex FFmpeg text parameters.
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="h-8 w-8 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold flex-shrink-0 text-sm">03</div>
-              <div>
-                <h4 class="font-heading font-bold text-slate-800 text-base mb-1" data-en="Acoustic Crossfading &amp; Normalization">Acoustic Crossfading &amp; Normalization</h4>
-                <p class="text-xs text-slate-600 leading-relaxed text-justify" data-en="Orchestrates sound track assets smoothly by running complex filter mix rules. The system scales background tracking volumes to match priority voiceover layers perfectly, producing balanced broadcast outputs."></p>
-                Orchestrates sound track assets smoothly by running complex filter mix rules. The system scales background tracking volumes to match priority voiceover layers perfectly, producing balanced broadcast outputs.
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="h-8 w-8 rounded-lg bg-cyan-100 text-cyan-600 flex items-center justify-center font-bold flex-shrink-0 text-sm">04</div>
-              <div>
-                <h4 class="font-heading font-bold text-slate-800 text-base mb-1" data-en="Dynamic Ken Burns Motion Matrix">Dynamic Ken Burns Motion Matrix</h4>
-                <p class="text-xs text-slate-600 leading-relaxed text-justify" data-en="Calculates runtime zoom vectors programmatically across static image inputs, injecting subtle organic camera pans to transform standard media files into interactive, fluid content pieces natively."></p>
-                Calculates runtime zoom vectors programmatically across static image inputs, injecting subtle organic camera pans to transform standard media files into interactive, fluid content pieces natively.
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="interface" class="scroll-mt-28">
-          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-white mb-4 border-b border-slate-200 pb-2" data-en="6. Software Interface &amp; UX Gallery" data-de="6. Benutzeroberfläche &amp; UX-Galerie">6. Software Interface &amp; UX Gallery</h2>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-4 rounded-xl border border-slate-200 shadow-sm group flex flex-col justify-between">
-              <div>
-                <div class="overflow-hidden rounded-lg bg-slate-100 aspect-video mb-3 relative">
-                  <img src="assets/images/projects/ai-video-studio/aivideostudio1.jpg" alt="Multimedia Asset Hub Interface" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
-                </div>
-                <h4 class="font-heading font-bold text-sm text-slate-900 px-1 mb-1" data-en="Module 01: Multimedia Asset Ingestion">Module 01: Multimedia Asset Ingestion</h4>
-              </div>
-              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-800 text-xs text-slate-600 text-justify mt-2">
-                <span class="font-semibold text-white block mb-0.5" data-en="Short Summary:">Short Summary:</span>
-                <span data-en="This module acts as the safe high-capacity input gateway. It manages independent multitrack directories for target voiceover streams, background sound variables, transparent brand logos, and disclaimers safely without running into graphical interface bottlenecks.">This module acts as the safe high-capacity input gateway. It manages independent multitrack directories for target voiceover streams, background sound variables, transparent brand logos, and disclaimers safely without running into graphical interface bottlenecks.</span>
-              </div>
-            </div>
-
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-4 rounded-xl border border-slate-200 shadow-sm group flex flex-col justify-between">
-              <div>
-                <div class="overflow-hidden rounded-lg bg-slate-100 aspect-video mb-3 relative">
-                  <img src="assets/images/projects/ai-video-studio/aivideostudio2.jpg" alt="Model Provider Setup Management" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
-                </div>
-                <h4 class="font-heading font-bold text-sm text-slate-800 px-1 mb-1" data-en="Module 02: Infrastructure &amp; Providers Management">Module 02: Infrastructure &amp; Providers Management</h4>
-              </div>
-              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-800 text-xs text-slate-600 text-justify mt-2">
-                <span class="font-semibold text-white block mb-0.5" data-en="Short Summary:">Short Summary:</span>
-                <span data-en="The infrastructure configuration control hub. It securely maps API authorizations and endpoint coordinates for local LLM (Ollama) engines alongside commercial cloud providers (Gemini, Vertex AI, OpenAI, OpenRouter), handling hardware profile mappings fluidly.">The infrastructure configuration control hub. It securely maps API authorizations and endpoint coordinates for local LLM (Ollama) engines alongside commercial cloud providers (Gemini, Vertex AI, OpenAI, OpenRouter), handling hardware profile mappings fluidly.</span>
-              </div>
-            </div>
-
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-4 rounded-xl border border-slate-200 shadow-sm group flex flex-col justify-between">
-              <div>
-                <div class="overflow-hidden rounded-lg bg-slate-100 aspect-video mb-3 relative">
-                  <img src="assets/images/projects/ai-video-studio/aivideostudio3.jpg" alt="Filtergraph Adjustments Control" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
-                </div>
-                <h4 class="font-heading font-bold text-sm text-slate-800 px-1 mb-1" data-en="Module 03: Video/Audio FX Filters Setup">Module 03: Video/Audio FX Filters Setup</h4>
-              </div>
-              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-800 text-xs text-slate-600 text-justify mt-2">
-                <span class="font-semibold text-white block mb-0.5" data-en="Short Summary:">Short Summary:</span>
-                <span data-en="Granular processing filtergraph adjustment layout. It dictates background sound volume ratios via analog slider objects, alongside structural runtime flags for text translation routing, Ken Burns cinematic zooms, anti-aliased subtitles styles, and alignment boundaries.">Granular processing filtergraph adjustment layout. It dictates background sound volume ratios via analog slider objects, alongside structural runtime flags for text translation routing, Ken Burns cinematic zooms, anti-aliased subtitles styles, and alignment boundaries.</span>
-              </div>
-            </div>
-
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-4 rounded-xl border border-slate-200 shadow-sm group flex flex-col justify-between">
-              <div>
-                <div class="overflow-hidden rounded-lg bg-slate-100 aspect-video mb-3 relative">
-                  <img src="assets/images/projects/ai-video-studio/aivideostudio4.jpg" alt="Production Processing Terminal Dashboard" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
-                </div>
-                <h4 class="font-heading font-bold text-sm text-slate-800 px-1 mb-1" data-en="Module 04: Render Production Console">Module 04: Render Production Console</h4>
-              </div>
-              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-800 text-xs text-slate-600 text-justify mt-2">
-                <span class="font-semibold text-white block mb-0.5" data-en="Short Summary:">Short Summary:</span>
-                <span data-en="The active deployment dashboard monitor. It tunnels unedited low-level backend system logs into a thread-safe terminal layout stream, incorporating immediate safe interruption parameters to stop threads and wipe cache instances securely.">The active deployment dashboard monitor. It tunnels unedited low-level backend system logs into a thread-safe terminal layout stream, incorporating immediate safe interruption parameters to stop threads and wipe cache instances securely.</span>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <section id="video-results" class="scroll-mt-28">
-          <div class="border-b border-slate-200 pb-4 mb-6">
-            <h2 class="text-2xl font-heading font-extrabold text-white" data-en="7. Automated Video Production Outputs Showcase" data-de="7. Galerie der Videoergebnisse">7. Automated Video Production Outputs Showcase</h2>
-            <p class="text-sm text-slate-500" data-en="Direct visual evidence of multi-layered faceless cinematic formats rendered fully autonomously by the V21.0 engine architecture." data-de="Direkter visueller Beweis für mehrschichtige Videos, die vollautomatisch von der V21.0-Engine gerendert wurden.">Direct visual evidence of multi-layered faceless cinematic formats rendered fully autonomously by the V21.0 engine architecture.</p>
-          </div>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-3 rounded-xl border border-slate-200 shadow-sm">
-              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/HvrKc-W91k4?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1" data-en="Asset Sample 01: Academic Discourse Production Style" data-de="Beispiel 01: Akademischer Produktionsstil">Asset Sample 01: Academic Discourse Production Style</p>
-            </div>
-            
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-3 rounded-xl border border-slate-200 shadow-sm">
-              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/g1QGFvrsDVA?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1" data-en="Asset Sample 02: Cinematic Crossfaded Content" data-de="Beispiel 02: Kinematografischer Inhalt">Asset Sample 02: Cinematic Crossfaded Content</p>
-            </div>
-            
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-3 rounded-xl border border-slate-200 shadow-sm">
-              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/NHK8-r6-xPc?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1" data-en="Asset Sample 03: Automated High-Retention Subtitles Overlay" data-de="Beispiel 03: Automatisierte Untertitel">Asset Sample 03: Automated High-Retention Subtitles Overlay</p>
-            </div>
-            
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-3 rounded-xl border border-slate-200 shadow-sm">
-              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/SAUpMQt_bcg?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1" data-en="Asset Sample 04: Bulk Programmatic Faceless Synthesis" data-de="Beispiel 04: Programmatische Synthese">Asset Sample 04: Bulk Programmatic Faceless Synthesis</p>
-            </div>
-
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-3 rounded-xl border border-slate-200 shadow-sm">
-              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/xH0eYu6OLkw?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1" data-en="Asset Sample 05: Complex Multi-layer Audio Normalization" data-de="Beispiel 05: Audio-Normalisierung">Asset Sample 05: Complex Multi-layer Audio Normalization</p>
-            </div>
-
-            <div class="bg-slate-900/90 text-slate-300 border-slate-800 p-3 rounded-xl border border-slate-200 shadow-sm">
-              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
-                <iframe class="w-full h-full" src="https://www.youtube.com/embed/C3fLPo5eqRY?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-              </div>
-              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1" data-en="Asset Sample 06: 4K High-Fidelity Export Matrix" data-de="Beispiel 06: 4K-High-Fidelity-Export">Asset Sample 06: 4K High-Fidelity Export Matrix</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="business-value" class="scroll-mt-28 bg-gradient-to-br from-slate-50 to-blue-50/50 p-8 rounded-2xl border border-blue-100">
-          <h2 class="font-heading font-bold text-2xl text-white mb-3" data-en="8. Commercial Integration &amp; Strategic Viability" data-de="8. Kommerzielle Integration &amp; Strategischer Wert">8. Commercial Integration &amp; Strategic Viability</h2>
-          <p class="text-sm text-slate-600 leading-relaxed text-justify mb-6" data-en="AI Video Studio (V21.0 Advanced) provides enterprise teams with a reliable framework to scale short-form video operations efficiently. By shifting heavy workloads from expensive cloud render systems directly onto local hardware assets, the application helps businesses scale production output while optimizing operating cost metrics safely." data-de="AI Video Studio (V21.0 Advanced) bietet Unternehmen eine skalierbare Lösung für die automatisierte Videoproduktion. Durch die lokale Verarbeitung auf bestehender Hardware werden kostspielige Cloud-Infrastrukturen überflüssig.">
-            AI Video Studio (V21.0 Advanced) provides enterprise teams with a reliable framework to scale short-form video operations efficiently. By shifting heavy workloads from expensive cloud render systems directly onto local hardware assets, the application helps businesses scale production output while optimizing operating cost metrics safely.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="mailto:imon.mahmud.official@hotmail.com?subject=Acquire Commercial Source License: AI Video Studio" class="inline-flex items-center justify-center px-5 py-3 text-sm font-bold font-heading bg-primary hover:bg-dark text-white rounded-xl transition shadow-md shadow-blue-950/10" data-en="Acquire Commercial Source License" data-de="Kommerzielle Lizenz erwerben">
-              Acquire Commercial Source License
-            </a>
-            <a href="https://www.linkedin.com/in/imonmahmud/" target="_blank" class="inline-flex items-center justify-center px-5 py-3 text-sm font-bold font-heading bg-slate-900/90 text-slate-300 border-slate-800 border border-slate-300 hover:border-slate-400 text-slate-300 rounded-xl transition" data-en="Interview Developer (Imon Mahmud)" data-de="Entwickler interviewen (Imon Mahmud)">
-              Interview Developer (Imon Mahmud)
-            </a>
-          </div>
-        </section>
-
-      </div>
-    </div>
+    <section class="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm">
+      <h2 class="text-2xl font-heading font-bold text-darkSlate">Software Overview & Capabilities</h2>
+      <p class="text-slate-700 leading-relaxed text-sm">Automated video generation pipeline using Whisper AI for speech transcription, Gemini AI for footage matching, FFmpeg for NVENC hardware-accelerated video rendering, and background audio mixing.</p>
+    </section>
   </main>
 
-  <footer class="bg-dark text-white pt-12 pb-6 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-xs gap-4 text-slate-400">
-      <div class="space-y-1 text-center md:text-left">
-        <p class="font-bold font-heading text-slate-200" data-en="System Architecture Designed by Imon Mahmud" data-de="Systemarchitektur entwickelt von Imon Mahmud">System Architecture Designed by Imon Mahmud</p>
-        <p data-en="Core Focus Areas: Distributed Cloud Automation Platforms & Secured Infrastructure Engineering Architecture." data-de="Kernfokusbereiche: Verteilte Cloud-Automatisierungsplattformen & Sichere Infrastruktur-Engineering-Architektur.">Core Focus Areas: Distributed Cloud Automation Platforms & Secured Infrastructure Engineering Architecture.</p>
-      </div>
-      <div class="text-center md:text-right font-medium">
-        <p data-en="© 2026 Imon Mahmud. All Engineering Designs & Core Source Assets Reserved." data-de="© 2026 Imon Mahmud. Alle Konstruktionsentwürfe & Core-Quell-Assets vorbehalten.">© 2026 Imon Mahmud. All Engineering Designs & Core Source Assets Reserved.</p>
-      </div>
-    </div>
+  <footer class="bg-darkSlate border-t border-slate-800 py-10 text-center text-xs text-slate-400">
+    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-white">Home</a></p>
   </footer>
-
-  <script>
-    let currentLang = 'en';
-
-    const systemTranslationProperties = {
-      de: {
-        "doc_title": "AI Video Studio (V21.0 Advanced) - Dokumentationszentrum | Imon Mahmud"
-      },
-      en: {
-        "doc_title": "AI Video Studio (V21.0 Advanced) - Documentation Hub | Imon Mahmud"
-      }
-    };
-
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
-      
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        if (currentLang === 'en') {
-          el.innerHTML = el.getAttribute('data-en');
-        } else {
-          el.innerHTML = el.getAttribute('data-de');
-        }
-      });
-
-      if(currentLang === 'de') {
-         document.title = systemTranslationProperties.de.doc_title;
-      } else {
-         document.title = systemTranslationProperties.en.doc_title;
-      }
-    }
-  </script>
-
 </body>
 </html>

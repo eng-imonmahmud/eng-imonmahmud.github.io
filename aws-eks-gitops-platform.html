@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -25,80 +25,78 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            obsidian: '#0B0F17',
-            midnight: '#111827',
-            surface: '#1A2333',
-            emeraldAccent: '#10B981',
-            tealAccent: '#06B6D4',
-            amberAccent: '#F59E0B',
+            primary: '#1E3A8A',
+            secondary: '#0284C7',
+            accentGold: '#D97706',
+            darkSlate: '#0F172A',
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-[#0B0F17] text-slate-300 font-sans antialiased selection:bg-emeraldAccent selection:text-obsidian">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- Sticky Navbar -->
-  <nav class="sticky top-0 z-50 bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/40">
+  <!-- Sticky Executive Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="bg-primary text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-primary/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-primary transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
-          <span>🌐</span> <span id="lang-label">DE</span>
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono text-xs rounded-xl border border-slate-200 transition">
+          <span>🌐</span> <span id="lang-label">EN</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-primary transition">← Back to Projects</a>
         
-        <a href="https://github.com/eng-imonmahmud/aws-eks-gitops-platform" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+        <a href="https://github.com/eng-imonmahmud/aws-eks-gitops-platform" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-darkSlate text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Banner -->
-  <header class="relative bg-gradient-to-b from-[#111827] via-[#0B0F17] to-[#0B0F17] py-16 lg:py-24 border-b border-slate-800 overflow-hidden">
+  <!-- Hero Header -->
+  <header class="relative bg-gradient-to-br from-darkSlate via-slate-900 to-primary text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
       <div class="lg:col-span-8 space-y-5">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emeraldAccent/10 text-emeraldAccent border border-emeraldAccent/20">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-sky-500/20 text-sky-300 border border-sky-400/30">
           <span>🚀</span>
           <span>Kubernetes & GitOps</span>
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
           Aws Eks Gitops Platform
         </h1>
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
           Production-grade AWS EKS GitOps platform built with Terraform, Kubernetes, ArgoCD, Helm, and GitHub Actions. This project demonstrates Infrastructure as Code (IaC), automated application delivery, GitOps workflows, monitoring, and cloud-native DevOps best practices for scalable and secure Kubernetes environments.
         </p>
         <div class="flex flex-wrap gap-2 pt-2">
-          <span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">AWS</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">EKS</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">ArgoCD</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Terraform</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Helm</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">GitHub Actions</span>
+          <span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">AWS</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">EKS</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">ArgoCD</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Terraform</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Helm</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">GitHub Actions</span>
         </div>
         <div class="flex flex-wrap items-center gap-4 pt-4">
-          <a href="https://github.com/eng-imonmahmud/aws-eks-gitops-platform" target="_blank" class="px-6 py-3 bg-gradient-to-r from-emeraldAccent to-tealAccent hover:opacity-90 text-obsidian font-heading font-bold text-sm rounded-xl shadow-lg shadow-emeraldAccent/20 transition flex items-center">
+          <a href="https://github.com/eng-imonmahmud/aws-eks-gitops-platform" target="_blank" class="px-6 py-3 bg-secondary hover:bg-blue-600 text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
           </a>
-          <a href="index.html#projects" class="px-6 py-3 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-heading font-semibold text-sm rounded-xl border border-slate-700 transition">
+          <a href="index.html#projects" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-heading font-semibold text-sm rounded-xl border border-white/20 transition">
             ← Back to Portfolio Overview
           </a>
         </div>
       </div>
       
-      <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
-        <ul class="text-xs font-mono space-y-2.5 text-slate-300">
-          <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">aws-eks-gitops-platform</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">HCL</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Security Control:</span> <span class="text-emeraldAccent">Zero-Trust & IAM</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
+      <div class="lg:col-span-4 bg-white/10 border border-white/20 p-6 rounded-2xl space-y-4 shadow-xl backdrop-blur-md">
+        <h3 class="font-heading font-bold text-white text-base border-b border-white/20 pb-3">Enterprise Architecture Specs</h3>
+        <ul class="text-xs font-mono space-y-2.5 text-slate-200">
+          <li class="flex justify-between"><span class="text-slate-300">Repository:</span> <span class="text-sky-300 font-semibold">aws-eks-gitops-platform</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Primary Language:</span> <span class="text-white">HCL</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Security Control:</span> <span class="text-emerald-400">Zero-Trust & IAM</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
         </ul>
         <div class="pt-2">
-          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Aws Eks Gitops Platform" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-heading font-bold text-xs rounded-xl border border-slate-700 transition">
+          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Aws Eks Gitops Platform" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-white text-darkSlate font-heading font-bold text-xs rounded-xl shadow transition hover:bg-slate-100">
             ✉ Contact Candidate Regarding This Project
           </a>
         </div>
@@ -111,69 +109,69 @@
     
     
         <section class="space-y-6">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <h2 class="text-xl font-heading font-bold text-darkSlate tracking-tight">
               Live Production Console & Screenshots
             </h2>
-            <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">15 Screenshots Verified</span>
+            <span class="text-xs font-mono text-primary bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">15 Screenshots Verified</span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #1</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/aws-eks-gitops-platform/main/screenshots/VPC%20Your%20VPCs%20vpc-0915aa22eddb00f8d.png" alt="Aws Eks Gitops Platform Screenshot 1" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #2</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/aws-eks-gitops-platform/main/screenshots/Amazon%20Elastic%20Kubernetes%20Service%20Clusters.png" alt="Aws Eks Gitops Platform Screenshot 2" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #3</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/aws-eks-gitops-platform/main/screenshots/Amazon%20Elastic%20Kubernetes%20Service%20Clusters%20enterprise-platform-prod-eks%20Compute%20Tab.png" alt="Aws Eks Gitops Platform Screenshot 3" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #4</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/aws-eks-gitops-platform/main/screenshots/Amazon%20Elastic%20Kubernetes%20Service%20Clusters%20enterprise-platform-prod-eks%20Node%20Group.png" alt="Aws Eks Gitops Platform Screenshot 4" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #5</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/aws-eks-gitops-platform/main/screenshots/EC2Instancesi-02280ef898bd63445.png" alt="Aws Eks Gitops Platform Screenshot 5" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #6</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/aws-eks-gitops-platform/main/screenshots/EC2Instancesi-0a74e55ebb16ebca0.png" alt="Aws Eks Gitops Platform Screenshot 6" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
@@ -184,16 +182,16 @@
         
 
     <!-- Architecture & Technical Specifications Section -->
-    <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
-      <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+    <section class="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-heading font-bold text-darkSlate tracking-tight">
           System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
+        <p class="text-xs text-slate-500 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
-      <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">Automated GitOps Kubernetes (EKS) Platform with Prometheus & Grafana</h1>
+      <div class="prose max-w-none text-slate-700 text-sm leading-relaxed space-y-4">
+        <h1 class="text-2xl font-heading font-bold text-slate-900 mt-6 mb-3">Automated GitOps Kubernetes (EKS) Platform with Prometheus & Grafana</h1>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
@@ -204,19 +202,19 @@
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Executive Summary</h2>
-<p class="text-slate-300 leading-relaxed my-2">This project demonstrates an enterprise-grade, highly available Cloud Native platform. It completely automates the provisioning of AWS infrastructure using Terraform and manages Kubernetes workloads dynamically via ArgoCD using the declarative "App of Apps" GitOps pattern. The platform comes pre-instrumented with a fully persistent Prometheus and Grafana observability stack.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Executive Summary</h2>
+<p class="text-slate-700 leading-relaxed my-2">This project demonstrates an enterprise-grade, highly available Cloud Native platform. It completely automates the provisioning of AWS infrastructure using Terraform and manages Kubernetes workloads dynamically via ArgoCD using the declarative "App of Apps" GitOps pattern. The platform comes pre-instrumented with a fully persistent Prometheus and Grafana observability stack.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Business Problem</h2>
-<p class="text-slate-300 leading-relaxed my-2">Modern software organizations struggle with "configuration drift" and environment inconsistency. Manual infrastructure updates and imperative Kubernetes deployments (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">kubectl apply</code>) lead to fragile environments that are difficult to replicate, audit, and scale, severely impacting Site Reliability and increasing Mean Time to Recovery (MTTR).</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Business Problem</h2>
+<p class="text-slate-700 leading-relaxed my-2">Modern software organizations struggle with "configuration drift" and environment inconsistency. Manual infrastructure updates and imperative Kubernetes deployments (<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">kubectl apply</code>) lead to fragile environments that are difficult to replicate, audit, and scale, severely impacting Site Reliability and increasing Mean Time to Recovery (MTTR).</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Solution Overview</h2>
-<p class="text-slate-300 leading-relaxed my-2">This platform solves environment drift by adopting <strong class="text-white">GitOps</strong> as a core philosophy. Git serves as the single source of truth for both infrastructure (Terraform) and application configuration (ArgoCD). Any change to the cluster must be initiated via a Git commit. If unauthorized changes occur in the live cluster, ArgoCD automatically reconciles and reverts the drift to match the repository state.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Solution Overview</h2>
+<p class="text-slate-700 leading-relaxed my-2">This platform solves environment drift by adopting <strong class="text-slate-900">GitOps</strong> as a core philosophy. Git serves as the single source of truth for both infrastructure (Terraform) and application configuration (ArgoCD). Any change to the cluster must be initiated via a Git commit. If unauthorized changes occur in the live cluster, ArgoCD automatically reconciles and reverts the drift to match the repository state.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Architecture Overview</h2>
-<p class="text-slate-300 leading-relaxed my-2">The platform architecture utilizes a strict separation of concerns between underlying infrastructure and application workloads:</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Architecture Overview</h2>
+<p class="text-slate-700 leading-relaxed my-2">The platform architecture utilizes a strict separation of concerns between underlying infrastructure and application workloads:</p>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>graph TD
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">mermaid</div><pre><code>graph TD
   Dev[Developer] --&gt; Git[GitHub Repository]
   Git --&gt; Argo[ArgoCD]
   
@@ -240,16 +238,16 @@
     EKS --&gt; EBS_CSI
   end</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Technology Stack</h2>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Provider:</strong> Amazon Web Services (AWS)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">IaC Engine:</strong> Terraform</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Orchestration:</strong> Kubernetes (EKS v1.35)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Continuous Delivery:</strong> ArgoCD</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Observability:</strong> Prometheus, Grafana, Kubernetes Metrics Server</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Storage:</strong> Amazon Elastic Block Store (EBS) CSI Driver</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Technology Stack</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Provider:</strong> Amazon Web Services (AWS)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">IaC Engine:</strong> Terraform</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Orchestration:</strong> Kubernetes (EKS v1.35)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Continuous Delivery:</strong> ArgoCD</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Observability:</strong> Prometheus, Grafana, Kubernetes Metrics Server</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Storage:</strong> Amazon Elastic Block Store (EBS) CSI Driver</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Repository Structure</h2>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>.
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Repository Structure</h2>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>.
 ├── terraform/                # Infrastructure as Code
 │   ├── modules/              # Reusable modules (VPC, EKS, Security Groups)
 │   └── environments/prod/    # Production environment composition
@@ -261,155 +259,155 @@
 ├── scripts/                  # Automation utilities
 └── docs/                     # Supplemental documentation</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Infrastructure Components</h2>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Networking:</strong> Secure AWS VPC spanning multiple Availability Zones with isolated Private Subnets for worker nodes.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Compute:</strong> Managed EKS Node Group utilizing cost-efficient <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">c7i-flex.large</code> instances.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">IAM/OIDC:</strong> Strict IAM Roles mapped to Kubernetes Service Accounts using OIDC integration.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Infrastructure Components</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Networking:</strong> Secure AWS VPC spanning multiple Availability Zones with isolated Private Subnets for worker nodes.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Compute:</strong> Managed EKS Node Group utilizing cost-efficient <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">c7i-flex.large</code> instances.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">IAM/OIDC:</strong> Strict IAM Roles mapped to Kubernetes Service Accounts using OIDC integration.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">GitOps Workflow</h2>
-<p class="text-slate-300 leading-relaxed my-2">The deployment utilizes ArgoCD's <strong class="text-white">App-of-Apps</strong> pattern.</p>
-<p class="text-slate-300 leading-relaxed my-2">1. The <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">enterprise-platform-root</code> application is manually bootstrapped into the cluster.</p>
-<p class="text-slate-300 leading-relaxed my-2">2. The root application automatically points back to this GitHub repository and discovers child applications (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">enterprise-nginx</code>, <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">enterprise-prometheus</code>, <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">enterprise-grafana</code>).</p>
-<p class="text-slate-300 leading-relaxed my-2">3. Child applications are automatically synchronized and deployed to their respective namespaces.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">GitOps Workflow</h2>
+<p class="text-slate-700 leading-relaxed my-2">The deployment utilizes ArgoCD's <strong class="text-slate-900">App-of-Apps</strong> pattern.</p>
+<p class="text-slate-700 leading-relaxed my-2">1. The <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">enterprise-platform-root</code> application is manually bootstrapped into the cluster.</p>
+<p class="text-slate-700 leading-relaxed my-2">2. The root application automatically points back to this GitHub repository and discovers child applications (<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">enterprise-nginx</code>, <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">enterprise-prometheus</code>, <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">enterprise-grafana</code>).</p>
+<p class="text-slate-700 leading-relaxed my-2">3. Child applications are automatically synchronized and deployed to their respective namespaces.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Security Features</h2>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Private Compute:</strong> EKS nodes are placed in private subnets with no direct public ingress; all outbound traffic routes through a NAT Gateway.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">No Hardcoded Secrets:</strong> The codebase is thoroughly audited. Secrets are injected at runtime or managed via external tools (no <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">.tfvars</code> or credentials committed).</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Self-Healing:</strong> ArgoCD automatically reverts unauthorized, out-of-band changes to Kubernetes resources.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Security Features</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Private Compute:</strong> EKS nodes are placed in private subnets with no direct public ingress; all outbound traffic routes through a NAT Gateway.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">No Hardcoded Secrets:</strong> The codebase is thoroughly audited. Secrets are injected at runtime or managed via external tools (no <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.tfvars</code> or credentials committed).</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Self-Healing:</strong> ArgoCD automatically reverts unauthorized, out-of-band changes to Kubernetes resources.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Monitoring & Observability</h2>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Metrics Server:</strong> Installed to enable cluster autoscaling (HPA) by providing resource utilization data.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Prometheus:</strong> Continuously scrapes and aggregates node, pod, and service metrics.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Grafana:</strong> Visualizes infrastructure health with pre-built cluster monitoring dashboards.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Monitoring & Observability</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Metrics Server:</strong> Installed to enable cluster autoscaling (HPA) by providing resource utilization data.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Prometheus:</strong> Continuously scrapes and aggregates node, pod, and service metrics.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Grafana:</strong> Visualizes infrastructure health with pre-built cluster monitoring dashboards.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Storage Architecture</h2>
-<p class="text-slate-300 leading-relaxed my-2">The platform implements stateful resilience using the <strong class="text-white">EBS CSI Driver</strong>. Both Prometheus and Grafana dynamically provision and bind to AWS <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">gp3</code> EBS volumes (via PersistentVolumeClaims). If a monitoring pod crashes or is rescheduled to another node, the EBS volume is automatically detached and re-attached, preventing data loss.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Storage Architecture</h2>
+<p class="text-slate-700 leading-relaxed my-2">The platform implements stateful resilience using the <strong class="text-slate-900">EBS CSI Driver</strong>. Both Prometheus and Grafana dynamically provision and bind to AWS <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">gp3</code> EBS volumes (via PersistentVolumeClaims). If a monitoring pod crashes or is rescheduled to another node, the EBS volume is automatically detached and re-attached, preventing data loss.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Deployment Process</h2>
-<p class="text-slate-300 leading-relaxed my-2">1. Initialize and apply Terraform from <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform/environments/prod</code>.</p>
-<p class="text-slate-300 leading-relaxed my-2">2. Update local <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">.kube/config</code>.</p>
-<p class="text-slate-300 leading-relaxed my-2">3. Bootstrap the cluster with ArgoCD (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">kubectl apply -n argocd -f ...</code>).</p>
-<p class="text-slate-300 leading-relaxed my-2">4. Apply the Root Application manifest to initiate the GitOps cascade.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Deployment Process</h2>
+<p class="text-slate-700 leading-relaxed my-2">1. Initialize and apply Terraform from <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">terraform/environments/prod</code>.</p>
+<p class="text-slate-700 leading-relaxed my-2">2. Update local <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.kube/config</code>.</p>
+<p class="text-slate-700 leading-relaxed my-2">3. Bootstrap the cluster with ArgoCD (<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">kubectl apply -n argocd -f ...</code>).</p>
+<p class="text-slate-700 leading-relaxed my-2">4. Apply the Root Application manifest to initiate the GitOps cascade.</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">AI-Assisted Development</h2>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Design & Review:</strong> Terraform, Kubernetes, ArgoCD, and AWS architecture decisions were designed, reviewed, validated, and thoroughly understood by the project owner.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Productivity Tools:</strong> AI assistants (OpenAI Codex and Google Gemini) were utilized as engineering productivity tools for troubleshooting, validation, documentation generation, deployment verification, and repository refinement.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Responsibility:</strong> All final architectural decisions, testing, deployment approval, and operational responsibilities remained entirely with the project owner.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">AI-Assisted Development</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Design & Review:</strong> Terraform, Kubernetes, ArgoCD, and AWS architecture decisions were designed, reviewed, validated, and thoroughly understood by the project owner.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Productivity Tools:</strong> AI assistants (OpenAI Codex and Google Gemini) were utilized as engineering productivity tools for troubleshooting, validation, documentation generation, deployment verification, and repository refinement.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Responsibility:</strong> All final architectural decisions, testing, deployment approval, and operational responsibilities remained entirely with the project owner.</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Screenshot Portfolio</h2>
-<p class="text-slate-300 leading-relaxed my-2">The following visual evidence confirms the successful live deployment of the platform on AWS:</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Screenshot Portfolio</h2>
+<p class="text-slate-700 leading-relaxed my-2">The following visual evidence confirms the successful live deployment of the platform on AWS:</p>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Infrastructure Validation</h3>
-<div class="h-2"></div>
-<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Infrastructure Validation</h3>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">GitOps Validation</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">GitOps Validation</h3>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Kubernetes & Observability Validation</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Kubernetes & Observability Validation</h3>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Lessons Learned</h2>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">GitOps Bootstrapping:</strong> A chicken-and-egg problem exists when bootstrapping a GitOps controller before external connectivity is fully established. Implementing an in-cluster Git server is a viable workaround for strict sandbox environments.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Limitations:</strong> Account-level restrictions (like limits on creating Load Balancers) require resilient architecture design that functions effectively via local port-forwarding during the development phase.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Lessons Learned</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">GitOps Bootstrapping:</strong> A chicken-and-egg problem exists when bootstrapping a GitOps controller before external connectivity is fully established. Implementing an in-cluster Git server is a viable workaround for strict sandbox environments.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Limitations:</strong> Account-level restrictions (like limits on creating Load Balancers) require resilient architecture design that functions effectively via local port-forwarding during the development phase.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Future Improvements</h2>
-<li class="ml-4 list-disc text-slate-300 my-1">Integration of <strong class="text-white">External Secrets Operator</strong> with AWS Secrets Manager.</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Migration of Terraform state to a remote AWS S3 backend with DynamoDB locking.</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Implementation of Ingress Controllers (AWS ALB Ingress) when account permissions allow.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Future Improvements</h2>
+<li class="ml-4 list-disc text-slate-700 my-1">Integration of <strong class="text-slate-900">External Secrets Operator</strong> with AWS Secrets Manager.</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Migration of Terraform state to a remote AWS S3 backend with DynamoDB locking.</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Implementation of Ingress Controllers (AWS ALB Ingress) when account permissions allow.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Project Status</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Project Status</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Status: Completed</p>
+<p class="text-slate-700 leading-relaxed my-2">Status: Completed</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">This project has successfully completed:</p>
+<p class="text-slate-700 leading-relaxed my-2">This project has successfully completed:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Infrastructure provisioning with Terraform</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Amazon EKS deployment</li>
-<li class="ml-4 list-disc text-slate-300 my-1">ArgoCD GitOps implementation</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Metrics Server deployment</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Prometheus deployment</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Grafana deployment</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Persistent storage validation using EBS CSI Driver</li>
-<li class="ml-4 list-disc text-slate-300 my-1">End-to-end GitOps synchronization validation</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Production readiness review</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Security review</li>
-<li class="ml-4 list-disc text-slate-300 my-1">GitHub publication</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Infrastructure provisioning with Terraform</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Amazon EKS deployment</li>
+<li class="ml-4 list-disc text-slate-700 my-1">ArgoCD GitOps implementation</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Metrics Server deployment</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Prometheus deployment</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Grafana deployment</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Persistent storage validation using EBS CSI Driver</li>
+<li class="ml-4 list-disc text-slate-700 my-1">End-to-end GitOps synchronization validation</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Production readiness review</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Security review</li>
+<li class="ml-4 list-disc text-slate-700 my-1">GitHub publication</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Portfolio Note:</p>
+<p class="text-slate-700 leading-relaxed my-2">Portfolio Note:</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">This repository is maintained as a portfolio and learning project demonstrating Infrastructure as Code, Kubernetes platform engineering, GitOps, and observability practices.</p>
+<p class="text-slate-700 leading-relaxed my-2">This repository is maintained as a portfolio and learning project demonstrating Infrastructure as Code, Kubernetes platform engineering, GitOps, and observability practices.</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Infrastructure Lifecycle:</p>
+<p class="text-slate-700 leading-relaxed my-2">Infrastructure Lifecycle:</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">The live AWS infrastructure used for validation may be destroyed after project completion to avoid unnecessary cloud costs. Repository source code, architecture documentation, screenshots, deployment evidence, and implementation details remain available in GitHub.</p>
+<p class="text-slate-700 leading-relaxed my-2">The live AWS infrastructure used for validation may be destroyed after project completion to avoid unnecessary cloud costs. Repository source code, architecture documentation, screenshots, deployment evidence, and implementation details remain available in GitHub.</p>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Cleanup Instructions</h2>
-<p class="text-slate-300 leading-relaxed my-2">To safely tear down the environment and avoid lingering cloud charges:</p>
-<p class="text-slate-300 leading-relaxed my-2">1. Delete ArgoCD child applications via the UI to clear their resources.</p>
-<p class="text-slate-300 leading-relaxed my-2">2. Run <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform destroy -auto-approve</code> from the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">prod</code> directory.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Cleanup Instructions</h2>
+<p class="text-slate-700 leading-relaxed my-2">To safely tear down the environment and avoid lingering cloud charges:</p>
+<p class="text-slate-700 leading-relaxed my-2">1. Delete ArgoCD child applications via the UI to clear their resources.</p>
+<p class="text-slate-700 leading-relaxed my-2">2. Run <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">terraform destroy -auto-approve</code> from the <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">prod</code> directory.</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Recruiter Notes</h2>
-<p class="text-slate-300 leading-relaxed my-2">This repository represents a holistic, real-world DevOps/SRE approach. It goes far beyond standard tutorials by dynamically managing persistent storage (CSI), complex multi-stage provisioning (Terraform -> EKS -> ArgoCD), and strict Git-driven drift control.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Recruiter Notes</h2>
+<p class="text-slate-700 leading-relaxed my-2">This repository represents a holistic, real-world DevOps/SRE approach. It goes far beyond standard tutorials by dynamically managing persistent storage (CSI), complex multi-stage provisioning (Terraform -> EKS -> ArgoCD), and strict Git-driven drift control.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Author</h2>
-<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Imon Mahmud</strong></p>
-<p class="text-slate-300 leading-relaxed my-2">Cloud DevOps Engineer & Platform Architect</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Author</h2>
+<p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Imon Mahmud</strong></p>
+<p class="text-slate-700 leading-relaxed my-2">Cloud DevOps Engineer & Platform Architect</p>
 <div class="h-2"></div>
       </div>
     </section>
 
     <!-- Recruiter Compliance & Value Matrix -->
     <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-emeraldAccent text-xl">🛡️</div>
-        <h3 class="font-heading font-bold text-white text-base">Security & Compliance</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-emerald-600 text-xl">🛡️</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">Security & Compliance</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
       </div>
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-tealAccent text-xl">⚡</div>
-        <h3 class="font-heading font-bold text-white text-base">IaC & Automation</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-secondary text-xl">⚡</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">IaC & Automation</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
       </div>
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-amberAccent text-xl">📊</div>
-        <h3 class="font-heading font-bold text-white text-base">Observability & Health</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-amber-600 text-xl">📊</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">Observability & Health</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
       </div>
     </section>
 
     <!-- Navigation Footer CTA -->
-    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-slate-900 via-surface to-slate-900 border border-slate-800 p-8 rounded-2xl gap-4">
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-primary via-darkSlate to-primary border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
       <div>
         <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
-        <p class="text-xs text-slate-400">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
+        <p class="text-xs text-slate-300">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
       </div>
       <div class="flex space-x-3">
-        <a href="https://github.com/eng-imonmahmud/aws-eks-gitops-platform" target="_blank" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+        <a href="https://github.com/eng-imonmahmud/aws-eks-gitops-platform" target="_blank" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-mono text-xs rounded-xl border border-white/20 transition">
           View Repository ↗
         </a>
-        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emeraldAccent hover:bg-emerald-600 text-obsidian font-heading font-bold text-xs rounded-xl transition">
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-heading font-bold text-xs rounded-xl shadow transition">
           Contact Candidate
         </a>
       </div>
@@ -417,8 +415,8 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
-    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
+  <footer class="bg-darkSlate border-t border-slate-800 py-10 text-center text-xs text-slate-400 space-y-4">
+    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-white">Home</a> | <a href="disclaimer.html" class="hover:text-white">Disclaimer</a> | <a href="privacy.html" class="hover:text-white">Privacy Policy</a></p>
   </footer>
 </body>
 </html>

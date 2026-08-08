@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -25,80 +25,78 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            obsidian: '#0B0F17',
-            midnight: '#111827',
-            surface: '#1A2333',
-            emeraldAccent: '#10B981',
-            tealAccent: '#06B6D4',
-            amberAccent: '#F59E0B',
+            primary: '#1E3A8A',
+            secondary: '#0284C7',
+            accentGold: '#D97706',
+            darkSlate: '#0F172A',
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-[#0B0F17] text-slate-300 font-sans antialiased selection:bg-emeraldAccent selection:text-obsidian">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- Sticky Navbar -->
-  <nav class="sticky top-0 z-50 bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/40">
+  <!-- Sticky Executive Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="bg-primary text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-primary/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-primary transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
-          <span>🌐</span> <span id="lang-label">DE</span>
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono text-xs rounded-xl border border-slate-200 transition">
+          <span>🌐</span> <span id="lang-label">EN</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-primary transition">← Back to Projects</a>
         
-        <a href="https://github.com/eng-imonmahmud/Hybrid-Active-Directory-Lab-on-AWS" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+        <a href="https://github.com/eng-imonmahmud/Hybrid-Active-Directory-Lab-on-AWS" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-darkSlate text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Banner -->
-  <header class="relative bg-gradient-to-b from-[#111827] via-[#0B0F17] to-[#0B0F17] py-16 lg:py-24 border-b border-slate-800 overflow-hidden">
+  <!-- Hero Header -->
+  <header class="relative bg-gradient-to-br from-darkSlate via-slate-900 to-primary text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
       <div class="lg:col-span-8 space-y-5">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emeraldAccent/10 text-emeraldAccent border border-emeraldAccent/20">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-sky-500/20 text-sky-300 border border-sky-400/30">
           <span>🚀</span>
           <span>Cloud Infrastructure & IaC</span>
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
           Hybrid Active Directory Lab On Aws
         </h1>
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
           Automated Hybrid Active Directory Lab on AWS using Terraform, Windows Server 2022, AD DS, DNS, and AWS Directory Service (AD Connector).
         </p>
         <div class="flex flex-wrap gap-2 pt-2">
-          <span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">AWS</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Windows Server 2022</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">AD DS</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">AD Connector</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Terraform</span>
+          <span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">AWS</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Windows Server 2022</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">AD DS</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">AD Connector</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Terraform</span>
         </div>
         <div class="flex flex-wrap items-center gap-4 pt-4">
-          <a href="https://github.com/eng-imonmahmud/Hybrid-Active-Directory-Lab-on-AWS" target="_blank" class="px-6 py-3 bg-gradient-to-r from-emeraldAccent to-tealAccent hover:opacity-90 text-obsidian font-heading font-bold text-sm rounded-xl shadow-lg shadow-emeraldAccent/20 transition flex items-center">
+          <a href="https://github.com/eng-imonmahmud/Hybrid-Active-Directory-Lab-on-AWS" target="_blank" class="px-6 py-3 bg-secondary hover:bg-blue-600 text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
           </a>
-          <a href="index.html#projects" class="px-6 py-3 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-heading font-semibold text-sm rounded-xl border border-slate-700 transition">
+          <a href="index.html#projects" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-heading font-semibold text-sm rounded-xl border border-white/20 transition">
             ← Back to Portfolio Overview
           </a>
         </div>
       </div>
       
-      <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
-        <ul class="text-xs font-mono space-y-2.5 text-slate-300">
-          <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">Hybrid-Active-Directory-Lab-on-AWS</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">HCL</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Security Control:</span> <span class="text-emeraldAccent">Zero-Trust & IAM</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
+      <div class="lg:col-span-4 bg-white/10 border border-white/20 p-6 rounded-2xl space-y-4 shadow-xl backdrop-blur-md">
+        <h3 class="font-heading font-bold text-white text-base border-b border-white/20 pb-3">Enterprise Architecture Specs</h3>
+        <ul class="text-xs font-mono space-y-2.5 text-slate-200">
+          <li class="flex justify-between"><span class="text-slate-300">Repository:</span> <span class="text-sky-300 font-semibold">Hybrid-Active-Directory-Lab-on-AWS</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Primary Language:</span> <span class="text-white">HCL</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Security Control:</span> <span class="text-emerald-400">Zero-Trust & IAM</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
         </ul>
         <div class="pt-2">
-          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Hybrid Active Directory Lab On Aws" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-heading font-bold text-xs rounded-xl border border-slate-700 transition">
+          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Hybrid Active Directory Lab On Aws" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-white text-darkSlate font-heading font-bold text-xs rounded-xl shadow transition hover:bg-slate-100">
             ✉ Contact Candidate Regarding This Project
           </a>
         </div>
@@ -112,44 +110,44 @@
     
 
     <!-- Architecture & Technical Specifications Section -->
-    <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
-      <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+    <section class="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-heading font-bold text-darkSlate tracking-tight">
           System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
+        <p class="text-xs text-slate-500 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
-      <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">Hybrid Active Directory Lab on AWS</h1>
+      <div class="prose max-w-none text-slate-700 text-sm leading-relaxed space-y-4">
+        <h1 class="text-2xl font-heading font-bold text-slate-900 mt-6 mb-3">Hybrid Active Directory Lab on AWS</h1>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📺 Infrastructure Deployment & Verification Video</h2>
-<p class="text-slate-300 leading-relaxed my-2">Click the link below to watch the live step-by-step infrastructure provisioning and verification:</p>
-<p class="text-slate-300 leading-relaxed my-2">👉 [Watch the Hybrid Active Directory Lab on AWS Projects on Google Drive](https://drive.google.com/file/d/1u3i_Vv4RtkEM4xc0osdtzzaSpt_9qjv-/view?usp=sharing)</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">📺 Infrastructure Deployment & Verification Video</h2>
+<p class="text-slate-700 leading-relaxed my-2">Click the link below to watch the live step-by-step infrastructure provisioning and verification:</p>
+<p class="text-slate-700 leading-relaxed my-2">👉 [Watch the Hybrid Active Directory Lab on AWS Projects on Google Drive](https://drive.google.com/file/d/1u3i_Vv4RtkEM4xc0osdtzzaSpt_9qjv-/view?usp=sharing)</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Project Overview</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Project Overview</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">This project demonstrates the deployment of a Microsoft Active Directory Domain Controller on AWS using Infrastructure as Code (Terraform) and integration with AWS Identity Services.</p>
+<p class="text-slate-700 leading-relaxed my-2">This project demonstrates the deployment of a Microsoft Active Directory Domain Controller on AWS using Infrastructure as Code (Terraform) and integration with AWS Identity Services.</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">The environment simulates a hybrid identity architecture where an on-premises Active Directory is extended into AWS and connected through AWS Directory Service (AD Connector) and IAM Identity Center.</p>
+<p class="text-slate-700 leading-relaxed my-2">The environment simulates a hybrid identity architecture where an on-premises Active Directory is extended into AWS and connected through AWS Directory Service (AD Connector) and IAM Identity Center.</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">This project was built to gain hands-on experience with:</p>
+<p class="text-slate-700 leading-relaxed my-2">This project was built to gain hands-on experience with:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Terraform Infrastructure as Code (IaC)</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS Networking</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Windows Server Administration</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Active Directory Domain Services (AD DS)</li>
-<li class="ml-4 list-disc text-slate-300 my-1">DNS Configuration</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS Directory Service</li>
-<li class="ml-4 list-disc text-slate-300 my-1">IAM Identity Center</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Identity Federation Concepts</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Infrastructure Troubleshooting</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Terraform Infrastructure as Code (IaC)</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS Networking</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Windows Server Administration</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Active Directory Domain Services (AD DS)</li>
+<li class="ml-4 list-disc text-slate-700 my-1">DNS Configuration</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS Directory Service</li>
+<li class="ml-4 list-disc text-slate-700 my-1">IAM Identity Center</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Identity Federation Concepts</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Infrastructure Troubleshooting</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Architecture</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Architecture</h2>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>Internet
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>Internet
     │
     ▼
 AWS VPC (10.0.0.0/16)
@@ -169,145 +167,145 @@ AWS VPC (10.0.0.0/16)
         ▼
 IAM Identity Center</code></pre></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Technologies Used</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Technologies Used</h2>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Cloud</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Cloud</h3>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS EC2</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS VPC</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS Route Tables</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS Internet Gateway</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS Security Groups</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS Directory Service</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS IAM Identity Center</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS EC2</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS VPC</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS Route Tables</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS Internet Gateway</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS Security Groups</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS Directory Service</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS IAM Identity Center</li>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Infrastructure as Code</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Infrastructure as Code</h3>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Terraform</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Terraform</li>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Operating System</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Operating System</h3>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Windows Server 2022</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Windows Server 2022</li>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Identity Services</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Identity Services</h3>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Active Directory Domain Services</li>
-<li class="ml-4 list-disc text-slate-300 my-1">DNS</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AD Connector</li>
-<li class="ml-4 list-disc text-slate-300 my-1">IAM Identity Center</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Active Directory Domain Services</li>
+<li class="ml-4 list-disc text-slate-700 my-1">DNS</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AD Connector</li>
+<li class="ml-4 list-disc text-slate-700 my-1">IAM Identity Center</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Infrastructure Provisioned with Terraform</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Infrastructure Provisioned with Terraform</h2>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Networking</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Networking</h3>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Custom VPC</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Public Subnet</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Private Subnet A</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Private Subnet B</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Internet Gateway</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Route Tables</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Route Associations</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Custom VPC</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Public Subnet</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Private Subnet A</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Private Subnet B</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Internet Gateway</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Route Tables</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Route Associations</li>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Security</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Security</h3>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Security Group</li>
-<li class="ml-4 list-disc text-slate-300 my-1">RDP Access Restriction</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Active Directory Ports</li>
-<li class="ml-4 list-disc text-slate-300 my-1">DNS Ports</li>
-<li class="ml-4 list-disc text-slate-300 my-1">LDAP Ports</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Kerberos Ports</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Security Group</li>
+<li class="ml-4 list-disc text-slate-700 my-1">RDP Access Restriction</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Active Directory Ports</li>
+<li class="ml-4 list-disc text-slate-700 my-1">DNS Ports</li>
+<li class="ml-4 list-disc text-slate-700 my-1">LDAP Ports</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Kerberos Ports</li>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Compute</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Compute</h3>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Windows Server 2022 EC2 Instance</li>
-<li class="ml-4 list-disc text-slate-300 my-1">SSH/RDP Key Pair</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Windows Server 2022 EC2 Instance</li>
+<li class="ml-4 list-disc text-slate-700 my-1">SSH/RDP Key Pair</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Active Directory Configuration</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Active Directory Configuration</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Domain Name:</p>
+<p class="text-slate-700 leading-relaxed my-2">Domain Name:</p>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>imon.local</code></pre></div>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>imon.local</code></pre></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Installed Roles:</p>
+<p class="text-slate-700 leading-relaxed my-2">Installed Roles:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Active Directory Domain Services</li>
-<li class="ml-4 list-disc text-slate-300 my-1">DNS Server</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Active Directory Domain Services</li>
+<li class="ml-4 list-disc text-slate-700 my-1">DNS Server</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Verified Components:</p>
+<p class="text-slate-700 leading-relaxed my-2">Verified Components:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Domain Controller Promotion</li>
-<li class="ml-4 list-disc text-slate-300 my-1">DNS Resolution</li>
-<li class="ml-4 list-disc text-slate-300 my-1">User Creation</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Domain Validation</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Domain Controller Promotion</li>
+<li class="ml-4 list-disc text-slate-700 my-1">DNS Resolution</li>
+<li class="ml-4 list-disc text-slate-700 my-1">User Creation</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Domain Validation</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">PowerShell Validation:</p>
+<p class="text-slate-700 leading-relaxed my-2">PowerShell Validation:</p>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">powershell</div><pre><code>Get-ADDomain
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">powershell</div><pre><code>Get-ADDomain
 Get-WindowsFeature AD-Domain-Services,DNS</code></pre></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">AWS Directory Service Integration</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">AWS Directory Service Integration</h2>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">AD Connector</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">AD Connector</h3>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Configured AWS AD Connector to connect AWS services with the Active Directory environment.</p>
+<p class="text-slate-700 leading-relaxed my-2">Configured AWS AD Connector to connect AWS services with the Active Directory environment.</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Configuration:</p>
+<p class="text-slate-700 leading-relaxed my-2">Configuration:</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">| Item            | Value        |</p>
-<p class="text-slate-300 leading-relaxed my-2">| --------------- | ------------ |</p>
-<p class="text-slate-300 leading-relaxed my-2">| Directory Type  | AD Connector |</p>
-<p class="text-slate-300 leading-relaxed my-2">| Directory Size  | Small        |</p>
-<p class="text-slate-300 leading-relaxed my-2">| Domain          | imon.local   |</p>
-<p class="text-slate-300 leading-relaxed my-2">| DNS Server      | 10.0.1.158   |</p>
-<p class="text-slate-300 leading-relaxed my-2">| Service Account | ad.connector |</p>
+<p class="text-slate-700 leading-relaxed my-2">| Item            | Value        |</p>
+<p class="text-slate-700 leading-relaxed my-2">| --------------- | ------------ |</p>
+<p class="text-slate-700 leading-relaxed my-2">| Directory Type  | AD Connector |</p>
+<p class="text-slate-700 leading-relaxed my-2">| Directory Size  | Small        |</p>
+<p class="text-slate-700 leading-relaxed my-2">| Domain          | imon.local   |</p>
+<p class="text-slate-700 leading-relaxed my-2">| DNS Server      | 10.0.1.158   |</p>
+<p class="text-slate-700 leading-relaxed my-2">| Service Account | ad.connector |</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">IAM Identity Center</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">IAM Identity Center</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Enabled:</p>
+<p class="text-slate-700 leading-relaxed my-2">Enabled:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">IAM Identity Center (Standalone Account Instance)</li>
+<li class="ml-4 list-disc text-slate-700 my-1">IAM Identity Center (Standalone Account Instance)</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Configured:</p>
+<p class="text-slate-700 leading-relaxed my-2">Configured:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Identity Source</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Access Portal</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Federation Readiness</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Identity Source</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Access Portal</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Federation Readiness</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Troubleshooting Experience</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Troubleshooting Experience</h2>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Issue</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Issue</h3>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">AD Connector failed during deployment.</p>
+<p class="text-slate-700 leading-relaxed my-2">AD Connector failed during deployment.</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Error:</p>
+<p class="text-slate-700 leading-relaxed my-2">Error:</p>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>LDAP unavailable (UDP port 389)</code></pre></div>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>LDAP unavailable (UDP port 389)</code></pre></div>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Root Cause</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Root Cause</h3>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">The Active Directory Security Group was missing:</p>
+<p class="text-slate-700 leading-relaxed my-2">The Active Directory Security Group was missing:</p>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>UDP 389 (LDAP)</code></pre></div>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>UDP 389 (LDAP)</code></pre></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Although LDAP TCP 389 was configured, AWS AD Connector health checks also require LDAP UDP 389 connectivity.</p>
+<p class="text-slate-700 leading-relaxed my-2">Although LDAP TCP 389 was configured, AWS AD Connector health checks also require LDAP UDP 389 connectivity.</p>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Resolution</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Resolution</h3>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Updated Terraform Security Group configuration:</p>
+<p class="text-slate-700 leading-relaxed my-2">Updated Terraform Security Group configuration:</p>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">hcl</div><pre><code>ingress {
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">hcl</div><pre><code>ingress {
   description = "LDAP UDP"
   from_port   = 389
   to_port     = 389
@@ -315,113 +313,113 @@ Get-WindowsFeature AD-Domain-Services,DNS</code></pre></div>
   cidr_blocks = ["10.0.0.0/16"]
 }</code></pre></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Applied changes:</p>
+<p class="text-slate-700 leading-relaxed my-2">Applied changes:</p>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">bash</div><pre><code>terraform apply</code></pre></div>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">bash</div><pre><code>terraform apply</code></pre></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Result:</p>
+<p class="text-slate-700 leading-relaxed my-2">Result:</p>
 <div class="h-2"></div>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>AD Connector Status = Active</code></pre></div>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>AD Connector Status = Active</code></pre></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Validation Evidence</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Validation Evidence</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Screenshots included:</p>
+<p class="text-slate-700 leading-relaxed my-2">Screenshots included:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Terraform Plan Clean</li>
-<li class="ml-4 list-disc text-slate-300 my-1">VPC Resource Map</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Domain Controller Instance</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Get-ADDomain Output</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Active Directory Users and Computers</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AD Connector Active</li>
-<li class="ml-4 list-disc text-slate-300 my-1">IAM Identity Center Enabled</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Terraform Plan Clean</li>
+<li class="ml-4 list-disc text-slate-700 my-1">VPC Resource Map</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Domain Controller Instance</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Get-ADDomain Output</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Active Directory Users and Computers</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AD Connector Active</li>
+<li class="ml-4 list-disc text-slate-700 my-1">IAM Identity Center Enabled</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Project Outcomes</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Project Outcomes</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Successfully deployed:</p>
+<p class="text-slate-700 leading-relaxed my-2">Successfully deployed:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS Infrastructure with Terraform</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Windows Server 2022 Domain Controller</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Active Directory Domain Services</li>
-<li class="ml-4 list-disc text-slate-300 my-1">DNS Services</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AD Connector Integration</li>
-<li class="ml-4 list-disc text-slate-300 my-1">IAM Identity Center Integration</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS Infrastructure with Terraform</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Windows Server 2022 Domain Controller</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Active Directory Domain Services</li>
+<li class="ml-4 list-disc text-slate-700 my-1">DNS Services</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AD Connector Integration</li>
+<li class="ml-4 list-disc text-slate-700 my-1">IAM Identity Center Integration</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Successfully performed:</p>
+<p class="text-slate-700 leading-relaxed my-2">Successfully performed:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Infrastructure Provisioning</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Active Directory Administration</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS Networking</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Identity Integration</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Production-style Troubleshooting</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Infrastructure Provisioning</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Active Directory Administration</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS Networking</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Identity Integration</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Production-style Troubleshooting</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Future Improvements</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Future Improvements</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Potential future enhancements:</p>
+<p class="text-slate-700 leading-relaxed my-2">Potential future enhancements:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS Managed Microsoft AD</li>
-<li class="ml-4 list-disc text-slate-300 my-1">SAML Federation</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Multi-Factor Authentication (MFA)</li>
-<li class="ml-4 list-disc text-slate-300 my-1">WorkSpaces Integration</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS Organizations Integration</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Multi-Region Domain Controllers</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS Managed Microsoft AD</li>
+<li class="ml-4 list-disc text-slate-700 my-1">SAML Federation</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Multi-Factor Authentication (MFA)</li>
+<li class="ml-4 list-disc text-slate-700 my-1">WorkSpaces Integration</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS Organizations Integration</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Multi-Region Domain Controllers</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Author</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Author</h2>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Imon Mahmud</p>
+<p class="text-slate-700 leading-relaxed my-2">Imon Mahmud</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Computer Engineer</p>
+<p class="text-slate-700 leading-relaxed my-2">Computer Engineer</p>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">Focus Areas:</p>
+<p class="text-slate-700 leading-relaxed my-2">Focus Areas:</p>
 <div class="h-2"></div>
-<li class="ml-4 list-disc text-slate-300 my-1">Cloud Engineering</li>
-<li class="ml-4 list-disc text-slate-300 my-1">AWS</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Terraform</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Active Directory</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Identity & Access Management</li>
-<li class="ml-4 list-disc text-slate-300 my-1">DevOps</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Infrastructure Automation</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Cloud Engineering</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Terraform</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Active Directory</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Identity & Access Management</li>
+<li class="ml-4 list-disc text-slate-700 my-1">DevOps</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Infrastructure Automation</li>
 <div class="h-2"></div>
       </div>
     </section>
 
     <!-- Recruiter Compliance & Value Matrix -->
     <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-emeraldAccent text-xl">🛡️</div>
-        <h3 class="font-heading font-bold text-white text-base">Security & Compliance</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-emerald-600 text-xl">🛡️</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">Security & Compliance</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
       </div>
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-tealAccent text-xl">⚡</div>
-        <h3 class="font-heading font-bold text-white text-base">IaC & Automation</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-secondary text-xl">⚡</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">IaC & Automation</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
       </div>
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-amberAccent text-xl">📊</div>
-        <h3 class="font-heading font-bold text-white text-base">Observability & Health</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-amber-600 text-xl">📊</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">Observability & Health</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
       </div>
     </section>
 
     <!-- Navigation Footer CTA -->
-    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-slate-900 via-surface to-slate-900 border border-slate-800 p-8 rounded-2xl gap-4">
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-primary via-darkSlate to-primary border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
       <div>
         <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
-        <p class="text-xs text-slate-400">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
+        <p class="text-xs text-slate-300">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
       </div>
       <div class="flex space-x-3">
-        <a href="https://github.com/eng-imonmahmud/Hybrid-Active-Directory-Lab-on-AWS" target="_blank" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+        <a href="https://github.com/eng-imonmahmud/Hybrid-Active-Directory-Lab-on-AWS" target="_blank" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-mono text-xs rounded-xl border border-white/20 transition">
           View Repository ↗
         </a>
-        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emeraldAccent hover:bg-emerald-600 text-obsidian font-heading font-bold text-xs rounded-xl transition">
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-heading font-bold text-xs rounded-xl shadow transition">
           Contact Candidate
         </a>
       </div>
@@ -429,8 +427,8 @@ Get-WindowsFeature AD-Domain-Services,DNS</code></pre></div>
   </main>
 
   <!-- Footer -->
-  <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
-    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
+  <footer class="bg-darkSlate border-t border-slate-800 py-10 text-center text-xs text-slate-400 space-y-4">
+    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-white">Home</a> | <a href="disclaimer.html" class="hover:text-white">Disclaimer</a> | <a href="privacy.html" class="hover:text-white">Privacy Policy</a></p>
   </footer>
 </body>
 </html>

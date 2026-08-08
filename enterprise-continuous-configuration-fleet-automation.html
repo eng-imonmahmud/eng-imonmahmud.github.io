@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -25,80 +25,78 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            obsidian: '#0B0F17',
-            midnight: '#111827',
-            surface: '#1A2333',
-            emeraldAccent: '#10B981',
-            tealAccent: '#06B6D4',
-            amberAccent: '#F59E0B',
+            primary: '#1E3A8A',
+            secondary: '#0284C7',
+            accentGold: '#D97706',
+            darkSlate: '#0F172A',
           }
         }
       }
     }
   </script>
 </head>
-<body class="bg-[#0B0F17] text-slate-300 font-sans antialiased selection:bg-emeraldAccent selection:text-obsidian">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-blue-600 selection:text-white">
 
-  <!-- Sticky Navbar -->
-  <nav class="sticky top-0 z-50 bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/40">
+  <!-- Sticky Executive Navbar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="bg-primary text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-primary/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-primary transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
-          <span>🌐</span> <span id="lang-label">DE</span>
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono text-xs rounded-xl border border-slate-200 transition">
+          <span>🌐</span> <span id="lang-label">EN</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-primary transition">← Back to Projects</a>
         
-        <a href="https://github.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+        <a href="https://github.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-darkSlate text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Banner -->
-  <header class="relative bg-gradient-to-b from-[#111827] via-[#0B0F17] to-[#0B0F17] py-16 lg:py-24 border-b border-slate-800 overflow-hidden">
+  <!-- Hero Header -->
+  <header class="relative bg-gradient-to-br from-darkSlate via-slate-900 to-primary text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
       <div class="lg:col-span-8 space-y-5">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emeraldAccent/10 text-emeraldAccent border border-emeraldAccent/20">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-sky-500/20 text-sky-300 border border-sky-400/30">
           <span>🚀</span>
           <span>Cloud Infrastructure & IaC</span>
         </div>
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
           Enterprise Continuous Configuration Fleet Automation
         </h1>
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+        <p class="text-base sm:text-lg text-slate-200 leading-relaxed font-normal">
           Enterprise-grade AWS Systems Manager (SSM) solution for continuous configuration management and zero-trust fleet automation using Parameter Store, State Manager, and SSM Documents without SSH access.
         </p>
         <div class="flex flex-wrap gap-2 pt-2">
-          <span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">AWS SSM</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Parameter Store</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">State Manager</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Zero-Trust</span>
+          <span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">AWS SSM</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Parameter Store</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">State Manager</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Zero-Trust</span>
         </div>
         <div class="flex flex-wrap items-center gap-4 pt-4">
-          <a href="https://github.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation" target="_blank" class="px-6 py-3 bg-gradient-to-r from-emeraldAccent to-tealAccent hover:opacity-90 text-obsidian font-heading font-bold text-sm rounded-xl shadow-lg shadow-emeraldAccent/20 transition flex items-center">
+          <a href="https://github.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation" target="_blank" class="px-6 py-3 bg-secondary hover:bg-blue-600 text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
           </a>
-          <a href="index.html#projects" class="px-6 py-3 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-heading font-semibold text-sm rounded-xl border border-slate-700 transition">
+          <a href="index.html#projects" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-heading font-semibold text-sm rounded-xl border border-white/20 transition">
             ← Back to Portfolio Overview
           </a>
         </div>
       </div>
       
-      <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
-        <ul class="text-xs font-mono space-y-2.5 text-slate-300">
-          <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">enterprise-continuous-configuration-fleet-automation</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">HCL</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">Security Control:</span> <span class="text-emeraldAccent">Zero-Trust & IAM</span></li>
-          <li class="flex justify-between"><span class="text-slate-500">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
+      <div class="lg:col-span-4 bg-white/10 border border-white/20 p-6 rounded-2xl space-y-4 shadow-xl backdrop-blur-md">
+        <h3 class="font-heading font-bold text-white text-base border-b border-white/20 pb-3">Enterprise Architecture Specs</h3>
+        <ul class="text-xs font-mono space-y-2.5 text-slate-200">
+          <li class="flex justify-between"><span class="text-slate-300">Repository:</span> <span class="text-sky-300 font-semibold">enterprise-continuous-configuration-fleet-automation</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Primary Language:</span> <span class="text-white">HCL</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Security Control:</span> <span class="text-emerald-400">Zero-Trust & IAM</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
         </ul>
         <div class="pt-2">
-          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Enterprise Continuous Configuration Fleet Automation" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-heading font-bold text-xs rounded-xl border border-slate-700 transition">
+          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Enterprise Continuous Configuration Fleet Automation" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-white text-darkSlate font-heading font-bold text-xs rounded-xl shadow transition hover:bg-slate-100">
             ✉ Contact Candidate Regarding This Project
           </a>
         </div>
@@ -111,69 +109,69 @@
     
     
         <section class="space-y-6">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
+          <div class="flex items-center justify-between border-b border-slate-200 pb-3">
+            <h2 class="text-xl font-heading font-bold text-darkSlate tracking-tight">
               Live Production Console & Screenshots
             </h2>
-            <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">11 Screenshots Verified</span>
+            <span class="text-xs font-mono text-primary bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">11 Screenshots Verified</span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #1</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation/main/screenshots/screencapture-eu-central-1-console-aws-amazon-ec2-home-2026-07-11-12_30_59.png" alt="Enterprise Continuous Configuration Fleet Automation Screenshot 1" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #2</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation/main/screenshots/screencapture-eu-central-1-console-aws-amazon-ec2-home-2026-07-11-12_31_46.png" alt="Enterprise Continuous Configuration Fleet Automation Screenshot 2" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #3</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation/main/screenshots/screencapture-eu-central-1-console-aws-amazon-vpcconsole-home-2026-07-11-12_33_42.png" alt="Enterprise Continuous Configuration Fleet Automation Screenshot 3" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #4</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation/main/screenshots/screencapture-eu-central-1-console-aws-amazon-vpcconsole-home-2026-07-11-12_34_22.png" alt="Enterprise Continuous Configuration Fleet Automation Screenshot 4" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #5</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation/main/screenshots/screencapture-eu-central-1-console-aws-amazon-systems-manager-fleet-manager-managed-nodes-i-0b70962c630565a58-general-2026-07-11-12_35_50.png" alt="Enterprise Continuous Configuration Fleet Automation Screenshot 5" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
             </div>
             
-            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
-              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
-                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+              <div class="p-2 bg-slate-100 border-b border-slate-200 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
                 <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #6</span>
               </div>
               <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation/main/screenshots/screencapture-eu-central-1-console-aws-amazon-systems-manager-parameters-2026-07-11-12_36_22.png" alt="Enterprise Continuous Configuration Fleet Automation Screenshot 6" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
@@ -184,16 +182,16 @@
         
 
     <!-- Architecture & Technical Specifications Section -->
-    <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
-      <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+    <section class="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm">
+      <div class="border-b border-slate-200 pb-4">
+        <h2 class="text-2xl font-heading font-bold text-darkSlate tracking-tight">
           System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
+        <p class="text-xs text-slate-500 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
-      <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">Enterprise Continuous Configuration & Fleet Automation Pipeline</h1>
+      <div class="prose max-w-none text-slate-700 text-sm leading-relaxed space-y-4">
+        <h1 class="text-2xl font-heading font-bold text-slate-900 mt-6 mb-3">Enterprise Continuous Configuration & Fleet Automation Pipeline</h1>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
@@ -202,30 +200,30 @@
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Author:</strong> Imon Mahmud.</p>
-<p class="text-slate-300 leading-relaxed my-2">IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER</p>
+<p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Author:</strong> Imon Mahmud.</p>
+<p class="text-slate-700 leading-relaxed my-2">IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Executive Summary</h2>
-<p class="text-slate-300 leading-relaxed my-2">This repository contains the Infrastructure as Code (IaC) and automation scripts for an enterprise-grade Continuous Configuration platform. Leveraging AWS Systems Manager (SSM) and Terraform, this project provisions a strictly isolated EC2 fleet that adheres to a rigorous <strong class="text-white">Zero Trust Architecture</strong>. The entire platform was designed, deployed, validated, and documented autonomously.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Executive Summary</h2>
+<p class="text-slate-700 leading-relaxed my-2">This repository contains the Infrastructure as Code (IaC) and automation scripts for an enterprise-grade Continuous Configuration platform. Leveraging AWS Systems Manager (SSM) and Terraform, this project provisions a strictly isolated EC2 fleet that adheres to a rigorous <strong class="text-slate-900">Zero Trust Architecture</strong>. The entire platform was designed, deployed, validated, and documented autonomously.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Business Problem</h2>
-<p class="text-slate-300 leading-relaxed my-2">Enterprise environments require strict compliance, zero public exposure, and continuous enforcement of configuration states across thousands of virtual machines. Traditional SSH-based management and public bastion hosts introduce significant security vectors and operational overhead.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Business Problem</h2>
+<p class="text-slate-700 leading-relaxed my-2">Enterprise environments require strict compliance, zero public exposure, and continuous enforcement of configuration states across thousands of virtual machines. Traditional SSH-based management and public bastion hosts introduce significant security vectors and operational overhead.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Solution</h2>
-<p class="text-slate-300 leading-relaxed my-2">A fully automated, agent-based architecture where instances pull configuration from AWS Systems Manager.</p>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">No Inbound Network Access:</strong> Security Groups have zero ingress rules.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">No SSH or Bastion Hosts:</strong> All terminal access and configuration happen securely via SSM Session Manager and Run Command.</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Continuous Compliance:</strong> SSM State Manager enforces the desired state (e.g., Nginx, CloudWatch Agent) automatically.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Solution</h2>
+<p class="text-slate-700 leading-relaxed my-2">A fully automated, agent-based architecture where instances pull configuration from AWS Systems Manager.</p>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">No Inbound Network Access:</strong> Security Groups have zero ingress rules.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">No SSH or Bastion Hosts:</strong> All terminal access and configuration happen securely via SSM Session Manager and Run Command.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Continuous Compliance:</strong> SSM State Manager enforces the desired state (e.g., Nginx, CloudWatch Agent) automatically.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Technology Stack</h2>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Provisioning:</strong> Terraform (Modular Architecture)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Provider:</strong> Amazon Web Services (AWS - eu-central-1)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Configuration Management:</strong> AWS Systems Manager (SSM Parameter Store, Documents, State Manager)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Compute:</strong> Amazon EC2 (AL2023)</li>
-<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Networking:</strong> VPC, Private Subnets, VPC Interface & Gateway Endpoints</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Technology Stack</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Provisioning:</strong> Terraform (Modular Architecture)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Provider:</strong> Amazon Web Services (AWS - eu-central-1)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Configuration Management:</strong> AWS Systems Manager (SSM Parameter Store, Documents, State Manager)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Compute:</strong> Amazon EC2 (AL2023)</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Networking:</strong> VPC, Private Subnets, VPC Interface & Gateway Endpoints</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Architecture Diagram</h2>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>graph TD
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Architecture Diagram</h2>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">mermaid</div><pre><code>graph TD
     subgraph AWS Cloud [eu-central-1]
         subgraph VPC [Enterprise VPC]
             direction TB
@@ -251,8 +249,8 @@
     classDef secure fill:#d4edda,stroke:#28a745,stroke-width:2px;
     class EC2 secure;</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Repository Structure</h2>
-<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>├── .gitignore
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Repository Structure</h2>
+<div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>├── .gitignore
 ├── README.md
 ├── SECURITY_AUDIT_REPORT.md
 ├── documents/
@@ -273,85 +271,85 @@
         ├── ssm/
         └── vpc/</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Security Architecture & Zero Trust Design</h2>
-<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Private Subnets Only:</strong> Resources are completely hidden from the public internet.</p>
-<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Egress-Only Security Groups:</strong> EC2 instances cannot accept any inbound connections, strictly enforcing a pull-based management model.</p>
-<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">VPC Endpoints (AWS PrivateLink):</strong> Traffic to AWS Services (SSM, S3) never traverses the public internet.</p>
-<p class="text-slate-300 leading-relaxed my-2">4. <strong class="text-white">IAM Instance Profiles:</strong> Least privilege policies (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">AmazonSSMManagedInstanceCore</code>, <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">CloudWatchAgentServerPolicy</code>) are attached instead of long-lived access keys.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Security Architecture & Zero Trust Design</h2>
+<p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">Private Subnets Only:</strong> Resources are completely hidden from the public internet.</p>
+<p class="text-slate-700 leading-relaxed my-2">2. <strong class="text-slate-900">Egress-Only Security Groups:</strong> EC2 instances cannot accept any inbound connections, strictly enforcing a pull-based management model.</p>
+<p class="text-slate-700 leading-relaxed my-2">3. <strong class="text-slate-900">VPC Endpoints (AWS PrivateLink):</strong> Traffic to AWS Services (SSM, S3) never traverses the public internet.</p>
+<p class="text-slate-700 leading-relaxed my-2">4. <strong class="text-slate-900">IAM Instance Profiles:</strong> Least privilege policies (<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">AmazonSSMManagedInstanceCore</code>, <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">CloudWatchAgentServerPolicy</code>) are attached instead of long-lived access keys.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Configuration Management Workflow</h2>
-<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">SSM Parameter Store</strong> securely holds configuration values and environmental metadata.</p>
-<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">SSM Documents</strong> define the exact shell scripts required to install dependencies.</p>
-<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">SSM State Manager</strong> runs associations on a schedule or instance boot, guaranteeing the node converges to the desired state without manual intervention.</p>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Configuration Management Workflow</h2>
+<p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">SSM Parameter Store</strong> securely holds configuration values and environmental metadata.</p>
+<p class="text-slate-700 leading-relaxed my-2">2. <strong class="text-slate-900">SSM Documents</strong> define the exact shell scripts required to install dependencies.</p>
+<p class="text-slate-700 leading-relaxed my-2">3. <strong class="text-slate-900">SSM State Manager</strong> runs associations on a schedule or instance boot, guaranteeing the node converges to the desired state without manual intervention.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Validation & Testing</h2>
-<p class="text-slate-300 leading-relaxed my-2">The <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">scripts/verify_fleet.ps1</code> runs post-deployment to ensure:</p>
-<li class="ml-4 list-disc text-slate-300 my-1">Instance registers as <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">Online</code> in Systems Manager.</li>
-<li class="ml-4 list-disc text-slate-300 my-1">State Manager Associations complete with <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">Success</code>.</li>
-<li class="ml-4 list-disc text-slate-300 my-1">Nginx service is verified as running via SSM <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">AWS-RunShellScript</code>.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Validation & Testing</h2>
+<p class="text-slate-700 leading-relaxed my-2">The <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">scripts/verify_fleet.ps1</code> runs post-deployment to ensure:</p>
+<li class="ml-4 list-disc text-slate-700 my-1">Instance registers as <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">Online</code> in Systems Manager.</li>
+<li class="ml-4 list-disc text-slate-700 my-1">State Manager Associations complete with <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">Success</code>.</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Nginx service is verified as running via SSM <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">AWS-RunShellScript</code>.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Cost Optimization</h2>
-<li class="ml-4 list-disc text-slate-300 my-1">Eliminated NAT Gateways (saving ~$32/month) by utilizing S3 Gateway Endpoints (Free) and SSM Interface Endpoints, significantly reducing idle network costs while maintaining extreme security.</li>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Cost Optimization</h2>
+<li class="ml-4 list-disc text-slate-700 my-1">Eliminated NAT Gateways (saving ~$32/month) by utilizing S3 Gateway Endpoints (Free) and SSM Interface Endpoints, significantly reducing idle network costs while maintaining extreme security.</li>
 <div class="h-2"></div>
-<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Screenshot Gallery</h2>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Screenshot Gallery</h2>
 <div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">1. Zero Trust EC2 & Networking</h3>
-<p class="text-slate-300 leading-relaxed my-2">The instance runs entirely in a private subnet with no public IP and egress-only security rules.</p>
-<div class="h-2"></div>
-<div class="h-2"></div>
-<div class="h-2"></div>
-<div class="h-2"></div>
-<div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">2. Systems Manager Fleet Automation</h3>
-<p class="text-slate-300 leading-relaxed my-2">AWS Systems Manager maintains total control over the private instance, managing configurations and states.</p>
-<div class="h-2"></div>
-<div class="h-2"></div>
-<div class="h-2"></div>
-<div class="h-2"></div>
-<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">3. Additional AWS Components</h3>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">1. Zero Trust EC2 & Networking</h3>
+<p class="text-slate-700 leading-relaxed my-2">The instance runs entirely in a private subnet with no public IP and egress-only security rules.</p>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Conclusion</h2>
-<p class="text-slate-300 leading-relaxed my-2">This implementation proves the viability of highly secure, scalable, and fully automated cloud infrastructures. The architecture removes human-error vectors (like exposed SSH ports) and guarantees infrastructural compliance natively within AWS.</p>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">2. Systems Manager Fleet Automation</h3>
+<p class="text-slate-700 leading-relaxed my-2">AWS Systems Manager maintains total control over the private instance, managing configurations and states.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">3. Additional AWS Components</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Conclusion</h2>
+<p class="text-slate-700 leading-relaxed my-2">This implementation proves the viability of highly secure, scalable, and fully automated cloud infrastructures. The architecture removes human-error vectors (like exposed SSH ports) and guarantees infrastructural compliance natively within AWS.</p>
 <div class="h-2"></div>
       </div>
     </section>
 
     <!-- Recruiter Compliance & Value Matrix -->
     <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-emeraldAccent text-xl">🛡️</div>
-        <h3 class="font-heading font-bold text-white text-base">Security & Compliance</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-emerald-600 text-xl">🛡️</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">Security & Compliance</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
       </div>
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-tealAccent text-xl">⚡</div>
-        <h3 class="font-heading font-bold text-white text-base">IaC & Automation</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-secondary text-xl">⚡</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">IaC & Automation</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
       </div>
-      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
-        <div class="text-amberAccent text-xl">📊</div>
-        <h3 class="font-heading font-bold text-white text-base">Observability & Health</h3>
-        <p class="text-xs text-slate-400 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
+      <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
+        <div class="text-amber-600 text-xl">📊</div>
+        <h3 class="font-heading font-bold text-darkSlate text-base">Observability & Health</h3>
+        <p class="text-xs text-slate-500 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
       </div>
     </section>
 
     <!-- Navigation Footer CTA -->
-    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-slate-900 via-surface to-slate-900 border border-slate-800 p-8 rounded-2xl gap-4">
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-primary via-darkSlate to-primary border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
       <div>
         <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
-        <p class="text-xs text-slate-400">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
+        <p class="text-xs text-slate-300">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
       </div>
       <div class="flex space-x-3">
-        <a href="https://github.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation" target="_blank" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+        <a href="https://github.com/eng-imonmahmud/enterprise-continuous-configuration-fleet-automation" target="_blank" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-mono text-xs rounded-xl border border-white/20 transition">
           View Repository ↗
         </a>
-        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emeraldAccent hover:bg-emerald-600 text-obsidian font-heading font-bold text-xs rounded-xl transition">
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-heading font-bold text-xs rounded-xl shadow transition">
           Contact Candidate
         </a>
       </div>
@@ -359,8 +357,8 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
-    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
+  <footer class="bg-darkSlate border-t border-slate-800 py-10 text-center text-xs text-slate-400 space-y-4">
+    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-white">Home</a> | <a href="disclaimer.html" class="hover:text-white">Disclaimer</a> | <a href="privacy.html" class="hover:text-white">Privacy Policy</a></p>
   </footer>
 </body>
 </html>

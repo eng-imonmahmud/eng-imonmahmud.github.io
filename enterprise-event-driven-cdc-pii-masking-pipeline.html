@@ -25,9 +25,10 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            primary: '#1E3A8A',
-            secondary: '#0284C7',
-            accentGold: '#D97706',
+            brandEmerald: '#059669',
+            brandDarkEmerald: '#047857',
+            brandTeal: '#0D9488',
+            brandObsidian: '#0B0F17',
             darkSlate: '#0F172A',
           }
         }
@@ -35,35 +36,31 @@
     }
   </script>
 </head>
-<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-blue-600 selection:text-white">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-brandEmerald selection:text-white">
 
   <!-- Sticky Executive Navbar -->
-  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="index.html" class="bg-primary text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-primary/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-primary transition">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="bg-brandEmerald text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emerald-600/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-brandEmerald transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono text-xs rounded-xl border border-slate-200 transition">
-          <span>🌐</span> <span id="lang-label">EN</span>
-        </button>
-
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-primary transition">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandEmerald transition">← Back to Projects</a>
         
-        <a href="https://github.com/eng-imonmahmud/enterprise-event-driven-cdc-pii-masking-pipeline" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-primary hover:bg-darkSlate text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
+        <a href="https://github.com/eng-imonmahmud/enterprise-event-driven-cdc-pii-masking-pipeline" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Header -->
-  <header class="relative bg-gradient-to-br from-darkSlate via-slate-900 to-primary text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
+  <!-- Hero Header (Custom Emerald Obsidian) -->
+  <header class="relative bg-gradient-to-br from-[#062016] via-brandObsidian to-darkSlate text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
       <div class="lg:col-span-8 space-y-5">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-sky-500/20 text-sky-300 border border-sky-400/30">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
           <span>🚀</span>
           <span>DevSecOps & Security</span>
         </div>
@@ -77,7 +74,7 @@
           <span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">AWS DynamoDB Streams</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">PII Masking</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Lambda</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">S3</span>
         </div>
         <div class="flex flex-wrap items-center gap-4 pt-4">
-          <a href="https://github.com/eng-imonmahmud/enterprise-event-driven-cdc-pii-masking-pipeline" target="_blank" class="px-6 py-3 bg-secondary hover:bg-blue-600 text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
+          <a href="https://github.com/eng-imonmahmud/enterprise-event-driven-cdc-pii-masking-pipeline" target="_blank" class="px-6 py-3 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
           </a>
           <a href="index.html#projects" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-heading font-semibold text-sm rounded-xl border border-white/20 transition">
@@ -89,7 +86,7 @@
       <div class="lg:col-span-4 bg-white/10 border border-white/20 p-6 rounded-2xl space-y-4 shadow-xl backdrop-blur-md">
         <h3 class="font-heading font-bold text-white text-base border-b border-white/20 pb-3">Enterprise Architecture Specs</h3>
         <ul class="text-xs font-mono space-y-2.5 text-slate-200">
-          <li class="flex justify-between"><span class="text-slate-300">Repository:</span> <span class="text-sky-300 font-semibold">enterprise-event-driven-cdc-pii-masking-pipeline</span></li>
+          <li class="flex justify-between"><span class="text-slate-300">Repository:</span> <span class="text-emerald-300 font-semibold">enterprise-event-driven-cdc-pii-masking-pipeline</span></li>
           <li class="flex justify-between"><span class="text-slate-300">Primary Language:</span> <span class="text-white">HCL</span></li>
           <li class="flex justify-between"><span class="text-slate-300">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
           <li class="flex justify-between"><span class="text-slate-300">Security Control:</span> <span class="text-emerald-400">Zero-Trust & IAM</span></li>
@@ -113,7 +110,7 @@
             <h2 class="text-xl font-heading font-bold text-darkSlate tracking-tight">
               Live Production Console & Screenshots
             </h2>
-            <span class="text-xs font-mono text-primary bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200">9 Screenshots Verified</span>
+            <span class="text-xs font-mono text-brandEmerald bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">9 Screenshots Verified</span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
@@ -199,12 +196,12 @@
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Project Overview</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Project Overview</h2>
 <p class="text-slate-700 leading-relaxed my-2">This project is a production-grade <strong class="text-slate-900">Event-Driven Change Data Capture (CDC) pipeline</strong> built on AWS. It autonomously ingests streaming data, identifies and masks Personally Identifiable Information (PII) on the fly, and securely archives the sanitized records into a centralized Data Lake.</p>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">The architecture emphasizes security, automation, cost-efficiency, and strict adherence to IAM least-privilege principles—all while operating entirely within the AWS Free Tier.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Business Use Case</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Business Use Case</h2>
 <p class="text-slate-700 leading-relaxed my-2">Enterprise organizations often collect vast amounts of customer data. Under regulations like GDPR, CCPA, and HIPAA, storing raw PII in downstream analytics environments (Data Lakes, Data Warehouses) introduces severe compliance risks.</p>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">This solution solves this by:</p>
@@ -212,15 +209,15 @@
 <p class="text-slate-700 leading-relaxed my-2">2. Automatically scrubbing sensitive fields (Email, Phone Number) before they reach the Data Lake.</p>
 <p class="text-slate-700 leading-relaxed my-2">3. Enabling downstream Data Science and Analytics teams to work with realistic, sanitized data without compromising customer privacy.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Key Features</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Key Features</h2>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Serverless Architecture</strong>: Fully managed, auto-scaling components with zero server maintenance.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Real-Time CDC</strong>: Utilizing DynamoDB Streams to capture row-level changes instantaneously.</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Automated PII Masking</strong>: Python Lambda functions intercept the data stream, apply masking logic (e.g., <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">j<strong class="text-slate-900">*@example.com</code>, <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">+1-</strong>*-***-1234</code>), and forward the clean data.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Automated PII Masking</strong>: Python Lambda functions intercept the data stream, apply masking logic (e.g., <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">j<strong class="text-slate-900">*@example.com</code>, <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">+1-</strong>*-***-1234</code>), and forward the clean data.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Infrastructure as Code</strong>: 100% automated provisioning and teardown using Terraform.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Zero-Touch Synthetic Data</strong>: An automated EventBridge-driven data generator simulates realistic customer traffic.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Security First</strong>: Granular IAM roles, encrypted transit, and blocked public S3 access.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Architecture</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Architecture</h2>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Architecture Diagram</h3>
 <div class="h-2"></div>
@@ -239,9 +236,9 @@
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Infrastructure Workflow & Event Flow</h3>
 <p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">AWS EventBridge Scheduler</strong> triggers the <strong class="text-slate-900">Data Generator Lambda</strong> every minute.</p>
-<p class="text-slate-700 leading-relaxed my-2">2. The <strong class="text-slate-900">Data Generator Lambda</strong> synthesizes realistic customer profiles and performs an <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">INSERT</code> into the <strong class="text-slate-900">Amazon DynamoDB Table</strong>.</p>
+<p class="text-slate-700 leading-relaxed my-2">2. The <strong class="text-slate-900">Data Generator Lambda</strong> synthesizes realistic customer profiles and performs an <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">INSERT</code> into the <strong class="text-slate-900">Amazon DynamoDB Table</strong>.</p>
 <p class="text-slate-700 leading-relaxed my-2">3. <strong class="text-slate-900">DynamoDB Streams</strong> instantly captures the change event (CDC).</p>
-<p class="text-slate-700 leading-relaxed my-2">4. The <strong class="text-slate-900">PII Masking Lambda</strong> consumes the stream, unmarshals the DynamoDB JSON, and applies masking algorithms to the <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">email</code> and <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">phone</code> fields.</p>
+<p class="text-slate-700 leading-relaxed my-2">4. The <strong class="text-slate-900">PII Masking Lambda</strong> consumes the stream, unmarshals the DynamoDB JSON, and applies masking algorithms to the <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">email</code> and <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">phone</code> fields.</p>
 <p class="text-slate-700 leading-relaxed my-2">5. The sanitized JSON record is securely written to the <strong class="text-slate-900">Amazon S3 Data Lake</strong>, partitioned by timestamp.</p>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Technology Stack & AWS Services</h3>
@@ -254,7 +251,7 @@
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Observability</strong>: Amazon CloudWatch Logs</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Security</strong>: AWS IAM (Identity and Access Management)</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Folder Structure</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Folder Structure</h2>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>.
 ├── terraform/                # Infrastructure as Code
 │   ├── main.tf               # (Combined or separate logic)
@@ -275,7 +272,7 @@
 ├── .gitignore
 └── README.md</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">PII Masking Example</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">PII Masking Example</h2>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Raw Input (DynamoDB):</strong></p>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">json</div><pre><code>{
@@ -297,46 +294,46 @@
   "status": "SUSPENDED"
 }</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Security Design & IAM Least Privilege</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Security Design & IAM Least Privilege</h2>
 <p class="text-slate-700 leading-relaxed my-2">Security is embedded at every layer:</p>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Data Generator Lambda</strong>: Only allowed to <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">dynamodb:PutItem</code> on the specific table and write to CloudWatch.</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">PII Masking Lambda</strong>: Only allowed to <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">dynamodb:GetRecords</code>, <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">GetShardIterator</code>, <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">DescribeStream</code> on the specific stream ARN, and <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">s3:PutObject</code> on the specific bucket.</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">EventBridge Scheduler</strong>: Only allowed to <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">lambda:InvokeFunction</code> on the Data Generator Lambda.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Data Generator Lambda</strong>: Only allowed to <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">dynamodb:PutItem</code> on the specific table and write to CloudWatch.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">PII Masking Lambda</strong>: Only allowed to <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">dynamodb:GetRecords</code>, <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">GetShardIterator</code>, <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">DescribeStream</code> on the specific stream ARN, and <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">s3:PutObject</code> on the specific bucket.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">EventBridge Scheduler</strong>: Only allowed to <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">lambda:InvokeFunction</code> on the Data Generator Lambda.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">S3 Bucket</strong>: Block Public Access is strictly enforced.</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">State Security</strong>: <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.terraform</code> directories, state files, and execution outputs are meticulously gitignored.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">State Security</strong>: <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.terraform</code> directories, state files, and execution outputs are meticulously gitignored.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Deployment & Validation Steps</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Deployment & Validation Steps</h2>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">Initialize Terraform:</strong></p>
-<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`bash</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`bash</p>
 <p class="text-slate-700 leading-relaxed my-2">cd terraform</p>
 <p class="text-slate-700 leading-relaxed my-2">terraform init</p>
 <p class="text-slate-700 leading-relaxed my-2">terraform validate</p>
-<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`</p>
 <p class="text-slate-700 leading-relaxed my-2">2. <strong class="text-slate-900">Deploy Infrastructure:</strong></p>
-<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`bash</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`bash</p>
 <p class="text-slate-700 leading-relaxed my-2">terraform apply -auto-approve</p>
-<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`</p>
+<p class="text-slate-700 leading-relaxed my-2"><code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200"></code>`</p>
 <p class="text-slate-700 leading-relaxed my-2">3. <strong class="text-slate-900">Automated Testing & Validation:</strong></p>
 <p class="text-slate-700 leading-relaxed my-2">The pipeline begins running immediately. Validation involves checking DynamoDB for new items, ensuring CloudWatch logs show successful processing, and verifying the masked JSON in the S3 bucket.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Troubleshooting</h2>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">No data in S3?</strong> Check if EventBridge is enabled. Verify the Data Generator Lambda CloudWatch logs for execution errors. Ensure DynamoDB Streams is configured to <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">NEW_IMAGE</code>.</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Terraform errors?</strong> Ensure AWS credentials are valid and the region <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">eu-central-1</code> is specified.</li>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Troubleshooting</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">No data in S3?</strong> Check if EventBridge is enabled. Verify the Data Generator Lambda CloudWatch logs for execution errors. Ensure DynamoDB Streams is configured to <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">NEW_IMAGE</code>.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Terraform errors?</strong> Ensure AWS credentials are valid and the region <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">eu-central-1</code> is specified.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Cleanup Procedure</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Cleanup Procedure</h2>
 <p class="text-slate-700 leading-relaxed my-2">To prevent ongoing AWS charges and tear down the infrastructure completely:</p>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">bash</div><pre><code>terraform destroy -auto-approve</code></pre></div>
-<p class="text-slate-700 leading-relaxed my-2">*Note: The S3 bucket is configured with <code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">force_destroy = true</code> for seamless teardown.*</p>
+<p class="text-slate-700 leading-relaxed my-2">*Note: The S3 bucket is configured with <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">force_destroy = true</code> for seamless teardown.*</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Future Improvements</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Future Improvements</h2>
 <li class="ml-4 list-disc text-slate-700 my-1">Integrate <strong class="text-slate-900">Amazon Athena</strong> and <strong class="text-slate-900">AWS Glue</strong> to query the S3 Data Lake directly.</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Use <strong class="text-slate-900">AWS KMS</strong> for Customer Managed Keys (CMK) encryption at rest for S3 and DynamoDB.</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Add an SQS Dead Letter Queue (DLQ) for failed stream processing events.</li>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-blue-700 mt-6 mb-3 border-b border-slate-200 pb-2">Recruiter Highlights & Screenshot Gallery</h2>
+<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Recruiter Highlights & Screenshot Gallery</h2>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">This section demonstrates the successful execution and validation of the pipeline in a live AWS environment.</p>
 <div class="h-2"></div>
@@ -365,7 +362,7 @@
 <div class="h-2"></div>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">7. DynamoDB Streams</h3>
-<p class="text-slate-700 leading-relaxed my-2">Streams are enabled, actively capturing changes (<code class="bg-slate-100 text-blue-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">NEW_IMAGE</code>).</p>
+<p class="text-slate-700 leading-relaxed my-2">Streams are enabled, actively capturing changes (<code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">NEW_IMAGE</code>).</p>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">8. CloudWatch Logs</h3>
@@ -392,7 +389,7 @@
         <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
       </div>
       <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
-        <div class="text-secondary text-xl">⚡</div>
+        <div class="text-teal-600 text-xl">⚡</div>
         <h3 class="font-heading font-bold text-darkSlate text-base">IaC & Automation</h3>
         <p class="text-xs text-slate-500 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
       </div>
@@ -404,16 +401,16 @@
     </section>
 
     <!-- Navigation Footer CTA -->
-    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-primary via-darkSlate to-primary border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-[#062016] via-brandObsidian to-darkSlate border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
       <div>
         <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
-        <p class="text-xs text-slate-300">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
+        <p class="text-xs text-slate-300">Available for technical engineer & architecture roles globally and remotely.</p>
       </div>
       <div class="flex space-x-3">
         <a href="https://github.com/eng-imonmahmud/enterprise-event-driven-cdc-pii-masking-pipeline" target="_blank" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-mono text-xs rounded-xl border border-white/20 transition">
           View Repository ↗
         </a>
-        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-600 text-white font-heading font-bold text-xs rounded-xl shadow transition">
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-heading font-bold text-xs rounded-xl shadow transition">
           Contact Candidate
         </a>
       </div>

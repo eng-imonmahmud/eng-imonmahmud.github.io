@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="40" fill="#083B31"/>
+  <rect x="20" y="20" width="160" height="160" rx="30" fill="none" stroke="#168770" stroke-width="4"/>
+  <text x="100" y="90" font-family="sans-serif" font-weight="bold" font-size="22" fill="#FFFFFF" text-anchor="middle">JESSORE IT</text>
+  <text x="100" y="120" font-family="sans-serif" font-weight="bold" font-size="13" fill="#D1EAE5" text-anchor="middle">WEB DEV & WP</text>
+</svg>

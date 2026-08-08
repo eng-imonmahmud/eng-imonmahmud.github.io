@@ -25,10 +25,11 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brandEmerald: '#059669',
-            brandDarkEmerald: '#047857',
-            brandTeal: '#0D9488',
-            brandObsidian: '#0B0F17',
+            brandDeepForest: '#0C5244',
+            brandDarkerForest: '#083B31',
+            brandForestHover: '#094237',
+            brandAccentGreen: '#116B59',
+            brandEmeraldLight: '#168770',
             darkSlate: '#0F172A',
           }
         }
@@ -36,28 +37,28 @@
     }
   </script>
 </head>
-<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-brandEmerald selection:text-white">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-brandDeepForest selection:text-white">
 
   <!-- Sticky Executive Navbar -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="index.html" class="bg-brandEmerald text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emerald-600/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-brandEmerald transition">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="bg-brandDeepForest text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-brandDeepForest/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-brandDeepForest transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandEmerald transition">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandDeepForest transition">← Back to Projects</a>
         
-        <a href="https://github.com/eng-imonmahmud/enterprise-serverless-genai-inference-api" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
+        <a href="https://github.com/eng-imonmahmud/enterprise-serverless-genai-inference-api" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Header (Custom Emerald Obsidian) -->
-  <header class="relative bg-gradient-to-br from-[#062016] via-brandObsidian to-darkSlate text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
+  <!-- Hero Header (Custom #0C5244 Deep Forest) -->
+  <header class="relative bg-gradient-to-br from-[#083B31] via-brandDeepForest to-darkSlate text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
       <div class="lg:col-span-8 space-y-5">
         <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
@@ -74,7 +75,7 @@
           <span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">GCP Functions Gen2</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Vertex AI Gemini</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Python REST API</span>
         </div>
         <div class="flex flex-wrap items-center gap-4 pt-4">
-          <a href="https://github.com/eng-imonmahmud/enterprise-serverless-genai-inference-api" target="_blank" class="px-6 py-3 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
+          <a href="https://github.com/eng-imonmahmud/enterprise-serverless-genai-inference-api" target="_blank" class="px-6 py-3 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
           </a>
           <a href="index.html#projects" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-heading font-semibold text-sm rounded-xl border border-white/20 transition">
@@ -110,7 +111,7 @@
             <h2 class="text-xl font-heading font-bold text-darkSlate tracking-tight">
               Live Production Console & Screenshots
             </h2>
-            <span class="text-xs font-mono text-brandEmerald bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">8 Screenshots Verified</span>
+            <span class="text-xs font-mono text-brandDeepForest bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">8 Screenshots Verified</span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
@@ -197,7 +198,7 @@
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Project Status:</strong> 🟢 Production Ready</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Professional Description</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Professional Description</h2>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">The <strong class="text-slate-900">Enterprise Serverless GenAI Inference API</strong> is a highly scalable, robust, and autonomous REST API engineered entirely on Google Cloud Platform's serverless infrastructure. It acts as an integration gateway to <strong class="text-slate-900">Vertex AI Gemini</strong>, exposing generative AI inference capabilities through secure endpoints.</p>
 <div class="h-2"></div>
@@ -205,7 +206,7 @@
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Table of Contents</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Table of Contents</h2>
 <li class="ml-4 list-disc text-slate-700 my-1">[Executive Summary](#executive-summary)</li>
 <li class="ml-4 list-disc text-slate-700 my-1">[Features](#features)</li>
 <li class="ml-4 list-disc text-slate-700 my-1">[Architecture Overview](#architecture-overview)</li>
@@ -224,20 +225,20 @@
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Executive Summary</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Executive Summary</h2>
 <p class="text-slate-700 leading-relaxed my-2">This project demonstrates the ability to autonomously construct, deploy, and audit a completely serverless AI backend without manual intervention. It highlights a mature cloud-native engineering workflow—from generating secure boilerplate and enforcing IaC-like infrastructure to configuring deployment pipelines and interacting with large language models efficiently.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Features</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Features</h2>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Serverless Compute</strong>: Zero infrastructure management leveraging Cloud Functions (2nd Gen).</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Generative AI Integration</strong>: Direct communication with Google's Vertex AI Gemini 2.5 Flash model.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Stateless Execution</strong>: Ensures horizontal scaling out-of-the-box.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Automated CI/CD</strong>: Integrated GitHub Actions for linting and Pytest automation.</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Enterprise Security</strong>: Uses least-privilege service accounts and <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.gcloudignore</code> filtering.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Enterprise Security</strong>: Uses least-privilege service accounts and <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.gcloudignore</code> filtering.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Structured Logging</strong>: Comprehensive error handling and system-level logging.</li>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Architecture Overview</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Architecture Overview</h2>
 <div class="h-2"></div>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">mermaid</div><pre><code>graph TD
     Client((Client)) --&gt;|HTTP POST JSON| CF(Cloud Functions 2nd Gen)
@@ -247,13 +248,13 @@
     CF --&gt;|HTTP 200 JSON| Client
     CF --&gt;|Application Logs| Logging(Cloud Logging)</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Technology Stack</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Technology Stack</h2>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Language</strong>: Python 3.12</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Frameworks</strong>: Flask, Functions Framework for Python</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Testing</strong>: Pytest, Pytest-Mock</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">CI/CD</strong>: GitHub Actions</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Google Cloud Services Used</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Google Cloud Services Used</h2>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Functions (2nd Gen)</strong>: Application execution environment.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Vertex AI</strong>: Generative AI endpoint (Gemini).</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Build</strong>: Automated container image construction.</li>
@@ -262,7 +263,7 @@
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Project Structure</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Project Structure</h2>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>.
 ├── .github/workflows/       # CI/CD workflows
 ├── docs/                    # Project documentation
@@ -281,12 +282,12 @@
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">REST API Endpoints</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">REST API Endpoints</h2>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">1. Health Check</h3>
 <p class="text-slate-700 leading-relaxed my-2">Validates the availability of the Cloud Function.</p>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Method</strong>: <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">GET</code></li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Path</strong>: <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">/</code></li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Method</strong>: <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">GET</code></li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Path</strong>: <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">/</code></li>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Response (200 OK)</strong></p>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">json</div><pre><code>{
@@ -295,9 +296,9 @@
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">2. GenAI Inference Generation</h3>
 <p class="text-slate-700 leading-relaxed my-2">Processes user prompts using the Vertex AI Gemini model.</p>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Method</strong>: <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">POST</code></li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Path</strong>: <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">/generate</code></li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Headers</strong>: <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">Content-Type: application/json</code></li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Method</strong>: <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">POST</code></li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Path</strong>: <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">/generate</code></li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Headers</strong>: <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">Content-Type: application/json</code></li>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Request Body</strong></p>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">json</div><pre><code>{
@@ -311,9 +312,9 @@
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Deployment Architecture</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Deployment Architecture</h2>
 <div class="h-2"></div>
-<p class="text-slate-700 leading-relaxed my-2">The API was deployed using the <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">gcloud</code> CLI. The underlying platform handles containerization, deployment to Cloud Run, and Eventarc integration automatically.</p>
+<p class="text-slate-700 leading-relaxed my-2">The API was deployed using the <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">gcloud</code> CLI. The underlying platform handles containerization, deployment to Cloud Run, and Eventarc integration automatically.</p>
 <div class="h-2"></div>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">bash</div><pre><code>gcloud functions deploy genai-api \
     --gen2 \
@@ -329,18 +330,18 @@
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Security Design & Authentication & IAM</h2>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Identity Abstraction</strong>: The function operates under a dedicated Service Account (<code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">genai-api-sa@imons-projects.iam.gserviceaccount.com</code>).</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Least-Privilege Role</strong>: The service account is strictly granted the <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">Vertex AI User</code> (<code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">roles/aiplatform.user</code>) role, preventing any unauthorized broad project modifications.</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Credential Sanitization</strong>: The repository enforces a strict exclusion policy (<code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.gitignore</code> and <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.gcloudignore</code>) to prevent accidental leaks of <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.json</code> keys, <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.env</code> files, or <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">venv</code> structures.</li>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Security Design & Authentication & IAM</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Identity Abstraction</strong>: The function operates under a dedicated Service Account (<code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">genai-api-sa@imons-projects.iam.gserviceaccount.com</code>).</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Least-Privilege Role</strong>: The service account is strictly granted the <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">Vertex AI User</code> (<code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">roles/aiplatform.user</code>) role, preventing any unauthorized broad project modifications.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Credential Sanitization</strong>: The repository enforces a strict exclusion policy (<code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.gitignore</code> and <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.gcloudignore</code>) to prevent accidental leaks of <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.json</code> keys, <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.env</code> files, or <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">venv</code> structures.</li>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Testing Strategy</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Testing Strategy</h2>
 <p class="text-slate-700 leading-relaxed my-2">The project implements a comprehensive Pytest suite:</p>
-<p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">Endpoint Verification</strong>: Validates correct HTTP status codes (<code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">200 OK</code>, <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">400 Bad Request</code>, <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">500 Internal Server Error</code>).</p>
+<p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">Endpoint Verification</strong>: Validates correct HTTP status codes (<code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">200 OK</code>, <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">400 Bad Request</code>, <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">500 Internal Server Error</code>).</p>
 <p class="text-slate-700 leading-relaxed my-2">2. <strong class="text-slate-900">Payload Validation</strong>: Asserts proper handling of empty or invalid JSON.</p>
-<p class="text-slate-700 leading-relaxed my-2">3. <strong class="text-slate-900">Mocking</strong>: Simulates Vertex AI responses using <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">pytest-mock</code> to test the internal logic without accumulating cloud billing costs or network latency.</p>
+<p class="text-slate-700 leading-relaxed my-2">3. <strong class="text-slate-900">Mocking</strong>: Simulates Vertex AI responses using <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">pytest-mock</code> to test the internal logic without accumulating cloud billing costs or network latency.</p>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Validation Results</h3>
 <p class="text-slate-700 leading-relaxed my-2">All tests passing successfully:</p>
@@ -351,12 +352,12 @@ collected 4 items
 tests/test_app.py ....                                                   [100%]
 ============================== 4 passed in 0.45s ===============================</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">CI/CD Workflow</h2>
-<p class="text-slate-700 leading-relaxed my-2">The CI workflow defined in <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.github/workflows/ci.yml</code> triggers on every push and pull request to the <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">main</code> branch. It sets up Python 3.12, securely installs requirements, and executes the entire Pytest suite automatically to guarantee production stability.</p>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">CI/CD Workflow</h2>
+<p class="text-slate-700 leading-relaxed my-2">The CI workflow defined in <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.github/workflows/ci.yml</code> triggers on every push and pull request to the <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">main</code> branch. It sets up Python 3.12, securely installs requirements, and executes the entire Pytest suite automatically to guarantee production stability.</p>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Screenshot Gallery</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Screenshot Gallery</h2>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">The following gallery proves the successful deployment, testing, and resource configuration of the Enterprise GenAI API in the Google Cloud Console.</p>
 <div class="h-2"></div>
@@ -386,25 +387,25 @@ tests/test_app.py ....                                                   [100%]
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Lessons Learned</h2>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Dependency Management</strong>: Utilizing Python 3.12 for Cloud Functions requires careful consideration of library compatibilities (such as <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">protobuf</code>). Leveraging exact requirements guarantees smooth deployments.</li>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Lessons Learned</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Dependency Management</strong>: Utilizing Python 3.12 for Cloud Functions requires careful consideration of library compatibilities (such as <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">protobuf</code>). Leveraging exact requirements guarantees smooth deployments.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Resource Constraints</strong>: Serverless inference often requires tuning memory caps; scaling from the default 256 MiB to 512 MiB ensures the Vertex AI libraries do not face out-of-memory container terminations.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Future Improvements</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Future Improvements</h2>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">API Gateway</strong>: Introduce Google Cloud API Gateway for rate limiting and API key authentication.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Terraform Automation</strong>: Refactor infrastructure provisioning using HashiCorp Terraform for true Infrastructure-as-Code implementations.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Secret Manager</strong>: Store prompt engineering templates and configuration variables dynamically in Google Cloud Secret Manager.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Cleanup</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Cleanup</h2>
 <p class="text-slate-700 leading-relaxed my-2">To destroy the active Cloud Function and prevent recurring charges:</p>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">bash</div><pre><code>gcloud functions delete genai-api --gen2 --region us-central1 --quiet</code></pre></div>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">License</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">License</h2>
 <p class="text-slate-700 leading-relaxed my-2">MIT License. Copyright (c) 2026 Imon Mahmud.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Author</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Author</h2>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Imon Mahmud</strong></p>
 <p class="text-slate-700 leading-relaxed my-2">IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER</p>
@@ -417,7 +418,7 @@ tests/test_app.py ....                                                   [100%]
       <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
         <div class="text-emerald-600 text-xl">🛡️</div>
         <h3 class="font-heading font-bold text-darkSlate text-base">Security & Compliance</h3>
-        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
+        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR compliance standards.</p>
       </div>
       <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
         <div class="text-teal-600 text-xl">⚡</div>
@@ -432,7 +433,7 @@ tests/test_app.py ....                                                   [100%]
     </section>
 
     <!-- Navigation Footer CTA -->
-    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-[#062016] via-brandObsidian to-darkSlate border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-[#083B31] via-brandDeepForest to-darkSlate border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
       <div>
         <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
         <p class="text-xs text-slate-300">Available for technical engineer & architecture roles globally and remotely.</p>
@@ -441,7 +442,7 @@ tests/test_app.py ....                                                   [100%]
         <a href="https://github.com/eng-imonmahmud/enterprise-serverless-genai-inference-api" target="_blank" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-mono text-xs rounded-xl border border-white/20 transition">
           View Repository ↗
         </a>
-        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-heading font-bold text-xs rounded-xl shadow transition">
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-xs rounded-xl shadow transition">
           Contact Candidate
         </a>
       </div>

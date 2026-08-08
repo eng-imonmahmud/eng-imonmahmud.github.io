@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="40" fill="#0C5244"/>
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+  <text x="100" y="85" font-family="sans-serif" font-weight="bold" font-size="28" fill="#FFFFFF" text-anchor="middle">BTEB</text>
+  <text x="100" y="115" font-family="sans-serif" font-weight="bold" font-size="14" fill="#D1EAE5" text-anchor="middle">360 HOURS</text>
+  <text x="100" y="135" font-family="sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">Govt. Certified</text>
+</svg>

@@ -25,10 +25,11 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brandEmerald: '#059669',
-            brandDarkEmerald: '#047857',
-            brandTeal: '#0D9488',
-            brandObsidian: '#0B0F17',
+            brandDeepForest: '#0C5244',
+            brandDarkerForest: '#083B31',
+            brandForestHover: '#094237',
+            brandAccentGreen: '#116B59',
+            brandEmeraldLight: '#168770',
             darkSlate: '#0F172A',
           }
         }
@@ -36,28 +37,28 @@
     }
   </script>
 </head>
-<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-brandEmerald selection:text-white">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-brandDeepForest selection:text-white">
 
   <!-- Sticky Executive Navbar -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="index.html" class="bg-brandEmerald text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emerald-600/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-brandEmerald transition">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="bg-brandDeepForest text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-brandDeepForest/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-brandDeepForest transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandEmerald transition">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandDeepForest transition">← Back to Projects</a>
         
-        <a href="https://github.com/eng-imonmahmud/enterprise-serverless-workflow-orchestration" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
+        <a href="https://github.com/eng-imonmahmud/enterprise-serverless-workflow-orchestration" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Header (Custom Emerald Obsidian) -->
-  <header class="relative bg-gradient-to-br from-[#062016] via-brandObsidian to-darkSlate text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
+  <!-- Hero Header (Custom #0C5244 Deep Forest) -->
+  <header class="relative bg-gradient-to-br from-[#083B31] via-brandDeepForest to-darkSlate text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
       <div class="lg:col-span-8 space-y-5">
         <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
@@ -74,7 +75,7 @@
           <span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">AWS Step Functions</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Lambda</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">DynamoDB</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Terraform</span>
         </div>
         <div class="flex flex-wrap items-center gap-4 pt-4">
-          <a href="https://github.com/eng-imonmahmud/enterprise-serverless-workflow-orchestration" target="_blank" class="px-6 py-3 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
+          <a href="https://github.com/eng-imonmahmud/enterprise-serverless-workflow-orchestration" target="_blank" class="px-6 py-3 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
           </a>
           <a href="index.html#projects" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-heading font-semibold text-sm rounded-xl border border-white/20 transition">
@@ -110,7 +111,7 @@
             <h2 class="text-xl font-heading font-bold text-darkSlate tracking-tight">
               Live Production Console & Screenshots
             </h2>
-            <span class="text-xs font-mono text-brandEmerald bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">8 Screenshots Verified</span>
+            <span class="text-xs font-mono text-brandDeepForest bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">8 Screenshots Verified</span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
@@ -196,7 +197,7 @@
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Table of Contents</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Table of Contents</h2>
 <li class="ml-4 list-disc text-slate-700 my-1">[Executive Summary](#executive-summary)</li>
 <li class="ml-4 list-disc text-slate-700 my-1">[Business Use Case](#business-use-case)</li>
 <li class="ml-4 list-disc text-slate-700 my-1">[Solution Overview](#solution-overview)</li>
@@ -216,13 +217,13 @@
 <li class="ml-4 list-disc text-slate-700 my-1">[Future Improvements](#future-improvements)</li>
 <li class="ml-4 list-disc text-slate-700 my-1">[Author](#author)</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Executive Summary</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Executive Summary</h2>
 <p class="text-slate-700 leading-relaxed my-2">This project demonstrates a production-grade, serverless workflow orchestration system entirely built on AWS using Terraform (Infrastructure as Code) and Python. The goal is to provide a highly resilient, scalable, and automated state management architecture for enterprise workflows, while strictly adhering to AWS Free Tier limits and cloud security best practices (least privilege IAM).</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Business Use Case</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Business Use Case</h2>
 <p class="text-slate-700 leading-relaxed my-2">Enterprises often require complex, multi-step business processes such as order fulfillment, data pipeline orchestrations, or automated compliance checks. This solution provides a blueprint for a microservices orchestration model using AWS Step Functions, allowing teams to break down monolithic processes into decoupled Lambda functions, route logic dynamically based on validation results, and log execution states automatically to DynamoDB for auditability.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Solution Overview</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Solution Overview</h2>
 <p class="text-slate-700 leading-relaxed my-2">The system triggers an AWS Step Functions state machine which coordinates two AWS Lambda functions:</p>
 <p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">Job Generator Lambda</strong>: Mocks an incoming enterprise payload (Workflow ID, Order ID, Customer ID, Region).</p>
 <p class="text-slate-700 leading-relaxed my-2">2. <strong class="text-slate-900">Validator Lambda</strong>: Evaluates the payload for correctness.</p>
@@ -232,7 +233,7 @@
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">FAILED</strong>: Logs a failure record to DynamoDB.</li>
 <p class="text-slate-700 leading-relaxed my-2">Every state transition is heavily monitored and logged in CloudWatch Logs.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Features</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Features</h2>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">100% Infrastructure as Code (IaC)</strong>: Fully automated deployment via Terraform.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Serverless Compute</strong>: Event-driven AWS Lambda functions in Python.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Workflow Orchestration</strong>: AWS Step Functions with conditional routing (Choice State).</li>
@@ -241,7 +242,7 @@
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Strict Security</strong>: IAM roles provisioned with absolute least privilege.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Zero Cost</strong>: Architected entirely within the AWS Free Tier.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Architecture Overview</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Architecture Overview</h2>
 <div class="h-2"></div>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">mermaid</div><pre><code>graph TD
     Client[Client / Event Trigger] --&gt;|Triggers Execution| SFN[AWS Step Functions]
@@ -270,7 +271,7 @@
 <p class="text-slate-700 leading-relaxed my-2">5. Step Functions -> Writes State to DynamoDB (Success or Failure)</p>
 <p class="text-slate-700 leading-relaxed my-2">6. CloudWatch continuously monitors Step Functions and Lambda execution logs.</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Folder Structure</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Folder Structure</h2>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">text</div><pre><code>.
 ├── src/
 │   ├── job_generator.py
@@ -287,24 +288,24 @@
 ├── README.md
 └── screenshots/</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Technology Stack</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Technology Stack</h2>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Cloud Provider</strong>: AWS</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Infrastructure as Code</strong>: Terraform</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Programming Language</strong>: Python 3.9</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Version Control</strong>: Git / GitHub</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">AWS Services Used</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">AWS Services Used</h2>
 <li class="ml-4 list-disc text-slate-700 my-1">AWS Step Functions</li>
 <li class="ml-4 list-disc text-slate-700 my-1">AWS Lambda</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Amazon DynamoDB</li>
 <li class="ml-4 list-disc text-slate-700 my-1">AWS IAM (Identity and Access Management)</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Amazon CloudWatch</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Terraform Deployment Instructions</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Terraform Deployment Instructions</h2>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Prerequisites</h3>
-<li class="ml-4 list-disc text-slate-700 my-1">AWS CLI configured with credentials (<code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">aws configure</code>).</li>
-<li class="ml-4 list-disc text-slate-700 my-1">Terraform installed (<code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">>= 1.0.0</code>).</li>
+<li class="ml-4 list-disc text-slate-700 my-1">AWS CLI configured with credentials (<code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">aws configure</code>).</li>
+<li class="ml-4 list-disc text-slate-700 my-1">Terraform installed (<code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">>= 1.0.0</code>).</li>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Deployment</h3>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">bash</div><pre><code># Initialize Terraform and download providers
@@ -319,7 +320,7 @@ terraform plan
 # Deploy infrastructure
 terraform apply -auto-approve</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Testing Procedure</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Testing Procedure</h2>
 <p class="text-slate-700 leading-relaxed my-2">You can trigger the workflow manually using the AWS CLI or the AWS Management Console.</p>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Success Path Test:</strong></p>
@@ -334,12 +335,12 @@ terraform apply -auto-approve</code></pre></div>
   --input "{\"simulate_failure\": true}" \
   --region eu-central-1</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Validation Results</h2>
-<li class="ml-4 list-disc text-slate-700 my-1">Verified DynamoDB contains both <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">SUCCESS</code> and <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">FAILED</code> workflow logs.</li>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Validation Results</h2>
+<li class="ml-4 list-disc text-slate-700 my-1">Verified DynamoDB contains both <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">SUCCESS</code> and <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">FAILED</code> workflow logs.</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Verified Step Functions execution history perfectly routes based on Choice state.</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Verified CloudWatch captures complete execution details without permission errors.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Screenshot Gallery</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Screenshot Gallery</h2>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">Step Functions Workflow</h3>
 <div class="h-2"></div>
@@ -359,21 +360,21 @@ terraform apply -auto-approve</code></pre></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">IAM Roles (Least Privilege)</h3>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Security Considerations</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Security Considerations</h2>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">No Hardcoded Credentials</strong>: Terraform relies on strictly configured local AWS credentials. No secrets are tracked in version control.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Least Privilege IAM</strong>: Lambda roles can only execute and write logs. Step Functions role can only invoke specific Lambdas, put items in a specific DynamoDB table, and write to a specific CloudWatch log group.</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">State File Security</strong>: <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.gitignore</code> explicitly prevents <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">terraform.tfstate</code> and AWS PEM files from being committed.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">State File Security</strong>: <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.gitignore</code> explicitly prevents <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">terraform.tfstate</code> and AWS PEM files from being committed.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Cost Optimization</h2>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">DynamoDB</strong>: Configured as <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">PAY_PER_REQUEST</code> (On-Demand), staying well within the 25 GB free tier limit.</li>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Cost Optimization</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">DynamoDB</strong>: Configured as <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">PAY_PER_REQUEST</code> (On-Demand), staying well within the 25 GB free tier limit.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Lambda & Step Functions</strong>: Free tier allows millions of requests/transitions per month.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">CloudWatch</strong>: Standard retention policies implemented to prevent bloat.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Cleanup Instructions</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Cleanup Instructions</h2>
 <p class="text-slate-700 leading-relaxed my-2">To avoid any accidental AWS charges, ensure you tear down the infrastructure when done:</p>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">bash</div><pre><code>terraform destroy -auto-approve</code></pre></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Skills Demonstrated</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Skills Demonstrated</h2>
 <li class="ml-4 list-disc text-slate-700 my-1">Cloud Architecture & Serverless Design</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Infrastructure as Code (Terraform)</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Microservices Orchestration</li>
@@ -381,12 +382,12 @@ terraform apply -auto-approve</code></pre></div>
 <li class="ml-4 list-disc text-slate-700 my-1">DevOps automation</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Python Development for Cloud</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Future Improvements</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Future Improvements</h2>
 <li class="ml-4 list-disc text-slate-700 my-1">Integrate Amazon EventBridge to trigger the workflow on a schedule.</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Implement a Dead Letter Queue (DLQ) using SQS for unhandled Lambda exceptions.</li>
 <li class="ml-4 list-disc text-slate-700 my-1">Add Terraform remote state backend (S3 + DynamoDB lock) for team collaboration.</li>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Author</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Author</h2>
 <p class="text-slate-700 leading-relaxed my-2"><strong class="text-slate-900">Imon Mahmud</strong></p>
 <p class="text-slate-700 leading-relaxed my-2">IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER</p>
 <div class="h-2"></div>
@@ -398,7 +399,7 @@ terraform apply -auto-approve</code></pre></div>
       <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
         <div class="text-emerald-600 text-xl">🛡️</div>
         <h3 class="font-heading font-bold text-darkSlate text-base">Security & Compliance</h3>
-        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
+        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR compliance standards.</p>
       </div>
       <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
         <div class="text-teal-600 text-xl">⚡</div>
@@ -413,7 +414,7 @@ terraform apply -auto-approve</code></pre></div>
     </section>
 
     <!-- Navigation Footer CTA -->
-    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-[#062016] via-brandObsidian to-darkSlate border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-[#083B31] via-brandDeepForest to-darkSlate border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
       <div>
         <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
         <p class="text-xs text-slate-300">Available for technical engineer & architecture roles globally and remotely.</p>
@@ -422,7 +423,7 @@ terraform apply -auto-approve</code></pre></div>
         <a href="https://github.com/eng-imonmahmud/enterprise-serverless-workflow-orchestration" target="_blank" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-mono text-xs rounded-xl border border-white/20 transition">
           View Repository ↗
         </a>
-        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-heading font-bold text-xs rounded-xl shadow transition">
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-xs rounded-xl shadow transition">
           Contact Candidate
         </a>
       </div>

@@ -25,10 +25,11 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brandEmerald: '#059669',
-            brandDarkEmerald: '#047857',
-            brandTeal: '#0D9488',
-            brandObsidian: '#0B0F17',
+            brandDeepForest: '#0C5244',
+            brandDarkerForest: '#083B31',
+            brandForestHover: '#094237',
+            brandAccentGreen: '#116B59',
+            brandEmeraldLight: '#168770',
             darkSlate: '#0F172A',
           }
         }
@@ -36,28 +37,28 @@
     }
   </script>
 </head>
-<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-brandEmerald selection:text-white">
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-brandDeepForest selection:text-white">
 
   <!-- Sticky Executive Navbar -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
-        <a href="index.html" class="bg-brandEmerald text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emerald-600/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-brandEmerald transition">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="bg-brandDeepForest text-white font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-brandDeepForest/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-darkSlate text-lg tracking-tight hidden sm:block hover:text-brandDeepForest transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandEmerald transition">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandDeepForest transition">← Back to Projects</a>
         
-        <a href="https://github.com/eng-imonmahmud/enterprise-secure-asset-vault-event-processing" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
+        <a href="https://github.com/eng-imonmahmud/enterprise-secure-asset-vault-event-processing" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-mono text-xs rounded-xl shadow-sm transition duration-300">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
         </a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Header (Custom Emerald Obsidian) -->
-  <header class="relative bg-gradient-to-br from-[#062016] via-brandObsidian to-darkSlate text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
+  <!-- Hero Header (Custom #0C5244 Deep Forest) -->
+  <header class="relative bg-gradient-to-br from-[#083B31] via-brandDeepForest to-darkSlate text-white py-16 lg:py-24 border-b border-slate-200 overflow-hidden shadow-md">
     <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
       <div class="lg:col-span-8 space-y-5">
         <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
@@ -74,7 +75,7 @@
           <span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">AWS S3 Vault</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">KMS Encryption</span><span class="px-2.5 py-1 bg-white/10 border border-white/20 text-white font-mono text-[11px] rounded-lg">Lambda Event Processing</span>
         </div>
         <div class="flex flex-wrap items-center gap-4 pt-4">
-          <a href="https://github.com/eng-imonmahmud/enterprise-secure-asset-vault-event-processing" target="_blank" class="px-6 py-3 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
+          <a href="https://github.com/eng-imonmahmud/enterprise-secure-asset-vault-event-processing" target="_blank" class="px-6 py-3 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-sm rounded-xl shadow-lg transition flex items-center">
             <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
           </a>
           <a href="index.html#projects" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-heading font-semibold text-sm rounded-xl border border-white/20 transition">
@@ -110,7 +111,7 @@
             <h2 class="text-xl font-heading font-bold text-darkSlate tracking-tight">
               Live Production Console & Screenshots
             </h2>
-            <span class="text-xs font-mono text-brandEmerald bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">10 Screenshots Verified</span>
+            <span class="text-xs font-mono text-brandDeepForest bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">10 Screenshots Verified</span>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             
@@ -198,7 +199,7 @@
 <div class="h-2"></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Project Overview</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Project Overview</h2>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">An enterprise-grade event-driven architecture designed to securely process, validate, and catalog digital assets uploaded to the cloud. Built entirely on Google Cloud's serverless ecosystem, this architecture ensures high availability, automated scalability, and strict security compliance via least-privilege IAM and centralized secret management.</p>
 <div class="h-2"></div>
@@ -217,7 +218,7 @@
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Architecture Overview</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Architecture Overview</h2>
 <div class="h-2"></div>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">mermaid</div><pre><code>graph TD
     User([External System / User]) --&gt;|Upload Asset| GCS[Cloud Storage Bucket]
@@ -237,21 +238,21 @@
     style Logging fill:#607D8B,stroke:#fff,stroke-width:2px,color:#fff</code></pre></div>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">End-to-End Workflow</h3>
-<p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">Ingestion</strong>: The <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">enterprise-secure-asset-vault-*</code> bucket enforces uniform bucket-level access.</p>
-<p class="text-slate-700 leading-relaxed my-2">2. <strong class="text-slate-900">Routing</strong>: <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">google.cloud.storage.object.v1.finalized</code> events are caught by Eventarc, ensuring guaranteed delivery using underlying Pub/Sub mechanisms.</p>
+<p class="text-slate-700 leading-relaxed my-2">1. <strong class="text-slate-900">Ingestion</strong>: The <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">enterprise-secure-asset-vault-*</code> bucket enforces uniform bucket-level access.</p>
+<p class="text-slate-700 leading-relaxed my-2">2. <strong class="text-slate-900">Routing</strong>: <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">google.cloud.storage.object.v1.finalized</code> events are caught by Eventarc, ensuring guaranteed delivery using underlying Pub/Sub mechanisms.</p>
 <p class="text-slate-700 leading-relaxed my-2">3. <strong class="text-slate-900">Processing Engine</strong>: The Gen2 Cloud Function processes the standard CloudEvents payload, performing dynamic configuration lookup.</p>
-<p class="text-slate-700 leading-relaxed my-2">4. <strong class="text-slate-900">State Management</strong>: Extracted characteristics (CRC32C, size, timestamps, content-type) are persisted as structured documents into the <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">asset-catalog</code> collection.</p>
+<p class="text-slate-700 leading-relaxed my-2">4. <strong class="text-slate-900">State Management</strong>: Extracted characteristics (CRC32C, size, timestamps, content-type) are persisted as structured documents into the <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">asset-catalog</code> collection.</p>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Security Best Practices</h2>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Zero Hardcoded Secrets</strong>: Python source code (<code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">src/main.py</code>) relies entirely on Secret Manager for enterprise configuration.</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Principle of Least Privilege</strong>: The processing function runs under a dedicated service account identity, restricted to only <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">roles/secretmanager.secretAccessor</code> and <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">roles/datastore.user</code>.</li>
-<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Git Hygiene</strong>: Comprehensive <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.gitignore</code> completely isolates service account keys (<code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">*.json</code>), local environment variables, and temporary artifacts from the repository.</li>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Security Best Practices</h2>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Zero Hardcoded Secrets</strong>: Python source code (<code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">src/main.py</code>) relies entirely on Secret Manager for enterprise configuration.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Principle of Least Privilege</strong>: The processing function runs under a dedicated service account identity, restricted to only <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">roles/secretmanager.secretAccessor</code> and <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">roles/datastore.user</code>.</li>
+<li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Git Hygiene</strong>: Comprehensive <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">.gitignore</code> completely isolates service account keys (<code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">*.json</code>), local environment variables, and temporary artifacts from the repository.</li>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Deployment & Testing</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Deployment & Testing</h2>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">The infrastructure is provisioned through custom automated Python deployment scripts that wrap the Google Cloud SDK, demonstrating programmatic orchestration of cloud environments.</p>
 <div class="h-2"></div>
@@ -266,14 +267,14 @@ python scripts/deploy.py</code></pre></div>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Recruiter Screenshot Gallery</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Recruiter Screenshot Gallery</h2>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">1. Google Cloud Project Dashboard</h3>
 <p class="text-slate-700 leading-relaxed my-2">Provides a holistic overview of the production environment.</p>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">2. Cloud Storage Setup</h3>
-<p class="text-slate-700 leading-relaxed my-2">The <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">enterprise-secure-asset-vault</code> bucket configuration.</p>
+<p class="text-slate-700 leading-relaxed my-2">The <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">enterprise-secure-asset-vault</code> bucket configuration.</p>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">3. Uploaded Enterprise Asset</h3>
@@ -293,7 +294,7 @@ python scripts/deploy.py</code></pre></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">7. Secret Manager Integration</h3>
-<p class="text-slate-700 leading-relaxed my-2">Secure storage of the <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">enterprise-config</code> parameters.</p>
+<p class="text-slate-700 leading-relaxed my-2">Secure storage of the <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">enterprise-config</code> parameters.</p>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">8. Firestore Database</h3>
@@ -301,7 +302,7 @@ python scripts/deploy.py</code></pre></div>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">9. Firestore Data Catalog</h3>
-<p class="text-slate-700 leading-relaxed my-2">The processed metadata accurately stored within the <code class="bg-slate-100 text-emerald-700 px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">asset-catalog</code> collection.</p>
+<p class="text-slate-700 leading-relaxed my-2">The processed metadata accurately stored within the <code class="bg-slate-100 text-[#0C5244] px-1.5 py-0.5 rounded text-xs font-mono border border-slate-200">asset-catalog</code> collection.</p>
 <div class="h-2"></div>
 <div class="h-2"></div>
 <h3 class="text-lg font-heading font-bold text-slate-900 mt-4 mb-2">10. Cloud Logging & Observability</h3>
@@ -310,7 +311,7 @@ python scripts/deploy.py</code></pre></div>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Repository Structure</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Repository Structure</h2>
 <div class="h-2"></div>
 <div class="bg-slate-900 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-md"><div class="text-[10px] text-slate-400 font-mono mb-1">code</div><pre><code>.
 ├── src/
@@ -327,7 +328,7 @@ python scripts/deploy.py</code></pre></div>
 <div class="h-2"></div>
 <p class="text-slate-700 leading-relaxed my-2">---</p>
 <div class="h-2"></div>
-<h2 class="text-xl font-heading font-bold text-emerald-700 mt-6 mb-3 border-b border-slate-200 pb-2">Skills Demonstrated</h2>
+<h2 class="text-xl font-heading font-bold text-[#0C5244] mt-6 mb-3 border-b border-slate-200 pb-2">Skills Demonstrated</h2>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Google Cloud Platform (GCP)</strong>: Mastered orchestration of serverless and data components.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Event-Driven Architecture</strong>: Implementation of loosely coupled, highly scalable microservices.</li>
 <li class="ml-4 list-disc text-slate-700 my-1"><strong class="text-slate-900">Python Development</strong>: Writing robust, PEP-8 compliant cloud execution code.</li>
@@ -352,7 +353,7 @@ python scripts/deploy.py</code></pre></div>
       <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
         <div class="text-emerald-600 text-xl">🛡️</div>
         <h3 class="font-heading font-bold text-darkSlate text-base">Security & Compliance</h3>
-        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
+        <p class="text-xs text-slate-500 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR compliance standards.</p>
       </div>
       <div class="bg-white border border-slate-200 p-6 rounded-2xl space-y-3 shadow-sm">
         <div class="text-teal-600 text-xl">⚡</div>
@@ -367,7 +368,7 @@ python scripts/deploy.py</code></pre></div>
     </section>
 
     <!-- Navigation Footer CTA -->
-    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-[#062016] via-brandObsidian to-darkSlate border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-[#083B31] via-brandDeepForest to-darkSlate border border-slate-700 p-8 rounded-2xl gap-4 text-white shadow-lg">
       <div>
         <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
         <p class="text-xs text-slate-300">Available for technical engineer & architecture roles globally and remotely.</p>
@@ -376,7 +377,7 @@ python scripts/deploy.py</code></pre></div>
         <a href="https://github.com/eng-imonmahmud/enterprise-secure-asset-vault-event-processing" target="_blank" class="px-5 py-2.5 bg-white/10 hover:bg-white/20 text-white font-mono text-xs rounded-xl border border-white/20 transition">
           View Repository ↗
         </a>
-        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-brandEmerald hover:bg-brandDarkEmerald text-white font-heading font-bold text-xs rounded-xl shadow transition">
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-xs rounded-xl shadow transition">
           Contact Candidate
         </a>
       </div>

@@ -1,209 +1,192 @@
 [
   {
-    "id": "62acb997-e890-4a7d-a8a2-5444ca613f06",
-    "name": "Network Addressing and Basic Troubleshooting",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Network Addressing and Basic Troubleshooting course and achieved this student level credential. Earner has knowledge of physical, dat...",
-    "image_url": "https://images.credly.com/images/49c099bd-8542-4f48-8c03-f21799dcaf51/image.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/62acb997-e890-4a7d-a8a2-5444ca613f06"
+    "name": "CCNA: Introduction to Networks",
+    "issuer": "Cisco Systems",
+    "issued_at": "Cisco Certified",
+    "badge_url": "https://www.credly.com/badges/30d2ca2a-bd15-4fa8-b3bc-5e3aefee8d88",
+    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "category_tag": "Network & Security"
   },
   {
-    "id": "ce8392a1-9241-4b4a-bedb-b49fc068ad0d",
-    "name": "Network Support and Security",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Network Support and Security course and achieved this student level credential. Earner has knowledge to support endpoints, networks, ...",
-    "image_url": "https://images.credly.com/images/a4dd891f-7bf5-4938-8241-50dc81e8cc00/image.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/ce8392a1-9241-4b4a-bedb-b49fc068ad0d"
+    "name": "CCNA: Switching, Routing, and Wireless Essentials",
+    "issuer": "Cisco Systems",
+    "issued_at": "Cisco Certified",
+    "badge_url": "https://www.credly.com/badges/5f0c9782-f047-4974-9f4a-251f2801e061",
+    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
+    "category_tag": "Network & Security"
   },
   {
-    "id": "f1f0b2b3-ad70-41a0-b6e9-784db629d193",
+    "name": "CCNA: Enterprise Networking, Security, and Automation",
+    "issuer": "Cisco Systems",
+    "issued_at": "Cisco Certified",
+    "badge_url": "https://www.credly.com/badges/84de7974-bf43-43ed-8a9d-b82aa2198083",
+    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "category_tag": "Network & Security"
+  },
+  {
+    "name": "Networking Essentials",
+    "issuer": "Cisco Systems",
+    "issued_at": "Cisco Certified",
+    "badge_url": "https://www.credly.com/badges/89222479-79f9-46aa-b2b9-6c39f032aa27",
+    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "category_tag": "Network & Security"
+  },
+  {
     "name": "Networking Devices and Initial Configuration",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Networking Devices and Initial Configuration course and achieved this student level credential. Earner learned characteristics and be...",
-    "image_url": "https://images.credly.com/images/88316fe8-5651-4e61-a6be-5be1558f049e/image.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/f1f0b2b3-ad70-41a0-b6e9-784db629d193"
+    "issuer": "Cisco Systems",
+    "issued_at": "Cisco Certified",
+    "badge_url": "https://www.credly.com/badges/16ecdbb8-cb86-455b-b9d9-bbec3ea97d41",
+    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "category_tag": "Network & Security"
   },
   {
-    "id": "7b9e0dd4-2d63-406d-97ee-d1ffb9a21da4",
-    "name": "Networking Basics",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Networking Basics course and achieved this student level credential. Earner has knowledge of the types of networks, how they work, ho...",
-    "image_url": "https://images.credly.com/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/7b9e0dd4-2d63-406d-97ee-d1ffb9a21da4"
-  },
-  {
-    "id": "ea722150-ebfa-4695-81fd-2de4ea126c97",
-    "name": "Hardware and Upgrade Support",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Hardware and Upgrade Support course. This course builds foundational knowledge for working safely with computer hardware. Learners pr...",
-    "image_url": "https://images.credly.com/images/94cbdf0d-3e44-44b2-b213-866fe22aa7d5/blob",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/ea722150-ebfa-4695-81fd-2de4ea126c97"
-  },
-  {
-    "id": "6709cec7-915e-4a62-bed5-20fad386f3eb",
-    "name": "Operating Systems Support",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge has successfully completed the Operating Systems Support course, demonstrating proficiency in troubleshooting and resolving issues across Windows, macOS, and mo...",
-    "image_url": "https://images.credly.com/images/70cc28ef-542c-4ce2-8bad-e8d95daf5138/blob",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/6709cec7-915e-4a62-bed5-20fad386f3eb"
-  },
-  {
-    "id": "a9f18a53-05cb-45d1-a53b-33a4f25c7c1f",
-    "name": "Linux Essentials",
-    "issuer": "Cisco",
-    "description": "Cisco, in collaboration with NDG, verifies that the learner has knowledge of open vs closed source applications, basic hardware concepts, Linux OS components, command line usage, file management, crea...",
-    "image_url": "https://images.credly.com/images/e8fe3d67-2967-43d0-bc4a-7a268a37f47b/image.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/a9f18a53-05cb-45d1-a53b-33a4f25c7c1f"
-  },
-  {
-    "id": "fa764988-2b2a-4118-a20e-581d985e9ff2",
     "name": "Operating Systems Basics",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Operating Systems Basics course and achieved this student level credential. Earner has fundamental knowledge of operating systems by ...",
-    "image_url": "https://images.credly.com/images/dcdf1a3c-2594-4f4c-a33a-050b4bca58b5/image.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/fa764988-2b2a-4118-a20e-581d985e9ff2"
+    "issuer": "Cisco Systems",
+    "issued_at": "Cisco Certified",
+    "badge_url": "https://www.credly.com/badges/626d7c71-2ee3-4eb0-80a5-b3e15b573d84",
+    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "category_tag": "Linux & OS Systems"
   },
   {
-    "id": "eaf5d4d4-60fe-4052-92e3-d0f053b5f266",
-    "name": "Data Analytics Essentials",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Data Analytics Essentials course. The holder of this student-level credential has a broad understanding how the data analytics proces...",
-    "image_url": "https://images.credly.com/images/1fdfeaeb-e61c-4450-bdfe-a07bd4e715df/image.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/eaf5d4d4-60fe-4052-92e3-d0f053b5f266"
+    "name": "Computer Hardware Basics",
+    "issuer": "Cisco Systems",
+    "issued_at": "Cisco Certified",
+    "badge_url": "https://www.credly.com/badges/f1e72e1c-54a7-47b2-bdf4-dcb41eb19ee8",
+    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "category_tag": "Linux & OS Systems"
   },
   {
-    "id": "3d36d91d-5793-40fb-8a88-bacf5a76a81f",
-    "name": "AI Fundamentals: Foundations for Understanding AI",
-    "issuer": "Cisco",
-    "description": "Cisco, in collaboration with IBM SkillsBuild, verifies that the earner of this badge successfully completed AI Fundamentals: Foundations for Understanding AI. The holder of this student-level credenti...",
-    "image_url": "https://images.credly.com/images/fa29f782-3029-44f9-9fb1-631c3278a68a/blob",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/3d36d91d-5793-40fb-8a88-bacf5a76a81f"
+    "name": "NDG Linux Unhatched",
+    "issuer": "Cisco / NDG",
+    "issued_at": "Cisco / NDG Certified",
+    "badge_url": "https://www.credly.com/badges/ad40ce78-43bb-4286-9a2d-45bfd3ea7475",
+    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "category_tag": "Linux & OS Systems"
   },
   {
-    "id": "709b4e57-7534-41c8-9ed9-7026114947bf",
-    "name": "AI Fundamentals: Foundations for Understanding AI",
+    "name": "NDG Linux Essentials",
+    "issuer": "Cisco / NDG",
+    "issued_at": "Cisco / NDG Certified",
+    "badge_url": "https://www.credly.com/badges/8f7ff271-eef1-4bdf-87f5-7c2503923bb6",
+    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "category_tag": "Linux & OS Systems"
+  },
+  {
+    "name": "Artificial Intelligence Fundamentals",
     "issuer": "IBM SkillsBuild",
-    "description": "This credential earner demonstrates foundational knowledge of artificial intelligence and its core technologies. The individual can explain AI concepts and capabilities, differentiate human learning f...",
-    "image_url": "https://images.credly.com/images/e0644ccc-dd87-4e27-82e4-0facf461cd1f/AI_20Fundamentals_20Foundations_20for_20Understanding_20AI.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/709b4e57-7534-41c8-9ed9-7026114947bf"
+    "issued_at": "IBM Verified",
+    "badge_url": "https://www.credly.com/badges/289e6eb1-d1be-45a8-bd2f-f8c6edc1c984",
+    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
+    "category_tag": "AI & Automation"
   },
   {
-    "id": "7403d32b-b8b4-4ad4-b687-4d6da6856bb8",
-    "name": "Data Science Essentials With Python",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Data Science Essentials with Python course, demonstrating the ability to use Python and industry\u2011standard libraries to explore, visua...",
-    "image_url": "https://images.credly.com/images/62db59ef-19f9-4652-a00c-7582baee8177/blob",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/7403d32b-b8b4-4ad4-b687-4d6da6856bb8"
+    "name": "Working with Generative AI Models and Prompts",
+    "issuer": "IBM SkillsBuild",
+    "issued_at": "IBM Verified",
+    "badge_url": "https://www.credly.com/badges/c03d7db2-6901-447a-8f81-54c379a2bd43",
+    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
+    "category_tag": "AI & Automation"
   },
   {
-    "id": "37a68850-bc68-4ba4-b1c8-3fdbbc9050d3",
-    "name": "Introduction to Data Science",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Introduction to Data Science course. The holder of this student-level credential has a broad understanding in basic concepts of Data ...",
-    "image_url": "https://images.credly.com/images/b38a42e0-dc58-4ce2-b6c0-28d978e8aaad/image.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/37a68850-bc68-4ba4-b1c8-3fdbbc9050d3"
+    "name": "Prompt Engineering Basics",
+    "issuer": "IBM SkillsBuild",
+    "issued_at": "IBM Verified",
+    "badge_url": "https://www.credly.com/badges/b7ca9d25-6355-4cc9-b7b5-829d5b03fb40",
+    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
+    "category_tag": "AI & Automation"
   },
   {
-    "id": "c3007a04-4334-4588-982b-dc4b6f5c1bb4",
-    "name": "Introduction to Modern AI",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Introduction to Modern AI course. The learner will have practiced using AI enabled features on free apps, such as photo apps, transla...",
-    "image_url": "https://images.credly.com/images/e2d12302-10f9-40d4-8ff1-066a7008b61d/blob",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/c3007a04-4334-4588-982b-dc4b6f5c1bb4"
-  },
-  {
-    "id": "00f41a8a-c717-49dc-86c4-d31ab5f9d004",
-    "name": "Python Essentials 2",
-    "issuer": "Cisco",
-    "description": "Cisco, in collaboration with OpenEDG Python Institute, verifies the earner of this badge successfully completed the Python Essentials 2 course and achieved the student level credentials. Earners have ...",
-    "image_url": "https://images.credly.com/images/3f802526-7274-4230-91ab-f6d1a35340e6/image.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/00f41a8a-c717-49dc-86c4-d31ab5f9d004"
-  },
-  {
-    "id": "fde041a9-0b3e-484e-840b-226452acb26f",
     "name": "Python Essentials 1",
-    "issuer": "Cisco",
-    "description": "Cisco, in collaboration with OpenEDG Python Institute, verifies the earner of this badge successfully completed the Python Essentials 1 course and achieved the student level credentials. Earners have ...",
-    "image_url": "https://images.credly.com/images/68c0b94d-f6ac-40b1-a0e0-921439eb092e/image.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/fde041a9-0b3e-484e-840b-226452acb26f"
+    "issuer": "Cisco / OpenEDG",
+    "issued_at": "Cisco / OpenEDG Certified",
+    "badge_url": "https://www.credly.com/badges/8c8189c4-ed35-46bd-b8c1-d41935c15ab8",
+    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "category_tag": "Python & Data"
   },
   {
-    "id": "da68a97c-1765-44e1-bff7-ef64000a108d",
-    "name": "Introduction to Cybersecurity",
-    "issuer": "Cisco",
-    "description": "Cisco verifies the earner of this badge successfully completed the Introduction to Cybersecurity course. The holder of this student-level credential has introductory knowledge of cybersecurity, includ...",
-    "image_url": "https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
-    "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/badges/da68a97c-1765-44e1-bff7-ef64000a108d"
+    "name": "Python Essentials 2",
+    "issuer": "Cisco / OpenEDG",
+    "issued_at": "Cisco / OpenEDG Certified",
+    "badge_url": "https://www.credly.com/badges/3e527d2c-0e7e-4b61-9c60-31278ff564ea",
+    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "category_tag": "Python & Data"
+  },
+  {
+    "name": "Data Analysis with Python",
+    "issuer": "IBM SkillsBuild",
+    "issued_at": "IBM Verified",
+    "badge_url": "https://www.credly.com/badges/1b6ea17e-9769-42b7-8d2b-67a840656a81",
+    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "category_tag": "Python & Data"
+  },
+  {
+    "name": "Data Visualization with Python",
+    "issuer": "IBM SkillsBuild",
+    "issued_at": "IBM Verified",
+    "badge_url": "https://www.credly.com/badges/1f38e3e4-f3c5-4d04-8b65-66a9d3568c09",
+    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "category_tag": "Python & Data"
+  },
+  {
+    "name": "Python 101 for Data Science",
+    "issuer": "IBM SkillsBuild",
+    "issued_at": "IBM Verified",
+    "badge_url": "https://www.credly.com/badges/30d2ca2a-bd15-4fa8-b3bc-5e3aefee8d88",
+    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "category_tag": "Python & Data"
   },
   {
     "name": "Understanding Threats and Attacks",
     "issuer": "Cisco Networking Academy",
-    "issued_at": "In Progress / Verified",
+    "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
+    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
     "category_tag": "Network & Security"
   },
   {
     "name": "The Art of Investigation",
     "issuer": "Cisco Networking Academy",
-    "issued_at": "In Progress / Verified",
+    "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
     "category_tag": "Network & Security"
   },
   {
     "name": "Security Operations and the Defense Analyst",
     "issuer": "Cisco Networking Academy",
-    "issued_at": "In Progress / Verified",
+    "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
+    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
     "category_tag": "Network & Security"
   },
   {
     "name": "Data and Tools for Defense Analysts",
     "issuer": "Cisco Networking Academy",
-    "issued_at": "In Progress / Verified",
-    "badge_url": "#",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
-    "category_tag": "Network & Security"
-  },
-  {
-    "name": "Introduction to Splunk",
-    "issuer": "Cisco Networking Academy",
-    "issued_at": "In Progress / Verified",
+    "issued_at": "NetAcad Training",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
     "category_tag": "Network & Security"
   },
   {
-    "name": "Network Defense",
+    "name": "Introduction to Splunk",
     "issuer": "Cisco Networking Academy",
-    "issued_at": "In Progress / Verified",
+    "issued_at": "NetAcad Training",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
     "category_tag": "Network & Security"
   },
   {
+    "name": "Network Defense",
+    "issuer": "Cisco Networking Academy",
+    "issued_at": "NetAcad Training",
+    "badge_url": "#",
+    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "category_tag": "Network & Security"
+  },
+  {
     "name": "Cyber Threat Management",
     "issuer": "Cisco Networking Academy",
-    "issued_at": "In Progress / Verified",
+    "issued_at": "NetAcad Training",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
     "category_tag": "Network & Security"
@@ -211,7 +194,7 @@
   {
     "name": "Endpoint Security",
     "issuer": "Cisco Networking Academy",
-    "issued_at": "In Progress / Verified",
+    "issued_at": "NetAcad Training",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
     "category_tag": "Network & Security"
@@ -219,9 +202,33 @@
   {
     "name": "SOC Essentials: Investigating with Splunk",
     "issuer": "Cisco Networking Academy",
-    "issued_at": "In Progress / Verified",
+    "issued_at": "NetAcad Training",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
     "category_tag": "Network & Security"
+  },
+  {
+    "name": "National Skill Standard Basic (360 Hours)",
+    "issuer": "BTEB (Bangladesh Technical Education Board)",
+    "issued_at": "Govt. Certified",
+    "badge_url": "#",
+    "image_url": "assets/images/trainings/bteb-logo.svg",
+    "category_tag": "Linux & OS Systems"
+  },
+  {
+    "name": "Web Design & Development (WordPress)",
+    "issuer": "Jessore IT Institute",
+    "issued_at": "Professional Diploma",
+    "badge_url": "#",
+    "image_url": "assets/images/trainings/jessore-it-logo.svg",
+    "category_tag": "Python & Data"
+  },
+  {
+    "name": "Graphics Design & Visual Media",
+    "issuer": "Creative IT Limited",
+    "issued_at": "Professional Diploma",
+    "badge_url": "#",
+    "image_url": "assets/images/trainings/creative-it-logo.svg",
+    "category_tag": "Python & Data"
   }
 ]

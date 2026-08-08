@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Enterprise Real Time Event Streaming Data Warehouse Pipeline | Imon Mahmud - Enterprise Cloud & DevOps Architecture</title>
+  <meta name="description" content="Technical documentation and architecture breakdown for Enterprise Real Time Event Streaming Data Warehouse Pipeline by Imon Mahmud. Enterprise-grade event-driven data pipeline on Google Cloud using Cloud Scheduler, Pub/Sub, Cloud Functions (Gen2), and BigQuery for real-time event ingestion, ETL processing, and analytics.">
+  <meta name="keywords" content="Enterprise Real Time Event Streaming Data Warehouse Pipeline, Imon Mahmud, Cloud Infrastructure, DevOps, Terraform, AWS, GCP, Architecture">
+  <meta name="author" content="Imon Mahmud">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            obsidian: '#0B0F17',
+            midnight: '#111827',
+            surface: '#1A2333',
+            emeraldAccent: '#10B981',
+            tealAccent: '#06B6D4',
+            amberAccent: '#F59E0B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0B0F17] text-slate-300 font-sans antialiased selection:bg-emeraldAccent selection:text-obsidian">
+
+  <!-- Sticky Navbar -->
+  <nav class="sticky top-0 z-50 bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/40">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition" data-en="Imon Mahmud | Systems & Architecture" data-de="Imon Mahmud | Systeme & Architektur">Imon Mahmud | Systems & Architecture</a>
+      </div>
+      
+      <div class="flex items-center space-x-4">
+        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
+          <span>🌐</span> <span id="lang-label">DE</span>
+        </button>
+
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition" data-en="← Back to Projects" data-de="← Zurück zu den Projekten">← Back to Projects</a>
+        
+        <a href="https://github.com/eng-imonmahmud/enterprise-real-time-event-streaming-data-warehouse-pipeline" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+          <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="relative bg-gradient-to-b from-[#111827] via-[#0B0F17] to-[#0B0F17] py-16 lg:py-24 border-b border-slate-800 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+      <div class="lg:col-span-8 space-y-5">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emeraldAccent/10 text-emeraldAccent border border-emeraldAccent/20">
+          <span>🚀</span>
+          <span>Serverless & AI Systems</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
+          Enterprise Real Time Event Streaming Data Warehouse Pipeline
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+          Enterprise-grade event-driven data pipeline on Google Cloud using Cloud Scheduler, Pub/Sub, Cloud Functions (Gen2), and BigQuery for real-time event ingestion, ETL processing, and analytics.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">GCP Pub/Sub</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Functions Gen2</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">BigQuery Data Warehouse</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a href="https://github.com/eng-imonmahmud/enterprise-real-time-event-streaming-data-warehouse-pipeline" target="_blank" class="px-6 py-3 bg-gradient-to-r from-emeraldAccent to-tealAccent hover:opacity-90 text-obsidian font-heading font-bold text-sm rounded-xl shadow-lg shadow-emeraldAccent/20 transition flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
+          </a>
+          <a href="index.html#projects" class="px-6 py-3 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-heading font-semibold text-sm rounded-xl border border-slate-700 transition">
+            ← Back to Portfolio Overview
+          </a>
+        </div>
+      </div>
+      
+      <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
+        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3" data-en="Enterprise Architecture Specs" data-de="Unternehmensarchitektur-Spezifikation">Enterprise Architecture Specs</h3>
+        <ul class="text-xs font-mono space-y-2.5 text-slate-300">
+          <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">enterprise-real-time-event-streaming-data-warehouse-pipeline</span></li>
+          <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">Python</span></li>
+          <li class="flex justify-between"><span class="text-slate-500">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
+          <li class="flex justify-between"><span class="text-slate-500">Security Control:</span> <span class="text-emeraldAccent">Zero-Trust & IAM</span></li>
+          <li class="flex justify-between"><span class="text-slate-500">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
+        </ul>
+        <div class="pt-2">
+          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Enterprise Real Time Event Streaming Data Warehouse Pipeline" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-heading font-bold text-xs rounded-xl border border-slate-700 transition">
+            ✉ Contact Candidate Regarding This Project
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Screenshots & Architecture Gallery -->
+  <main class="max-w-7xl mx-auto px-6 py-12 space-y-16">
+    
+    
+        <section class="space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <h2 class="text-xl font-heading font-bold text-white tracking-tight" data-en="Live Production Console & Screenshots" data-de="Live-Konsolenscreenshots">
+              Live Production Console & Screenshots
+            </h2>
+            <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">13 Screenshots Verified</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #1</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-real-time-event-streaming-data-warehouse-pipeline/main/screenshots/screencapture-console-cloud-google-bigquery-2026-07-10-21_03_52.png" alt="Enterprise Real Time Event Streaming Data Warehouse Pipeline Screenshot 1" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #2</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-real-time-event-streaming-data-warehouse-pipeline/main/screenshots/screencapture-console-cloud-google-bigquery-2026-07-10-21_05_58.png" alt="Enterprise Real Time Event Streaming Data Warehouse Pipeline Screenshot 2" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #3</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-real-time-event-streaming-data-warehouse-pipeline/main/screenshots/screencapture-console-cloud-google-bigquery-2026-07-10-21_07_59.png" alt="Enterprise Real Time Event Streaming Data Warehouse Pipeline Screenshot 3" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #4</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-real-time-event-streaming-data-warehouse-pipeline/main/screenshots/screencapture-console-cloud-google-cloudpubsub-topic-list-2026-07-10-20_56_31.png" alt="Enterprise Real Time Event Streaming Data Warehouse Pipeline Screenshot 4" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #5</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-real-time-event-streaming-data-warehouse-pipeline/main/screenshots/screencapture-console-cloud-google-cloudscheduler-2026-07-10-20_54_49.png" alt="Enterprise Real Time Event Streaming Data Warehouse Pipeline Screenshot 5" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #6</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-real-time-event-streaming-data-warehouse-pipeline/main/screenshots/screencapture-console-cloud-google-cloudscheduler-jobs-edit-us-central1-enterprise-event-publisher-2026-07-10-20_55_42.png" alt="Enterprise Real Time Event Streaming Data Warehouse Pipeline Screenshot 6" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+          </div>
+        </section>
+        
+
+    <!-- Architecture & Technical Specifications Section -->
+    <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-heading font-bold text-white tracking-tight" data-en="System Architecture & Technical Design" data-de="Systemarchitektur & Technisches Design">
+          System Architecture & Technical Design
+        </h2>
+        <p class="text-xs text-slate-400 font-mono mt-1">Official repository specifications and infrastructure breakdown.</p>
+      </div>
+
+      <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
+        <div class="bg-obsidian/80 border border-slate-800 p-6 rounded-xl font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
+# Enterprise Real-Time Event Streaming &amp; Data Warehouse Analytics Pipeline
+
+
+
+
+
+
+
+## 📌 Project Overview
+This repository contains a production-quality serverless event-driven analytics pipeline built entirely on **Google Cloud Platform (GCP)**. Designed with enterprise-grade architecture, the system automatically processes generated order events in real-time, performs dynamic ETL (Extract, Transform, Load) transformations, and streams the refined data directly into an Enterprise Data Warehouse (BigQuery) for analytical querying.
+
+## 🏗️ High-Level Architecture
+
+The pipeline leverages an event-driven, fully serverless architecture ensuring extreme scalability, fault tolerance, and zero infrastructure maintenance overhead.
+
+```mermaid
+graph TD
+    A[Cloud Scheduler] --&gt;|Publishes Base JSON Event| B(Cloud Pub/Sub: order-events)
+    B --&gt;|Eventarc Trigger| C{Cloud Function Gen2: etl-processor}
+    C --&gt;|Transforms Data &amp; Appends Metadata| D[(BigQuery: enterprise_analytics.orders)]
+```
+
+## 🔄 Event Flow Diagram
+
+```mermaid
+sequenceDiagram
+    participant CS as Cloud Scheduler
+    participant PS as Pub/Sub
+    participant CF as Cloud Function
+    participant BQ as BigQuery
+
+    CS-&gt;&gt;PS: Publish periodic JSON template
+    PS-&gt;&gt;CF: Trigger via Eventarc
+    CF-&gt;&gt;CF: Extract Payload
+    CF-&gt;&gt;CF: Transform &amp; Generate UUIDs/Amounts
+    CF-&gt;&gt;CF: Append UTC Processing Timestamp
+    CF-&gt;&gt;BQ: Stream Insert Rows
+    BQ--&gt;&gt;CF: Acknowledge Success
+```
+
+## 🚀 Features
+- **Fully Serverless:** No infrastructure to manage. Scales automatically from zero to thousands of events per second.
+- **Event-Driven:** Loosely coupled architecture where components react to state changes in real-time.
+- **Dynamic ETL:** Real-time data sanitization, enrichment, and metadata appending (e.g., timestamps).
+- **Infrastructure as Code (Automation):** Fully automated deployment and teardown scripts.
+- **Enterprise Security:** Strict IAM principles, secure Application Default Credentials, zero hardcoded secrets.
+
+## 💼 Enterprise Use Cases
+- Real-time E-commerce order processing and analytics.
+- IoT device telemetry ingestion.
+- Financial transaction monitoring and fraud detection streaming.
+
+## 📂 Folder Structure
+
+```text
+├── architecture/         # Architecture diagrams
+├── bigquery/             # BigQuery schema definitions and validation scripts
+├── cleanup/              # Scripts to safely destroy cloud resources
+├── deployment/           # Scripts to provision Pub/Sub and Scheduler
+├── docs/                 # Additional documentation
+├── function/             # Source code for the Cloud Function (Gen2)
+├── screenshots/          # Evidence of successful deployment and execution
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
+```
+
+## ⚙️ Deployment Workflow
+All resources are deployed autonomously using the Google Cloud SDK and Python client libraries. 
+1. Enable necessary GCP APIs (Cloud Functions, Run, Eventarc, Pub/Sub, BigQuery, Scheduler).
+2. Provision BigQuery Dataset (`en
+        </div>
+      </div>
+    </section>
+
+    <!-- Recruiter Compliance & Value Matrix -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
+        <div class="text-emeraldAccent text-xl">🛡️</div>
+        <h3 class="font-heading font-bold text-white text-base">Security & Compliance</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
+      </div>
+      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
+        <div class="text-tealAccent text-xl">⚡</div>
+        <h3 class="font-heading font-bold text-white text-base">IaC & Automation</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
+      </div>
+      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
+        <div class="text-amberAccent text-xl">📊</div>
+        <h3 class="font-heading font-bold text-white text-base">Observability & Health</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
+      </div>
+    </section>
+
+    <!-- Navigation Footer CTA -->
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-slate-900 via-surface to-slate-900 border border-slate-800 p-8 rounded-2xl gap-4">
+      <div>
+        <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
+        <p class="text-xs text-slate-400">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
+      </div>
+      <div class="flex space-x-3">
+        <a href="https://github.com/eng-imonmahmud/enterprise-real-time-event-streaming-data-warehouse-pipeline" target="_blank" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+          View Repository ↗
+        </a>
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emeraldAccent hover:bg-emerald-600 text-obsidian font-heading font-bold text-xs rounded-xl transition">
+          Contact Candidate
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
+    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    let currentLang = 'en';
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'de' : 'en';
+      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
+      const elements = document.querySelectorAll('[data-en]');
+      elements.forEach(el => {
+        el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
+      });
+    }
+  </script>
+</body>
+</html>

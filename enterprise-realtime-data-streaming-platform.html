@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Enterprise Realtime Data Streaming Platform | Imon Mahmud - Enterprise Cloud & DevOps Architecture</title>
+  <meta name="description" content="Technical documentation and architecture breakdown for Enterprise Realtime Data Streaming Platform by Imon Mahmud. Enterprise-grade event-driven serverless data pipeline on AWS using Amazon EventBridge, AWS Lambda, Amazon SQS, and Amazon S3 Data Lake.">
+  <meta name="keywords" content="Enterprise Realtime Data Streaming Platform, Imon Mahmud, Cloud Infrastructure, DevOps, Terraform, AWS, GCP, Architecture">
+  <meta name="author" content="Imon Mahmud">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            obsidian: '#0B0F17',
+            midnight: '#111827',
+            surface: '#1A2333',
+            emeraldAccent: '#10B981',
+            tealAccent: '#06B6D4',
+            amberAccent: '#F59E0B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0B0F17] text-slate-300 font-sans antialiased selection:bg-emeraldAccent selection:text-obsidian">
+
+  <!-- Sticky Navbar -->
+  <nav class="sticky top-0 z-50 bg-[#0B0F17]/90 backdrop-blur-md border-b border-slate-800 shadow-lg shadow-black/40">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
+        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition" data-en="Imon Mahmud | Systems & Architecture" data-de="Imon Mahmud | Systeme & Architektur">Imon Mahmud | Systems & Architecture</a>
+      </div>
+      
+      <div class="flex items-center space-x-4">
+        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
+          <span>🌐</span> <span id="lang-label">DE</span>
+        </button>
+
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition" data-en="← Back to Projects" data-de="← Zurück zu den Projekten">← Back to Projects</a>
+        
+        <a href="https://github.com/eng-imonmahmud/enterprise-realtime-data-streaming-platform" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+          <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <header class="relative bg-gradient-to-b from-[#111827] via-[#0B0F17] to-[#0B0F17] py-16 lg:py-24 border-b border-slate-800 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+      <div class="lg:col-span-8 space-y-5">
+        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emeraldAccent/10 text-emeraldAccent border border-emeraldAccent/20">
+          <span>🚀</span>
+          <span>Serverless & AI Systems</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
+          Enterprise Realtime Data Streaming Platform
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+          Enterprise-grade event-driven serverless data pipeline on AWS using Amazon EventBridge, AWS Lambda, Amazon SQS, and Amazon S3 Data Lake.
+        </p>
+        <div class="flex flex-wrap gap-2 pt-2">
+          <span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">AWS EventBridge</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">SQS</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">Lambda</span><span class="px-2.5 py-1 bg-slate-800/80 border border-slate-700/80 text-slate-300 font-mono text-[11px] rounded-lg">S3 Data Lake</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 pt-4">
+          <a href="https://github.com/eng-imonmahmud/enterprise-realtime-data-streaming-platform" target="_blank" class="px-6 py-3 bg-gradient-to-r from-emeraldAccent to-tealAccent hover:opacity-90 text-obsidian font-heading font-bold text-sm rounded-xl shadow-lg shadow-emeraldAccent/20 transition flex items-center">
+            <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> Inspect Source Repository ↗
+          </a>
+          <a href="index.html#projects" class="px-6 py-3 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-heading font-semibold text-sm rounded-xl border border-slate-700 transition">
+            ← Back to Portfolio Overview
+          </a>
+        </div>
+      </div>
+      
+      <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
+        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3" data-en="Enterprise Architecture Specs" data-de="Unternehmensarchitektur-Spezifikation">Enterprise Architecture Specs</h3>
+        <ul class="text-xs font-mono space-y-2.5 text-slate-300">
+          <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">enterprise-realtime-data-streaming-platform</span></li>
+          <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">HCL</span></li>
+          <li class="flex justify-between"><span class="text-slate-500">Infrastructure Paradigm:</span> <span class="text-white">Terraform / IaC</span></li>
+          <li class="flex justify-between"><span class="text-slate-500">Security Control:</span> <span class="text-emeraldAccent">Zero-Trust & IAM</span></li>
+          <li class="flex justify-between"><span class="text-slate-500">High Availability:</span> <span class="text-white">99.9% Uptime SLA</span></li>
+        </ul>
+        <div class="pt-2">
+          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Inquiry regarding Enterprise Realtime Data Streaming Platform" class="w-full inline-flex items-center justify-center px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-heading font-bold text-xs rounded-xl border border-slate-700 transition">
+            ✉ Contact Candidate Regarding This Project
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Screenshots & Architecture Gallery -->
+  <main class="max-w-7xl mx-auto px-6 py-12 space-y-16">
+    
+    
+        <section class="space-y-6">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <h2 class="text-xl font-heading font-bold text-white tracking-tight" data-en="Live Production Console & Screenshots" data-de="Live-Konsolenscreenshots">
+              Live Production Console & Screenshots
+            </h2>
+            <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">9 Screenshots Verified</span>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #1</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-realtime-data-streaming-platform/main/Screenshots/Amazon%20S3%20Buckets%20ent-streaming-data-lake-s7rlk4mq.png" alt="Enterprise Realtime Data Streaming Platform Screenshot 1" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #2</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-realtime-data-streaming-platform/main/Screenshots/Amazon%20S3%20Buckets%20ent-streaming-data-lake-s7rlk4mq%20data%20year=2026%20month=06%20day=28.png" alt="Enterprise Realtime Data Streaming Platform Screenshot 2" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #3</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-realtime-data-streaming-platform/main/Screenshots/LambdaFunctions.png" alt="Enterprise Realtime Data Streaming Platform Screenshot 3" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #4</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-realtime-data-streaming-platform/main/Screenshots/LambdaFunctionsent-streaming-producer.png" alt="Enterprise Realtime Data Streaming Platform Screenshot 4" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #5</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-realtime-data-streaming-platform/main/Screenshots/LambdaFunctionsent-streaming-transformer.png" alt="Enterprise Realtime Data Streaming Platform Screenshot 5" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+            <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-lg hover:border-emeraldAccent/50 transition">
+              <div class="p-2 bg-slate-950 border-b border-slate-800 flex items-center space-x-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+                <span class="text-[10px] font-mono text-slate-500 truncate ml-2">Console View #6</span>
+              </div>
+              <img src="https://raw.githubusercontent.com/eng-imonmahmud/enterprise-realtime-data-streaming-platform/main/Screenshots/Amazon%20SQS%20Queues%20ent-streaming-data-queue.png" alt="Enterprise Realtime Data Streaming Platform Screenshot 6" class="w-full h-auto object-cover max-h-[500px]" loading="lazy">
+            </div>
+            
+          </div>
+        </section>
+        
+
+    <!-- Architecture & Technical Specifications Section -->
+    <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
+      <div class="border-b border-slate-800 pb-4">
+        <h2 class="text-2xl font-heading font-bold text-white tracking-tight" data-en="System Architecture & Technical Design" data-de="Systemarchitektur & Technisches Design">
+          System Architecture & Technical Design
+        </h2>
+        <p class="text-xs text-slate-400 font-mono mt-1">Official repository specifications and infrastructure breakdown.</p>
+      </div>
+
+      <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
+        <div class="bg-obsidian/80 border border-slate-800 p-6 rounded-xl font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
+# Enterprise Real-Time Data Streaming &amp; Serverless ETL Architecture
+
+
+
+
+
+
+A production-ready, serverless data streaming and ETL pipeline built entirely on AWS. Designed using Enterprise best practices, Clean Architecture, and fully automated via Terraform Infrastructure as Code (IaC).
+
+## 🚀 Architecture Overview
+
+This project implements a scalable, decoupled, real-time data ingestion pipeline. It generates synthetic enterprise transaction data, buffers it, processes it in real-time, and stores it in an S3 Data Lake with dynamic time-based partitioning.
+
+```mermaid
+graph TD
+    A[Amazon EventBridge] --&gt;|Trigger rate 1 min| B(Producer Lambda)
+    B --&gt;|Publish JSON| C{Amazon SQS}
+    C --&gt;|Batch Trigger| D(Transformer Lambda)
+    D --&gt;|Write Partitioned Data| E[(Amazon S3 Data Lake)]
+    
+    classDef aws fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:white;
+    class A,B,C,D,E aws;
+```
+
+## 🛠️ Technology Stack &amp; AWS Services
+
+- **Amazon EventBridge**: Cron-style event scheduling for real-time triggers.
+- **AWS Lambda (Node.js 20.x)**: Serverless compute for both data generation and ETL transformations.
+- **Amazon SQS**: High-throughput message queuing to decouple producer and consumer.
+- **Amazon S3**: Scalable, durable object storage serving as the Data Lake.
+- **AWS IAM**: Strict least-privilege roles and policies.
+- **Terraform**: Complete Infrastructure as Code (IaC) deployment.
+
+## 📂 Enterprise Folder Structure
+
+```text
+enterprise-realtime-data-streaming-platform/
+│
+├── infrastructure/           # Terraform IaC
+│   ├── main.tf               # Provider configuration
+│   ├── variables.tf          # Input variables
+│   ├── sqs.tf                # SQS queue definition
+│   ├── s3.tf                 # Data lake bucket and security
+│   ├── lambda.tf             # Lambda functions and triggers
+│   ├── iam.tf                # Least privilege IAM roles
+│   ├── eventbridge.tf        # CloudWatch Event Rules
+│   └── outputs.tf            # Deployment outputs
+│
+├── src/                      # Source Code
+│   ├── producer/             # Producer Lambda (Data Generator)
+│   │   └── index.js
+│   └── transformer/          # Transformation Lambda (ETL)
+│       └── index.js
+│
+├── Screenshots/              # Evidence of execution
+├── README.md                 # Project documentation
+└── .gitignore                # Security filters
+```
+
+## ⚙️ Features
+
+- **Decoupled Architecture**: Utilizes SQS for fault tolerance and buffering.
+- **Serverless Compute**: Fully managed AWS Lambda functions requiring no server maintenance.
+- **Dynamic Partitioning**: Transformer dynamically routes objects in S3 into `year=YYYY/month=MM/day=DD` Hive-style partitions.
+- **Security First**: 
+  - S3 Public Access Block enabled.
+  - Default S3 Server-Side Encryption (AES256).
+  - Granular IAM roles restricted to exact ARN resources.
+- **Idempotent Deployment**: Uses Terraform for consistent, repeatable deployments.
+
+## 🔄 Data Flow Explanation
+
+1. **Scheduling**: Amazon EventBridge fi
+        </div>
+      </div>
+    </section>
+
+    <!-- Recruiter Compliance & Value Matrix -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
+        <div class="text-emeraldAccent text-xl">🛡️</div>
+        <h3 class="font-heading font-bold text-white text-base">Security & Compliance</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">Implements strict IAM least-privilege roles, automated secret management, encryption at rest/in-transit, and GDPR/DSGVO compliance standards.</p>
+      </div>
+      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
+        <div class="text-tealAccent text-xl">⚡</div>
+        <h3 class="font-heading font-bold text-white text-base">IaC & Automation</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">100% Declarative Terraform modules with state locking, automated CI/CD pipeline triggers, and zero-downtime deployment strategies.</p>
+      </div>
+      <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-3">
+        <div class="text-amberAccent text-xl">📊</div>
+        <h3 class="font-heading font-bold text-white text-base">Observability & Health</h3>
+        <p class="text-xs text-slate-400 leading-relaxed">Centralized CloudWatch / Cloud Logging telemetry, automated anomaly alerts, self-healing remediation triggers, and audit trail logging.</p>
+      </div>
+    </section>
+
+    <!-- Navigation Footer CTA -->
+    <div class="flex flex-col sm:flex-row justify-between items-center bg-gradient-to-r from-slate-900 via-surface to-slate-900 border border-slate-800 p-8 rounded-2xl gap-4">
+      <div>
+        <h3 class="font-heading font-bold text-white text-lg">Interested in this Architecture?</h3>
+        <p class="text-xs text-slate-400">Available for technical engineer & architecture roles in Germany, Canada, Australia & Bangladesh.</p>
+      </div>
+      <div class="flex space-x-3">
+        <a href="https://github.com/eng-imonmahmud/enterprise-realtime-data-streaming-platform" target="_blank" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
+          View Repository ↗
+        </a>
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-5 py-2.5 bg-emeraldAccent hover:bg-emerald-600 text-obsidian font-heading font-bold text-xs rounded-xl transition">
+          Contact Candidate
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
+    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
+  </footer>
+
+  <script>
+    let currentLang = 'en';
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'de' : 'en';
+      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
+      const elements = document.querySelectorAll('[data-en]');
+      elements.forEach(el => {
+        el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
+      });
+    }
+  </script>
+</body>
+</html>

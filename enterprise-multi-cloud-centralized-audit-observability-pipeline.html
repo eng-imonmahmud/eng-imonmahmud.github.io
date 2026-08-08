@@ -44,15 +44,15 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition" data-en="Imon Mahmud | Systems & Architecture" data-de="Imon Mahmud | Systeme & Architektur">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
           <span>🌐</span> <span id="lang-label">DE</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition" data-en="← Back to Projects" data-de="← Zurück zu den Projekten">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
         
         <a href="https://github.com/eng-imonmahmud/enterprise-multi-cloud-centralized-audit-observability-pipeline" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
@@ -89,7 +89,7 @@
       </div>
       
       <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3" data-en="Enterprise Architecture Specs" data-de="Unternehmensarchitektur-Spezifikation">Enterprise Architecture Specs</h3>
+        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
         <ul class="text-xs font-mono space-y-2.5 text-slate-300">
           <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">enterprise-multi-cloud-centralized-audit-observability-pipeline</span></li>
           <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">PowerShell</span></li>
@@ -112,7 +112,7 @@
     
         <section class="space-y-6">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight" data-en="Live Production Console & Screenshots" data-de="Live-Konsolenscreenshots">
+            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
               Live Production Console & Screenshots
             </h2>
             <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">17 Screenshots Verified</span>
@@ -186,76 +186,337 @@
     <!-- Architecture & Technical Specifications Section -->
     <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
       <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight" data-en="System Architecture & Technical Design" data-de="Systemarchitektur & Technisches Design">
-          System Architecture & Technical Design
+        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+          System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Official repository specifications and infrastructure breakdown.</p>
+        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
       <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <div class="bg-obsidian/80 border border-slate-800 p-6 rounded-xl font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
-&lt;div align="center"&gt;
-  &lt;h1&gt;🌐 Enterprise Multi-Cloud Centralized Audit &amp; Observability Pipeline&lt;/h1&gt;
-  &lt;p&gt;&lt;i&gt;A production-grade, highly secure, serverless pipeline bridging AWS and Google Cloud Platform for centralized audit logging and observability.&lt;/i&gt;&lt;/p&gt;
-  
-  
-  
-  
-  
-  
-  &lt;p&gt;&lt;b&gt;Last Updated:&lt;/b&gt; 2026-07-11&lt;/p&gt;
-&lt;/div&gt;
+        <p class="text-slate-300 leading-relaxed my-2"><div align="center"></p>
+<p class="text-slate-300 leading-relaxed my-2"><h1>🌐 Enterprise Multi-Cloud Centralized Audit & Observability Pipeline</h1></p>
+<p class="text-slate-300 leading-relaxed my-2"><p><i>A production-grade, highly secure, serverless pipeline bridging AWS and Google Cloud Platform for centralized audit logging and observability.</i></p></p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><p><b>Last Updated:</b> 2026-07-11</p></p>
+<p class="text-slate-300 leading-relaxed my-2"></div></p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📑 Table of Contents</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1">[Executive Summary](#-executive-summary)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Business Use Case](#-business-use-case)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Architecture Overview](#-architecture-overview)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Architecture Diagram](#-architecture-diagram)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[High-Level Data Flow](#-high-level-data-flow)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[End-to-End Workflow](#-end-to-end-workflow)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Technology Stack](#-technology-stack)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Repository Structure](#-repository-structure)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Security Architecture](#-security-architecture)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Authentication Flow](#-authentication-flow)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[AWS Components](#-aws-components)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Google Cloud Components](#-google-cloud-components)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Deployment Process](#-deployment-process)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[End-to-End Testing Results](#-end-to-end-testing-results)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Validation Summary](#-validation-summary)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Cloud Logging Example](#-cloud-logging-example)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Cloud Storage Archive Example](#-cloud-storage-archive-example)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Project Highlights](#-project-highlights)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Cost Optimization](#-cost-optimization)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Cleanup Strategy](#-cleanup-strategy)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Troubleshooting](#-troubleshooting)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Lessons Learned](#-lessons-learned)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Future Improvements](#-future-improvements)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[References](#-references)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[License](#-license)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Author](#-author)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Screenshot Gallery](#-screenshot-gallery)</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🚀 Executive Summary</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">> <strong class="text-white">Project Status:</strong> This project is officially <strong class="text-white">closed</strong> and <strong class="text-white">completed</strong>. The production lifecycle has concluded, and all resources have been verified and documented.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The <strong class="text-white">Enterprise Multi-Cloud Centralized Audit & Observability Pipeline</strong> is a resilient, serverless architectural solution designed to seamlessly bridge telemetry and audit logs between Amazon Web Services (AWS) and Google Cloud Platform (GCP). It leverages AWS EventBridge and AWS Lambda to collect and forward telemetry data, which is securely transmitted via authenticated HTTPS requests to a Google Cloud Function (Gen 2). The GCP environment then centrally processes, structure-logs, and archives the telemetry into Cloud Storage for long-term retention and compliance.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">Designed for enterprise-grade scalability, this pipeline ensures zero unauthenticated access, deep observability, and completely automated cross-platform infrastructure provisioning.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">💼 Business Use Case</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">In modern enterprise environments, organizations often employ multi-cloud strategies to mitigate vendor lock-in and leverage best-of-breed services. However, this creates isolated silos for security logs, audit trails, and observability data.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Challenges Solved:</strong></p>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Siloed Telemetry:</strong> Centralizes cross-cloud audit logs into a single GCP project for SIEM integration.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Compliance & Retention:</strong> Automatically archives immutable logs into GCP Cloud Storage to satisfy GDPR, HIPAA, and PCI-DSS compliance regulations.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Security Posture:</strong> Replaces static, long-lived credentials with short-lived, dynamically assumed IAM identity tokens for cross-cloud authentication.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Operational Overhead:</strong> Fully automates the deployment and testing lifecycle using idempotent Infrastructure as Code (IaC) principles.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🏗 Architecture Overview</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The architecture is built completely on serverless, managed components to guarantee high availability and scale-to-zero capabilities.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">📊 Architecture Diagram</h3>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>graph TD
+    subgraph AWS [Amazon Web Services eu-central-1]
+        EB[EventBridge Schedule] --&gt;|Triggers| L[AWS Lambda Log Forwarder]
+        L --&gt;|Assumes Role| IAM[AWS IAM Role]
+    end
 
----
+    subgraph Auth [Cross-Cloud Identity]
+        L --&gt;|Generates short-lived JWT/OIDC| GCP_SA[GCP Service Account Auth]
+    end
 
-## 📑 Table of Contents
-
-- [Executive Summary](#-executive-summary)
-- [Business Use Case](#-business-use-case)
-- [Architecture Overview](#-architecture-overview)
-- [Architecture Diagram](#-architecture-diagram)
-- [High-Level Data Flow](#-high-level-data-flow)
-- [End-to-End Workflow](#-end-to-end-workflow)
-- [Technology Stack](#-technology-stack)
-- [Repository Structure](#-repository-structure)
-- [Security Architecture](#-security-architecture)
-- [Authentication Flow](#-authentication-flow)
-- [AWS Components](#-aws-components)
-- [Google Cloud Components](#-google-cloud-components)
-- [Deployment Process](#-deployment-process)
-- [End-to-End Testing Results](#-end-to-end-testing-results)
-- [Validation Summary](#-validation-summary)
-- [Cloud Logging Example](#-cloud-logging-example)
-- [Cloud Storage Archive Example](#-cloud-storage-archive-example)
-- [Project Highlights](#-project-highlights)
-- [Cost Optimization](#-cost-optimization)
-- [Cleanup Strategy](#-cleanup-strategy)
-- [Troubleshooting](#-troubleshooting)
-- [Lessons Learned](#-lessons-learned)
-- [Future Improvements](#-future-improvements)
-- [References](#-references)
-- [License](#-license)
-- [Author](#-author)
-- [Screenshot Gallery](#-screenshot-gallery)
-
----
-
-## 🚀 Executive Summary
-
-&gt; **Project Status:** This project is officially **closed** and **completed**. The production lifecycle has concluded, and all resources have been verified and documented.
-
-The **Enterprise Multi-Cloud Centralized Audit &amp; Observability Pipeline** is a resilient, serverless architectural solution designed to seamlessly bridge telemetry and audit logs between Amazon Web Services (AWS) and Google Cloud Platform (GCP). It leverages AWS EventBridge and AWS Lambda to collect and forward telemetry data, which is securely transmitted via authenticated HTTPS requests to a Google Cloud Function (Gen 2). The GCP environment then centrally processes, structure-logs, and archives the telemetry into Cloud Storage for long-term retention and compliance. 
-
-Designed for enterprise-grade scalability, this pipeline ensures zero unauthenticated access, deep observability, and completely automated cross-platform infrastructure provisioning.
-
-## 💼 Business Use Case
-
-In modern enterprise environments, organizations often employ multi-cloud strategies to mitigate vendor lock-in and leverage best-of-breed services. However, this creates isolated silos for security logs, audit trails, and observability data. 
-
-**Challenges Solved:**
-- **Siloed Telemetry:** Centralizes cross-cloud audit logs into a single GCP project for SIEM integration.
-- **Compliance &amp; Retention:** Automatically archives immutable logs into GCP C
-        </div>
+    subgraph GCP [Google Cloud Platform europe-west3]
+        GCP_SA --&gt;|Authenticated HTTPS| CF[Cloud Function Gen2]
+        CF --&gt;|Structured Logs| CL[Cloud Logging]
+        CF --&gt;|Cold Archive JSON| CS[Cloud Storage Bucket]
+    end</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🌊 High-Level Data Flow</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Trigger:</strong> Amazon EventBridge triggers the AWS Lambda forwarder on a defined schedule.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Collection:</strong> AWS Lambda collects internal audit metrics and telemetry.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">Authentication:</strong> AWS Lambda uses a local temporary GCP Service Account mapping to generate an authorized OIDC bearer token.</p>
+<p class="text-slate-300 leading-relaxed my-2">4. <strong class="text-white">Transmission:</strong> The payload is transmitted securely over TLS to the GCP Cloud Function via a REST <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">POST</code> request.</p>
+<p class="text-slate-300 leading-relaxed my-2">5. <strong class="text-white">Ingestion:</strong> The GCP Cloud Function parses the JSON, structures it into a standard schema, and injects a UUID trace ID.</p>
+<p class="text-slate-300 leading-relaxed my-2">6. <strong class="text-white">Observability:</strong> The payload is immediately logged to Google Cloud Logging for real-time dashboards and alerting.</p>
+<p class="text-slate-300 leading-relaxed my-2">7. <strong class="text-white">Archival:</strong> The native JSON payload is written to Google Cloud Storage under a date-partitioned prefix (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">YYYY/MM/DD</code>).</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🔄 End-to-End Workflow</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">1. Automated setup of all GCP resources (Service Accounts, IAM policies, Storage Buckets, APIs, Cloud Functions).</p>
+<p class="text-slate-300 leading-relaxed my-2">2. Dynamic fetching of the GCP Function HTTPS trigger URL.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. Automated provisioning of AWS resources (IAM Roles, Lambda packaging with Linux binaries, EventBridge Rules).</p>
+<p class="text-slate-300 leading-relaxed my-2">4. Continuous automated invocation between AWS and GCP.</p>
+<p class="text-slate-300 leading-relaxed my-2">5. Seamless lifecycle teardown scripts to prevent resource leakage.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🛠 Technology Stack</h2>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Google Cloud Platform (GCP)</h3>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Functions (Gen 2):</strong> Serverless compute for receiving HTTPS POST requests.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Storage:</strong> Secure, highly durable object storage for audit log archival.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Logging (Operations Suite):</strong> Structured logging for real-time observability.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Artifact Registry & Cloud Build:</strong> Containerizes the Gen 2 Cloud Function.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">IAM:</strong> Strict least-privilege service account bindings.</li>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Amazon Web Services (AWS)</h3>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS Lambda:</strong> Python-based serverless compute running on Amazon Linux.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon EventBridge:</strong> Serverless event bus and scheduler.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS IAM:</strong> Role-based access control.</li>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Tools & Languages</h3>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Python 3.10:</strong> Application logic for both AWS Lambda and GCP Cloud Functions.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">PowerShell 7+:</strong> End-to-end automation orchestration.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Google Cloud SDK (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">gcloud</code>):</strong> CLI management for GCP.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS CLI (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">aws</code>):</strong> CLI management for AWS.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📂 Repository Structure</h2>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>enterprise-multi-cloud-centralized-audit-observability-pipeline/
+├── .gitignore
+├── README.md
+├── architecture/
+├── aws-source/
+│   ├── lambda_function.py
+│   └── requirements.txt
+├── cleanup-scripts/
+│   └── destroy.ps1
+├── configuration/
+│   └── settings.ps1
+├── deployment-scripts/
+│   └── deploy.ps1
+├── gcp-source/
+│   ├── main.py
+│   └── requirements.txt
+├── screenshots/
+└── test-scripts/
+    └── test-e2e.ps1</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🔒 Security Architecture</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Zero Unauthenticated Access:</strong> The GCP Cloud Function explicitly disables unauthenticated invocations (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">--no-allow-unauthenticated</code>).</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Least Privilege IAM:</strong></li>
+<li class="ml-4 list-disc text-slate-300 my-1">The GCP Cloud Function runs under <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">audit-func-sa</code> with restricted permissions (Log Writer, Storage Object Admin).</li>
+<li class="ml-4 list-disc text-slate-300 my-1">The AWS Lambda is invoked using <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">audit-invoker-sa</code> exclusively holding the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">roles/run.invoker</code> permission.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">No Hardcoded Secrets in Code:</strong> Credentials are dynamically injected via environment variables and temporary identity tokens.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Repository Hygiene:</strong> A strict <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">.gitignore</code> safeguards against accidental credential exposure.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Data in Transit:</strong> All traffic flows over TLS/HTTPS.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🔑 Authentication Flow</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">To successfully bridge the two clouds, the AWS Lambda acts as the client:</p>
+<p class="text-slate-300 leading-relaxed my-2">1. It reads an authorized GCP Service Account key configuration.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. Utilizing the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">google-auth</code> library, it negotiates an OpenID Connect (OIDC) identity token tailored specifically for the target Cloud Function URL.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. It appends the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">Authorization: Bearer <TOKEN></code> header to the POST request.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">☁ AWS Components</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Lambda Function (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">multi-cloud-log-forwarder</code>):</strong> Built with Python 3.10. Relies on <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">requests</code> and <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">google-auth</code>. Uses <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">manylinux2014_x86_64</code> wheels for cross-platform C-extension compatibility (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">cryptography</code>).</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">EventBridge Rule (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">multi-cloud-audit-schedule</code>):</strong> Configured on a 5-minute rate schedule.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">IAM Role (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">multi-cloud-lambda-role</code>):</strong> Grants <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">AWSLambdaBasicExecutionRole</code> allowing CloudWatch metric generation.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">☁ Google Cloud Components</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Function (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">multi-cloud-audit-api</code>):</strong> A Gen 2 Cloud Function (powered by Cloud Run). Maps the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">ARCHIVE_BUCKET</code> environment variable.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Storage (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">imons-projects-audit-archive-4821</code>):</strong> Stores logs in the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">audit_logs/YYYY/MM/DD/</code> taxonomy.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Service Accounts:</strong></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">audit-func-sa</code>: Bound to the function.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">audit-invoker-sa</code>: Bound to the AWS Lambda logic.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🚀 Deployment Process</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The entire architecture is deployed autonomously using a single PowerShell script.</p>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">powershell</div><pre><code>.\deployment-scripts\deploy.ps1</code></pre></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Actions Performed:</strong></p>
+<li class="ml-4 list-disc text-slate-300 my-1">Synchronizes local configuration.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Activates GCP credentials and enables all required APIs.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Provisions GCP Cloud Storage and Service Accounts.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Deploys the GCP Cloud Function.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Assigns IAM bindings for cross-platform invocation.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Generates a temporary JSON key for AWS identity context.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Cross-compiles the Python dependencies for the Amazon Linux Lambda environment.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Zips and provisions the AWS Lambda and IAM roles.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Maps Amazon EventBridge to trigger the Lambda.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Immediately sanitizes local temporary credentials to prevent secret leakage.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🧪 End-to-End Testing Results</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">test-e2e.ps1</code> script performs programmatic validation:</p>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">powershell</div><pre><code>.\test-scripts\test-e2e.ps1</code></pre></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Output:</strong></p>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">code</div><pre><code>Starting End-to-End Test for Multi-Cloud Centralized Audit Pipeline
+Invoking AWS Lambda function manually...
+Lambda Response: {"statusCode": 200, "body": "{\"event_id\":\"ed9826db-cab1-407d-8cfe-81180b974b9e\",\"status\":\"success\"}\n"}
+Waiting 15 seconds for logs and storage to sync...
+Checking GCP Cloud Storage bucket for archived logs...
+Success! Found logs in GCP Storage Bucket: gs://imons-projects-audit-archive-4821/audit_logs/**
+Checking GCP Cloud Logging for structured audit events...
+Success! Found structured logs in GCP Cloud Logging.
+End-to-End Test Completed successfully.</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">✅ Validation Summary</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1">[x] AWS EventBridge triggers Lambda on schedule.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[x] AWS Lambda dynamically negotiates GCP OIDC Bearer tokens.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[x] GCP Cloud Function receives and processes the payload natively.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[x] GCP Cloud Logging records the telemetry instantly.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[x] GCP Cloud Storage archives the exact payload successfully.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📝 Cloud Logging Example</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">Structured JSON entry captured in Google Cloud Logging:</p>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">json</div><pre><code>{
+  "insertId": "64d008e0000301a24838b0cd",
+  "jsonPayload": {
+    "event_id": "405653e0-f3b7-4434-ae65-d5d14dcf499c",
+    "payload": {
+      "message": "Autonomous Audit Event"
+    },
+    "source": "aws-eventbridge",
+    "timestamp": "2026-07-10T19:53:57.123456Z"
+  },
+  "logName": "projects/imons-projects/logs/audit-api-log",
+  "severity": "INFO"
+}</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📦 Cloud Storage Archive Example</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">Native payload successfully written to <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">gs://imons-projects-audit-archive-4821/audit_logs/2026/07/10/audit-405653e0-f3b7-4434-ae65-d5d14dcf499c.json</code>:</p>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">json</div><pre><code>{
+  "event_id": "405653e0-f3b7-4434-ae65-d5d14dcf499c",
+  "timestamp": "2026-07-10T19:53:57.123456Z",
+  "source": "aws-eventbridge",
+  "payload": {
+    "message": "Autonomous Audit Event"
+  }
+}</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">⭐ Project Highlights</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Platform Engineering:</strong> Fully automated infrastructure lifecycle utilizing idempotent scripts.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">DevSecOps Integration:</strong> Security-first implementation ensuring absolute zero unauthenticated access across cloud perimeters.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cross-Cloud Identity:</strong> Mastery over GCP IAM OIDC token negotiation directly from inside AWS Lambda.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Python CI/CD:</strong> Dynamic cross-compilation of Python C-extension wheels (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">manylinux</code>) on a Windows environment for Amazon Linux consumption.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">💰 Cost Optimization</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1">Both AWS Lambda and GCP Cloud Functions utilize Serverless models resulting in $0 charges when idle.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Cloud Storage acts as cold storage minimizing long-term data retention costs compared to active SIEM ingestion.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🧹 Cleanup Strategy</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">To prevent idle resource leakage, the infrastructure can be safely torn down using:</p>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">powershell</div><pre><code>.\cleanup-scripts\destroy.ps1</code></pre></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This ensures all IAM roles, event rules, Lambdas, Cloud Functions, and Storage buckets are fully purged.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🔧 Troubleshooting</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">ModuleNotFoundError in AWS Lambda:</strong> Ensure dependencies are packaged with <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">--platform manylinux2014_x86_64</code> and <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">--only-binary=:all:</code> to avoid Windows C-extensions being uploaded to Amazon Linux.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">GCP 403 Forbidden on Cloud Function:</strong> Ensure the AWS Lambda possesses the correct Bearer Token mapped to a Service Account possessing the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">roles/run.invoker</code> role.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🧠 Lessons Learned</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1">Integrating multi-cloud IAM involves highly specific OIDC identity translation.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">PowerShell robustly handles Cloud API interactions when leveraging proper exception handling (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">$ErrorActionPreference</code>).</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Cross-platform dependency packaging (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">pip</code> wheel compatibility) is critical for serverless deployments.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🔭 Future Improvements</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1">Migrate PowerShell deployment scripts to HashiCorp Terraform for stateful IaC management.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Implement AWS Secrets Manager / GCP Secret Manager for temporary SA key distribution to eliminate local filesystem touches.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Integrate Datadog or Splunk forwarders for extended SIEM visibility.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📚 References</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1">[Google Cloud Functions Authentication](https://cloud.google.com/functions/docs/securing/authenticating)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[AWS Lambda Deployment Packages](https://docs.aws.amazon.com/lambda/latest/dg/python-package.html)</li>
+<li class="ml-4 list-disc text-slate-300 my-1">[Amazon EventBridge Overview](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html)</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📄 License</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This project is licensed under the MIT License - see the LICENSE file for details.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">👨‍💻 Author</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Imon Mahmud</strong></p>
+<p class="text-slate-300 leading-relaxed my-2">*IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER*</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📸 Screenshot Gallery</h2>
+<p class="text-slate-300 leading-relaxed my-2"><br></p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
       </div>
     </section>
 
@@ -299,17 +560,5 @@ In modern enterprise environments, organizations often employ multi-cloud strate
   <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
     <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
   </footer>
-
-  <script>
-    let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
-      });
-    }
-  </script>
 </body>
 </html>

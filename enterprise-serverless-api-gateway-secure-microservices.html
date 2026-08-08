@@ -44,15 +44,15 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition" data-en="Imon Mahmud | Systems & Architecture" data-de="Imon Mahmud | Systeme & Architektur">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
           <span>🌐</span> <span id="lang-label">DE</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition" data-en="← Back to Projects" data-de="← Zurück zu den Projekten">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
         
         <a href="https://github.com/eng-imonmahmud/enterprise-serverless-api-gateway-secure-microservices" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
@@ -89,7 +89,7 @@
       </div>
       
       <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3" data-en="Enterprise Architecture Specs" data-de="Unternehmensarchitektur-Spezifikation">Enterprise Architecture Specs</h3>
+        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
         <ul class="text-xs font-mono space-y-2.5 text-slate-300">
           <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">enterprise-serverless-api-gateway-secure-microservices</span></li>
           <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">Shell</span></li>
@@ -112,7 +112,7 @@
     
         <section class="space-y-6">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight" data-en="Live Production Console & Screenshots" data-de="Live-Konsolenscreenshots">
+            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
               Live Production Console & Screenshots
             </h2>
             <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">15 Screenshots Verified</span>
@@ -186,73 +186,187 @@
     <!-- Architecture & Technical Specifications Section -->
     <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
       <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight" data-en="System Architecture & Technical Design" data-de="Systemarchitektur & Technisches Design">
-          System Architecture & Technical Design
+        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+          System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Official repository specifications and infrastructure breakdown.</p>
+        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
       <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <div class="bg-obsidian/80 border border-slate-800 p-6 rounded-xl font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
-# Enterprise Serverless API Gateway &amp; Secure Microservices Architecture
-
-
-
-
-
-
-
-
-
-
-
-
-## Project Description
-
-This project demonstrates a production-ready, highly secure, and automated Enterprise Serverless Architecture built natively on Google Cloud Platform (GCP). It features a Python Flask microservice containerized using Docker, continuously built via Google Cloud Build, and stored in Artifact Registry. The service is securely deployed to a private Google Cloud Run instance.
-
-To adhere to the Zero Trust security model, the Cloud Run instance strictly blocks all unauthenticated public access. Traffic is exclusively managed and routed through a Google Cloud API Gateway, which utilizes a dedicated Identity and Access Management (IAM) service account with least privilege permissions (`roles/run.invoker`) to authenticate and securely invoke the private backend. 
-
-The entire pipeline, infrastructure deployment, IAM configuration, validation, and cleanup have been automated, eliminating the need for manual intervention and mitigating security risks.
-
-## Architecture Overview
-
-
-
-The application traffic flows securely through the following path:
-**Internet** → **API Gateway** → **IAM Authentication (Service Account)** → **Private Cloud Run**
-
-## Technology Stack
-
-*   **Language**: Python 3.11
-*   **Web Framework**: Flask
-*   **Containerization**: Docker
-*   **CI/CD**: Google Cloud Build
-*   **Container Registry**: Google Artifact Registry
-*   **Serverless Compute**: Google Cloud Run (Private)
-*   **API Management**: Google Cloud API Gateway
-*   **Security &amp; Auth**: Google Cloud IAM (Zero Trust, Least Privilege)
-*   **API Specification**: OpenAPI 2.0 (Swagger)
-*   **Scripting**: Bash / PowerShell
-
-## Features
-
-*   **Zero Trust Security Model**: Direct public access to the Cloud Run microservices is completely blocked using the `--no-allow-unauthenticated` policy.
-*   **Least Privilege IAM**: The API Gateway uses a dedicated service account limited strictly to the `run.invoker` role.
-*   **Automated CI/CD**: Seamlessly transitions from raw code to a deployed container image via Cloud Build and Artifact Registry.
-*   **API Management**: Centralized routing and API specification using a fully managed Google API Gateway.
-*   **Infrastructure as Code (IaC) principles**: Standardized deployment scripts and OpenAPI YAML for repeatable, immutable deployments.
-
-## Security Model
-
-This project stringently enforces enterprise-grade security protocols:
-
-1.  **No Public Direct Access**: Attempting to bypass the Gateway and access Cloud Run directly results in a deliberate `403 Forbidden` response.
-2.  **Explicit IAM Binding**: Only the designated API Gateway Service Account possesses the precise cryptographic token authority to negotiate entry to the backend.
-3.  **Strict Git Ignore Policies**: All local JSON credential files, PEM keys, temporary artifacts, and environmental configuration files are systematically ignored to prevent credential leakage.
-
-## API Endpoin
-        </div>
+        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">Enterprise Serverless API Gateway & Secure Microservices Architecture</h1>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Project Description</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This project demonstrates a production-ready, highly secure, and automated Enterprise Serverless Architecture built natively on Google Cloud Platform (GCP). It features a Python Flask microservice containerized using Docker, continuously built via Google Cloud Build, and stored in Artifact Registry. The service is securely deployed to a private Google Cloud Run instance.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">To adhere to the Zero Trust security model, the Cloud Run instance strictly blocks all unauthenticated public access. Traffic is exclusively managed and routed through a Google Cloud API Gateway, which utilizes a dedicated Identity and Access Management (IAM) service account with least privilege permissions (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">roles/run.invoker</code>) to authenticate and securely invoke the private backend.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The entire pipeline, infrastructure deployment, IAM configuration, validation, and cleanup have been automated, eliminating the need for manual intervention and mitigating security risks.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Architecture Overview</h2>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The application traffic flows securely through the following path:</p>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Internet</strong> → <strong class="text-white">API Gateway</strong> → <strong class="text-white">IAM Authentication (Service Account)</strong> → <strong class="text-white">Private Cloud Run</strong></p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Technology Stack</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Language</strong>: Python 3.11</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Web Framework</strong>: Flask</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Containerization</strong>: Docker</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">CI/CD</strong>: Google Cloud Build</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Container Registry</strong>: Google Artifact Registry</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Serverless Compute</strong>: Google Cloud Run (Private)</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Management</strong>: Google Cloud API Gateway</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Security & Auth</strong>: Google Cloud IAM (Zero Trust, Least Privilege)</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Specification</strong>: OpenAPI 2.0 (Swagger)</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Scripting</strong>: Bash / PowerShell</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Features</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Zero Trust Security Model</strong>: Direct public access to the Cloud Run microservices is completely blocked using the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">--no-allow-unauthenticated</code> policy.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Least Privilege IAM</strong>: The API Gateway uses a dedicated service account limited strictly to the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">run.invoker</code> role.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Automated CI/CD</strong>: Seamlessly transitions from raw code to a deployed container image via Cloud Build and Artifact Registry.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Management</strong>: Centralized routing and API specification using a fully managed Google API Gateway.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Infrastructure as Code (IaC) principles</strong>: Standardized deployment scripts and OpenAPI YAML for repeatable, immutable deployments.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Security Model</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This project stringently enforces enterprise-grade security protocols:</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">1.  <strong class="text-white">No Public Direct Access</strong>: Attempting to bypass the Gateway and access Cloud Run directly results in a deliberate <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">403 Forbidden</code> response.</p>
+<p class="text-slate-300 leading-relaxed my-2">2.  <strong class="text-white">Explicit IAM Binding</strong>: Only the designated API Gateway Service Account possesses the precise cryptographic token authority to negotiate entry to the backend.</p>
+<p class="text-slate-300 leading-relaxed my-2">3.  <strong class="text-white">Strict Git Ignore Policies</strong>: All local JSON credential files, PEM keys, temporary artifacts, and environmental configuration files are systematically ignored to prevent credential leakage.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">API Endpoint Documentation</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The API Gateway routes the following RESTful endpoints:</p>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /health</code>: Validates the operational health of the microservice.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /employees</code>: Returns structured employee organizational data.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /projects</code>: Returns current enterprise project statuses.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /departments</code>: Returns departmental hierarchical data.</li>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Example JSON Responses</h3>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /health</code></strong></p>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">json</div><pre><code>{
+  "service": "employee-api",
+  "status": "healthy"
+}</code></pre></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">GET /employees</code></strong></p>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">json</div><pre><code>{
+  "data": [
+    {
+      "department": "Engineering",
+      "id": "EMP-001",
+      "name": "Alice Smith",
+      "role": "Senior Engineer"
+    },
+    ...
+  ]
+}</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Repository Structure</h2>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">code</div><pre><code>.
+├── .gitignore               # Enterprise-grade Git exclusions
+├── Dockerfile               # Container build instructions
+├── LICENSE                  # MIT License
+├── README.md                # This documentation file
+├── app.py                   # Python Flask microservice
+├── architecture.png         # Architecture Topology Diagram
+├── cloudbuild.yaml          # Google Cloud Build pipeline
+├── openapi.yaml             # API Gateway OpenAPI Spec
+├── requirements.txt         # Python dependencies
+├── screenshots/             # Deployment Proof &amp; Gallery
+└── scripts/
+    ├── cleanup.sh           # Billable Resource Teardown Script
+    ├── deploy.sh            # Local deployment wrapper
+    └── validate.sh          # Automated curl-based validation</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Deployment & Validation Workflow</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The automated deployment pipeline performs the following sequentially:</p>
+<p class="text-slate-300 leading-relaxed my-2">1.  <strong class="text-white">Build Phase</strong>: Cloud Build packages the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">app.py</code> into a Docker image and pushes it to Artifact Registry.</p>
+<p class="text-slate-300 leading-relaxed my-2">2.  <strong class="text-white">Deploy Phase</strong>: Cloud Run deploys the image privately.</p>
+<p class="text-slate-300 leading-relaxed my-2">3.  <strong class="text-white">Security Phase</strong>: A Service Account is provisioned, and IAM policies bind the account to the Cloud Run service.</p>
+<p class="text-slate-300 leading-relaxed my-2">4.  <strong class="text-white">Gateway Phase</strong>: The OpenAPI specification dynamically injects the backend URL and initializes the API Config and API Gateway.</p>
+<p class="text-slate-300 leading-relaxed my-2">5.  <strong class="text-white">Validation Phase</strong>: Curl scripts automatically assert that the backend rejects direct traffic (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">403</code>) while the gateway routes successfully (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">200 OK</code>).</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Screenshot Gallery</h2>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Google Cloud Console Deployments</h3>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run Overview</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run Revisions</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run Revisions (Detailed)</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run Metrics</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run Logs</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Cloud Run IAM Security Policy</strong>:</li>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">API Gateway Configurations</h3>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Gateway Overview</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Detail</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Configs Rollout</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Configs Detail</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Gateway Deployed</strong>:</li>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Live Validation & Endpoint Tests</h3>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Direct Cloud Run URL (Blocked / Zero Trust)</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Gateway Health Check (Success)</strong>:</li>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">API Gateway Employee Endpoint (Success)</strong>:</li>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Lessons Learned</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1">Enforcing a Zero Trust backend significantly bolsters the resilience of serverless applications against unauthorized invocations.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Decoupling API routing from the core application logic using API Gateway streamlines microservice architecture and scales effortlessly.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Complete end-to-end automation via scripts and pipelines dramatically reduces the time-to-market while enforcing stringent cloud-native best practices.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Future Improvements</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1">Implement Google Cloud Armor in front of the API Gateway for WAF and DDoS protection.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Incorporate JSON Web Token (JWT) validation at the API Gateway level to authenticate end-users, not just the microservices.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Translate the imperative deployment bash scripts into declarative Terraform modules for industry-standard state management.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Credits</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Imon Mahmud</strong></p>
+<p class="text-slate-300 leading-relaxed my-2">IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">License</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This project is licensed under the MIT License - see the LICENSE file for details.</p>
+<div class="h-2"></div>
       </div>
     </section>
 
@@ -296,17 +410,5 @@ This project stringently enforces enterprise-grade security protocols:
   <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
     <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
   </footer>
-
-  <script>
-    let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
-      });
-    }
-  </script>
 </body>
 </html>

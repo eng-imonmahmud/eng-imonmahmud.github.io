@@ -44,15 +44,15 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition" data-en="Imon Mahmud | Systems & Architecture" data-de="Imon Mahmud | Systeme & Architektur">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
           <span>🌐</span> <span id="lang-label">DE</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition" data-en="← Back to Projects" data-de="← Zurück zu den Projekten">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
         
         <a href="https://github.com/eng-imonmahmud/global-enterprise-transit-network-bgp" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
@@ -89,7 +89,7 @@
       </div>
       
       <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3" data-en="Enterprise Architecture Specs" data-de="Unternehmensarchitektur-Spezifikation">Enterprise Architecture Specs</h3>
+        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
         <ul class="text-xs font-mono space-y-2.5 text-slate-300">
           <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">global-enterprise-transit-network-bgp</span></li>
           <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">HCL</span></li>
@@ -112,7 +112,7 @@
     
         <section class="space-y-6">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight" data-en="Live Production Console & Screenshots" data-de="Live-Konsolenscreenshots">
+            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
               Live Production Console & Screenshots
             </h2>
             <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">12 Screenshots Verified</span>
@@ -186,31 +186,29 @@
     <!-- Architecture & Technical Specifications Section -->
     <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
       <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight" data-en="System Architecture & Technical Design" data-de="Systemarchitektur & Technisches Design">
-          System Architecture & Technical Design
+        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+          System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Official repository specifications and infrastructure breakdown.</p>
+        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
       <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <div class="bg-obsidian/80 border border-slate-800 p-6 rounded-xl font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
-# 🌐 Global Enterprise Transit Network &amp; Dynamic Routing Architecture (BGP)
-
-
-
-
-
-
-**Project Status:** 🟢 Completed &amp; Validated
-
-## 🚀 Architecture Overview
-This project showcases a highly available, enterprise-grade cloud networking architecture built entirely using Infrastructure as Code (Terraform) on AWS. It demonstrates expertise in interconnecting multiple VPCs with a simulated on-premises datacenter via AWS Transit Gateway and dynamic routing (BGP) over IPsec VPN.
-
-This architecture establishes the AWS-side infrastructure for a Hybrid Cloud environment. The dynamic BGP VPN is designed to peer with on-premises Data Center core routers (e.g., Cisco ASR / FortiGate) over an MPLS or direct internet connection. Network security inspections can be routed through Palo Alto/F5 virtual appliances in the Hub VPC.
-
-### 🗺️ Architecture Diagram
-```mermaid
-graph TD;
+        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">🌐 Global Enterprise Transit Network & Dynamic Routing Architecture (BGP)</h1>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Project Status:</strong> 🟢 Completed & Validated</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🚀 Architecture Overview</h2>
+<p class="text-slate-300 leading-relaxed my-2">This project showcases a highly available, enterprise-grade cloud networking architecture built entirely using Infrastructure as Code (Terraform) on AWS. It demonstrates expertise in interconnecting multiple VPCs with a simulated on-premises datacenter via AWS Transit Gateway and dynamic routing (BGP) over IPsec VPN.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This architecture establishes the AWS-side infrastructure for a Hybrid Cloud environment. The dynamic BGP VPN is designed to peer with on-premises Data Center core routers (e.g., Cisco ASR / FortiGate) over an MPLS or direct internet connection. Network security inspections can be routed through Palo Alto/F5 virtual appliances in the Hub VPC.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">🗺️ Architecture Diagram</h3>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>graph TD;
     subgraph AWS Cloud
         TGW[Transit Gateway]
         
@@ -238,28 +236,127 @@ graph TD;
     TGW &lt;--&gt;|IPsec VPN tunnels| VGW
     VGW &lt;--&gt;|BGP over IPsec| CGW
     CGW --- Router
-    Router --- OnPrem_Sub
-```
-
-### 💼 Business Problem
-Modern enterprises require scalable and transitive network connectivity across dozens of VPCs and physical on-premises data centers. Point-to-point VPC peering and static routing quickly become an administrative nightmare, leading to human error, downtime, and massive operational overhead.
-
-### 💡 Solution
-The implementation of an **AWS Transit Gateway** acting as a central hub-and-spoke router, paired with **AWS Site-to-Site VPN** and **Dynamic BGP Routing**. This architecture allows for automated route propagation, high availability, and immediate scalability as new VPCs or data centers are added to the network.
-
-## 🌟 Enterprise Features
-- **Infrastructure as Code**: 100% modular Terraform design for reusability and scalability.
-- **Dynamic BGP Routing**: Eliminates manual static route management, allowing networks to automatically learn new routes.
-- **Hub-and-Spoke Topology**: Utilizing AWS Transit Gateway for transitive routing.
-- **Strict Security Posture**: Least-privilege IAM roles and granular Security Groups.
-- **Automated Bootstrapping**: EC2 user-data auto-configures StrongSwan and FRR on Ubuntu without manual intervention.
-
-## 🛠️ Technologies Used
-### AWS Services
-- **AWS Transit Gateway** (TGW, TGW Attachments, TGW Route Tables)
-- **Amazon Virtual Private Cloud** (VPCs, Subnets, Route Tables, IGW)
-- **AWS Site-to-Site VPN** (Customer Gateway, Virt
-        </div>
+    Router --- OnPrem_Sub</code></pre></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">💼 Business Problem</h3>
+<p class="text-slate-300 leading-relaxed my-2">Modern enterprises require scalable and transitive network connectivity across dozens of VPCs and physical on-premises data centers. Point-to-point VPC peering and static routing quickly become an administrative nightmare, leading to human error, downtime, and massive operational overhead.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">💡 Solution</h3>
+<p class="text-slate-300 leading-relaxed my-2">The implementation of an <strong class="text-white">AWS Transit Gateway</strong> acting as a central hub-and-spoke router, paired with <strong class="text-white">AWS Site-to-Site VPN</strong> and <strong class="text-white">Dynamic BGP Routing</strong>. This architecture allows for automated route propagation, high availability, and immediate scalability as new VPCs or data centers are added to the network.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🌟 Enterprise Features</h2>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Infrastructure as Code</strong>: 100% modular Terraform design for reusability and scalability.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Dynamic BGP Routing</strong>: Eliminates manual static route management, allowing networks to automatically learn new routes.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Hub-and-Spoke Topology</strong>: Utilizing AWS Transit Gateway for transitive routing.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Strict Security Posture</strong>: Least-privilege IAM roles and granular Security Groups.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Automated Bootstrapping</strong>: EC2 user-data auto-configures StrongSwan and FRR on Ubuntu without manual intervention.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🛠️ Technologies Used</h2>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">AWS Services</h3>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS Transit Gateway</strong> (TGW, TGW Attachments, TGW Route Tables)</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon Virtual Private Cloud</strong> (VPCs, Subnets, Route Tables, IGW)</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS Site-to-Site VPN</strong> (Customer Gateway, Virtual Private Gateway features)</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon EC2</strong> (Ubuntu Server 24.04 LTS, Elastic IPs, Security Groups)</li>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Open Source & Tools</h3>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Terraform</strong> (IaC, Modules, State Management)</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">FRRouting (FRR)</strong> (BGP Daemon)</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">StrongSwan</strong> (IPsec VTI implementation)</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Git & GitHub</strong> (Version Control, CI/CD simulated hygiene)</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🏗️ Repository Structure & Terraform Modules</h2>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>.
+├── terraform/
+│   ├── main.tf             # Core infrastructure instantiation
+│   ├── variables.tf        # Global variables
+│   ├── outputs.tf          # Global outputs
+│   ├── providers.tf        # AWS Provider configuration
+│   └── modules/
+│       ├── vpc/            # Reusable VPC, Subnets, and Route Table logic
+│       ├── tgw/            # Transit Gateway and Attachment management
+│       ├── vpn/            # Site-to-Site VPN and Customer Gateway config
+│       └── router/         # Simulated On-Prem EC2 Router &amp; user_data templating
+├── scripts/
+│   └── validate.ps1        # Automated Pre-commit validation and Secret Scanning
+└── docs/
+    └── ARCHITECTURE.md     # Architectural diagrams and design decisions</code></pre></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📐 Networking Design</h2>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Transit Gateway Design</h3>
+<p class="text-slate-300 leading-relaxed my-2">The AWS Transit Gateway (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">enterprise-transit-gateway</code>) is the core of this network. It uses a default route table with <strong class="text-white">Route Propagation enabled</strong>. This means as soon as the VPN connects and BGP establishes, the on-premises CIDR (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">192.168.0.0/16</code>) is automatically injected into the TGW Route Table, and traffic from the Production and Shared Services VPCs can natively route to it.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Dynamic BGP & VPN Architecture</h3>
+<p class="text-slate-300 leading-relaxed my-2">The simulated On-Premises data center uses an EC2 instance running Ubuntu 24.04.</p>
+<li class="ml-4 list-disc text-slate-300 my-1">The EC2 instance is attached to an Elastic IP.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">The Elastic IP is registered in AWS as a <strong class="text-white">Customer Gateway</strong> (ASN <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">65000</code>).</li>
+<li class="ml-4 list-disc text-slate-300 my-1">An <strong class="text-white">AWS Site-to-Site VPN</strong> connection is established between the TGW (ASN <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">64512</code>) and the Customer Gateway.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">StrongSwan</strong> is used to bring up an IPsec VTI (Virtual Tunnel Interface).</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">FRRouting</strong> establishes a BGP peering session over the VTI to the AWS inside-tunnel IP, advertising the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">192.168.0.0/16</code> network dynamically.</li>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Security Architecture</h3>
+<li class="ml-4 list-disc text-slate-300 my-1">The EC2 Router's Security Group strictly allows only necessary protocols for VPN and routing: <strong class="text-white">UDP 500 (IKE)</strong>, <strong class="text-white">UDP 4500 (NAT-T)</strong>, <strong class="text-white">Protocol 50 (ESP)</strong>, and <strong class="text-white">TCP 179 (BGP)</strong>.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">No overly permissive <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">0.0.0.0/0</code> rules exist for SSH or management traffic, adhering to the Well-Architected Framework.</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📸 Professional Screenshot Gallery</h2>
+<p class="text-slate-300 leading-relaxed my-2">The infrastructure deployment has been fully validated in the AWS Console.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">1. VPC & Subnet Architecture</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">2. Route Tables</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">3. Transit Gateway Hub</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">4. VPN & BGP Validation</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">5. Simulated On-Premises Router (EC2)</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">✅ Validation & Testing Workflow</h2>
+<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Terraform Formatting</strong>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform fmt -recursive</code> ensures clean code.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Terraform Validation</strong>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform validate</code> ensures syntactical correctness.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">Secret Scanning</strong>: Custom scripts prevent accidental commits of <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">.tfstate</code>, AWS keys, or PSKs.</p>
+<p class="text-slate-300 leading-relaxed my-2">4. <strong class="text-white">AWS Console Verification</strong>: Ensured VPN tunnels transitioned to <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">UP</code> state and BGP routes propagated.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🚀 Deployment Instructions</h2>
+<p class="text-slate-300 leading-relaxed my-2">1. Clone this repository.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. Ensure you have valid AWS credentials configured (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">aws configure</code>).</p>
+<p class="text-slate-300 leading-relaxed my-2">3. Navigate to the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform</code> directory: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">cd terraform</code></p>
+<p class="text-slate-300 leading-relaxed my-2">4. Initialize the project: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform init</code></p>
+<p class="text-slate-300 leading-relaxed my-2">5. Apply the configuration: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform apply -auto-approve</code></p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🧹 Cleanup Procedure</h2>
+<p class="text-slate-300 leading-relaxed my-2">To avoid ongoing AWS charges, destroy the infrastructure when finished:</p>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">bash</div><pre><code>cd terraform
+terraform destroy -auto-approve</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🧠 Lessons Learned & Future Improvements</h2>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Automating IPsec/BGP on Linux</strong>: Extracting the dynamic VPN tunnel configuration from the Terraform <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">aws_vpn_connection</code> resource and injecting it cleanly into an EC2 <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">user_data</code> template proved to be a highly effective way to simulate an on-prem router entirely automatically.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Future Improvement</strong>: Implementing AWS Network Firewall in an inspection VPC to filter east-west traffic between the Production and Shared Services VPCs.</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">👨‍💻 Author</h2>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Imon Mahmud</strong></p>
+<p class="text-slate-300 leading-relaxed my-2">*IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER*</p>
+<div class="h-2"></div>
       </div>
     </section>
 
@@ -303,17 +400,5 @@ The implementation of an **AWS Transit Gateway** acting as a central hub-and-spo
   <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
     <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
   </footer>
-
-  <script>
-    let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
-      });
-    }
-  </script>
 </body>
 </html>

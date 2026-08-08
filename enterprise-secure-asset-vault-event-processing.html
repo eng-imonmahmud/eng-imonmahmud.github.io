@@ -44,15 +44,15 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition" data-en="Imon Mahmud | Systems & Architecture" data-de="Imon Mahmud | Systeme & Architektur">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
           <span>🌐</span> <span id="lang-label">DE</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition" data-en="← Back to Projects" data-de="← Zurück zu den Projekten">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
         
         <a href="https://github.com/eng-imonmahmud/enterprise-secure-asset-vault-event-processing" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
@@ -89,7 +89,7 @@
       </div>
       
       <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3" data-en="Enterprise Architecture Specs" data-de="Unternehmensarchitektur-Spezifikation">Enterprise Architecture Specs</h3>
+        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
         <ul class="text-xs font-mono space-y-2.5 text-slate-300">
           <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">enterprise-secure-asset-vault-event-processing</span></li>
           <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">Python</span></li>
@@ -112,7 +112,7 @@
     
         <section class="space-y-6">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight" data-en="Live Production Console & Screenshots" data-de="Live-Konsolenscreenshots">
+            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
               Live Production Console & Screenshots
             </h2>
             <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">10 Screenshots Verified</span>
@@ -186,47 +186,45 @@
     <!-- Architecture & Technical Specifications Section -->
     <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
       <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight" data-en="System Architecture & Technical Design" data-de="Systemarchitektur & Technisches Design">
-          System Architecture & Technical Design
+        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+          System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Official repository specifications and infrastructure breakdown.</p>
+        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
       <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <div class="bg-obsidian/80 border border-slate-800 p-6 rounded-xl font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
-# Enterprise Secure Asset Vault &amp; Event-Driven Processing Architecture
-
-**By Imon Mahmud** | *IT SPECIALIST | CLOUD INFRASTRUCTURE &amp; AI AUTOMATION ENGINEER*
-
-
-
-
-
-
-
-## Project Overview
-
-An enterprise-grade event-driven architecture designed to securely process, validate, and catalog digital assets uploaded to the cloud. Built entirely on Google Cloud's serverless ecosystem, this architecture ensures high availability, automated scalability, and strict security compliance via least-privilege IAM and centralized secret management.
-
-This project was built following industry best practices for Infrastructure-as-Code (IaC) deployment, robust error handling, and structured observability, demonstrating capabilities required for senior Cloud Engineering roles.
-
-### Business Problem
-Organizations require a secure and reliable mechanism to process digital assets submitted by third parties or internal systems. Manual processing is unscalable, while synchronous processing introduces bottlenecks. Furthermore, configurations and encryption parameters often leak into codebases, posing significant security risks.
-
-### The Solution
-A fully automated, event-driven pipeline that decoupling ingestion from processing:
-1. Assets are securely deposited into **Cloud Storage**.
-2. **Eventarc** captures the upload event and asynchronously routes it to a **Cloud Function (Gen 2)**.
-3. The function retrieves encrypted configurations from **Secret Manager**.
-4. The asset metadata is extracted and cataloged in a scalable **Firestore** database.
-5. All operations emit structured logs to **Cloud Logging** for observability and compliance auditing.
-
----
-
-## Architecture Overview
-
-```mermaid
-graph TD
+        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">Enterprise Secure Asset Vault & Event-Driven Processing Architecture</h1>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">By Imon Mahmud</strong> | *IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Project Overview</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">An enterprise-grade event-driven architecture designed to securely process, validate, and catalog digital assets uploaded to the cloud. Built entirely on Google Cloud's serverless ecosystem, this architecture ensures high availability, automated scalability, and strict security compliance via least-privilege IAM and centralized secret management.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This project was built following industry best practices for Infrastructure-as-Code (IaC) deployment, robust error handling, and structured observability, demonstrating capabilities required for senior Cloud Engineering roles.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Business Problem</h3>
+<p class="text-slate-300 leading-relaxed my-2">Organizations require a secure and reliable mechanism to process digital assets submitted by third parties or internal systems. Manual processing is unscalable, while synchronous processing introduces bottlenecks. Furthermore, configurations and encryption parameters often leak into codebases, posing significant security risks.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">The Solution</h3>
+<p class="text-slate-300 leading-relaxed my-2">A fully automated, event-driven pipeline that decoupling ingestion from processing:</p>
+<p class="text-slate-300 leading-relaxed my-2">1. Assets are securely deposited into <strong class="text-white">Cloud Storage</strong>.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Eventarc</strong> captures the upload event and asynchronously routes it to a <strong class="text-white">Cloud Function (Gen 2)</strong>.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. The function retrieves encrypted configurations from <strong class="text-white">Secret Manager</strong>.</p>
+<p class="text-slate-300 leading-relaxed my-2">4. The asset metadata is extracted and cataloged in a scalable <strong class="text-white">Firestore</strong> database.</p>
+<p class="text-slate-300 leading-relaxed my-2">5. All operations emit structured logs to <strong class="text-white">Cloud Logging</strong> for observability and compliance auditing.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Architecture Overview</h2>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>graph TD
     User([External System / User]) --&gt;|Upload Asset| GCS[Cloud Storage Bucket]
     GCS --&gt;|Finalize Event| Eventarc{Eventarc Trigger}
     Eventarc --&gt;|Invoke| Function(Cloud Functions Gen2)
@@ -241,15 +239,116 @@ graph TD
     style Function fill:#34A853,stroke:#fff,stroke-width:2px,color:#fff
     style SecretManager fill:#EA4335,stroke:#fff,stroke-width:2px,color:#fff
     style Firestore fill:#4285F4,stroke:#fff,stroke-width:2px,color:#fff
-    style Logging fill:#607D8B,stroke:#fff,stroke-width:2px,color:#fff
-```
-
-### End-to-End Workflow
-1. **Ingestion**: The `enterprise-secure-asset-vault-*` bucket enforces uniform bucket-level access.
-2. **Routing**: `google.cloud.storage.object.v1.finalized` events are caught by Eventarc, ensuring guaranteed delivery using underlying Pub/Sub mechanisms.
-3. **Processing Engine**: The Gen2 Cloud Function processes the standard CloudEvents payload, performing dynamic configuration lookup.
-4. **State M
-        </div>
+    style Logging fill:#607D8B,stroke:#fff,stroke-width:2px,color:#fff</code></pre></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">End-to-End Workflow</h3>
+<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Ingestion</strong>: The <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">enterprise-secure-asset-vault-*</code> bucket enforces uniform bucket-level access.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Routing</strong>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">google.cloud.storage.object.v1.finalized</code> events are caught by Eventarc, ensuring guaranteed delivery using underlying Pub/Sub mechanisms.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">Processing Engine</strong>: The Gen2 Cloud Function processes the standard CloudEvents payload, performing dynamic configuration lookup.</p>
+<p class="text-slate-300 leading-relaxed my-2">4. <strong class="text-white">State Management</strong>: Extracted characteristics (CRC32C, size, timestamps, content-type) are persisted as structured documents into the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">asset-catalog</code> collection.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Security Best Practices</h2>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Zero Hardcoded Secrets</strong>: Python source code (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">src/main.py</code>) relies entirely on Secret Manager for enterprise configuration.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Principle of Least Privilege</strong>: The processing function runs under a dedicated service account identity, restricted to only <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">roles/secretmanager.secretAccessor</code> and <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">roles/datastore.user</code>.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Git Hygiene</strong>: Comprehensive <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">.gitignore</code> completely isolates service account keys (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">*.json</code>), local environment variables, and temporary artifacts from the repository.</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Deployment & Testing</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The infrastructure is provisioned through custom automated Python deployment scripts that wrap the Google Cloud SDK, demonstrating programmatic orchestration of cloud environments.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Deployment Summary</h3>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">bash</div><pre><code># Provision Cloud Storage, Secret Manager, Firestore, Eventarc, and deploy Gen2 Cloud Function
+python scripts/deploy.py</code></pre></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Testing Methodology</h3>
+<p class="text-slate-300 leading-relaxed my-2">An automated test script simulates an enterprise file drop:</p>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">bash</div><pre><code>python scripts/test.py</code></pre></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Validation Results</strong>: The script confirms the GCS upload, pauses to allow asynchronous event propagation, queries Firestore to assert document creation, and finally streams execution logs to the console to verify a successful 200 OK execution.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Recruiter Screenshot Gallery</h2>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">1. Google Cloud Project Dashboard</h3>
+<p class="text-slate-300 leading-relaxed my-2">Provides a holistic overview of the production environment.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">2. Cloud Storage Setup</h3>
+<p class="text-slate-300 leading-relaxed my-2">The <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">enterprise-secure-asset-vault</code> bucket configuration.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">3. Uploaded Enterprise Asset</h3>
+<p class="text-slate-300 leading-relaxed my-2">Demonstrates successful data ingestion.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">4. Cloud Functions (Gen2) Deployment</h3>
+<p class="text-slate-300 leading-relaxed my-2">Highlights the serverless architecture, runtime environment (Python 3.10), and underlying Cloud Run revisions.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">5. Cloud Function Source Code Configuration</h3>
+<p class="text-slate-300 leading-relaxed my-2">Code successfully pushed and built within Google Cloud infrastructure.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">6. Eventarc Trigger Configuration</h3>
+<p class="text-slate-300 leading-relaxed my-2">Seamless event routing from GCS to the processor function.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">7. Secret Manager Integration</h3>
+<p class="text-slate-300 leading-relaxed my-2">Secure storage of the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">enterprise-config</code> parameters.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">8. Firestore Database</h3>
+<p class="text-slate-300 leading-relaxed my-2">The Native Mode database configuration ensuring scalable document storage.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">9. Firestore Data Catalog</h3>
+<p class="text-slate-300 leading-relaxed my-2">The processed metadata accurately stored within the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">asset-catalog</code> collection.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">10. Cloud Logging & Observability</h3>
+<p class="text-slate-300 leading-relaxed my-2">Structured JSON logs confirming the successful, error-free execution of the pipeline.</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Repository Structure</h2>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">code</div><pre><code>.
+├── src/
+│   ├── main.py              # Cloud Function core processing logic (CloudEvents handler)
+│   └── requirements.txt     # Locked Python dependencies
+├── scripts/
+│   ├── deploy.py            # Infrastructure deployment orchestration &amp; IAM setup
+│   ├── test.py              # Automated E2E verification workflow
+│   └── cleanup.py           # Resource teardown and cost prevention
+├── screenshots/             # Production deployment visual evidence
+├── .gitignore               # Strict exclusion of sensitive files
+├── LICENSE                  # MIT License
+└── README.md                # Enterprise Architecture documentation</code></pre></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Skills Demonstrated</h2>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Google Cloud Platform (GCP)</strong>: Mastered orchestration of serverless and data components.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Event-Driven Architecture</strong>: Implementation of loosely coupled, highly scalable microservices.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Python Development</strong>: Writing robust, PEP-8 compliant cloud execution code.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Identity & Access Management (IAM)</strong>: Implementing the principle of least privilege.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Infrastructure Automation</strong>: Building repeatable deployment workflows without reliance on point-and-click console usage.</li>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Future Improvements</h3>
+<p class="text-slate-300 leading-relaxed my-2">While this project represents a production-ready baseline, future iterations could introduce:</p>
+<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Terraform</strong>: Transitioning the Python deployment script into declarative HashiCorp Terraform HCL.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">CI/CD Pipelines</strong>: Incorporating GitHub Actions or Cloud Build to deploy code on Git push.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">Dead Letter Queues (DLQ)</strong>: Implementing Pub/Sub DLQs for failed event processing retries.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Cleanup Strategy</h3>
+<p class="text-slate-300 leading-relaxed my-2">To avoid unnecessary cloud billing after the portfolio demonstration, a deterministic teardown script deletes all created resources (Buckets, Secrets, Functions, Eventarc Triggers, and Artifact Registry images):</p>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">bash</div><pre><code>python scripts/cleanup.py</code></pre></div>
+<div class="h-2"></div>
       </div>
     </section>
 
@@ -293,17 +392,5 @@ graph TD
   <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
     <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
   </footer>
-
-  <script>
-    let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
-      });
-    }
-  </script>
 </body>
 </html>

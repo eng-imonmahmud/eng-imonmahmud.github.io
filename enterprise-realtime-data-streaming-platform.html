@@ -44,15 +44,15 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition" data-en="Imon Mahmud | Systems & Architecture" data-de="Imon Mahmud | Systeme & Architektur">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
           <span>🌐</span> <span id="lang-label">DE</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition" data-en="← Back to Projects" data-de="← Zurück zu den Projekten">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
         
         <a href="https://github.com/eng-imonmahmud/enterprise-realtime-data-streaming-platform" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
@@ -89,7 +89,7 @@
       </div>
       
       <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3" data-en="Enterprise Architecture Specs" data-de="Unternehmensarchitektur-Spezifikation">Enterprise Architecture Specs</h3>
+        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
         <ul class="text-xs font-mono space-y-2.5 text-slate-300">
           <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">enterprise-realtime-data-streaming-platform</span></li>
           <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">HCL</span></li>
@@ -112,7 +112,7 @@
     
         <section class="space-y-6">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight" data-en="Live Production Console & Screenshots" data-de="Live-Konsolenscreenshots">
+            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
               Live Production Console & Screenshots
             </h2>
             <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">9 Screenshots Verified</span>
@@ -186,51 +186,47 @@
     <!-- Architecture & Technical Specifications Section -->
     <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
       <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight" data-en="System Architecture & Technical Design" data-de="Systemarchitektur & Technisches Design">
-          System Architecture & Technical Design
+        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+          System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Official repository specifications and infrastructure breakdown.</p>
+        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
       <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <div class="bg-obsidian/80 border border-slate-800 p-6 rounded-xl font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
-# Enterprise Real-Time Data Streaming &amp; Serverless ETL Architecture
-
-
-
-
-
-
-A production-ready, serverless data streaming and ETL pipeline built entirely on AWS. Designed using Enterprise best practices, Clean Architecture, and fully automated via Terraform Infrastructure as Code (IaC).
-
-## 🚀 Architecture Overview
-
-This project implements a scalable, decoupled, real-time data ingestion pipeline. It generates synthetic enterprise transaction data, buffers it, processes it in real-time, and stores it in an S3 Data Lake with dynamic time-based partitioning.
-
-```mermaid
-graph TD
+        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">Enterprise Real-Time Data Streaming & Serverless ETL Architecture</h1>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">A production-ready, serverless data streaming and ETL pipeline built entirely on AWS. Designed using Enterprise best practices, Clean Architecture, and fully automated via Terraform Infrastructure as Code (IaC).</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🚀 Architecture Overview</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This project implements a scalable, decoupled, real-time data ingestion pipeline. It generates synthetic enterprise transaction data, buffers it, processes it in real-time, and stores it in an S3 Data Lake with dynamic time-based partitioning.</p>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>graph TD
     A[Amazon EventBridge] --&gt;|Trigger rate 1 min| B(Producer Lambda)
     B --&gt;|Publish JSON| C{Amazon SQS}
     C --&gt;|Batch Trigger| D(Transformer Lambda)
     D --&gt;|Write Partitioned Data| E[(Amazon S3 Data Lake)]
     
     classDef aws fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:white;
-    class A,B,C,D,E aws;
-```
-
-## 🛠️ Technology Stack &amp; AWS Services
-
-- **Amazon EventBridge**: Cron-style event scheduling for real-time triggers.
-- **AWS Lambda (Node.js 20.x)**: Serverless compute for both data generation and ETL transformations.
-- **Amazon SQS**: High-throughput message queuing to decouple producer and consumer.
-- **Amazon S3**: Scalable, durable object storage serving as the Data Lake.
-- **AWS IAM**: Strict least-privilege roles and policies.
-- **Terraform**: Complete Infrastructure as Code (IaC) deployment.
-
-## 📂 Enterprise Folder Structure
-
-```text
-enterprise-realtime-data-streaming-platform/
+    class A,B,C,D,E aws;</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🛠️ Technology Stack & AWS Services</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon EventBridge</strong>: Cron-style event scheduling for real-time triggers.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS Lambda (Node.js 20.x)</strong>: Serverless compute for both data generation and ETL transformations.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon SQS</strong>: High-throughput message queuing to decouple producer and consumer.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon S3</strong>: Scalable, durable object storage serving as the Data Lake.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS IAM</strong>: Strict least-privilege roles and policies.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Terraform</strong>: Complete Infrastructure as Code (IaC) deployment.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📂 Enterprise Folder Structure</h2>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>enterprise-realtime-data-streaming-platform/
 │
 ├── infrastructure/           # Terraform IaC
 │   ├── main.tf               # Provider configuration
@@ -250,24 +246,77 @@ enterprise-realtime-data-streaming-platform/
 │
 ├── Screenshots/              # Evidence of execution
 ├── README.md                 # Project documentation
-└── .gitignore                # Security filters
-```
-
-## ⚙️ Features
-
-- **Decoupled Architecture**: Utilizes SQS for fault tolerance and buffering.
-- **Serverless Compute**: Fully managed AWS Lambda functions requiring no server maintenance.
-- **Dynamic Partitioning**: Transformer dynamically routes objects in S3 into `year=YYYY/month=MM/day=DD` Hive-style partitions.
-- **Security First**: 
-  - S3 Public Access Block enabled.
-  - Default S3 Server-Side Encryption (AES256).
-  - Granular IAM roles restricted to exact ARN resources.
-- **Idempotent Deployment**: Uses Terraform for consistent, repeatable deployments.
-
-## 🔄 Data Flow Explanation
-
-1. **Scheduling**: Amazon EventBridge fi
-        </div>
+└── .gitignore                # Security filters</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">⚙️ Features</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Decoupled Architecture</strong>: Utilizes SQS for fault tolerance and buffering.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Serverless Compute</strong>: Fully managed AWS Lambda functions requiring no server maintenance.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Dynamic Partitioning</strong>: Transformer dynamically routes objects in S3 into <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">year=YYYY/month=MM/day=DD</code> Hive-style partitions.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Security First</strong>:</li>
+<li class="ml-4 list-disc text-slate-300 my-1">S3 Public Access Block enabled.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Default S3 Server-Side Encryption (AES256).</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Granular IAM roles restricted to exact ARN resources.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Idempotent Deployment</strong>: Uses Terraform for consistent, repeatable deployments.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🔄 Data Flow Explanation</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Scheduling</strong>: Amazon EventBridge fires every 1 minute.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Data Generation</strong>: The <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">Producer Lambda</code> generates a synthetic enterprise transaction payload (e.g., <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">customerId</code>, <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">amount</code>, <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">currency</code>, <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">sourceSystem</code>) with a <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">PENDING</code> status.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">Buffering</strong>: The Producer publishes the JSON payload to an Amazon SQS Queue.</p>
+<p class="text-slate-300 leading-relaxed my-2">4. <strong class="text-white">ETL Transformation</strong>: The <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">Transformer Lambda</code> is triggered by SQS (Event Source Mapping). It reads batches of messages, enriches the data, updates the status to <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">PROCESSED</code>, applies a <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">CONFIDENTIAL</code> classification, and extracts timestamp metadata.</p>
+<p class="text-slate-300 leading-relaxed my-2">5. <strong class="text-white">Data Lake Storage</strong>: The enriched payload is dynamically partitioned by year, month, and day, and persisted in the Amazon S3 Data Lake.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🔒 Security Considerations</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">During the repository audit, all potential vulnerabilities were filtered:</p>
+<li class="ml-4 list-disc text-slate-300 my-1">Strict <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">.gitignore</code> preventing commit of <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">.terraform/</code>, <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform.tfstate</code>, <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">.env</code>, and deployment <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">*.zip</code> files.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">IAM roles adhere to least privilege (e.g., Producer can only write to a specific SQS Queue; Transformer can only write to a specific S3 bucket).</li>
+<li class="ml-4 list-disc text-slate-300 my-1">No AWS credentials or Access Keys are hardcoded in the codebase.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">💰 Cost Optimization Notes</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This architecture was designed to run entirely within the <strong class="text-white">AWS Free Tier</strong>:</p>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">AWS Lambda</strong>: 1 million free requests per month.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon SQS</strong>: 1 million free requests per month.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon EventBridge</strong>: Included in the free tier for standard rule evaluations.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon S3</strong>: Standard free tier storage limits apply.</li>
+<p class="text-slate-300 leading-relaxed my-2">> *Note: Amazon Kinesis Data Firehose was explicitly avoided in this implementation to prevent unexpected billing charges for AWS Free Trial accounts.*</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📸 Proof of Execution (Screenshot Gallery)</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The following screenshots demonstrate the production deployment and successful execution:</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">1. Amazon S3 Data Lake & Partitioning</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">2. AWS Lambda Functions</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">3. Amazon SQS Queue</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">4. Amazon EventBridge</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">5. CloudWatch Logs</h3>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🧹 Cleanup</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">To prevent ongoing AWS charges, all infrastructure can be destroyed via Terraform:</p>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">bash</div><pre><code>cd infrastructure
+terraform destroy -auto-approve</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">👨‍💻 Author</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Imon Mahmud</strong></p>
+<p class="text-slate-300 leading-relaxed my-2">IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER</p>
+<div class="h-2"></div>
       </div>
     </section>
 
@@ -311,17 +360,5 @@ enterprise-realtime-data-streaming-platform/
   <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
     <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
   </footer>
-
-  <script>
-    let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
-      });
-    }
-  </script>
 </body>
 </html>

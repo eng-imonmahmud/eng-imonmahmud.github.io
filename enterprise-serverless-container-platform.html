@@ -44,15 +44,15 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition" data-en="Imon Mahmud | Systems & Architecture" data-de="Imon Mahmud | Systeme & Architektur">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
           <span>🌐</span> <span id="lang-label">DE</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition" data-en="← Back to Projects" data-de="← Zurück zu den Projekten">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
         
         <a href="https://github.com/eng-imonmahmud/enterprise-serverless-container-platform" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
@@ -89,7 +89,7 @@
       </div>
       
       <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3" data-en="Enterprise Architecture Specs" data-de="Unternehmensarchitektur-Spezifikation">Enterprise Architecture Specs</h3>
+        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
         <ul class="text-xs font-mono space-y-2.5 text-slate-300">
           <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">enterprise-serverless-container-platform</span></li>
           <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">HCL</span></li>
@@ -112,7 +112,7 @@
     
         <section class="space-y-6">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight" data-en="Live Production Console & Screenshots" data-de="Live-Konsolenscreenshots">
+            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
               Live Production Console & Screenshots
             </h2>
             <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">14 Screenshots Verified</span>
@@ -186,47 +186,45 @@
     <!-- Architecture & Technical Specifications Section -->
     <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
       <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight" data-en="System Architecture & Technical Design" data-de="Systemarchitektur & Technisches Design">
-          System Architecture & Technical Design
+        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+          System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Official repository specifications and infrastructure breakdown.</p>
+        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
       <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <div class="bg-obsidian/80 border border-slate-800 p-6 rounded-xl font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
-&lt;div align="center"&gt;
-  &lt;h1 align="center"&gt;Enterprise Serverless Container Platform&lt;/h1&gt;
-  &lt;h3&gt;Production-Grade AWS Infrastructure deployed with Terraform &amp; Docker&lt;/h3&gt;
-&lt;/div&gt;
-
-&lt;p align="center"&gt;
-  &lt;img src="https://img.shields.io/badge/AWS-Fargate-FF9900?logo=amazonaws&amp;logoColor=white" alt="AWS Fargate" /&gt;
-  &lt;img src="https://img.shields.io/badge/Amazon-ECS-FF9900?logo=amazon-ecs&amp;logoColor=white" alt="Amazon ECS" /&gt;
-  &lt;img src="https://img.shields.io/badge/Terraform-1.5+-844FBA?logo=terraform&amp;logoColor=white" alt="Terraform" /&gt;
-  &lt;img src="https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&amp;logoColor=white" alt="Docker" /&gt;
-  &lt;img src="https://img.shields.io/badge/Status-Project_Complete-brightgreen" alt="Status" /&gt;
-  &lt;img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License" /&gt;
-&lt;/p&gt;
-
-&gt; **Status:** The project is complete. It successfully provisions a production-ready AWS Serverless environment autonomously from start to finish.
----
-
-## 📖 Project Overview
-This repository contains the complete Infrastructure as Code (IaC) to provision a highly available, enterprise-grade serverless container platform on AWS. Built from the ground up using **Terraform**, this project autonomously creates the networking, security, compute, and load balancing layers, and deploys a Dockerized frontend using **Amazon ECS on AWS Fargate**.
-
-## ✨ Key Features
-- **Zero-Touch Deployment**: 100% automated using Terraform (`apply` creates everything, including Docker builds).
-- **Serverless Compute**: Fully managed compute environment using AWS Fargate (no EC2 instances to maintain for the application).
-- **Native Automated Builds**: Uses a temporary EC2 builder to securely build and push Docker images to Amazon ECR directly inside the VPC.
-- **High Availability**: Multi-AZ deployment (eu-central-1a &amp; eu-central-1b) behind an Application Load Balancer.
-- **Enterprise Security**: Least privilege IAM roles, secure networking, isolated Security Groups, and no public credentials.
-
----
-
-## 🏛 Architecture Overview
-
-```mermaid
-graph TD
+        <p class="text-slate-300 leading-relaxed my-2"><div align="center"></p>
+<p class="text-slate-300 leading-relaxed my-2"><h1 align="center">Enterprise Serverless Container Platform</h1></p>
+<p class="text-slate-300 leading-relaxed my-2"><h3>Production-Grade AWS Infrastructure deployed with Terraform & Docker</h3></p>
+<p class="text-slate-300 leading-relaxed my-2"></div></p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><p align="center"></p>
+<p class="text-slate-300 leading-relaxed my-2"><img src="https://img.shields.io/badge/AWS-Fargate-FF9900?logo=amazonaws&logoColor=white" alt="AWS Fargate" /></p>
+<p class="text-slate-300 leading-relaxed my-2"><img src="https://img.shields.io/badge/Amazon-ECS-FF9900?logo=amazon-ecs&logoColor=white" alt="Amazon ECS" /></p>
+<p class="text-slate-300 leading-relaxed my-2"><img src="https://img.shields.io/badge/Terraform-1.5+-844FBA?logo=terraform&logoColor=white" alt="Terraform" /></p>
+<p class="text-slate-300 leading-relaxed my-2"><img src="https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white" alt="Docker" /></p>
+<p class="text-slate-300 leading-relaxed my-2"><img src="https://img.shields.io/badge/Status-Project_Complete-brightgreen" alt="Status" /></p>
+<p class="text-slate-300 leading-relaxed my-2"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License" /></p>
+<p class="text-slate-300 leading-relaxed my-2"></p></p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">> <strong class="text-white">Status:</strong> The project is complete. It successfully provisions a production-ready AWS Serverless environment autonomously from start to finish.</p>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📖 Project Overview</h2>
+<p class="text-slate-300 leading-relaxed my-2">This repository contains the complete Infrastructure as Code (IaC) to provision a highly available, enterprise-grade serverless container platform on AWS. Built from the ground up using <strong class="text-white">Terraform</strong>, this project autonomously creates the networking, security, compute, and load balancing layers, and deploys a Dockerized frontend using <strong class="text-white">Amazon ECS on AWS Fargate</strong>.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">✨ Key Features</h2>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Zero-Touch Deployment</strong>: 100% automated using Terraform (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">apply</code> creates everything, including Docker builds).</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Serverless Compute</strong>: Fully managed compute environment using AWS Fargate (no EC2 instances to maintain for the application).</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Native Automated Builds</strong>: Uses a temporary EC2 builder to securely build and push Docker images to Amazon ECR directly inside the VPC.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">High Availability</strong>: Multi-AZ deployment (eu-central-1a & eu-central-1b) behind an Application Load Balancer.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Enterprise Security</strong>: Least privilege IAM roles, secure networking, isolated Security Groups, and no public credentials.</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🏛 Architecture Overview</h2>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>graph TD
     User([User]) --&gt;|HTTP| ALB[Application Load Balancer]
     
     subgraph AWS VPC
@@ -247,11 +245,118 @@ graph TD
     style Task fill:#ff9900,stroke:#232f3e,stroke-width:2px,color:white
     style ECR fill:#ff9900,stroke:#232f3e,stroke-width:2px,color:white
     style CW fill:#ff4f8b,stroke:#232f3e,stroke-width:2px,color:white
-    style TG fill:#8c4fff,stroke:#232f3e,stroke-width:2px,color:white
-```
-### 🛠 AWS Services Used
-- **VPC (Virtual Private Cloud)**: Custo
-        </div>
+    style TG fill:#8c4fff,stroke:#232f3e,stroke-width:2px,color:white</code></pre></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">🛠 AWS Services Used</h3>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">VPC (Virtual Private Cloud)</strong>: Custom network with public subnets and internet gateways.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Application Load Balancer (ALB)</strong>: Intelligent traffic routing to healthy containers.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon ECS & Fargate</strong>: Serverless container orchestration.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon ECR</strong>: Private Elastic Container Registry.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">CloudWatch Logs</strong>: Centralized application logging.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">IAM</strong>: Secure role-based access control.</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📂 Repository Structure</h2>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>.
+├── .gitignore
+├── README.md
+├── architecture/
+│   └── diagram.mermaid
+├── docker/
+│   ├── Dockerfile
+│   ├── buildspec.yml
+│   └── index.html
+├── screenshots/          # Evidence of successful deployment
+└── terraform/
+    ├── alb.tf            # Application Load Balancer
+    ├── ecr_builder.tf    # ECR &amp; Native EC2 Image Builder
+    ├── ecs.tf            # ECS Cluster &amp; Fargate Task
+    ├── iam.tf            # IAM Roles &amp; Policies
+    ├── main.tf           # Provider config
+    ├── network.tf        # VPC, Subnets, Routing, SGs
+    ├── outputs.tf        # URL Exports
+    └── variables.tf      # Environment variables</code></pre></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🔒 Security Features</h2>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">IAM Least Privilege</strong>: Tasks and builder instances only possess permissions explicitly required for their operations.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">No Secrets Stored</strong>: Designed entirely without static AWS credentials. Uses instance profiles.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Network Isolation</strong>: The ECS tasks only accept incoming HTTP traffic from the ALB, preventing direct internet access.</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🚀 Deployment Workflow</h2>
+<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Initialize</strong>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform init</code> prepares the modules and providers.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Validate</strong>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform validate</code> ensures code quality.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">Apply</strong>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform apply -auto-approve</code> executes the infrastructure plan.</p>
+<p class="text-slate-300 leading-relaxed my-2">4. <strong class="text-white">Build Phase</strong>: A temporary EC2 instance is spun up to build the Docker image natively from the <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">docker/</code> folder and push it to ECR.</p>
+<p class="text-slate-300 leading-relaxed my-2">5. <strong class="text-white">Run Phase</strong>: The Fargate service starts the container, registers it with the ALB Target Group, and begins serving traffic.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📸 Screenshots Gallery</h2>
+<p class="text-slate-300 leading-relaxed my-2">Below are screenshots capturing the successfully deployed infrastructure:</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><details></p>
+<p class="text-slate-300 leading-relaxed my-2"><summary>Click to view AWS Infrastructure Screenshots</summary></p>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Amazon ECR Registry</strong>: <br> <img src="screenshots/Amazon ECR Private registry Repositories.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">ECS Cluster Metrics</strong>: <br> <img src="screenshots/Amazon Elastic Container Service Clusters enterprise-platform-cluster Metrics.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">ECS Service Configuration</strong>: <br> <img src="screenshots/Amazon Elastic Container Service Clusters enterprise-platform-cluster Services enterprise-platform-svc Configuration.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">ECS Service Events</strong>: <br> <img src="screenshots/Amazon Elastic Container Service Clusters enterprise-platform-cluster Services enterprise-platform-svc Events.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">ECS Services</strong>: <br> <img src="screenshots/Amazon Elastic Container Service Clusters enterprise-platform-cluster Services.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">ECS Tasks</strong>: <br> <img src="screenshots/Amazon Elastic Container Service Clusters enterprise-platform-cluster Tasks.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">CloudWatch Logs (Event Detail)</strong>: <br> <img src="screenshots/CloudWatch Log management ecsenterprise-platform ecsapp525064be81114a34a954cbcad52f4121logevent.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">CloudWatch Logs</strong>: <br> <img src="screenshots/CloudWatch Log management.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">ALB Configuration</strong>: <br> <img src="screenshots/EC2 Load balancers enterprise-platform-alb.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">ALB Security Group</strong>: <br> <img src="screenshots/EC2 Security Groups sg-005c17ce2b6304512 - enterprise-platform-alb-sg.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">ECS Security Group</strong>: <br> <img src="screenshots/EC2 Security Groups sg-03bdb11bd547f8880 - enterprise-platform-ecs-sg.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">ALB Target Group</strong>: <br> <img src="screenshots/EC2 Target groups enterprise-platform-tg.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">VPC Configuration</strong>: <br> <img src="screenshots/VPC Your VPCs vpc-02fa96eb4f682795f.png" width="600"></li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Deployed Landing Page (HTTP)</strong>: <br> <img src="screenshots/httpenterprise-platform-alb-338845031.eu-central-1.elb.amazonaws.com.png" width="600"></li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"></details></p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">💻 How to Deploy</h2>
+<p class="text-slate-300 leading-relaxed my-2">Ensure your local environment has the AWS CLI installed and configured.</p>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">bash</div><pre><code>git clone https://github.com/eng-imonmahmud/enterprise-serverless-container-platform.git
+cd enterprise-serverless-container-platform/terraform
+terraform init
+terraform apply -auto-approve</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🧹 How to Destroy</h2>
+<p class="text-slate-300 leading-relaxed my-2">To prevent unexpected AWS charges, clean up the resources when finished:</p>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">bash</div><pre><code>cd terraform
+terraform destroy -auto-approve</code></pre></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">💡 Lessons Learned</h2>
+<li class="ml-4 list-disc text-slate-300 my-1">Engineering a robust, self-contained automated Docker builder (via EC2 user-data) gracefully bypassing account-level CodeBuild restrictions (common in free-tier environments).</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Securing Terraform configurations to cleanly depend on dynamically generated container images.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🚀 Future Improvements</h2>
+<li class="ml-4 list-disc text-slate-300 my-1">Migration to a fully automated CI/CD pipeline using <strong class="text-white">GitHub Actions</strong>.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Adding HTTPS termination via <strong class="text-white">AWS ACM</strong> and <strong class="text-white">Route53</strong>.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Implementing <strong class="text-white">Auto Scaling</strong> rules based on CPU/Memory utilization to dynamically manage load.</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">👨‍💻 Author</h2>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Imon Mahmud</strong></p>
+<p class="text-slate-300 leading-relaxed my-2">*IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER*</p>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">GitHub Profile</strong>: [eng-imonmahmud](https://github.com/eng-imonmahmud)</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<p class="text-slate-300 leading-relaxed my-2"><p align="center"></p>
+<p class="text-slate-300 leading-relaxed my-2"><i>Portfolio Highlights - Built for enterprise scale, security, and high availability.</i></p>
+<p class="text-slate-300 leading-relaxed my-2"></p></p>
+<div class="h-2"></div>
       </div>
     </section>
 
@@ -295,17 +400,5 @@ graph TD
   <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
     <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
   </footer>
-
-  <script>
-    let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
-      });
-    }
-  </script>
 </body>
 </html>

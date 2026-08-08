@@ -44,15 +44,15 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition" data-en="Imon Mahmud | Systems & Architecture" data-de="Imon Mahmud | Systeme & Architektur">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
           <span>🌐</span> <span id="lang-label">DE</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition" data-en="← Back to Projects" data-de="← Zurück zu den Projekten">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
         
         <a href="https://github.com/eng-imonmahmud/enterprise-autoscaling-web-infrastructure" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
@@ -89,7 +89,7 @@
       </div>
       
       <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3" data-en="Enterprise Architecture Specs" data-de="Unternehmensarchitektur-Spezifikation">Enterprise Architecture Specs</h3>
+        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
         <ul class="text-xs font-mono space-y-2.5 text-slate-300">
           <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">enterprise-autoscaling-web-infrastructure</span></li>
           <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">HCL</span></li>
@@ -112,7 +112,7 @@
     
         <section class="space-y-6">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight" data-en="Live Production Console & Screenshots" data-de="Live-Konsolenscreenshots">
+            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
               Live Production Console & Screenshots
             </h2>
             <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">20 Screenshots Verified</span>
@@ -186,50 +186,48 @@
     <!-- Architecture & Technical Specifications Section -->
     <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
       <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight" data-en="System Architecture & Technical Design" data-de="Systemarchitektur & Technisches Design">
-          System Architecture & Technical Design
+        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+          System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Official repository specifications and infrastructure breakdown.</p>
+        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
       <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <div class="bg-obsidian/80 border border-slate-800 p-6 rounded-xl font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
-# Enterprise Auto-Scaling Web Infrastructure on Google Cloud Platform
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Project Overview
-
-This repository contains a complete, production-grade Infrastructure as Code (IaC) deployment for a highly available, auto-scaling web application on Google Cloud Platform. Built entirely with Terraform, the project automatically provisions a secure, robust foundation featuring a Global External HTTP Load Balancer distributing traffic across a Managed Instance Group of OpenLiteSpeed web servers, connected securely to a private Cloud SQL database.
-
-## Business Objective
-
-To design and implement an enterprise-grade cloud architecture that guarantees zero downtime during traffic spikes through horizontal scaling, ensures strict security via private IP networking and least-privilege IAM, and minimizes operational overhead by leveraging fully managed GCP services and Infrastructure as Code automation.
-
-## Key Features
-
-- **High Availability &amp; Scalability**: Auto-scaling Managed Instance Group (MIG) that dynamically adjusts computing resources based on CPU utilization.
-- **Global Traffic Routing**: Global HTTP Load Balancer equipped with Google's premium network tier for low latency and high throughput.
-- **Zero-Touch Provisioning**: Automated deployment of the OpenLiteSpeed web server using compute instance startup scripts.
-- **Robust Security**: Compute instances have no external IPs, communicating exclusively via Cloud NAT. Database connectivity is secured through Private Services Access.
-- **Least-Privilege Identity**: Custom IAM service account restricted strictly to required roles (Cloud Logging, Monitoring, Cloud SQL Client).
-- **Comprehensive Observability**: Full integration with Google Cloud Operations Suite (Cloud Logging and Cloud Monitoring).
-
-## Architecture Overview
-
-```mermaid
-graph TD
+        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">Enterprise Auto-Scaling Web Infrastructure on Google Cloud Platform</h1>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Project Overview</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This repository contains a complete, production-grade Infrastructure as Code (IaC) deployment for a highly available, auto-scaling web application on Google Cloud Platform. Built entirely with Terraform, the project automatically provisions a secure, robust foundation featuring a Global External HTTP Load Balancer distributing traffic across a Managed Instance Group of OpenLiteSpeed web servers, connected securely to a private Cloud SQL database.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Business Objective</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">To design and implement an enterprise-grade cloud architecture that guarantees zero downtime during traffic spikes through horizontal scaling, ensures strict security via private IP networking and least-privilege IAM, and minimizes operational overhead by leveraging fully managed GCP services and Infrastructure as Code automation.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Key Features</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">High Availability & Scalability</strong>: Auto-scaling Managed Instance Group (MIG) that dynamically adjusts computing resources based on CPU utilization.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Global Traffic Routing</strong>: Global HTTP Load Balancer equipped with Google's premium network tier for low latency and high throughput.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Zero-Touch Provisioning</strong>: Automated deployment of the OpenLiteSpeed web server using compute instance startup scripts.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Robust Security</strong>: Compute instances have no external IPs, communicating exclusively via Cloud NAT. Database connectivity is secured through Private Services Access.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Least-Privilege Identity</strong>: Custom IAM service account restricted strictly to required roles (Cloud Logging, Monitoring, Cloud SQL Client).</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Comprehensive Observability</strong>: Full integration with Google Cloud Operations Suite (Cloud Logging and Cloud Monitoring).</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Architecture Overview</h2>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>graph TD
     Client((Client Web Browser)) --&gt;|HTTP/HTTPS| GLB[Global External HTTP Load Balancer]
     
     subgraph "Google Cloud Platform - VPC Network"
@@ -257,15 +255,190 @@ graph TD
         VM1 --&gt; LOG[Cloud Logging]
         VM1 --&gt; MON[Cloud Monitoring]
         IAM[Custom Service Account] --&gt; VM1
-    end
-```
-
-## Infrastructure Components
-
-### Terraform Module Structure
-The infrastructure is completely modularized for reusability and clean state management:
-- **`networking`**: Provisions the custom VPC, Subnet, Private Servic
-        </div>
+    end</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Infrastructure Components</h2>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Terraform Module Structure</h3>
+<p class="text-slate-300 leading-relaxed my-2">The infrastructure is completely modularized for reusability and clean state management:</p>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">networking</code></strong>: Provisions the custom VPC, Subnet, Private Services Access, Cloud NAT, and precise Firewall rules allowing health checks and SSH via Identity-Aware Proxy (IAP).</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">compute</code></strong>: Deploys the Instance Template with the OpenLiteSpeed automated startup script, Managed Instance Group, HTTP Health Check, and Auto Scaling policy.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">database</code></strong>: Provisions a highly secure Cloud SQL MySQL instance configured strictly with a Private IP (no public endpoint).</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">loadbalancing</code></strong>: Deploys the Global Forwarding Rule, Target HTTP Proxy, URL Map, and Backend Service.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">iam</code></strong>: Sets up the restrictive custom Service Account.</li>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Repository Tree</h3>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>.
+├── modules/
+│   ├── compute/
+│   │   ├── scripts/
+│   │   │   └── startup.sh
+│   │   └── main.tf
+│   ├── database/
+│   │   └── main.tf
+│   ├── iam/
+│   │   └── main.tf
+│   ├── loadbalancing/
+│   │   └── main.tf
+│   └── networking/
+│       └── main.tf
+├── .gitignore
+├── main.tf
+├── outputs.tf
+├── providers.tf
+├── variables.tf
+├── PROJECT_STATUS.md
+├── SECURITY_AUDIT.md
+└── README.md</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Deep Dive Explanations</h2>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Auto Scaling</h3>
+<p class="text-slate-300 leading-relaxed my-2">The environment utilizes a Google Compute Region Autoscaler configured with a target CPU utilization of 70%. When traffic spikes cause the average CPU load to exceed this threshold, the autoscaler dynamically provisions new instances up to the configured maximum, ensuring responsive performance under heavy load.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Load Balancer</h3>
+<p class="text-slate-300 leading-relaxed my-2">The Global External HTTP Load Balancer serves as the single point of entry. It evaluates incoming traffic and forwards it to the closest healthy backend instance based on the configured HTTP Health Check, effectively masking the underlying infrastructure details and preventing single points of failure.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Cloud SQL</h3>
+<p class="text-slate-300 leading-relaxed my-2">A Cloud SQL MySQL database is provisioned to act as the persistent data store. Security is prioritized by completely disabling public IP mapping. All communication between the web servers and the database occurs over the internal Google network via Private Services Access.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Networking & Security</h3>
+<p class="text-slate-300 leading-relaxed my-2">A custom VPC is deployed with a dedicated subnet. Compute instances reside entirely within private IP space. Outbound internet access required for software installation (OpenLiteSpeed) is facilitated through a Cloud NAT gateway attached to a Cloud Router. Firewall rules strictly allow ingress only from Google's health check IP ranges.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">IAM (Identity and Access Management)</h3>
+<p class="text-slate-300 leading-relaxed my-2">A dedicated custom Service Account (<code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">enterprise-compute-sa</code>) is assigned to the compute instances. It restricts the instances to write logs, emit monitoring metrics, and connect to Cloud SQL, strictly adhering to the principle of least privilege.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Automated Deployment Workflow</h2>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>sequenceDiagram
+    participant Eng as DevOps Engineer
+    participant TF as Terraform
+    participant GCP as Google Cloud Platform
+    participant App as OpenLiteSpeed Web Server
+    
+    Eng-&gt;&gt;TF: `terraform apply`
+    TF-&gt;&gt;GCP: Enable APIs (Compute, SQL, IAM, Logging)
+    TF-&gt;&gt;GCP: Create VPC &amp; Subnets
+    TF-&gt;&gt;GCP: Establish Private Services Connection
+    TF-&gt;&gt;GCP: Provision Cloud SQL (Private IP)
+    TF-&gt;&gt;GCP: Create IAM Service Account
+    TF-&gt;&gt;GCP: Create Instance Template &amp; MIG
+    TF-&gt;&gt;GCP: Configure Global Load Balancer
+    GCP-&gt;&gt;App: Execute startup.sh (Install OLS)
+    App--&gt;&gt;GCP: Report Healthy status
+    GCP--&gt;&gt;TF: Infrastructure Provisioned
+    TF--&gt;&gt;Eng: Output Load Balancer IP</code></pre></div>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Validation & Testing Process</h2>
+<p class="text-slate-300 leading-relaxed my-2">Following deployment, the automated workflow performs strict validation:</p>
+<p class="text-slate-300 leading-relaxed my-2">1. Polls the Load Balancer IP over HTTP.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. Waits for Google's global DNS and routing propagation to complete.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. Evaluates the HTTP response to confirm an <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">HTTP 200 OK</code> status.</p>
+<p class="text-slate-300 leading-relaxed my-2">4. Verifies the specific HTML signature of the OpenLiteSpeed landing page.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Cost Considerations</h2>
+<p class="text-slate-300 leading-relaxed my-2">To optimize costs for this architecture:</p>
+<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">e2-micro</code> instances are utilized for the compute tier.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">db-f1-micro</code> is chosen for the database tier.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">The autoscaler is constrained to minimize unnecessary expansion during idle periods.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Challenges and Solutions</h2>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Challenge</strong>: Google Cloud Global Health Checks enforce eventual consistency, sometimes causing a <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">resourceNotReady</code> failure when linking the Backend Service immediately after Health Check creation.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Solution</strong>: Automated the deployment pipeline to elegantly catch the failure and autonomously re-trigger the apply command, successfully resolving the dependency tree.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Challenge</strong>: OpenLiteSpeed listens on port 8088 by default, which breaks standard port 80 load balancer health checks. Modifying complex configuration files automatically during startup is brittle.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Solution</strong>: Implemented an immediate <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">iptables</code> NAT PREROUTING rule in the startup script to seamlessly redirect port 80 traffic to 8088, ensuring rock-solid health checks without altering complex application configs.</li>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Future Improvements</h2>
+<li class="ml-4 list-disc text-slate-300 my-1">Implement HTTPS/SSL using Google-managed SSL certificates on the Load Balancer.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Integrate Cloud Armor for advanced WAF (Web Application Firewall) protection and DDoS mitigation.</li>
+<li class="ml-4 list-disc text-slate-300 my-1">Store the Terraform state remotely in a Google Cloud Storage bucket with state locking via Cloud KMS.</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Screenshot Gallery</h2>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Google Cloud Dashboard</h3>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Overview of the active Google Cloud project.*</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Global HTTP Load Balancer</h3>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Global External HTTP Load Balancer Frontend configuration.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Load Balancer Backend Services mapping.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Load Balancer URL map details.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Detailed view of backend service routing.*</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Managed Instance Group & Compute Engine</h3>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Managed Instance Group successfully deployed.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*MIG details highlighting Auto Scaling configuration and healthy status.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Compute Engine dashboard showing the dynamically provisioned web instances.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Details of Auto-Scaled VM Instance.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Details of Auto-Scaled VM Instance.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Details of Auto-Scaled VM Instance.*</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Instance Template</h3>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Instance Template used for the Managed Instance Group.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Instance Template details showing startup script and networking configurations.*</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Networking & Security</h3>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Custom enterprise VPC network.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Strict Firewall rules allowing Health Check and SSH access.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Global HTTP Health Check configuration for the Load Balancer.*</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Database</h3>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Cloud SQL MySQL Instance deployed strictly on a private IP address.*</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Observability</h3>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Google Cloud Monitoring dashboard actively tracking infrastructure metrics.*</p>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*Cloud Logging Log Explorer showing successful streaming of instance logs.*</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Live Application Verification</h3>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">*The highly attractive production landing page served live by OpenLiteSpeed through the Load Balancer.*</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Cleanup Strategy</h2>
+<p class="text-slate-300 leading-relaxed my-2">This project strictly adheres to a zero-waste policy. Following the validation phase, an automated <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform destroy</code> command is meticulously executed to tear down all generated cloud assets, confirming that zero billable infrastructure components remain actively running on the Google Cloud Platform account.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">License</h2>
+<p class="text-slate-300 leading-relaxed my-2">This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Author</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Imon Mahmud</strong></p>
+<p class="text-slate-300 leading-relaxed my-2">*IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER*</p>
+<p class="text-slate-300 leading-relaxed my-2">[GitHub Profile](https://github.com/eng-imonmahmud)</p>
+<div class="h-2"></div>
       </div>
     </section>
 
@@ -309,17 +482,5 @@ The infrastructure is completely modularized for reusability and clean state man
   <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
     <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
   </footer>
-
-  <script>
-    let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
-      });
-    }
-  </script>
 </body>
 </html>

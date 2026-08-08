@@ -44,15 +44,15 @@
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <div class="flex items-center space-x-3">
         <a href="index.html" class="bg-gradient-to-br from-emeraldAccent to-tealAccent text-obsidian font-heading font-extrabold text-xl w-10 h-10 flex items-center justify-center rounded-xl shadow-md shadow-emeraldAccent/20 hover:scale-105 transition">IM</a>
-        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition" data-en="Imon Mahmud | Systems & Architecture" data-de="Imon Mahmud | Systeme & Architektur">Imon Mahmud | Systems & Architecture</a>
+        <a href="index.html" class="font-heading font-bold text-white text-lg tracking-tight hidden sm:block hover:text-emeraldAccent transition">Imon Mahmud | Systems & Architecture</a>
       </div>
       
       <div class="flex items-center space-x-4">
-        <button onclick="toggleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-mono text-xs rounded-xl border border-slate-700 transition">
           <span>🌐</span> <span id="lang-label">DE</span>
         </button>
 
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition" data-en="← Back to Projects" data-de="← Zurück zu den Projekten">← Back to Projects</a>
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-300 hover:text-emeraldAccent transition">← Back to Projects</a>
         
         <a href="https://github.com/eng-imonmahmud/terraform-enterprise-event-processing-platform" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white font-mono text-xs rounded-xl border border-slate-700 transition">
           <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg> GitHub Repo ↗
@@ -89,7 +89,7 @@
       </div>
       
       <div class="lg:col-span-4 bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3" data-en="Enterprise Architecture Specs" data-de="Unternehmensarchitektur-Spezifikation">Enterprise Architecture Specs</h3>
+        <h3 class="font-heading font-bold text-white text-base border-b border-slate-800 pb-3">Enterprise Architecture Specs</h3>
         <ul class="text-xs font-mono space-y-2.5 text-slate-300">
           <li class="flex justify-between"><span class="text-slate-500">Repository:</span> <span class="text-emeraldAccent font-semibold">terraform-enterprise-event-processing-platform</span></li>
           <li class="flex justify-between"><span class="text-slate-500">Primary Language:</span> <span class="text-white">HCL</span></li>
@@ -112,7 +112,7 @@
     
         <section class="space-y-6">
           <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <h2 class="text-xl font-heading font-bold text-white tracking-tight" data-en="Live Production Console & Screenshots" data-de="Live-Konsolenscreenshots">
+            <h2 class="text-xl font-heading font-bold text-white tracking-tight">
               Live Production Console & Screenshots
             </h2>
             <span class="text-xs font-mono text-emeraldAccent bg-emeraldAccent/10 px-2.5 py-1 rounded-md border border-emeraldAccent/20">6 Screenshots Verified</span>
@@ -186,40 +186,38 @@
     <!-- Architecture & Technical Specifications Section -->
     <section class="bg-slate-900/60 border border-slate-800/80 rounded-2xl p-8 space-y-6">
       <div class="border-b border-slate-800 pb-4">
-        <h2 class="text-2xl font-heading font-bold text-white tracking-tight" data-en="System Architecture & Technical Design" data-de="Systemarchitektur & Technisches Design">
-          System Architecture & Technical Design
+        <h2 class="text-2xl font-heading font-bold text-white tracking-tight">
+          System Architecture & Technical Specifications
         </h2>
-        <p class="text-xs text-slate-400 font-mono mt-1">Official repository specifications and infrastructure breakdown.</p>
+        <p class="text-xs text-slate-400 font-mono mt-1">Parsed directly from repository README documentation.</p>
       </div>
 
       <div class="prose prose-invert max-w-none text-slate-300 text-sm leading-relaxed space-y-4">
-        <div class="bg-obsidian/80 border border-slate-800 p-6 rounded-xl font-mono text-xs text-slate-300 overflow-x-auto whitespace-pre-wrap leading-relaxed">
-# Enterprise Serverless Event Processing Platform
-
-
-
-
-
-
-A production-grade, event-driven serverless architecture built on AWS using Terraform. This platform provides a scalable, decoupled system for ingesting, queuing, and processing events asynchronously.
-
----
-
-## 🏛️ Architecture Workflow
-
-1. **Client**: Submits an event payload via an HTTP POST request.
-2. **Amazon API Gateway**: Acts as the RESTful entry point, handling routing and forwarding to the Lambda function.
-3. **Producer Lambda**: Validates the payload, assigns a unique `eventId`, and enqueues the message into SQS.
-4. **Amazon SQS**: Decouples the producer from the consumer, providing reliable message buffering and persistence.
-5. **Consumer Lambda**: Automatically triggered by SQS events to process the queued messages.
-6. **Amazon DynamoDB**: Stores the processed event records as the final persistence layer.
-
----
-
-## 📐 Architecture Diagram
-
-```mermaid
-flowchart LR
+        <h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">Enterprise Serverless Event Processing Platform</h1>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">A production-grade, event-driven serverless architecture built on AWS using Terraform. This platform provides a scalable, decoupled system for ingesting, queuing, and processing events asynchronously.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🏛️ Architecture Workflow</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Client</strong>: Submits an event payload via an HTTP POST request.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Amazon API Gateway</strong>: Acts as the RESTful entry point, handling routing and forwarding to the Lambda function.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">Producer Lambda</strong>: Validates the payload, assigns a unique <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">eventId</code>, and enqueues the message into SQS.</p>
+<p class="text-slate-300 leading-relaxed my-2">4. <strong class="text-white">Amazon SQS</strong>: Decouples the producer from the consumer, providing reliable message buffering and persistence.</p>
+<p class="text-slate-300 leading-relaxed my-2">5. <strong class="text-white">Consumer Lambda</strong>: Automatically triggered by SQS events to process the queued messages.</p>
+<p class="text-slate-300 leading-relaxed my-2">6. <strong class="text-white">Amazon DynamoDB</strong>: Stores the processed event records as the final persistence layer.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📐 Architecture Diagram</h2>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">mermaid</div><pre><code>flowchart LR
     Client([Client]) --&gt;|HTTP POST JSON| APIGW[API Gateway]
     APIGW --&gt;|AWS_PROXY Integration| ProdLambda[Producer Lambda]
     ProdLambda --&gt;|sqs:SendMessage| SQS[(Amazon SQS)]
@@ -227,67 +225,65 @@ flowchart LR
     ConsLambda --&gt;|dynamodb:PutItem| DDB[(Amazon DynamoDB)]
     
     classDef aws fill:#FF9900,stroke:#232F3E,stroke-width:2px,color:white;
-    class APIGW,ProdLambda,SQS,ConsLambda,DDB aws;
-```
-
----
-
-# 📸 Deployment Evidence (Screenshot Gallery)
-
-## Terraform Deployment
-
-This section demonstrates the successful execution of the Terraform deployment.
-
-## API Gateway
-
--Stages.png)
-
-This screenshot demonstrates the production API Gateway endpoint deployed through Terraform and exposed through the AWS Serverless architecture.
-
-## Lambda Functions
-
-
-
-This screenshot displays the producer and consumer Lambda functions provisioned in the AWS environment.
-
-## Amazon SQS Queue
-
-
-
-This screenshot captures the Amazon SQS queue acting as the message broker between the producer and consumer.
-
-## DynamoDB Table
-
-
-
-This screenshot highlights the DynamoDB table created to persist the event records securely.
-
-## DynamoDB Records
-
-
-
-This screenshot proves the successful end-to-end data flow with the event payload stored as a record in DynamoDB.
-
-## CloudWatch Logs
-
-
-
-This screenshot shows the CloudWatch log groups utilized for monitoring the execution of the Lambda functions.
-
-## Repository Structure
-
-The repository structure validates the modular organization and Infrastructure as Code best practices implemented in this project.
-
-## Architecture Diagram
-
-This section captures the visual architecture representing the serverless interactions between the deployed AWS services.
-
----
-
-## 📁 Repository Structure
-
-```text
-terraform-enterprise-event-processing-platform/
+    class APIGW,ProdLambda,SQS,ConsLambda,DDB aws;</code></pre></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h1 class="text-2xl font-heading font-bold text-white mt-6 mb-3">📸 Deployment Evidence (Screenshot Gallery)</h1>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Terraform Deployment</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This section demonstrates the successful execution of the Terraform deployment.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">API Gateway</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">-Stages.png)</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This screenshot demonstrates the production API Gateway endpoint deployed through Terraform and exposed through the AWS Serverless architecture.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Lambda Functions</h2>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This screenshot displays the producer and consumer Lambda functions provisioned in the AWS environment.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Amazon SQS Queue</h2>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This screenshot captures the Amazon SQS queue acting as the message broker between the producer and consumer.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">DynamoDB Table</h2>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This screenshot highlights the DynamoDB table created to persist the event records securely.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">DynamoDB Records</h2>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This screenshot proves the successful end-to-end data flow with the event payload stored as a record in DynamoDB.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">CloudWatch Logs</h2>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This screenshot shows the CloudWatch log groups utilized for monitoring the execution of the Lambda functions.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Repository Structure</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">The repository structure validates the modular organization and Infrastructure as Code best practices implemented in this project.</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">Architecture Diagram</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This section captures the visual architecture representing the serverless interactions between the deployed AWS services.</p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📁 Repository Structure</h2>
+<div class="h-2"></div>
+<div class="bg-obsidian/90 border border-slate-800 p-4 rounded-xl font-mono text-xs text-emerald-400 overflow-x-auto my-4 shadow-inner"><div class="text-[10px] text-slate-500 font-mono mb-1">text</div><pre><code>terraform-enterprise-event-processing-platform/
 ├── README.md
 ├── .gitignore
 ├── screenshots/                # Deployment evidence and screenshots
@@ -295,8 +291,66 @@ terraform-enterprise-event-processing-platform/
 │   ├── consumer/
 │   │   └── app.py              # Consumer Lambda Python code
 │   └── producer/
-│       └── app.py              # Produce
-        </div>
+│       └── app.py              # Producer Lambda Python code
+└── terraform/
+    ├── main.tf                 # Core infrastructure composition
+    ├── variables.tf            # Root variables
+    ├── outputs.tf              # Root outputs
+    ├── providers.tf            # AWS Provider configuration
+    └── modules/
+        ├── api_gateway/        # API Gateway configuration
+        ├── dynamodb/           # DynamoDB table definitions
+        ├── lambda/
+        │   ├── consumer/       # Consumer function &amp; IAM roles
+        │   └── producer/       # Producer function &amp; IAM roles
+        └── sqs/                # SQS Queue definitions</code></pre></div>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🚀 CI/CD Pipeline & Deployment</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">This project follows an Infrastructure as Code (IaC) CI/CD strategy.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Pipeline Workflow</h3>
+<p class="text-slate-300 leading-relaxed my-2">1. <strong class="text-white">Linting & Formatting</strong>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform fmt -check</code> ensures code consistency.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. <strong class="text-white">Validation</strong>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform validate</code> confirms HCL syntax correctness.</p>
+<p class="text-slate-300 leading-relaxed my-2">3. <strong class="text-white">Planning</strong>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform plan</code> outlines the required infrastructure changes.</p>
+<p class="text-slate-300 leading-relaxed my-2">4. <strong class="text-white">Deployment</strong>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform apply</code> provisions the AWS resources.</p>
+<p class="text-slate-300 leading-relaxed my-2">5. <strong class="text-white">Security Scanning</strong>: Routine credential scanning and audit trails.</p>
+<div class="h-2"></div>
+<h3 class="text-lg font-heading font-bold text-white mt-4 mb-2">Local Deployment Instructions</h3>
+<p class="text-slate-300 leading-relaxed my-2">1. Ensure AWS CLI is configured with correct credentials.</p>
+<p class="text-slate-300 leading-relaxed my-2">2. Navigate to <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform/</code>: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">cd terraform</code></p>
+<p class="text-slate-300 leading-relaxed my-2">3. Initialize Terraform: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform init</code></p>
+<p class="text-slate-300 leading-relaxed my-2">4. Deploy the infrastructure: <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">terraform apply -auto-approve</code></p>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">🛡️ Security Audit & Best Practices</h2>
+<div class="h-2"></div>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Least Privilege IAM</strong>: All Lambda roles explicitly define the minimal required permissions (e.g., only <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">sqs:SendMessage</code> for the Producer).</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Secrets Management</strong>: No credentials, access keys, or <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">.tfstate</code> files are tracked in this repository. Verified by strict <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">.gitignore</code> patterns.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Data Encapsulation</strong>: DynamoDB interactions use specific partition keys to ensure exact matching and minimal scanning.</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">📜 Project Complete History</h2>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Phase 1-2</strong>: Repository architecture and Terraform modular structure setup.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Phase 3-4</strong>: Development of decoupled Producer and Consumer Lambdas in Python 3.12.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Phase 5-7</strong>: Terraform configuration, validation, and successful deployment to AWS <code class="bg-slate-800 text-emerald-400 px-1.5 py-0.5 rounded text-xs font-mono">eu-central-1</code>.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Phase 8</strong>: End-to-end event payload testing, SQS verification, and DynamoDB data persistence.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Phase 9</strong>: Rigorous repository security audit verifying no credential leakage.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Phase 10</strong>: Recruiter checkpoint for AWS Console infrastructure verification.</li>
+<li class="ml-4 list-disc text-slate-300 my-1"><strong class="text-white">Phase 11-14</strong>: Documentation, architecture diagram generation, and version control push.</li>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2">---</p>
+<div class="h-2"></div>
+<h2 class="text-xl font-heading font-bold text-emeraldAccent mt-6 mb-3 border-b border-slate-800 pb-2">👨‍💻 Author</h2>
+<div class="h-2"></div>
+<p class="text-slate-300 leading-relaxed my-2"><strong class="text-white">Imon Mahmud</strong></p>
+<p class="text-slate-300 leading-relaxed my-2">IT SPECIALIST | CLOUD INFRASTRUCTURE & AI AUTOMATION ENGINEER</p>
+<p class="text-slate-300 leading-relaxed my-2">[GitHub Profile](https://github.com/eng-imonmahmud)</p>
+<div class="h-2"></div>
       </div>
     </section>
 
@@ -340,17 +394,5 @@ terraform-enterprise-event-processing-platform/
   <footer class="bg-obsidian border-t border-slate-800 py-10 text-center text-xs text-slate-500 space-y-4">
     <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-emeraldAccent">Home</a> | <a href="disclaimer.html" class="hover:text-emeraldAccent">Disclaimer</a> | <a href="privacy.html" class="hover:text-emeraldAccent">Privacy Policy</a></p>
   </footer>
-
-  <script>
-    let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'de' : 'en';
-      document.getElementById('lang-label').innerText = currentLang === 'en' ? 'DE' : 'EN';
-      const elements = document.querySelectorAll('[data-en]');
-      elements.forEach(el => {
-        el.innerText = currentLang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-de');
-      });
-    }
-  </script>
 </body>
 </html>

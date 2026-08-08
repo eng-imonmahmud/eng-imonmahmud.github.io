@@ -184,11 +184,19 @@
     "category_tag": "Cybersecurity"
   },
   {
-    "name": "Ethical Hacker & Threat Management",
+    "name": "Ethical Hacker",
     "issuer": "Cisco",
     "issued_at": "Verified Credential",
     "badge_url": "https://www.credly.com/org/cisco",
     "image_url": "assets/images/trainings/ethical-hacker.png",
+    "category_tag": "Cybersecurity"
+  },
+  {
+    "name": "Cyber Threat Management",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/org/cisco",
+    "image_url": "assets/images/trainings/cisco-cyber-threat.png",
     "category_tag": "Cybersecurity"
   },
   {

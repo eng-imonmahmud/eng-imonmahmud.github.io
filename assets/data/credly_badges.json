@@ -1,146 +1,146 @@
 [
   {
-    "name": "CCNA: Introduction to Networks",
-    "issuer": "Cisco Systems",
-    "issued_at": "Cisco Certified",
-    "badge_url": "https://www.credly.com/badges/30d2ca2a-bd15-4fa8-b3bc-5e3aefee8d88",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "name": "Network Addressing and Basic Troubleshooting",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/62acb997-e890-4a7d-a8a2-5444ca613f06",
+    "image_url": "https://images.credly.com/images/49c099bd-8542-4f48-8c03-f21799dcaf51/image.png",
     "category_tag": "Network & Security"
   },
   {
-    "name": "CCNA: Switching, Routing, and Wireless Essentials",
-    "issuer": "Cisco Systems",
-    "issued_at": "Cisco Certified",
-    "badge_url": "https://www.credly.com/badges/5f0c9782-f047-4974-9f4a-251f2801e061",
-    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
-    "category_tag": "Network & Security"
-  },
-  {
-    "name": "CCNA: Enterprise Networking, Security, and Automation",
-    "issuer": "Cisco Systems",
-    "issued_at": "Cisco Certified",
-    "badge_url": "https://www.credly.com/badges/84de7974-bf43-43ed-8a9d-b82aa2198083",
-    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
-    "category_tag": "Network & Security"
-  },
-  {
-    "name": "Networking Essentials",
-    "issuer": "Cisco Systems",
-    "issued_at": "Cisco Certified",
-    "badge_url": "https://www.credly.com/badges/89222479-79f9-46aa-b2b9-6c39f032aa27",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "name": "Network Support and Security",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/ce8392a1-9241-4b4a-bedb-b49fc068ad0d",
+    "image_url": "https://images.credly.com/images/a4dd891f-7bf5-4938-8241-50dc81e8cc00/image.png",
     "category_tag": "Network & Security"
   },
   {
     "name": "Networking Devices and Initial Configuration",
-    "issuer": "Cisco Systems",
-    "issued_at": "Cisco Certified",
-    "badge_url": "https://www.credly.com/badges/16ecdbb8-cb86-455b-b9d9-bbec3ea97d41",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/f1f0b2b3-ad70-41a0-b6e9-784db629d193",
+    "image_url": "https://images.credly.com/images/88316fe8-5651-4e61-a6be-5be1558f049e/image.png",
     "category_tag": "Network & Security"
   },
   {
+    "name": "Networking Basics",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/7b9e0dd4-2d63-406d-97ee-d1ffb9a21da4",
+    "image_url": "https://images.credly.com/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png",
+    "category_tag": "Network & Security"
+  },
+  {
+    "name": "Hardware and Upgrade Support",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/ea722150-ebfa-4695-81fd-2de4ea126c97",
+    "image_url": "https://images.credly.com/images/94cbdf0d-3e44-44b2-b213-866fe22aa7d5/blob",
+    "category_tag": "Linux & OS Systems"
+  },
+  {
+    "name": "Operating Systems Support",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/6709cec7-915e-4a62-bed5-20fad386f3eb",
+    "image_url": "https://images.credly.com/images/70cc28ef-542c-4ce2-8bad-e8d95daf5138/blob",
+    "category_tag": "Linux & OS Systems"
+  },
+  {
+    "name": "Linux Essentials",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/a9f18a53-05cb-45d1-a53b-33a4f25c7c1f",
+    "image_url": "https://images.credly.com/images/e8fe3d67-2967-43d0-bc4a-7a268a37f47b/image.png",
+    "category_tag": "Linux & OS Systems"
+  },
+  {
     "name": "Operating Systems Basics",
-    "issuer": "Cisco Systems",
-    "issued_at": "Cisco Certified",
-    "badge_url": "https://www.credly.com/badges/626d7c71-2ee3-4eb0-80a5-b3e15b573d84",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/fa764988-2b2a-4118-a20e-581d985e9ff2",
+    "image_url": "https://images.credly.com/images/dcdf1a3c-2594-4f4c-a33a-050b4bca58b5/image.png",
     "category_tag": "Linux & OS Systems"
   },
   {
-    "name": "Computer Hardware Basics",
-    "issuer": "Cisco Systems",
-    "issued_at": "Cisco Certified",
-    "badge_url": "https://www.credly.com/badges/f1e72e1c-54a7-47b2-bdf4-dcb41eb19ee8",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
-    "category_tag": "Linux & OS Systems"
-  },
-  {
-    "name": "NDG Linux Unhatched",
-    "issuer": "Cisco / NDG",
-    "issued_at": "Cisco / NDG Certified",
-    "badge_url": "https://www.credly.com/badges/ad40ce78-43bb-4286-9a2d-45bfd3ea7475",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
-    "category_tag": "Linux & OS Systems"
-  },
-  {
-    "name": "NDG Linux Essentials",
-    "issuer": "Cisco / NDG",
-    "issued_at": "Cisco / NDG Certified",
-    "badge_url": "https://www.credly.com/badges/8f7ff271-eef1-4bdf-87f5-7c2503923bb6",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
-    "category_tag": "Linux & OS Systems"
-  },
-  {
-    "name": "Artificial Intelligence Fundamentals",
-    "issuer": "IBM SkillsBuild",
-    "issued_at": "IBM Verified",
-    "badge_url": "https://www.credly.com/badges/289e6eb1-d1be-45a8-bd2f-f8c6edc1c984",
-    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
-    "category_tag": "AI & Automation"
-  },
-  {
-    "name": "Working with Generative AI Models and Prompts",
-    "issuer": "IBM SkillsBuild",
-    "issued_at": "IBM Verified",
-    "badge_url": "https://www.credly.com/badges/c03d7db2-6901-447a-8f81-54c379a2bd43",
-    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
-    "category_tag": "AI & Automation"
-  },
-  {
-    "name": "Prompt Engineering Basics",
-    "issuer": "IBM SkillsBuild",
-    "issued_at": "IBM Verified",
-    "badge_url": "https://www.credly.com/badges/b7ca9d25-6355-4cc9-b7b5-829d5b03fb40",
-    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
-    "category_tag": "AI & Automation"
-  },
-  {
-    "name": "Python Essentials 1",
-    "issuer": "Cisco / OpenEDG",
-    "issued_at": "Cisco / OpenEDG Certified",
-    "badge_url": "https://www.credly.com/badges/8c8189c4-ed35-46bd-b8c1-d41935c15ab8",
-    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "name": "Data Analytics Essentials",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/eaf5d4d4-60fe-4052-92e3-d0f053b5f266",
+    "image_url": "https://images.credly.com/images/1fdfeaeb-e61c-4450-bdfe-a07bd4e715df/image.png",
     "category_tag": "Python & Data"
+  },
+  {
+    "name": "AI Fundamentals: Foundations for Understanding AI",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/3d36d91d-5793-40fb-8a88-bacf5a76a81f",
+    "image_url": "https://images.credly.com/images/fa29f782-3029-44f9-9fb1-631c3278a68a/blob",
+    "category_tag": "AI & Automation"
+  },
+  {
+    "name": "AI Fundamentals: Foundations for Understanding AI",
+    "issuer": "IBM SkillsBuild",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/709b4e57-7534-41c8-9ed9-7026114947bf",
+    "image_url": "https://images.credly.com/images/e0644ccc-dd87-4e27-82e4-0facf461cd1f/AI_20Fundamentals_20Foundations_20for_20Understanding_20AI.png",
+    "category_tag": "AI & Automation"
+  },
+  {
+    "name": "Data Science Essentials With Python",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/7403d32b-b8b4-4ad4-b687-4d6da6856bb8",
+    "image_url": "https://images.credly.com/images/62db59ef-19f9-4652-a00c-7582baee8177/blob",
+    "category_tag": "Python & Data"
+  },
+  {
+    "name": "Introduction to Data Science",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/37a68850-bc68-4ba4-b1c8-3fdbbc9050d3",
+    "image_url": "https://images.credly.com/images/b38a42e0-dc58-4ce2-b6c0-28d978e8aaad/image.png",
+    "category_tag": "Python & Data"
+  },
+  {
+    "name": "Introduction to Modern AI",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/c3007a04-4334-4588-982b-dc4b6f5c1bb4",
+    "image_url": "https://images.credly.com/images/e2d12302-10f9-40d4-8ff1-066a7008b61d/blob",
+    "category_tag": "AI & Automation"
   },
   {
     "name": "Python Essentials 2",
-    "issuer": "Cisco / OpenEDG",
-    "issued_at": "Cisco / OpenEDG Certified",
-    "badge_url": "https://www.credly.com/badges/3e527d2c-0e7e-4b61-9c60-31278ff564ea",
-    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/00f41a8a-c717-49dc-86c4-d31ab5f9d004",
+    "image_url": "https://images.credly.com/images/3f802526-7274-4230-91ab-f6d1a35340e6/image.png",
     "category_tag": "Python & Data"
   },
   {
-    "name": "Data Analysis with Python",
-    "issuer": "IBM SkillsBuild",
-    "issued_at": "IBM Verified",
-    "badge_url": "https://www.credly.com/badges/1b6ea17e-9769-42b7-8d2b-67a840656a81",
-    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "name": "Python Essentials 1",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/fde041a9-0b3e-484e-840b-226452acb26f",
+    "image_url": "https://images.credly.com/images/68c0b94d-f6ac-40b1-a0e0-921439eb092e/image.png",
     "category_tag": "Python & Data"
   },
   {
-    "name": "Data Visualization with Python",
-    "issuer": "IBM SkillsBuild",
-    "issued_at": "IBM Verified",
-    "badge_url": "https://www.credly.com/badges/1f38e3e4-f3c5-4d04-8b65-66a9d3568c09",
-    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
-    "category_tag": "Python & Data"
-  },
-  {
-    "name": "Python 101 for Data Science",
-    "issuer": "IBM SkillsBuild",
-    "issued_at": "IBM Verified",
-    "badge_url": "https://www.credly.com/badges/30d2ca2a-bd15-4fa8-b3bc-5e3aefee8d88",
-    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
-    "category_tag": "Python & Data"
+    "name": "Introduction to Cybersecurity",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
+    "badge_url": "https://www.credly.com/badges/da68a97c-1765-44e1-bff7-ef64000a108d",
+    "image_url": "https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
+    "category_tag": "Network & Security"
   },
   {
     "name": "Understanding Threats and Attacks",
     "issuer": "Cisco Networking Academy",
     "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "image_url": "https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
     "category_tag": "Network & Security"
   },
   {
@@ -148,7 +148,7 @@
     "issuer": "Cisco Networking Academy",
     "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
+    "image_url": "https://images.credly.com/images/a4dd891f-7bf5-4938-8241-50dc81e8cc00/image.png",
     "category_tag": "Network & Security"
   },
   {
@@ -156,7 +156,7 @@
     "issuer": "Cisco Networking Academy",
     "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "image_url": "https://images.credly.com/images/88316fe8-5651-4e61-a6be-5be1558f049e/image.png",
     "category_tag": "Network & Security"
   },
   {
@@ -164,7 +164,7 @@
     "issuer": "Cisco Networking Academy",
     "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
+    "image_url": "https://images.credly.com/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png",
     "category_tag": "Network & Security"
   },
   {
@@ -172,7 +172,7 @@
     "issuer": "Cisco Networking Academy",
     "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "image_url": "https://images.credly.com/images/49c099bd-8542-4f48-8c03-f21799dcaf51/image.png",
     "category_tag": "Network & Security"
   },
   {
@@ -180,7 +180,7 @@
     "issuer": "Cisco Networking Academy",
     "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/84de7974-bf43-43ed-8a9d-b82aa2198083/image.png",
+    "image_url": "https://images.credly.com/images/a4dd891f-7bf5-4938-8241-50dc81e8cc00/image.png",
     "category_tag": "Network & Security"
   },
   {
@@ -188,7 +188,7 @@
     "issuer": "Cisco Networking Academy",
     "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
+    "image_url": "https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
     "category_tag": "Network & Security"
   },
   {
@@ -196,7 +196,7 @@
     "issuer": "Cisco Networking Academy",
     "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/af80029b-810a-48d6-a4c3-b9961e062635/image.png",
+    "image_url": "https://images.credly.com/images/88316fe8-5651-4e61-a6be-5be1558f049e/image.png",
     "category_tag": "Network & Security"
   },
   {
@@ -204,7 +204,7 @@
     "issuer": "Cisco Networking Academy",
     "issued_at": "NetAcad Training",
     "badge_url": "#",
-    "image_url": "https://images.credly.com/images/5f0c9782-f047-4974-9f4a-251f2801e061/image.png",
+    "image_url": "https://images.credly.com/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png",
     "category_tag": "Network & Security"
   },
   {

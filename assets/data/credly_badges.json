@@ -180,15 +180,15 @@
     "issuer": "Cisco",
     "issued_at": "Verified Credential",
     "badge_url": "https://www.credly.com/org/cisco",
-    "image_url": "assets/images/trainings/cisco-network-defense.png",
+    "image_url": "assets/images/trainings/cisco-network-defense-official.png",
     "category_tag": "Cybersecurity"
   },
   {
-    "name": "Cyber Threat Management",
+    "name": "Ethical Hacker & Threat Management",
     "issuer": "Cisco",
     "issued_at": "Verified Credential",
     "badge_url": "https://www.credly.com/org/cisco",
-    "image_url": "assets/images/trainings/cisco-cyber-threat.png",
+    "image_url": "assets/images/trainings/ethical-hacker.png",
     "category_tag": "Cybersecurity"
   },
   {
@@ -196,7 +196,7 @@
     "issuer": "Cisco",
     "issued_at": "Verified Credential",
     "badge_url": "https://www.credly.com/org/cisco",
-    "image_url": "assets/images/trainings/cisco-endpoint-security.png",
+    "image_url": "assets/images/trainings/cisco-endpoint-security-official.png",
     "category_tag": "Cybersecurity"
   },
   {

@@ -224,11 +224,11 @@
     "category_tag": "Python"
   },
   {
-    "name": "Graphics Design & Visual Media",
+    "name": "Graphics Design",
     "issuer": "Creative IT",
     "issued_at": "Verified Credential",
     "badge_url": "#",
-    "image_url": "assets/images/trainings/creative-it-logo.svg",
+    "image_url": "assets/images/trainings/creative-it-graphics-badge.png",
     "category_tag": "Python"
   }
 ]

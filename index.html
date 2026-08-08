@@ -259,19 +259,21 @@
       </p>
     </div>
 
-    <!-- Credly Filter Tabs -->
+    <!-- Credly Filter Tabs with Separated Smart Categories -->
     <div class="flex flex-wrap justify-center gap-2 font-mono text-xs" id="badge-tabs">
       <button onclick="filterBadges('all')" class="badge-tab-btn active px-4 py-2 bg-brandDeepForest text-white font-bold rounded-xl transition shadow">All Badges (29)</button>
-      <button onclick="filterBadges('Network & Security')" class="badge-tab-btn px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl border border-slate-200 transition">Network & Security</button>
+      <button onclick="filterBadges('Cybersecurity')" class="badge-tab-btn px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl border border-slate-200 transition">Cybersecurity</button>
+      <button onclick="filterBadges('Networking')" class="badge-tab-btn px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl border border-slate-200 transition">Networking</button>
       <button onclick="filterBadges('Linux & OS Systems')" class="badge-tab-btn px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl border border-slate-200 transition">Linux & OS Systems</button>
       <button onclick="filterBadges('AI & Automation')" class="badge-tab-btn px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl border border-slate-200 transition">AI & Automation</button>
-      <button onclick="filterBadges('Python & Data')" class="badge-tab-btn px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl border border-slate-200 transition">Python & Data</button>
+      <button onclick="filterBadges('Python')" class="badge-tab-btn px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl border border-slate-200 transition">Python</button>
+      <button onclick="filterBadges('Data Science')" class="badge-tab-btn px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl border border-slate-200 transition">Data Science</button>
     </div>
 
     <!-- Badges Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="badges-container">
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Networking">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco</span>
@@ -289,7 +291,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco</span>
@@ -307,7 +309,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Networking">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco</span>
@@ -325,7 +327,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Networking">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco</span>
@@ -415,7 +417,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python & Data">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Data Science">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco</span>
@@ -469,7 +471,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python & Data">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Data Science">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco</span>
@@ -487,7 +489,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python & Data">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Data Science">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco</span>
@@ -523,7 +525,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python & Data">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco</span>
@@ -541,7 +543,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python & Data">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco</span>
@@ -559,7 +561,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco</span>
@@ -577,7 +579,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco Networking Academy</span>
@@ -595,7 +597,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco Networking Academy</span>
@@ -613,7 +615,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco Networking Academy</span>
@@ -631,7 +633,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco Networking Academy</span>
@@ -649,7 +651,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco Networking Academy</span>
@@ -667,7 +669,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco Networking Academy</span>
@@ -685,7 +687,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco Networking Academy</span>
@@ -703,7 +705,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco Networking Academy</span>
@@ -721,7 +723,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Network & Security">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Cybersecurity">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Cisco Networking Academy</span>
@@ -757,7 +759,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python & Data">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Jessore IT Institute</span>
@@ -775,7 +777,7 @@
         </div>
       </div>
       
-      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python & Data">
+      <div class="badge-card bg-white border border-slate-200 p-5 rounded-2xl flex flex-col justify-between hover:border-brandDeepForest hover:shadow-lg transition group" data-category="Python">
         <div class="space-y-4">
           <div class="flex items-center justify-between">
             <span class="text-[10px] font-mono px-2 py-0.5 bg-slate-100 text-slate-700 rounded border border-slate-200 font-bold line-clamp-1">Creative IT Limited</span>
@@ -820,7 +822,7 @@
       <button onclick="filterProjects('AI Software Suite')" class="project-tab-btn px-4 py-2 bg-white hover:bg-slate-100 text-slate-700 rounded-xl border border-slate-200 transition">AI Software Suite</button>
     </div>
 
-    <!-- Projects Grid with User-Provided & Optimized Feature Images -->
+    <!-- Projects Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
       
       <div class="project-card bg-white border border-slate-200 rounded-2xl overflow-hidden flex flex-col justify-between hover:border-brandDeepForest hover:shadow-xl transition group" data-category="Cloud Infrastructure & IaC">

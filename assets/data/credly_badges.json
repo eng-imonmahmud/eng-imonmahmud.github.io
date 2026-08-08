@@ -137,96 +137,96 @@
   },
   {
     "name": "Understanding Threats and Attacks",
-    "issuer": "Cisco Networking Academy",
-    "issued_at": "NetAcad Training",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
     "category_tag": "Cybersecurity"
   },
   {
     "name": "The Art of Investigation",
-    "issuer": "Cisco Networking Academy",
-    "issued_at": "NetAcad Training",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/a4dd891f-7bf5-4938-8241-50dc81e8cc00/image.png",
     "category_tag": "Cybersecurity"
   },
   {
     "name": "Security Operations and the Defense Analyst",
-    "issuer": "Cisco Networking Academy",
-    "issued_at": "NetAcad Training",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/88316fe8-5651-4e61-a6be-5be1558f049e/image.png",
     "category_tag": "Cybersecurity"
   },
   {
     "name": "Data and Tools for Defense Analysts",
-    "issuer": "Cisco Networking Academy",
-    "issued_at": "NetAcad Training",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png",
     "category_tag": "Cybersecurity"
   },
   {
     "name": "Introduction to Splunk",
-    "issuer": "Cisco Networking Academy",
-    "issued_at": "NetAcad Training",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/49c099bd-8542-4f48-8c03-f21799dcaf51/image.png",
     "category_tag": "Cybersecurity"
   },
   {
     "name": "Network Defense",
-    "issuer": "Cisco Networking Academy",
-    "issued_at": "NetAcad Training",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/a4dd891f-7bf5-4938-8241-50dc81e8cc00/image.png",
     "category_tag": "Cybersecurity"
   },
   {
     "name": "Cyber Threat Management",
-    "issuer": "Cisco Networking Academy",
-    "issued_at": "NetAcad Training",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
     "category_tag": "Cybersecurity"
   },
   {
     "name": "Endpoint Security",
-    "issuer": "Cisco Networking Academy",
-    "issued_at": "NetAcad Training",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/88316fe8-5651-4e61-a6be-5be1558f049e/image.png",
     "category_tag": "Cybersecurity"
   },
   {
     "name": "SOC Essentials: Investigating with Splunk",
-    "issuer": "Cisco Networking Academy",
-    "issued_at": "NetAcad Training",
+    "issuer": "Cisco",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "https://images.credly.com/images/5bdd6a39-3e03-4444-9510-ecff80c9ce79/image.png",
     "category_tag": "Cybersecurity"
   },
   {
     "name": "National Skill Standard Basic (360 Hours)",
-    "issuer": "BTEB (Bangladesh Technical Education Board)",
-    "issued_at": "Govt. Certified",
+    "issuer": "BTEB",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "assets/images/trainings/bteb-logo.svg",
     "category_tag": "Linux & OS Systems"
   },
   {
     "name": "Web Design & Development (WordPress)",
-    "issuer": "Jessore IT Institute",
-    "issued_at": "Professional Diploma",
+    "issuer": "Jessore IT",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
-    "image_url": "assets/images/trainings/jessore-it-logo.svg",
+    "image_url": "assets/images/trainings/jessore-it-wordpress-badge.png",
     "category_tag": "Python"
   },
   {
     "name": "Graphics Design & Visual Media",
-    "issuer": "Creative IT Limited",
-    "issued_at": "Professional Diploma",
+    "issuer": "Creative IT",
+    "issued_at": "Verified Credential",
     "badge_url": "#",
     "image_url": "assets/images/trainings/creative-it-logo.svg",
     "category_tag": "Python"

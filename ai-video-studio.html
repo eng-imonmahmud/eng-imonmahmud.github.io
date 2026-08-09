@@ -4,14 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>AI Video Studio (V21.0 Advanced) | Imon Mahmud - Enterprise Cloud & DevOps Architecture</title>
-  <meta name="description" content="Technical documentation and architecture breakdown for AI Video Studio (V21.0 Advanced) by Imon Mahmud. Automated video generation pipeline using Whisper AI for speech transcription, Gemini AI for footage matching, FFmpeg for NVENC hardware-accelerated video rendering, and background audio mixing.">
-  <meta name="keywords" content="AI Video Studio (V21.0 Advanced), Imon Mahmud, Cloud Infrastructure, DevOps, Automation">
+  <title>AI Video Studio (V21.0 Advanced) - Technical Architecture & Showcase | Imon Mahmud</title>
+  <meta name="description" content="Cross-platform, multi-threaded Desktop OS Application for programmatic faceless video synthesis, NVENC/AMF GPU hardware rendering, Whisper AI subtitles, and audio mixing. Publicly available on GitHub.">
   <meta name="author" content="Imon Mahmud">
-  
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -27,26 +32,24 @@
           colors: {
             brandDeepForest: '#0C5244',
             brandDarkerForest: '#083B31',
+            brandForestHover: '#094237',
+            brandAccentGreen: '#116B59',
+            brandEmeraldLight: '#168770',
+            brandMintTint: '#D1EAE5',
+            brandAmber: '#D97706',
+            brandObsidian: '#0B0F17',
             darkSlate: '#0F172A',
           }
         }
       }
     }
   </script>
-
-  <!-- Favicon Icons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
 </head>
 <body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-brandDeepForest selection:text-white">
-
-  <!-- Sticky Navbar -->
+  <!-- Executive Navigation Bar -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       
-      <!-- Smart Typographic Tech Logo Signature -->
       <!-- Smart Typographic Tech Logo Signature -->
       <a href="index.html#home" class="flex items-center space-x-2.5 group">
         <div class="flex items-center font-heading font-black text-2xl tracking-tighter text-darkSlate">
@@ -56,53 +59,509 @@
         </div>
       </a>
 
-      </div>
-      
-      <div class="flex items-center space-x-4">
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandDeepForest transition">← Back to Projects</a>
-        <a href="https://github.com/eng-imonmahmud/ai-video-studio" target="_blank" class="px-4 py-2 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-mono text-xs rounded-xl shadow-sm transition">
-          GitHub Repo ↗
+      <!-- Navigation Links & Actions -->
+      <div class="flex items-center space-x-4 sm:space-x-6">
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandDeepForest transition flex items-center gap-1" data-en="← Back to Portfolio" data-de="← Zurück zum Portfolio" data-bn="← পোর্টফোলিওতে ফিরে যান">
+          ← <span class="hidden sm:inline" data-en="Back to Portfolio" data-de="Zurück zum Portfolio" data-bn="পোর্টফোলিওতে ফিরে যান">Back to Portfolio</span><span class="sm:hidden">Back</span>
+        </a>
+
+        <!-- 3-Way Language Toggle Button -->
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono text-xs rounded-xl border border-slate-200 transition">
+          🌐 <span id="lang-label">EN</span>
+        </button>
+
+        <a href="https://github.com/eng-imonmahmud" target="_blank" class="hidden md:inline-flex items-center space-x-1.5 px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-mono text-xs rounded-xl border border-slate-200 transition font-bold">
+          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+          <span>GitHub</span>
         </a>
       </div>
     </div>
   </nav>
-
-  <!-- Hero Header -->
-  <header class="relative bg-gradient-to-br from-[#083B31] via-brandDeepForest to-darkSlate text-white py-16 lg:py-24 border-b border-slate-200 shadow-md">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-      <div class="lg:col-span-8 space-y-5">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
-          <span>🤖</span> <span>AI Software Suite</span>
+  <!-- Header Hero Section -->
+  <header class="relative bg-gradient-to-br from-darkSlate via-brandObsidian to-[#062016] text-white py-16 lg:py-24 border-b border-slate-800 shadow-md overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
+        <div class="flex flex-wrap gap-2 justify-center lg:justify-start items-center">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 uppercase tracking-wider font-mono">
+            ✔ 100% Public Open-Source on GitHub
+          </span>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-500/20 text-blue-300 border border-blue-500/30 uppercase tracking-wider font-mono">
+            🚀 Enterprise Video Synthesis
+          </span>
         </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
-          AI Video Studio (V21.0 Advanced)
+        
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight leading-tight" data-en="AI Video Studio (V21.0 Advanced)" data-de="AI Video Studio (V21.0 Advanced)" data-bn="এআই ভিডিও স্টুডিও (V২১.০ অ্যাডভান্সড)">
+          AI Video Studio <br class="hidden sm:inline"><span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-200 to-amber-300">(V21.0 Advanced)</span>
         </h1>
-        <p class="text-base sm:text-lg text-slate-200 leading-relaxed">
-          Automated video generation pipeline using Whisper AI for speech transcription, Gemini AI for footage matching, FFmpeg for NVENC hardware-accelerated video rendering, and background audio mixing.
+
+        <p class="text-base sm:text-lg text-slate-200 font-normal leading-relaxed max-w-2xl text-justify" data-en="An advanced cross-platform, multi-threaded Desktop OS Application engineered for programmatic video synthesis, edge-based AI subtitle synchronization, dynamic audio crossfading, and production-grade hardware rendering workloads." data-de="Eine fortschrittliche, plattformübergreifende und multithreaded Desktop-Anwendung für programmatische Videosynthese, Edge-basierte KI-Untertitel-Synchronisation, dynamisches Audio-Crossfading und professionelles Rendering." data-bn="একটি অ্যাডভান্সড ক্রস-প্ল্যাটফর্ম, মাল্টি-থ্রেডেড ডেস্কটপ ওএস অ্যাপ্লিকেশন যা স্বয়ংক্রিয় ভিডিও সিন্থেসিস, এজ-বেসড এআই সাবটাইটেল সিঙ্ক, ডায়নামিক অডিও ক্রসফেডিং এবং জিপিইউ হার্ডওয়্যার এক্সিলারেটেড রেন্ডারিং সম্পাদন করে।">
+          An advanced cross-platform, multi-threaded Desktop OS Application engineered for programmatic video synthesis, edge-based AI subtitle synchronization, dynamic audio crossfading, and production-grade hardware rendering workloads.
         </p>
+        
+        <div class="space-y-3 pt-1">
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+            <span class="text-xs text-slate-400 font-heading font-semibold uppercase tracking-wider mr-1">Supported OS:</span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-800/80 text-xs text-slate-200 font-medium rounded-lg border border-slate-700 shadow-sm font-mono">
+              🪟 Windows 10 / 11
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-800/80 text-xs text-slate-200 font-medium rounded-lg border border-slate-700 shadow-sm font-mono">
+              🐧 Linux (Ubuntu / Debian / Arch)
+            </span>
+          </div>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-2 font-mono text-xs">
+            <span class="bg-slate-800/80 px-3 py-1.5 rounded-md text-emerald-300 border border-emerald-500/20">Python 3.11</span>
+            <span class="bg-slate-800/80 px-3 py-1.5 rounded-md text-slate-300 border border-slate-700">CustomTkinter</span>
+            <span class="bg-slate-800/80 px-3 py-1.5 rounded-md text-blue-300 border border-blue-500/20">FFmpeg (NVENC/AMF/QSV)</span>
+            <span class="bg-slate-800/80 px-3 py-1.5 rounded-md text-teal-300 border border-teal-500/20">OpenAI Whisper AI</span>
+            <span class="bg-slate-800/80 px-3 py-1.5 rounded-md text-amber-300 border border-amber-500/20">Google Gemini AI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm space-y-4">
+        <h3 class="font-heading font-bold text-lg border-b border-white/10 pb-2 text-emerald-300 flex items-center justify-between">
+          <span>Core Software Capabilities</span>
+          <span class="text-xs font-mono bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-400/30">PUBLIC REPO</span>
+        </h3>
+        <ul class="text-xs space-y-3 text-slate-300 text-left leading-relaxed">
+          <li>🔹 <strong>Create Bulk Faceless Videos:</strong> Generate professional faceless videos from Audio with subtitles and 4K export fully automated.</li>
+          <li>🔹 <strong>True Cross-Platform Blueprint:</strong> Native architectural adjustments compiled to deploy seamlessly on both <strong>Windows & Linux OS</strong> environments.</li>
+          <li>🔹 <strong>Hardware Accelerated Matrix:</strong> Automated low-overhead rendering engine exploiting NVIDIA NVENC, AMD AMF, and Intel QSV profiles natively.</li>
+          <li>🔹 <strong>Zero UI Deadlocks:</strong> Clean decoupled concurrency paradigm dividing computational rendering arrays from front-end layout pipelines.</li>
+        </ul>
+        <div class="pt-2 space-y-2">
+          <a href="https://github.com/eng-imonmahmud/ai-video-studio" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-3 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-xs sm:text-sm rounded-xl shadow-lg transition duration-300 space-x-2">
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+            <span>View Source & Download on GitHub ↗</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Content -->
-  <main class="max-w-7xl mx-auto px-6 py-12 space-y-12">
-    
-        <section class="space-y-6">
-          <h2 class="text-xl font-heading font-bold text-darkSlate">Application User Interface</h2>
-          <div class="bg-white border border-slate-200 p-3 rounded-2xl shadow-sm">
-            <img src="assets/images/projects/ai-video-studio/aivideostudio1.jpg" alt="AI Video Studio (V21.0 Advanced)" class="w-full h-auto rounded-xl">
+  <!-- Main Content Layout -->
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+      
+      <!-- Sidebar Navigation -->
+      <aside class="lg:col-span-1 sticky top-28 h-fit hidden lg:block bg-white border border-slate-200 p-6 rounded-2xl shadow-sm space-y-4">
+        <h3 class="font-heading font-bold text-xs uppercase tracking-wider text-darkSlate">Documentation Sections</h3>
+        <ul class="space-y-2.5 font-medium text-sm text-slate-600">
+          <li><a href="#overview" class="block hover:text-brandDeepForest border-l-2 border-transparent hover:border-brandDeepForest pl-3 transition">1. Executive Overview</a></li>
+          <li><a href="#pipeline" class="block hover:text-brandDeepForest border-l-2 border-transparent hover:border-brandDeepForest pl-3 transition">2. Architecture & Pipeline</a></li>
+          <li><a href="#technical-depth" class="block hover:text-brandDeepForest border-l-2 border-transparent hover:border-brandDeepForest pl-3 transition">3. Technical Deep Dive</a></li>
+          <li><a href="#system-requirements" class="block hover:text-brandDeepForest border-l-2 border-transparent hover:border-brandDeepForest pl-3 transition">4. Hardware Configuration</a></li>
+          <li><a href="#features" class="block hover:text-brandDeepForest border-l-2 border-transparent hover:border-brandDeepForest pl-3 transition">5. Advanced Core Features</a></li>
+          <li><a href="#interface" class="block hover:text-brandDeepForest border-l-2 border-transparent hover:border-brandDeepForest pl-3 transition">6. Interface Showcase</a></li>
+          <li><a href="#video-results" class="block hover:text-brandDeepForest border-l-2 border-transparent hover:border-brandDeepForest pl-3 transition">7. Render Results Gallery</a></li>
+          <li><a href="#public-deployment" class="block hover:text-brandDeepForest border-l-2 border-transparent hover:border-brandDeepForest pl-3 transition">8. Public Open-Source Access</a></li>
+        </ul>
+        <div class="pt-4 border-t border-slate-100">
+          <a href="https://github.com/eng-imonmahmud/ai-video-studio" target="_blank" class="w-full inline-flex items-center justify-center px-3 py-2 bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold rounded-xl transition">
+            📦 Clone / Download Repo ↗
+          </a>
+        </div>
+      </aside>
+
+      <!-- Main Content Articles -->
+      <div class="lg:col-span-3 space-y-20">
+        
+        <!-- 1. Executive Overview -->
+        <section id="overview" class="scroll-mt-28">
+          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-darkSlate mb-4 border-b border-slate-200 pb-2">1. Executive Overview</h2>
+          <p class="text-slate-600 leading-relaxed text-justify mb-4">
+            AI Video Studio (V21.0 Advanced) is an automated system designed to eliminate manual video editing operations. Built using decoupled object-oriented Python architectures, it converts continuous multitrack audio arrays and localized transcription files into ready-to-publish video assets. The script features high tolerance parameters for network failures and local device constraints, running safely under load across enterprise server environments or standalone administrative workstations.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+              <h4 class="font-heading font-bold text-darkSlate mb-2 flex items-center gap-2">
+                <span class="p-1.5 bg-emerald-100 rounded text-brandDeepForest">✔</span> For Technical Recruiters & Engineers
+              </h4>
+              <p class="text-xs text-slate-600 leading-relaxed text-justify">
+                Demonstrates production-grade competency in asynchronous thread orchestration, granular exception tracking pipelines, OS subprocess isolation layers, and dynamic GPU driver monitoring compliant with strict global security and performance benchmarks.
+              </p>
+            </div>
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+              <h4 class="font-heading font-bold text-darkSlate mb-2 flex items-center gap-2">
+                <span class="p-1.5 bg-amber-100 rounded text-amber-600">★</span> Public Open-Source Tool
+              </h4>
+              <p class="text-xs text-slate-600 leading-relaxed text-justify">
+                A turn-key open-source digital asset that eliminates production costs by executing continuous automated asset compilation locally on existing hardware pools, bypassing expensive recurring cloud computing bills completely.
+              </p>
+            </div>
           </div>
         </section>
-        
 
-    <section class="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm">
-      <h2 class="text-2xl font-heading font-bold text-darkSlate">Software Overview & Capabilities</h2>
-      <p class="text-slate-700 leading-relaxed text-sm">Automated video generation pipeline using Whisper AI for speech transcription, Gemini AI for footage matching, FFmpeg for NVENC hardware-accelerated video rendering, and background audio mixing.</p>
-    </section>
+        <!-- 2. System Architecture & Data Pipeline -->
+        <section id="pipeline" class="scroll-mt-28">
+          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-darkSlate mb-4 border-b border-slate-200 pb-2">2. System Architecture & Data Pipeline</h2>
+          <p class="text-slate-600 leading-relaxed text-justify mb-6">
+            The processing infrastructure manages transitional pipelines asynchronously. Graphical layout states transfer instructions into thread-safe worker pools without slowing window render times, guaranteeing fluid control environments during complex video composition tasks.
+          </p>
+          
+          <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm overflow-x-auto mb-6">
+            <div class="min-w-[600px] flex flex-col items-center font-mono text-xs">
+              <div class="flex items-center space-x-4">
+                <div class="bg-darkSlate text-white px-4 py-2 rounded-md shadow-sm border border-slate-700 text-center w-36">
+                  <strong>User Interface</strong><br>CustomTkinter Async GUI
+                </div>
+                <div class="text-slate-400">&rarr;</div>
+                <div class="bg-teal-700 text-white px-4 py-2 rounded-md shadow-sm text-center w-40">
+                  <strong>Threading Supervisor</strong><br>ThreadPoolExecutor Managed
+                </div>
+                <div class="text-slate-400">&rarr;</div>
+                <div class="bg-indigo-600 text-white px-4 py-2 rounded-md shadow-sm text-center w-36">
+                  <strong>AI Compute Layer</strong><br>Local Whisper / Cloud LLM
+                </div>
+              </div>
+              
+              <div class="w-[480px] h-6 border-l-2 border-r-2 border-slate-300 border-dashed my-1"></div>
+
+              <div class="flex items-center space-x-4">
+                <div class="bg-emerald-600 text-white px-4 py-2 rounded-md shadow-sm text-center w-36">
+                  <strong>Output Generation</strong><br>Video Master Artifact
+                </div>
+                <div class="text-slate-400">&larr;</div>
+                <div class="bg-amber-600 text-white px-4 py-2 rounded-md shadow-sm text-center w-40">
+                  <strong>Hardware Rendering</strong><br>FFmpeg H.264 NVENC/AMF
+                </div>
+                <div class="text-slate-400">&larr;</div>
+                <div class="bg-cyan-600 text-white px-4 py-2 rounded-md shadow-sm text-center w-36">
+                  <strong>Asset Alignment</strong><br>Audio, SRT, Watermarks
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500 italic text-center">Figure 1: Full-duplex asynchronous compilation and hardware-accelerated encoding execution flow.</p>
+        </section>
+
+        <!-- 3. Technical Deep Dive -->
+        <section id="technical-depth" class="scroll-mt-28">
+          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-darkSlate mb-4 border-b border-slate-200 pb-2">3. Technical Capabilities & Cross-OS Logic</h2>
+          <p class="text-slate-600 leading-relaxed text-justify mb-4">
+            The source architecture implements structural operating system adaptors to achieve absolute multi-platform stability. Rather than tracking rigid folder targets, the environment utilizes runtime verification functions to coordinate local system binary links fluidly on both Linux distributions and Windows workstations.
+          </p>
+          <div class="space-y-4">
+            
+            <div class="bg-darkSlate rounded-xl p-5 text-slate-200 font-mono text-xs border border-slate-800">
+              <h4 class="text-emerald-400 font-bold mb-2">// Subprocess Window Sandboxing (Windows Environment Fix)</h4>
+              <pre class="bg-slate-950 p-3 rounded border border-slate-800 overflow-x-auto text-emerald-300">
+if os.name == 'nt':
+    _original_popen = subprocess.Popen
+    class NoWindowPopen(_original_popen):
+        def __init__(self, *args, **kwargs):
+            if 'creationflags' not in kwargs:
+                kwargs['creationflags'] = 0x08000000 # CREATE_NO_WINDOW
+            super().__init__(*args, **kwargs)
+    subprocess.Popen = NoWindowPopen</pre>
+            </div>
+            
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-4">
+              <h3 class="font-heading font-bold text-base text-darkSlate">Granular Subsystem Implementations</h3>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-600">
+                <div class="bg-slate-50 p-3 rounded border border-slate-100 text-justify">
+                  <strong class="text-darkSlate block mb-1">Cross-OS Path Compliance</strong>
+                  Levers native POSIX permission adjustments (<code>os.chmod</code>) on Linux environments to safely enable local execution flags, while running clean directory mapping queries across Windows configurations via <code>os.path</code> libraries seamlessly.
+                </div>
+                <div class="bg-slate-50 p-3 rounded border border-slate-100 text-justify">
+                  <strong class="text-darkSlate block mb-1">Smart Network Fault Defenses</strong>
+                  Utilizes structured <code>HTTPAdapter</code> retry pooling via <code>urllib3</code> to gracefully isolate transient network timeouts, automated asset token drops, and stock provider API status exceptions automatically.
+                </div>
+                <div class="bg-slate-50 p-3 rounded border border-slate-100 text-justify">
+                  <strong class="text-darkSlate block mb-1">Hardware Encoder Auto-Discovery</strong>
+                  Queries systems hardware arrays at runtime to map encoding instructions directly into available GPU chips (NVIDIA <code>h264_nvenc</code>, AMD <code>h264_amf</code>, Intel <code>h264_qsv</code>), falling back smoothly to CPU limits if VRAM pools are absent.
+                </div>
+                <div class="bg-slate-50 p-3 rounded border border-slate-100 text-justify">
+                  <strong class="text-darkSlate block mb-1">Volatile Data Storage Isolation</strong>
+                  Isolates active chunk assemblies inside explicit session folders, running comprehensive recursive deletion sequences via <code>shutil.rmtree</code> on completion to prevent target machine storage leakage.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 4. Hardware Configuration -->
+        <section id="system-requirements" class="scroll-mt-28">
+          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-darkSlate mb-4 border-b border-slate-200 pb-2">4. Hardware Configuration & Runtime Requirements</h2>
+          <p class="text-slate-600 leading-relaxed text-justify mb-6">
+            To ensure rapid local video encoding operations and real-time OpenAI Whisper model initialization stability, the executing system architecture should meet or exceed the following technical layout parameters:
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+              <h4 class="font-heading font-bold text-darkSlate border-b pb-1.5 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span> Minimum Specifications
+              </h4>
+              <ul class="space-y-2 text-slate-600 font-sans">
+                <li><strong>Processor:</strong> Intel Core i3 (4th Gen) Map Framework</li>
+                <li><strong>Memory Array:</strong> 8 GB System RAM DDR3 Boundary</li>
+                <li><strong>Graphics Pool:</strong> Intel UHD Graphics / Baseline AMD Radeon Card</li>
+                <li><strong>Render Fallback Strategy:</strong> If a dedicated hardware GPU acceleration layer is absent, the pipeline engine automatically routes processing blocks into highly optimized <span class="text-brandDeepForest font-semibold">CPU Rendering (libx264)</span> core environments to avoid software deadlocks.</li>
+                <li><strong>Storage Space:</strong> 5 GB Allocated SSD Capacity</li>
+              </ul>
+            </div>
+            
+            <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm space-y-3">
+              <h4 class="font-heading font-bold text-darkSlate border-b pb-1.5 flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> Recommended Specifications (4K & Batch Production)
+              </h4>
+              <ul class="space-y-2 text-slate-600 font-sans">
+                <li><strong>Processor:</strong> Intel Core i7 / AMD Ryzen 7 Multi-Thread Chipset</li>
+                <li><strong>Memory Array:</strong> 16 GB / 32 GB RAM DDR5 Pool</li>
+                <li><strong>Graphics Pool:</strong> NVIDIA RTX 3060 / AMD RX 6600 (Dedicated VRAM)</li>
+                <li><strong>Hardware Profile:</strong> NVIDIA <code>h264_nvenc</code> Hardware Accelerator Pipeline</li>
+                <li><strong>Storage Space:</strong> NVMe M.2 High-Speed SSD Deployment</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. Advanced Core Features -->
+        <section id="features" class="scroll-mt-28">
+          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-darkSlate mb-4 border-b border-slate-200 pb-2">5. Advanced Core Technical Features</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex gap-4">
+              <div class="h-8 w-8 rounded-lg bg-emerald-100 text-brandDeepForest flex items-center justify-center font-bold flex-shrink-0 text-sm">01</div>
+              <div>
+                <h4 class="font-heading font-bold text-darkSlate text-base mb-1">Programmatic Bulk Faceless Video Synthesis</h4>
+                <p class="text-xs text-slate-600 leading-relaxed text-justify">
+                  Converts multitrack raw audio paths into high-retention video files completely automatically. The framework handles text segmentation, keyword mapping, stock selection, and layout burning under single execution runs.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="h-8 w-8 rounded-lg bg-teal-100 text-teal-800 flex items-center justify-center font-bold flex-shrink-0 text-sm">02</div>
+              <div>
+                <h4 class="font-heading font-bold text-darkSlate text-base mb-1">Sub-Second Alignment & Subtitle Fusion</h4>
+                <p class="text-xs text-slate-600 leading-relaxed text-justify">
+                  Leverages localized machine learning libraries to structure timeline databases. It embeds customized SRT strings with exact timing coordinates directly into targeting frame regions using complex FFmpeg text parameters.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="h-8 w-8 rounded-lg bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold flex-shrink-0 text-sm">03</div>
+              <div>
+                <h4 class="font-heading font-bold text-darkSlate text-base mb-1">Acoustic Crossfading & Normalization</h4>
+                <p class="text-xs text-slate-600 leading-relaxed text-justify">
+                  Orchestrates sound track assets smoothly by running complex filter mix rules. The system scales background tracking volumes to match priority voiceover layers perfectly, producing balanced broadcast outputs.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="h-8 w-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold flex-shrink-0 text-sm">04</div>
+              <div>
+                <h4 class="font-heading font-bold text-darkSlate text-base mb-1">Dynamic Ken Burns Motion Matrix</h4>
+                <p class="text-xs text-slate-600 leading-relaxed text-justify">
+                  Calculates runtime zoom vectors programmatically across static image inputs, injecting subtle organic camera pans to transform standard media files into interactive, fluid content pieces natively.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. Interface Showcase -->
+        <section id="interface" class="scroll-mt-28">
+          <h2 class="font-heading font-bold text-2xl lg:text-3xl text-darkSlate mb-4 border-b border-slate-200 pb-2">6. Software Interface & UX Gallery</h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm group flex flex-col justify-between">
+              <div>
+                <div class="overflow-hidden rounded-lg bg-slate-100 aspect-video mb-3 relative">
+                  <img src="assets/images/projects/ai-video-studio/aivideostudio1.jpg" alt="Multimedia Asset Hub Interface" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
+                </div>
+                <h4 class="font-heading font-bold text-sm text-darkSlate px-1 mb-1">Module 01: Multimedia Asset Ingestion</h4>
+              </div>
+              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs text-slate-600 text-justify mt-2">
+                <span class="font-semibold text-darkSlate block mb-0.5">Short Summary:</span>
+                <span>This module acts as the safe high-capacity input gateway. It manages independent multitrack directories for target voiceover streams, background sound variables, transparent brand logos, and disclaimers safely without running into graphical interface bottlenecks.</span>
+              </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm group flex flex-col justify-between">
+              <div>
+                <div class="overflow-hidden rounded-lg bg-slate-100 aspect-video mb-3 relative">
+                  <img src="assets/images/projects/ai-video-studio/aivideostudio2.jpg" alt="Model Provider Setup Management" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
+                </div>
+                <h4 class="font-heading font-bold text-sm text-darkSlate px-1 mb-1">Module 02: Infrastructure & Providers Management</h4>
+              </div>
+              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs text-slate-600 text-justify mt-2">
+                <span class="font-semibold text-darkSlate block mb-0.5">Short Summary:</span>
+                <span>The infrastructure configuration control hub. It securely maps API authorizations and endpoint coordinates for local LLM (Ollama) engines alongside commercial cloud providers (Gemini, Vertex AI, OpenAI, OpenRouter), handling hardware profile mappings fluidly.</span>
+              </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm group flex flex-col justify-between">
+              <div>
+                <div class="overflow-hidden rounded-lg bg-slate-100 aspect-video mb-3 relative">
+                  <img src="assets/images/projects/ai-video-studio/aivideostudio3.jpg" alt="Filtergraph Adjustments Control" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
+                </div>
+                <h4 class="font-heading font-bold text-sm text-darkSlate px-1 mb-1">Module 03: Video/Audio FX Filters Setup</h4>
+              </div>
+              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs text-slate-600 text-justify mt-2">
+                <span class="font-semibold text-darkSlate block mb-0.5">Short Summary:</span>
+                <span>Granular processing filtergraph adjustment layout. It dictates background sound volume ratios via analog slider objects, alongside structural runtime flags for text translation routing, Ken Burns cinematic zooms, anti-aliased subtitles styles, and alignment boundaries.</span>
+              </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm group flex flex-col justify-between">
+              <div>
+                <div class="overflow-hidden rounded-lg bg-slate-100 aspect-video mb-3 relative">
+                  <img src="assets/images/projects/ai-video-studio/aivideostudio4.jpg" alt="Production Processing Terminal Dashboard" class="object-cover w-full h-full group-hover:scale-105 transition duration-300">
+                </div>
+                <h4 class="font-heading font-bold text-sm text-darkSlate px-1 mb-1">Module 04: Render Production Console</h4>
+              </div>
+              <div class="bg-slate-50 p-2.5 rounded-lg border border-slate-100 text-xs text-slate-600 text-justify mt-2">
+                <span class="font-semibold text-darkSlate block mb-0.5">Short Summary:</span>
+                <span>The active deployment dashboard monitor. It tunnels unedited low-level backend system logs into a thread-safe terminal layout stream, incorporating immediate safe interruption parameters to stop threads and wipe cache instances securely.</span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- 7. Render Results Gallery -->
+        <section id="video-results" class="scroll-mt-28">
+          <div class="border-b border-slate-200 pb-4 mb-6">
+            <h2 class="text-2xl font-heading font-extrabold text-darkSlate">7. Automated Video Production Outputs Showcase</h2>
+            <p class="text-sm text-slate-500">Direct visual evidence of multi-layered faceless cinematic formats rendered fully autonomously by the V21.0 engine architecture.</p>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/HvrKc-W91k4?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1">Asset Sample 01: Academic Discourse Production Style</p>
+            </div>
+            
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/g1QGFvrsDVA?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1">Asset Sample 02: Cinematic Crossfaded Content</p>
+            </div>
+            
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/NHK8-r6-xPc?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1">Asset Sample 03: Automated High-Retention Subtitles Overlay</p>
+            </div>
+            
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/SAUpMQt_bcg?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1">Asset Sample 04: Bulk Programmatic Faceless Synthesis</p>
+            </div>
+
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/xH0eYu6OLkw?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1">Asset Sample 05: Complex Multi-layer Audio Normalization</p>
+            </div>
+
+            <div class="bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+              <div class="aspect-video rounded-lg overflow-hidden bg-slate-900 shadow-inner">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/C3fLPo5eqRY?origin=https://eng-imonmahmud.github.io&enablejsapi=1" title="AI Video Result 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+              <p class="text-xs font-heading font-bold text-slate-800 mt-2 px-1">Asset Sample 06: 4K High-Fidelity Export Matrix</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 8. Public Open-Source Access -->
+        <section id="public-deployment" class="scroll-mt-28 bg-gradient-to-br from-slate-50 via-emerald-50/40 to-teal-50/30 p-8 rounded-2xl border border-emerald-200">
+          <h2 class="font-heading font-bold text-2xl text-darkSlate mb-3">8. Public Open-Source Access & Deployment</h2>
+          <p class="text-sm text-slate-700 leading-relaxed text-justify mb-6">
+            AI Video Studio (V21.0 Advanced) is 100% public and open-source. Anyone can explore the full Python codebase, GPU encoding configurations, CustomTkinter GUIs, and build playbooks directly on GitHub.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://github.com/eng-imonmahmud/ai-video-studio" target="_blank" class="inline-flex items-center justify-center px-6 py-3.5 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-sm rounded-xl shadow-lg transition space-x-2">
+              <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+              <span>Download Repository on GitHub ↗</span>
+            </a>
+            <a href="mailto:imon.mahmud.official@hotmail.com?subject=Technical Collaboration Inquiry: AI Video Studio" class="inline-flex items-center justify-center px-6 py-3.5 bg-white hover:bg-slate-100 text-slate-800 font-heading font-semibold text-sm rounded-xl border border-slate-300 shadow-sm transition">
+              ✉ Contact Developer
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
   </main>
-
-  <footer class="bg-darkSlate border-t border-slate-800 py-10 text-center text-xs text-slate-400">
-    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-white">Home</a></p>
+  <!-- Restored Original Sleek Dark Obsidian Slate Footer -->
+  <footer class="bg-darkSlate text-white pt-12 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-xs gap-4 text-slate-400 font-mono">
+      <div class="space-y-1 text-center md:text-left">
+        <p class="font-bold text-slate-200">System Architecture Designed & Developed by Imon Mahmud</p>
+        <p>Core Focus: Cloud Infrastructure, Cybersecurity, AI Automation & Scalable Software Engineering.</p>
+      </div>
+      <div class="flex flex-wrap justify-center space-x-6">
+        <a href="index.html#home" class="hover:text-white transition">Home</a>
+        <a href="disclaimer.html" class="hover:text-white transition">Disclaimer</a>
+        <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Cookie Consent Banner (GDPR / DSGVO) -->
+  <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-white border border-slate-200 shadow-2xl rounded-2xl p-4 z-50 transition-all duration-300 flex flex-col space-y-3">
+    <div class="flex items-start space-x-3">
+      <span class="text-xl">🍪</span>
+      <div class="space-y-1">
+        <h4 class="text-xs font-heading font-bold text-darkSlate">Cookie Consent Matrix (GDPR / DSGVO)</h4>
+        <p class="text-[11px] text-slate-600 leading-relaxed">
+          This website implements analytics tracking cookies optimized for international technical hiring markets. You can accept or configure consent below.
+        </p>
+      </div>
+    </div>
+    <div class="flex justify-end space-x-2 text-[11px] font-mono font-bold">
+      <button onclick="denyCookies()" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition">Deny</button>
+      <button onclick="acceptCookies()" class="px-3.5 py-1.5 bg-brandDeepForest text-white rounded-lg shadow transition">Accept Cookies</button>
+    </div>
+  </div>
+
+  <script>
+    const languages = ['EN', 'DE', 'BN'];
+    let langIndex = 0;
+
+    function cycleLanguage() {
+      langIndex = (langIndex + 1) % languages.length;
+      const currentLang = languages[langIndex].toLowerCase();
+      document.getElementById('lang-label').innerText = languages[langIndex];
+      
+      const elements = document.querySelectorAll('[data-en]');
+      elements.forEach(el => {
+        const attrVal = el.getAttribute('data-' + currentLang);
+        if(attrVal) {
+          el.innerHTML = attrVal;
+        } else {
+          el.innerHTML = el.getAttribute('data-en');
+        }
+      });
+    }
+
+    function acceptCookies() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('portfolio_cookies', 'accepted');
+    }
+
+    function denyCookies() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('portfolio_cookies', 'denied');
+    }
+
+    window.onload = function() {
+      if (localStorage.getItem('portfolio_cookies')) {
+        document.getElementById('cookie-banner').style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>

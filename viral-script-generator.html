@@ -4,14 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Zero-Cost Viral Script Generator Engine | Imon Mahmud - Enterprise Cloud & DevOps Architecture</title>
-  <meta name="description" content="Technical documentation and architecture breakdown for Zero-Cost Viral Script Generator Engine by Imon Mahmud. Custom automation framework utilizing Selenium browser operations to inject dynamic semantic prompts into Google Gemini AI, producing high-retention multi-part video scripts with automated output sanitation.">
-  <meta name="keywords" content="Zero-Cost Viral Script Generator Engine, Imon Mahmud, Cloud Infrastructure, DevOps, Automation">
+  <title>Zero-Cost Viral Script Generator Engine - Technical Architecture | Imon Mahmud</title>
+  <meta name="description" content="Enterprise AI automation framework utilizing Selenium WebDriver and Google Gemini AI to produce context-aware 10-part scripts with zero API token overhead. Publicly available on GitHub.">
   <meta name="author" content="Imon Mahmud">
-  
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   
@@ -27,26 +32,24 @@
           colors: {
             brandDeepForest: '#0C5244',
             brandDarkerForest: '#083B31',
+            brandForestHover: '#094237',
+            brandAccentGreen: '#116B59',
+            brandEmeraldLight: '#168770',
+            brandMintTint: '#D1EAE5',
+            brandAmber: '#D97706',
+            brandObsidian: '#0B0F17',
             darkSlate: '#0F172A',
           }
         }
       }
     }
   </script>
-
-  <!-- Favicon Icons -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
 </head>
 <body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-brandDeepForest selection:text-white">
-
-  <!-- Sticky Navbar -->
+  <!-- Executive Navigation Bar -->
   <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       
-      <!-- Smart Typographic Tech Logo Signature -->
       <!-- Smart Typographic Tech Logo Signature -->
       <a href="index.html#home" class="flex items-center space-x-2.5 group">
         <div class="flex items-center font-heading font-black text-2xl tracking-tighter text-darkSlate">
@@ -56,46 +59,353 @@
         </div>
       </a>
 
-      </div>
-      
-      <div class="flex items-center space-x-4">
-        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandDeepForest transition">← Back to Projects</a>
-        <a href="https://github.com/eng-imonmahmud/viral-script-generator" target="_blank" class="px-4 py-2 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-mono text-xs rounded-xl shadow-sm transition">
-          GitHub Repo ↗
+      <!-- Navigation Links & Actions -->
+      <div class="flex items-center space-x-4 sm:space-x-6">
+        <a href="index.html#projects" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandDeepForest transition flex items-center gap-1" data-en="← Back to Portfolio" data-de="← Zurück zum Portfolio" data-bn="← পোর্টফোলিওতে ফিরে যান">
+          ← <span class="hidden sm:inline" data-en="Back to Portfolio" data-de="Zurück zum Portfolio" data-bn="পোর্টফোলিওতে ফিরে যান">Back to Portfolio</span><span class="sm:hidden">Back</span>
+        </a>
+
+        <!-- 3-Way Language Toggle Button -->
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono text-xs rounded-xl border border-slate-200 transition">
+          🌐 <span id="lang-label">EN</span>
+        </button>
+
+        <a href="https://github.com/eng-imonmahmud" target="_blank" class="hidden md:inline-flex items-center space-x-1.5 px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-800 font-mono text-xs rounded-xl border border-slate-200 transition font-bold">
+          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+          <span>GitHub</span>
         </a>
       </div>
     </div>
   </nav>
-
-  <!-- Hero Header -->
-  <header class="relative bg-gradient-to-br from-[#083B31] via-brandDeepForest to-darkSlate text-white py-16 lg:py-24 border-b border-slate-200 shadow-md">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-      <div class="lg:col-span-8 space-y-5">
-        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">
-          <span>🤖</span> <span>AI Software Suite</span>
+  <!-- Header Hero Section -->
+  <header class="relative bg-gradient-to-br from-darkSlate via-brandObsidian to-[#062016] text-white py-16 lg:py-20 border-b border-slate-800 shadow-md overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      <div class="lg:col-span-7 space-y-4 text-center lg:text-left">
+        <div class="flex flex-wrap gap-2 justify-center lg:justify-start items-center">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 uppercase tracking-wider font-mono">
+            ✔ 100% Public Open-Source on GitHub
+          </span>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-teal-500/20 text-teal-300 border border-teal-500/30 uppercase tracking-wider font-mono">
+            🚀 Enterprise AI Automation
+          </span>
         </div>
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight">
+        
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight leading-tight" data-en="Zero-Cost Viral Script Generator Engine" data-de="Kostenlose Viral Script Generator Engine" data-bn="জিরো-কস্ট ভাইরাল স্ক্রিপ্ট জেনারেটর ইঞ্জিন">
           Zero-Cost Viral Script Generator Engine
         </h1>
-        <p class="text-base sm:text-lg text-slate-200 leading-relaxed">
-          Custom automation framework utilizing Selenium browser operations to inject dynamic semantic prompts into Google Gemini AI, producing high-retention multi-part video scripts with automated output sanitation.
+
+        <div class="bg-white/5 border border-white/10 p-3 rounded-xl inline-block w-full sm:w-auto">
+          <span class="text-xs font-heading font-bold uppercase tracking-wider text-slate-400 mr-2 block sm:inline mb-1 sm:mb-0">Tech Stack:</span>
+          <div class="inline-flex flex-wrap gap-1.5 font-mono text-[11px]">
+            <span class="bg-slate-800/80 text-emerald-300 px-2 py-0.5 rounded border border-emerald-500/20">Python 3.11</span>
+            <span class="bg-slate-800/80 text-slate-300 px-2 py-0.5 rounded border border-white/5">Selenium WebDriver</span>
+            <span class="bg-slate-800/80 text-teal-300 px-2 py-0.5 rounded border border-teal-500/20">Microsoft Edge Engine</span>
+            <span class="bg-slate-800/80 text-amber-300 px-2 py-0.5 rounded border border-amber-500/20">DOM Regex Layer</span>
+            <span class="bg-slate-800/80 text-slate-300 px-2 py-0.5 rounded border border-white/5">Enterprise OOP</span>
+          </div>
+        </div>
+
+        <p class="text-base sm:text-lg text-slate-200 max-w-3xl font-normal leading-relaxed text-justify" data-en="An advanced enterprise-grade automation infrastructure engineered to slash commercial API dependencies to absolute zero. By programmatically driving native web-browser interfaces, this engine delivers high-retention, context-aware 10-part viral media scripts directly via the Gemini web version without proxy bottlenecks or operational overhead." data-de="Eine fortschrittliche Automatisierungsinfrastruktur für Unternehmen, die entwickelt wurde, um kommerzielle API-Abhängigkeiten auf absolut Null zu reduzieren. Durch die programmatische Steuerung nativer Webbrowser-Schnittstellen liefert diese Engine hochgradig bindende, kontextsensitive 10-teilige Skripte direkt über die Gemini-Webversion." data-bn="একটি অ্যাডভান্সড এন্টারপ্রাইজ অটোমেশন ইনফ্রাস্ট্রাকচার যা পেইড এপিআই নির্ভরতা সম্পূর্ণরূপে দূর করে। ব্রাউজার ইন্টারফেস স্বয়ংক্রিয়ভাবে ড্রাইভ করে এই ইঞ্জিন জেমিনি ওয়েব সংস্করণের মাধ্যমে হাই-রিটেনশন ১০-পার্টের ভাইরাল স্ক্রিপ্ট তৈরি করে।">
+          An advanced enterprise-grade automation infrastructure engineered to slash commercial API dependencies to absolute zero. By programmatically driving native web-browser interfaces, this engine delivers high-retention, context-aware 10-part viral media scripts directly via the Gemini web version without proxy bottlenecks or operational overhead.
         </p>
+      </div>
+      
+      <div class="lg:col-span-5 bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm space-y-4">
+        <h3 class="font-heading font-bold text-lg border-b border-white/10 pb-2 text-emerald-300 flex items-center justify-between">
+          <span>Core System Capabilities</span>
+          <span class="text-xs font-mono bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded border border-emerald-400/30">PUBLIC REPO</span>
+        </h3>
+        <ul class="text-xs space-y-2.5 text-slate-300 text-left">
+          <li>🔹 <strong>Zero API Expenses:</strong> Eliminates ongoing token costs via direct web automation orchestration.</li>
+          <li>🔹 <strong>13,500+ Word Scale:</strong> Programmatic multi-part execution loops with strict context inheritance.</li>
+          <li>🔹 <strong>Smart Wait & Anti-Error:</strong> Dynamic state verification tracking to bypass fragile static sleeps.</li>
+          <li>🔹 <strong>Public Repository:</strong> Full open-source script codebase and setup playbooks on GitHub.</li>
+        </ul>
+        <div class="pt-2 space-y-2">
+          <a href="https://github.com/eng-imonmahmud/viral-script-generator" target="_blank" class="w-full inline-flex items-center justify-center px-4 py-3 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-xs sm:text-sm rounded-xl shadow-lg transition duration-300 space-x-2">
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+            <span>View Source & Download on GitHub ↗</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- Content -->
-  <main class="max-w-7xl mx-auto px-6 py-12 space-y-12">
+  <!-- Main Content Layout -->
+  <main class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
     
+    <!-- Sidebar Index -->
+    <aside class="lg:col-span-3 hidden lg:block">
+      <div class="sticky top-28 bg-white border border-slate-200 p-6 rounded-2xl shadow-sm space-y-4">
+        <h4 class="font-heading font-bold text-darkSlate uppercase tracking-wider text-xs">Documentation Index</h4>
+        <nav class="flex flex-col space-y-2 text-sm font-medium text-slate-500">
+          <a href="#system-architecture" class="hover:text-brandDeepForest transition py-1 border-l-2 border-transparent hover:border-brandDeepForest pl-2">1. System Architecture Diagram</a>
+          <a href="#algorithmic-pipeline" class="hover:text-brandDeepForest transition py-1 border-l-2 border-transparent hover:border-brandDeepForest pl-2">2. Algorithmic Pipeline Flow</a>
+          <a href="#core-features" class="hover:text-brandDeepForest transition py-1 border-l-2 border-transparent hover:border-brandDeepForest pl-2">3. Technical Stability Mechanisms</a>
+          <a href="#compliance-metrics" class="hover:text-brandDeepForest transition py-1 border-l-2 border-transparent hover:border-brandDeepForest pl-2">4. Code Metrics & Compliance</a>
+          <a href="#public-access" class="hover:text-brandDeepForest transition py-1 border-l-2 border-transparent hover:border-brandDeepForest pl-2">5. Public Open-Source Access</a>
+        </nav>
+        <div class="pt-4 border-t border-slate-100">
+          <a href="https://github.com/eng-imonmahmud/viral-script-generator" target="_blank" class="w-full inline-flex items-center justify-center px-3 py-2 bg-slate-900 hover:bg-slate-800 text-white font-mono text-xs font-bold rounded-xl transition">
+            📦 Clone / Download Repo ↗
+          </a>
+        </div>
+      </div>
+    </aside>
 
-    <section class="bg-white border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm">
-      <h2 class="text-2xl font-heading font-bold text-darkSlate">Software Overview & Capabilities</h2>
-      <p class="text-slate-700 leading-relaxed text-sm">Custom automation framework utilizing Selenium browser operations to inject dynamic semantic prompts into Google Gemini AI, producing high-retention multi-part video scripts with automated output sanitation.</p>
+    <!-- Articles Section -->
+    <section class="lg:col-span-9 space-y-16">
+
+      <!-- 1. System Architecture Diagram -->
+      <article id="system-architecture" class="space-y-6 scroll-mt-24">
+        <div class="border-b border-slate-200 pb-4">
+          <h2 class="text-2xl font-heading font-extrabold text-darkSlate">1. Core High-Level System Architecture Diagram</h2>
+          <p class="text-sm text-slate-500">Decoupled local system abstracting browser synchronization from blocking script executions.</p>
+        </div>
+        
+        <p class="leading-relaxed text-justify">
+          The infrastructure operates via a dedicated Local Debugger Session pattern, binding onto an active instance of the Microsoft Edge browser via remote debugging ports (<code>127.0.0.1:9222</code>). By decoupling the automated controller loop from traditional ephemeral webdriver containers, the script securely bypasses Cloudflare anti-bot firewalls and multi-factor authentication locks. It relies on explicit thread-wait synchronization techniques to intercept runtime text buffers directly from the browser DOM layout seamlessly.
+        </p>
+
+        <div class="bg-darkSlate text-emerald-300 p-6 rounded-xl font-mono text-xs overflow-x-auto shadow-inner border border-slate-800 leading-relaxed">
++---------------------------------------------------------------------------------+
+|                       LOCAL APPLICATION FILE SYSTEM                             |
+|  [titles.txt Source] ---> [IO File Ingestion Queue] ---> [Sanitation Matrices]  |
++---------------------------------------------------------------------------------+
+                                         |
+                                         v (System Pipeline Init)
++---------------------------------------------------------------------------------+
+|                        CORE SELENIUM CONTROLLER LAYER                           |
+|      - Port: 127.0.0.1:9222  - Debugger Attachments  - Session persistence      |
++---------------------------------------------------------------------------------+
+                                         |
+                                         v (Active DOM Interrogator)
++---------------------------------------------------------------------------------+
+|                          NATIVE BROWSER RUNTIME LAYER                           |
+|   - Google Gemini Web Interface (https://gemini.google.com/app)                  |
+|   - Bypasses Cloudflare Checkpoints via User-Authenticated Profiles            |
++---------------------------------------------------------------------------------+
+      |                                  |                                  |
+      v (DOM Field Injection)            v (Smart Pacing Monitor)           v (Scraping/Extraction)
++------------------+             +-------------------+            +-----------------+
+|  TEXTBOX INPUT   |             | GENERATION WATCH  |            | MARKDOWN COPIER |
+| Programmatic     |             | Dynamic tracking  |            | Extraction of   |
+| Object Buffer    |             | of 'Stop/Send'    |            | raw response via|
+| Emulation Block  |             | UI button states  |            | text node sweeps|
++------------------+             +-------------------+            +-----------------+
+      |                                  |                                  |
+      +----------------------------------+----------------------------------+
+                                         |
+                                         v (Automated IO File Stream Block)
++---------------------------------------------------------------------------------+
+|                          FINAL ISOLATED OUTPUT STORAGE                          |
+|    - Path: [Output_Directory]\[Title_Slug_Sanitized]\script_part_X.txt          |
++---------------------------------------------------------------------------------+
+        </div>
+      </article>
+
+      <!-- 2. Algorithmic Pipeline Flow -->
+      <article id="algorithmic-pipeline" class="space-y-6 scroll-mt-24">
+        <div class="border-b border-slate-200 pb-4">
+          <h2 class="text-2xl font-heading font-extrabold text-darkSlate">2. The Sequential Algorithmic Pipeline Flow</h2>
+          <p class="text-sm text-slate-500">Operational execution pipeline of the multi-part context-inherited generation logic.</p>
+        </div>
+
+        <p class="leading-relaxed text-justify">
+          The algorithmic sequence manages long-form content continuation seamlessly. Instead of simple prompting, the algorithm treats each video script as a production matrix split across 10 independent transactional chunks. By caching context variables from previous generations and passing short summary snippets into the next execution array, it creates flawless transitions across all parts without hitches.
+        </p>
+
+        <div class="relative border-l-2 border-slate-200 pl-6 space-y-8 text-sm">
+          <div class="relative">
+            <span class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-brandDeepForest border-4 border-white"></span>
+            <h4 class="font-heading font-bold text-darkSlate">Phase 1: Input Ingestion & In-Memory Preflight Checks</h4>
+            <p class="text-slate-600 mt-1 text-justify">The application reads titles line-by-line, matching them against local directory nodes. If output text structures already exist for all 10 target files, the title skips instantly, establishing full transactional safety against unexpected application interruptions.</p>
+          </div>
+          <div class="relative">
+            <span class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-teal-600 border-4 border-white"></span>
+            <h4 class="font-heading font-bold text-darkSlate">Phase 2: UI Authentication Context Hooking</h4>
+            <p class="text-slate-600 mt-1 text-justify">Establishes a connection with Edge. The system instantiates a WebDriver link over port 9222, targets the active tab, navigates directly to gemini.google.com/app, and clears annoying overlay popups via precise Javascript CSS selector matching loops.</p>
+          </div>
+          <div class="relative">
+            <span class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-amber-500 border-4 border-white"></span>
+            <h4 class="font-heading font-bold text-darkSlate">Phase 3: Context-Inherited Generation Loop</h4>
+            <p class="text-slate-600 mt-1 text-justify">Executes a 10-tier partition cycle. Part 1 dynamically generates legal disclaimers tailored to the target topic followed by viral hooks. Parts 2-10 pass custom continuity blocks tracking the last 200 characters from previous outputs, forcing strict story pacing and high retention structures without text duplication.</p>
+          </div>
+          <div class="relative">
+            <span class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-emerald-600 border-4 border-white"></span>
+            <h4 class="font-heading font-bold text-darkSlate">Phase 4: DOM Extraction & Sanitizer Pipeline</h4>
+            <p class="text-slate-600 mt-1 text-justify">Grabs raw Markdown strings directly from the browser element stack. It processes text against strict regular expression arrays to delete metadata headers, video markers, speaker brackets, and problematic conversational AI patterns, storing clean scripts safely on disk.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3. Technical Stability Mechanisms -->
+      <article id="core-features" class="space-y-6 scroll-mt-24">
+        <div class="border-b border-slate-200 pb-4">
+          <h2 class="text-2xl font-heading font-extrabold text-darkSlate">3. Technical Architecture & Stability Mechanisms</h2>
+          <p class="text-sm text-slate-500">Systems-level engineering solutions implemented to guarantee autonomous execution.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+          <div class="bg-white p-6 border border-slate-200 rounded-xl shadow-sm space-y-2">
+            <div class="text-brandDeepForest font-bold font-heading text-base">🔒 Anti-Bot Session Persistence</div>
+            <p class="text-slate-600 text-justify leading-relaxed">
+              Instead of launching background headless chromium sessions that alert Cloudflare systems immediately, the script piggybacks onto existing system processes via localhost socket pipes. This preserves natural human session telemetry fingerprints and eliminates proxy expenditures entirely.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 border border-slate-200 rounded-xl shadow-sm space-y-2">
+            <div class="text-brandDeepForest font-bold font-heading text-base">📊 Smart Response Completion Detection</div>
+            <p class="text-slate-600 text-justify leading-relaxed">
+              The system bypasses fragile static sleep calls by implementing a dynamic polling layer. It analyzes state transitions of browser buttons, monitoring the disappearance of 'Stop generating' or the recovery of 'Send message' targets to catch production content completions instantly.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 border border-slate-200 rounded-xl shadow-sm space-y-2">
+            <div class="text-brandDeepForest font-bold font-heading text-base">🛡️ Automated Error Filtering & Rollbacks</div>
+            <p class="text-slate-600 text-justify leading-relaxed">
+              Integrates an automated string monitoring matrix that scans live returns for error flags like 'something went wrong'. If triggered, or if output length drops below 50 characters, the script triggers browser reloads and resets prompt queues up to 3 times before failing safely.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 border border-slate-200 rounded-xl shadow-sm space-y-2">
+            <div class="text-brandDeepForest font-bold font-heading text-base">📝 Advanced Content Sanitation Matrix</div>
+            <p class="text-slate-600 text-justify leading-relaxed">
+              Utilizes optimized regular expression filters to strip annoying technical formatting artifacts out of text bodies. It clears voice instructions, speaker nodes, asterisks, brackets, and meta text, outputting pure narration streams ready for direct Text-to-Speech deployment.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4. Code Metrics & Compliance -->
+      <article id="compliance-metrics" class="space-y-6 scroll-mt-24">
+        <div class="border-b border-slate-200 pb-4">
+          <h2 class="text-2xl font-heading font-extrabold text-darkSlate">4. Enterprise Source Code Integrity & Metrics</h2>
+          <p class="text-sm text-slate-500">Engineered to satisfy demanding code quality parameters from technical standards.</p>
+        </div>
+
+        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="bg-slate-50 text-slate-500 uppercase text-[11px] font-mono font-bold tracking-wider border-b border-slate-200">
+                <th class="p-4 w-1/3">Implemented Architecture Component</th>
+                <th class="p-4 w-2/3">Production Implementation Details & Value Provided</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100 text-slate-600 font-sans">
+              <tr>
+                <td class="p-4 font-bold text-darkSlate">Port-Mapped Remote Debugger Attach</td>
+                <td class="p-4 text-justify">Binds onto active browser kernels via <code>debuggerAddress = 127.0.0.1:9222</code>. This completely removes headless footprints, evading bot mitigation triggers by maintaining real authenticated browser sessions.</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-bold text-darkSlate">Context Continuity Caching Engine</td>
+                <td class="p-4 text-justify">Tracks and injects runtime string variables (tracking slice of final 200 characters) into iterative loops. This forces logical cohesion across huge generation metrics (13,500+ words total) without data gaps.</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-bold text-darkSlate">State-Driven Non-Blocking Smart Wait</td>
+                <td class="p-4 text-justify">Monitors the runtime element stacks dynamically using boolean switches against <code>aria-label='Stop generating'</code>. This catches generation completions perfectly, avoiding fragile static time.sleep dependencies completely.</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-bold text-darkSlate">Dynamic Policy Guardrail Prompts</td>
+                <td class="p-4 text-justify">Injects custom automated safety rules. It strips high-risk vocabulary terms dynamically, enforcing strictly educational tones to preserve full compliance with complex media safety rules.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <!-- 5. Public Open-Source Access -->
+      <article id="public-access" class="space-y-6 scroll-mt-24 bg-gradient-to-br from-slate-50 via-emerald-50/40 to-teal-50/30 p-8 rounded-2xl border border-emerald-200">
+        <div class="border-b border-emerald-200 pb-4">
+          <h2 class="text-2xl font-heading font-extrabold text-darkSlate">5. Public Open-Source Access & Deployment</h2>
+          <p class="text-sm text-slate-600">Explore the complete script, execution parameters, and playbooks on GitHub.</p>
+        </div>
+
+        <p class="leading-relaxed text-justify text-sm text-slate-700">
+          This project is 100% public and open-source. Anyone can explore the full codebase, review technical specifications, and download or clone the repository directly from GitHub to run in local Python environments or deploy across automated media production pipelines.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+          <a href="https://github.com/eng-imonmahmud/viral-script-generator" target="_blank" class="inline-flex items-center justify-center px-6 py-3.5 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-sm rounded-xl shadow-lg transition space-x-2">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+            <span>Download Repository on GitHub ↗</span>
+          </a>
+          <a href="mailto:imon.mahmud.official@hotmail.com?subject=Technical Collaboration Inquiry: Viral Script Generator" class="inline-flex items-center justify-center px-6 py-3.5 bg-white hover:bg-slate-100 text-slate-800 font-heading font-semibold text-sm rounded-xl border border-slate-300 shadow-sm transition">
+            ✉ Contact Developer
+          </a>
+        </div>
+      </article>
+
     </section>
   </main>
-
-  <footer class="bg-darkSlate border-t border-slate-800 py-10 text-center text-xs text-slate-400">
-    <p>© 2026 Imon Mahmud. All Rights Reserved. | <a href="index.html" class="hover:text-white">Home</a></p>
+  <!-- Restored Original Sleek Dark Obsidian Slate Footer -->
+  <footer class="bg-darkSlate text-white pt-12 pb-8 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between text-xs gap-4 text-slate-400 font-mono">
+      <div class="space-y-1 text-center md:text-left">
+        <p class="font-bold text-slate-200">System Architecture Designed & Developed by Imon Mahmud</p>
+        <p>Core Focus: Cloud Infrastructure, Cybersecurity, AI Automation & Scalable Software Engineering.</p>
+      </div>
+      <div class="flex flex-wrap justify-center space-x-6">
+        <a href="index.html#home" class="hover:text-white transition">Home</a>
+        <a href="disclaimer.html" class="hover:text-white transition">Disclaimer</a>
+        <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Cookie Consent Banner (GDPR / DSGVO) -->
+  <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:max-w-md bg-white border border-slate-200 shadow-2xl rounded-2xl p-4 z-50 transition-all duration-300 flex flex-col space-y-3">
+    <div class="flex items-start space-x-3">
+      <span class="text-xl">🍪</span>
+      <div class="space-y-1">
+        <h4 class="text-xs font-heading font-bold text-darkSlate">Cookie Consent Matrix (GDPR / DSGVO)</h4>
+        <p class="text-[11px] text-slate-600 leading-relaxed">
+          This website implements analytics tracking cookies optimized for international technical hiring markets. You can accept or configure consent below.
+        </p>
+      </div>
+    </div>
+    <div class="flex justify-end space-x-2 text-[11px] font-mono font-bold">
+      <button onclick="denyCookies()" class="px-3.5 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg transition">Deny</button>
+      <button onclick="acceptCookies()" class="px-3.5 py-1.5 bg-brandDeepForest text-white rounded-lg shadow transition">Accept Cookies</button>
+    </div>
+  </div>
+
+  <script>
+    const languages = ['EN', 'DE', 'BN'];
+    let langIndex = 0;
+
+    function cycleLanguage() {
+      langIndex = (langIndex + 1) % languages.length;
+      const currentLang = languages[langIndex].toLowerCase();
+      document.getElementById('lang-label').innerText = languages[langIndex];
+      
+      const elements = document.querySelectorAll('[data-en]');
+      elements.forEach(el => {
+        const attrVal = el.getAttribute('data-' + currentLang);
+        if(attrVal) {
+          el.innerHTML = attrVal;
+        } else {
+          el.innerHTML = el.getAttribute('data-en');
+        }
+      });
+    }
+
+    function acceptCookies() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('portfolio_cookies', 'accepted');
+    }
+
+    function denyCookies() {
+      document.getElementById('cookie-banner').style.display = 'none';
+      localStorage.setItem('portfolio_cookies', 'denied');
+    }
+
+    window.onload = function() {
+      if (localStorage.getItem('portfolio_cookies')) {
+        document.getElementById('cookie-banner').style.display = 'none';
+      }
+    }
+  </script>
 </body>
 </html>

@@ -211,7 +211,7 @@
     "name": "National Skill Standard Basic (360 Hours)",
     "issuer": "BTEB",
     "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/users/imon-mahmud",
+    "badge_url": "assets/images/certificates/bteb-360h-certificate.jpg",
     "image_url": "assets/images/trainings/bteb-logo.svg",
     "category_tag": "Linux & OS Systems"
   },
@@ -227,7 +227,7 @@
     "name": "Graphics Design",
     "issuer": "Creative IT",
     "issued_at": "Verified Credential",
-    "badge_url": "https://www.credly.com/users/imon-mahmud",
+    "badge_url": "assets/images/certificates/creative-it-graphics-design-certificate.jpg",
     "image_url": "assets/images/trainings/creative-it-graphics-badge.png",
     "category_tag": "Python"
   }

@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy (GDPR / DSGVO Compliant) | Imon Mahmud Portfolio</title>
+  <title>Privacy Policy (GDPR / DSGVO Compliant) | Imon Mahmud - Enterprise Cloud, DevOps & AI Solutions</title>
+  
+  <meta name="description" content="Transparent privacy policy ensuring compliance with EU GDPR / DSGVO, zero tracking cookies, and strict data protection standards.">
+  <meta name="author" content="Imon Mahmud">
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN with Exact Corporate Theme -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,10 +22,17 @@
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
             heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            primary: '#1E3A8A',
+            brandDeepForest: '#0B3B2C',
+            brandDarkerForest: '#062016',
+            brandAccentGreen: '#10B981',
+            brandMutedSage: '#4E6B61',
+            brandLightWash: '#F0F5F3',
+            brandObsidian: '#0B1512',
             darkSlate: '#0F172A',
+            emeraldBadge: '#059669',
           }
         }
       }
@@ -29,30 +43,261 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-
 </head>
-<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased">
-  <nav class="bg-white border-b border-slate-200 py-5">
-    <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
-      <a href="index.html" class="font-heading font-bold text-primary text-lg">← Back to Portfolio</a>
-      <span class="text-xs font-mono text-slate-400">Imon Mahmud Portfolio Policy</span>
+<body class="bg-[#F8FAFC] text-slate-700 font-sans antialiased selection:bg-brandDeepForest selection:text-white">
+
+  <!-- Executive Navigation Bar -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Smart Typographic Tech Logo Signature -->
+      <a href="index.html#home" class="flex items-center space-x-2.5 group">
+        <div class="flex items-center font-heading font-black text-2xl tracking-tighter text-darkSlate">
+          <span class="text-darkSlate font-extrabold group-hover:text-slate-900 transition">Imon</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandDeepForest via-brandAccentGreen to-emerald-600 font-black ml-1">Mahmud</span>
+          <span class="w-2 h-2 rounded-full bg-amber-500 inline-block ml-0.5 group-hover:scale-125 transition duration-300"></span>
+        </div>
+      </a>
+
+      <!-- Quick Social Icons -->
+      <div class="hidden lg:flex items-center space-x-3 text-slate-500 border-l border-r border-slate-200 px-4 py-1">
+        <a href="https://github.com/eng-imonmahmud" target="_blank" class="text-slate-400 hover:text-darkSlate transition p-1" title="GitHub">
+          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.024A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.293 2.747-1.024 2.747-1.024.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+        </a>
+        <a href="https://t.me/imoncs" target="_blank" class="text-slate-400 hover:text-sky-500 transition p-1" title="Telegram">
+          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-2.02 9.52c-.15.68-.56.84-1.13.53l-3.1-2.29-1.5 1.44c-.16.16-.3.3-.61.3l.22-3.17 5.77-5.21c.25-.22-.05-.34-.39-.12l-7.14 4.5-3.07-.96c-.67-.21-.68-.67.14-.99l12.01-4.63c.56-.21 1.05.13.83 1.08z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/imonmahmudofficial" target="_blank" class="text-slate-400 hover:text-blue-600 transition p-1" title="Facebook Profile">
+          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://wa.me/8801739319407" target="_blank" class="text-slate-400 hover:text-brandDeepForest transition p-1" title="WhatsApp">
+          <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.717-1.456L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.742.002-2.597-1.001-5.042-2.825-6.868C16.628 2.171 14.191 1.17 11.6 1.172c-5.442 0-9.867 4.372-9.87 9.743-.001 1.724.455 3.411 1.32 4.908l-.995 3.633 3.734-.972c1.474.795 3.076 1.218 4.71 1.22zM17.15 14.28c-.29-.145-1.713-.846-1.978-.942-.265-.096-.458-.145-.65.145-.192.291-.744.943-.912 1.134-.167.192-.335.215-.625.07-1.363-.683-2.256-1.214-3.115-2.684-.23-.393.23-.364.657-1.213.072-.145.036-.271-.018-.38-.054-.11-.458-1.102-.626-1.509-.164-.4-.344-.346-.458-.352-.107-.006-.23-.008-.353-.008s-.323.046-.492.23c-.169.184-.645.63-.645 1.539 0 .909.66 1.788.752 1.91.092.121 1.298 1.983 3.144 2.779.44.19.782.303 1.05.388.442.141.844.121 1.162.074.354-.051 1.712-.7 1.953-1.374.24-.674.24-1.253.169-1.374-.07-.121-.265-.192-.555-.337z"/></svg>
+        </a>
+      </div>
+
+      <!-- Navigation Links & Actions -->
+      <div class="flex items-center space-x-4 sm:space-x-6">
+        <a href="index.html#home" class="text-xs sm:text-sm font-heading font-semibold text-slate-600 hover:text-brandDeepForest transition flex items-center gap-1" data-en="← Back to Portfolio" data-de="← Zurück zum Portfolio" data-bn="← পোর্টফোলিওতে ফিরে যান">
+          ← <span class="hidden sm:inline" data-en="Back to Portfolio" data-de="Zurück zum Portfolio" data-bn="পোর্টফোলিওতে ফিরে যান">Back to Portfolio</span><span class="sm:hidden">Back</span>
+        </a>
+
+        <!-- 3-Way Language Toggle Button -->
+        <button onclick="cycleLanguage()" class="inline-flex items-center space-x-1 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-mono text-xs rounded-xl border border-slate-200 transition">
+          🌐 <span id="lang-label">EN</span>
+        </button>
+
+        <a href="https://drive.google.com/file/d/18-2m6gYYiZdouxOleAJToIswcY6IYaJM/view?usp=sharing" target="_blank" class="hidden md:inline-flex items-center justify-center px-4 py-2 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold text-xs rounded-xl shadow-md transition duration-300">
+          📥 <span class="ml-1" data-en="Download CV" data-de="Lebenslauf" data-bn="সিভি">Download CV</span>
+        </a>
+      </div>
     </div>
   </nav>
 
-  <main class="max-w-4xl mx-auto px-6 py-12 space-y-6">
-    <div class="bg-white border border-slate-200 p-8 rounded-2xl shadow-sm space-y-4">
-      <h1 class="text-3xl font-heading font-extrabold text-darkSlate border-b border-slate-200 pb-4">Privacy Policy (GDPR / DSGVO Compliant)</h1>
+  <!-- Hero Header Section -->
+  <header class="relative bg-gradient-to-br from-darkSlate via-brandObsidian to-[#062016] text-white py-16 lg:py-20 border-b border-slate-800 shadow-md overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 relative z-10 space-y-4 text-center">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 rounded-full text-xs font-mono uppercase tracking-wider">
+        <span>⚖️</span> <span>GDPR / DSGVO Compliance</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold tracking-tight text-white" data-en="Privacy Policy & Data Protection" data-de="Datenschutzerklärung (DSGVO)" data-bn="গোপনীয়তা নীতি ও ডেটা প্রটেকশন">
+        Privacy Policy & Data Protection
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed" data-en="Transparent privacy policy ensuring compliance with EU GDPR / DSGVO, zero tracking cookies, and strict data protection standards." data-de="Transparente Datenschutzerklärung gemäß EU-DSGVO, ohne Tracking-Cookies und mit strengen Datenschutzstandards." data-bn="ইইউ জিডিপিআর (GDPR / DSGVO) কমপ্লায়েন্ট গোপনীয়তা নীতি, জিরো ট্র্যাকিং কুকিজ এবং সর্বোচ্চ ডেটা প্রটেকশন মানদণ্ড।">
+        Transparent privacy policy ensuring compliance with EU GDPR / DSGVO, zero tracking cookies, and strict data protection standards.
+      </p>
+      <div class="flex items-center justify-center space-x-4 pt-2 text-xs font-mono text-slate-400">
+        <span>📅 Effective Date: February 2026</span>
+        <span>•</span>
+        <span>🌐 Global Compliance Standard</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Legal Document Body -->
+  <main class="max-w-4xl mx-auto px-6 py-14">
+    <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-xl space-y-12">
       
-        <h2 class="text-xl font-heading font-bold text-darkSlate">Privacy Policy & Data Protection</h2>
-        <p class="text-sm text-slate-700 leading-relaxed">Imon Mahmud ("we", "our") respects your privacy and is committed to protecting personal data in compliance with EU General Data Protection Regulation (GDPR / DSGVO) standards.</p>
-        <h2 class="text-xl font-heading font-bold text-darkSlate mt-6">Cookie Consent & Analytics</h2>
-        <p class="text-sm text-slate-700 leading-relaxed">This site uses minimal client-side local storage exclusively to remember user language preferences and cookie consent choices. No tracking cookies or third-party data broker pixels are embedded without explicit user interaction.</p>
-        
+      <!-- Section 1 -->
+      <section class="space-y-4">
+        <div class="flex items-center space-x-3 pb-2 border-b border-slate-100">
+          <span class="px-2.5 py-1 bg-emerald-100 text-brandDeepForest font-mono font-bold text-xs rounded-md">01</span>
+          <h2 class="text-xl sm:text-2xl font-heading font-bold text-darkSlate">Privacy Commitment & GDPR / DSGVO Alignment</h2>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed text-justify">
+          Imon Mahmud ("I", "my", "Author") is committed to maintaining transparent, ethical, and strictly privacy-first standards for all visitors accessing <strong>eng-imonmahmud.github.io</strong>. This privacy policy outlines the handling of technical metadata, cookies, and personal communication in strict adherence to the European Union General Data Protection Regulation (<strong>EU GDPR / DSGVO</strong>) and international privacy frameworks.
+        </p>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="space-y-4">
+        <div class="flex items-center space-x-3 pb-2 border-b border-slate-100">
+          <span class="px-2.5 py-1 bg-emerald-100 text-brandDeepForest font-mono font-bold text-xs rounded-md">02</span>
+          <h2 class="text-xl sm:text-2xl font-heading font-bold text-darkSlate">Data Controller Information</h2>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          The responsible party and data controller under Art. 4 No. 7 GDPR for this portfolio website is:
+        </p>
+        <div class="bg-slate-50 border border-slate-200 p-5 rounded-2xl text-xs sm:text-sm text-slate-700 space-y-1.5 font-mono">
+          <div class="font-bold text-darkSlate text-base font-sans">Imon Mahmud</div>
+          <div>Role: Cloud Infrastructure, DevOps & Cybersecurity Engineer</div>
+          <div>Location: Dhaka, Bangladesh (Global Remote)</div>
+          <div>Direct Email: <a href="mailto:imon.mahmud.official@hotmail.com" class="text-brandDeepForest underline font-bold">imon.mahmud.official@hotmail.com</a></div>
+          <div>Phone: +8801739319407</div>
+        </div>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="space-y-4">
+        <div class="flex items-center space-x-3 pb-2 border-b border-slate-100">
+          <span class="px-2.5 py-1 bg-emerald-100 text-brandDeepForest font-mono font-bold text-xs rounded-md">03</span>
+          <h2 class="text-xl sm:text-2xl font-heading font-bold text-darkSlate">Data Collection & Hosting Infrastructure</h2>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed text-justify">
+          This portfolio is hosted statically on <strong>GitHub Pages</strong> (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). When you visit this website, GitHub's edge web servers may automatically record standard HTTP request headers, including IP address, browser user-agent, operating system, and timestamp in technical server logs to ensure server integrity, DDoS protection, and security compliance (Art. 6 Para. 1 lit. f GDPR).
+        </p>
+        <p class="text-sm text-slate-700 leading-relaxed text-justify">
+          This portfolio does <strong>not</strong> operate backend tracking databases, user registration systems, nor does it capture, store, or sell personally identifiable information (PII) to third-party ad networks or data brokers.
+        </p>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="space-y-4">
+        <div class="flex items-center space-x-3 pb-2 border-b border-slate-100">
+          <span class="px-2.5 py-1 bg-emerald-100 text-brandDeepForest font-mono font-bold text-xs rounded-md">04</span>
+          <h2 class="text-xl sm:text-2xl font-heading font-bold text-darkSlate">Cookies & Client-Side Local Storage</h2>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed text-justify">
+          This website uses minimal, non-invasive client-side browser storage (<code>localStorage</code>) exclusively for essential user interface preferences:
+        </p>
+        <ul class="text-xs sm:text-sm text-slate-600 space-y-2 list-disc pl-5">
+          <li><code>imon_portfolio_lang</code>: Stores user language selection (EN, DE, BN) to provide continuous localized experience across subpages.</li>
+          <li><code>imon_cookie_consent</code>: Stores the user's cookie banner acknowledgment status so prompts are not repeatedly displayed.</li>
+        </ul>
+        <p class="text-sm text-slate-700 leading-relaxed text-justify">
+          These items contain zero personal data or tracking identifiers and can be cleared at any time via your browser settings.
+        </p>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="space-y-4">
+        <div class="flex items-center space-x-3 pb-2 border-b border-slate-100">
+          <span class="px-2.5 py-1 bg-emerald-100 text-brandDeepForest font-mono font-bold text-xs rounded-md">05</span>
+          <h2 class="text-xl sm:text-2xl font-heading font-bold text-darkSlate">Third-Party CDNs & Embedded Content</h2>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed text-justify">
+          To deliver optimal visual rendering, fast page load speeds, and typography across global regions, this website interfaces with reputable Content Delivery Networks (CDNs):
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-600">
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-darkSlate block mb-1">Google Fonts CDN</strong>
+            Loads font families (Plus Jakarta Sans, Inter, JetBrains Mono). Fonts are delivered via Google's secure caching networks without tracking user profile identities.
+          </div>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <strong class="text-darkSlate block mb-1">TailwindCSS Runtime CDN</strong>
+            Loads CSS utilities to render lightweight responsive grid layouts dynamically on the client device.
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 -->
+      <section class="space-y-4">
+        <div class="flex items-center space-x-3 pb-2 border-b border-slate-100">
+          <span class="px-2.5 py-1 bg-emerald-100 text-brandDeepForest font-mono font-bold text-xs rounded-md">06</span>
+          <h2 class="text-xl sm:text-2xl font-heading font-bold text-darkSlate">Your Rights Under GDPR / DSGVO</h2>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed text-justify">
+          Visitors residing in the European Economic Area (EEA) possess specific statutory rights regarding personal data processing:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-700">
+          <div class="p-3 bg-emerald-50/60 rounded-lg border border-emerald-100"><strong>• Right of Access (Art. 15 GDPR)</strong>: Inquire if any personal data is held.</div>
+          <div class="p-3 bg-emerald-50/60 rounded-lg border border-emerald-100"><strong>• Right to Rectification (Art. 16 GDPR)</strong>: Request correction of inaccurate information.</div>
+          <div class="p-3 bg-emerald-50/60 rounded-lg border border-emerald-100"><strong>• Right to Erasure (Art. 17 GDPR)</strong>: Request permanent deletion of contact messages.</div>
+          <div class="p-3 bg-emerald-50/60 rounded-lg border border-emerald-100"><strong>• Right to Object (Art. 21 GDPR)</strong>: Object to data processing at any time.</div>
+        </div>
+      </section>
+
+      <!-- Section 7 -->
+      <section class="space-y-4 pt-4 border-t border-slate-200">
+        <div class="flex items-center space-x-3 pb-2">
+          <span class="px-2.5 py-1 bg-emerald-100 text-brandDeepForest font-mono font-bold text-xs rounded-md">07</span>
+          <h2 class="text-xl sm:text-2xl font-heading font-bold text-darkSlate">Privacy Questions & Exercising Rights</h2>
+        </div>
+        <p class="text-sm text-slate-700 leading-relaxed">
+          If you have any questions regarding this Privacy Policy or wish to exercise your rights under GDPR, please reach out via email:
+        </p>
+        <div class="pt-2">
+          <a href="mailto:imon.mahmud.official@hotmail.com?subject=GDPR / Privacy Policy Inquiry" class="inline-flex items-center gap-2 px-6 py-3.5 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-mono text-xs font-bold rounded-xl shadow-lg transition">
+            <span>✉️</span> <span>imon.mahmud.official@hotmail.com</span>
+          </a>
+        </div>
+      </section>
+
     </div>
   </main>
 
-  <footer class="bg-darkSlate text-slate-400 text-xs py-8 text-center border-t border-slate-800">
-    © 2026 Imon Mahmud. All Rights Reserved.
-  </footer>
+  <!-- Restored Original Sleek Dark Obsidian Slate Contact & Footer -->
+  <section id="contact" class="bg-darkSlate border-t border-slate-800 text-white pt-16 pb-10 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6 text-center space-y-6 relative z-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 rounded-full text-xs font-mono uppercase tracking-wider">
+        <span>✉️</span> <span>Get in Touch</span>
+      </div>
+      <h2 class="text-3xl sm:text-4xl font-heading font-extrabold tracking-tight" data-en="Let's Connect for Professional Engineering Initiatives" data-de="Lassen Sie uns vernetzen" data-bn="প্রফেশনাল কাজের জন্য যোগাযোগ করুন">
+        Let's Connect for Professional Engineering Initiatives
+      </h2>
+      <p class="text-slate-300 text-sm max-w-xl mx-auto leading-relaxed" data-en="Available for full-time technical roles, Cloud Infrastructure & DevOps Engineering, Cybersecurity, AI Automation, Platform Engineering, Enterprise Systems, and Solutions Architecture initiatives globally and remotely." data-de="Verfügbar für Vollzeitpositionen als Cloud Infrastructure & DevOps Engineer, Cybersecurity Specialist und Solutions Architect weltweit und remote." data-bn="গ্লোবাল ও রিমোট ক্লাউড ইনফ্রাস্ট্রাকচার, ডিভঅপ্স, সাইবার সিকিউরিটি, এআই অটোমেশন ও সলিউশনস আর্কিটেকচার পদের জন্য যোগাযোগ করুন।">
+        Available for full-time technical roles, Cloud Infrastructure & DevOps Engineering, Cybersecurity, AI Automation, Platform Engineering, Enterprise Systems, and Solutions Architecture initiatives globally and remotely.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4 max-w-2xl mx-auto font-mono text-xs">
+        <a href="mailto:imon.mahmud.official@hotmail.com" class="px-6 py-4 bg-brandObsidian hover:bg-slate-900 text-emerald-300 border border-slate-700 rounded-xl transition flex items-center justify-center">
+          ✉ imon.mahmud.official@hotmail.com
+        </a>
+        <a href="tel:+8801739319407" class="px-6 py-4 bg-brandDeepForest hover:bg-brandDarkerForest text-white font-heading font-bold rounded-xl transition flex items-center justify-center shadow-lg">
+          📞 Call: +8801739319407
+        </a>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 mt-16 pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between text-xs gap-4 text-slate-400 font-mono">
+      <div>© 2026 Imon Mahmud. All Rights Reserved.</div>
+      <div class="flex flex-wrap justify-center space-x-6">
+        <a href="index.html#home" class="hover:text-white transition">Home</a>
+        <a href="disclaimer.html" class="hover:text-white transition ">Disclaimer</a>
+        <a href="privacy.html" class="hover:text-white transition font-bold text-emerald-400">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-white transition ">Terms of Service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Language Switcher Script -->
+  <script>
+    const languages = ['EN', 'DE', 'BN'];
+    let langIndex = 0;
+
+    function cycleLanguage() {
+      langIndex = (langIndex + 1) % languages.length;
+      const curLang = languages[langIndex];
+      document.getElementById('lang-label').innerText = curLang;
+      localStorage.setItem('imon_portfolio_lang', curLang);
+      applyLanguage(curLang);
+    }
+
+    function applyLanguage(lang) {
+      const attr = 'data-' + lang.toLowerCase();
+      document.querySelectorAll('[' + attr + ']').forEach(el => {
+        const text = el.getAttribute(attr);
+        if (text) el.innerHTML = text;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('imon_portfolio_lang');
+      if (savedLang && languages.includes(savedLang)) {
+        langIndex = languages.indexOf(savedLang);
+        document.getElementById('lang-label').innerText = savedLang;
+        applyLanguage(savedLang);
+      }
+    });
+  </script>
 </body>
 </html>
